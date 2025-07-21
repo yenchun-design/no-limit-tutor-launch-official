@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, Users, Video, Shield, Star, MessageSquare, Calendar, Zap, Award, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import nltLogo from "../assets/nlt-logo.png";
+import nltLogo from "../assets/nlt-logo-new.png";
 import heroImage from "../assets/online-tutoring-hero.jpg";
 
 const Index = () => {
