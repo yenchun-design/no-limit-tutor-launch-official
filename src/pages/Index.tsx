@@ -80,9 +80,11 @@ const Index = () => {
               <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
                 No Limit Tutor 是一個專為台灣師生設計的線上真人一對一家教上課平台。
                 <br />
-                連接全台優質教師與學生，學生能自由選擇教師，並透過平台完成預約、不滿意退費的試教、安全付款與視訊上課流程。
+                連結全台優質教師與學生，學生能自由選擇教師，並透過平台完成預約、視訊上課，與安全付款流程。
                 <br />
-                NLT 的核心價值是提供公平、透明、對教師友善的教學環境，並提升學生的自主學習體驗。
+                No Limit Tutor 保障試教課，不滿意可全額退費
+                <br />
+                NLT 的核心價值是提供公平、透明、對師生友善的教學環境，並提升用戶的自主教學及學習體驗。
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -115,8 +117,8 @@ const Index = () => {
                       <BookOpen className="w-7 h-7 text-amber-600" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-gray-900 text-lg">個人化學習</h3>
-                      <p className="text-sm text-gray-600">根據學生需求量身定制課程</p>
+                      <h3 className="font-bold text-gray-900 text-lg"><strong>民主式、群眾導向平台</strong></h3>
+                      <p className="text-sm text-gray-600">老師自由授課，學生自選課題，無需綁定固定教材或長期合約</p>
                     </div>
                   </div>
                   
@@ -126,7 +128,7 @@ const Index = () => {
                     </div>
                     <div>
                       <h3 className="font-bold text-gray-900 text-lg">視訊教學</h3>
-                      <p className="text-sm text-gray-600">高品質線上一對一互動</p>
+                      <p className="text-sm text-gray-600">簡潔、穩定的線上預約與視訊上課系統，實現一對一學習的彈性與效率</p>
                     </div>
                   </div>
                   
@@ -135,8 +137,8 @@ const Index = () => {
                       <Star className="w-7 h-7 text-green-600" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-gray-900 text-lg">優質師資</h3>
-                      <p className="text-sm text-gray-600">經驗豐富的專業教師</p>
+                      <h3 className="font-bold text-gray-900 text-lg">不抽成、沒有名目費用</h3>
+                      <p className="text-sm text-gray-600">NLT 不抽取教師收入，平台保障服務費由學生端支付，確保教師能獲得完整報酬，並降低平台對教師與學生的壓力與操控性，打造民主、群眾導向的線上學習環境。</p>
                     </div>
                   </div>
                 </div>
@@ -153,7 +155,7 @@ const Index = () => {
             <div className="inline-block bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
               功能特色
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">突破規則，知識無限</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">No Limit Tutor 的三大服務主張</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">讓每個人都能享受優質的一對一教學</p>
           </div>
           
@@ -164,7 +166,7 @@ const Index = () => {
                   <Users className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl">師資介紹與篩選</CardTitle>
-                <CardDescription>智能推薦算法，根據熱門度、評分、價格等綜合排序</CardDescription>
+                <CardDescription>根據熱門度、評分、價格等綜合排序與篩選條件</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3 text-sm text-gray-600">
@@ -290,7 +292,7 @@ const Index = () => {
                 <ul className="space-y-3 text-sm text-gray-600">
                   <li className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-yellow-500 rounded-full" />
-                    <span>試教課50%優惠</span>
+                    <span>試教課 50 % 優惠，不滿意可全額退費</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-yellow-500 rounded-full" />
@@ -357,7 +359,7 @@ const Index = () => {
               {
                 step: "1",
                 title: "選擇教師",
-                description: "瀏覽教師精美，查看教師經驗、學生評價，選擇最適合您的老師",
+                description: "瀏覽教師檔案，查看教師經驗、學生評價，選擇最適合您的老師",
                 icon: <Users className="w-8 h-8" />,
                 color: "from-amber-500 to-orange-500"
               },
@@ -549,19 +551,28 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 onClick={() => window.open('https://www.facebook.com/nolimittutor', '_blank')}
               >
-                立即追蹤 No Limit Tutor 粉絲專頁
+                追蹤臉書
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 onClick={() => window.open('https://www.instagram.com/no_limit_tutor/', '_blank')}
               >
-                立即追蹤 Instagram @no_limit_tutor 迷因粉專，看國外迷因學英文
+                追蹤 IG
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+              
+              <Button 
+                size="lg" 
+                className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                onClick={() => window.open('https://forms.gle/6cYoa9Lt2P7Wy8uu5', '_blank')}
+              >
+                填寫表單
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </div>
@@ -591,6 +602,9 @@ const Index = () => {
               <p className="text-gray-400 mb-4 text-lg">
                 突破規則，知識無限 - 讓每個人都能享受優質的一對一教學
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 mb-4">
+                <a href="/privacy" className="text-amber-400 hover:text-amber-300 text-sm transition-colors">隱私條款</a>
+              </div>
               <p className="text-gray-500 text-sm">
                 © 2025 No Limit Tutor. No Limit Tutor 無限家教為睿思博遠有限公司註冊之商標，All rights reserved
               </p>
