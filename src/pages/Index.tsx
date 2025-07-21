@@ -15,100 +15,88 @@ import {
   DollarSign,
   Shield,
   BookOpen,
-  Globe
+  Globe,
+  ArrowRight
 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const Index = () => {
-  const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
-
-  const handleEmailSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Store email in localStorage for now (you can access this data)
-    const existingEmails = JSON.parse(localStorage.getItem('nlt-emails') || '[]');
-    const newEmail = {
-      email,
-      timestamp: new Date().toISOString(),
-      id: Date.now()
-    };
-    
-    existingEmails.push(newEmail);
-    localStorage.setItem('nlt-emails', JSON.stringify(existingEmails));
-    
-    toast({
-      title: "訂閱成功！",
-      description: "我們會在平台上線時第一時間通知您。",
-    });
-    
-    setEmail('');
-    setIsSubmitting(false);
-  };
 
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto px-4 h-14 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
-              <GraduationCap className="w-5 h-5 text-white" />
+      <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/60 shadow-sm">
+        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 bg-transparent rounded-xl flex items-center justify-center">
+              <img 
+                src="/lovable-uploads/4e11ff9d-5010-4b7a-b3e5-9400b087e145.png" 
+                alt="No Limit Tutor Logo"
+                className="w-10 h-10 object-contain"
+                style={{ filter: 'brightness(0) saturate(100%) invert(41%) sepia(96%) saturate(1742%) hue-rotate(18deg) brightness(95%) contrast(95%)' }}
+              />
             </div>
-            <span className="text-xl font-bold text-orange-600">No Limit Tutor</span>
+            <div className="flex flex-col">
+              <span className="text-xl font-bold text-gray-900">No Limit Tutor</span>
+              <span className="text-sm text-amber-600 font-medium">無限家教</span>
+            </div>
           </div>
           
-          <nav className="hidden md:flex items-center space-x-6">
-            <button onClick={() => scrollToSection('home')} className="text-sm hover:text-orange-600 transition-colors">首頁</button>
-            <button onClick={() => scrollToSection('features')} className="text-sm hover:text-orange-600 transition-colors">功能特色</button>
-            <button onClick={() => scrollToSection('process')} className="text-sm hover:text-orange-600 transition-colors">學習流程</button>
-            <button onClick={() => scrollToSection('pricing')} className="text-sm hover:text-orange-600 transition-colors">收費方式</button>
-            <button onClick={() => scrollToSection('teacher')} className="text-sm hover:text-orange-600 transition-colors">成為教師</button>
+          <nav className="hidden md:flex items-center space-x-8">
+            <button onClick={() => scrollToSection('home')} className="text-sm font-medium text-gray-700 hover:text-amber-600 transition-colors">首頁</button>
+            <button onClick={() => scrollToSection('features')} className="text-sm font-medium text-gray-700 hover:text-amber-600 transition-colors">功能特色</button>
+            <button onClick={() => scrollToSection('process')} className="text-sm font-medium text-gray-700 hover:text-amber-600 transition-colors">學習流程</button>
+            <button onClick={() => scrollToSection('pricing')} className="text-sm font-medium text-gray-700 hover:text-amber-600 transition-colors">收費方式</button>
+            <button onClick={() => scrollToSection('teacher')} className="text-sm font-medium text-gray-700 hover:text-amber-600 transition-colors">成為教師</button>
           </nav>
         </div>
       </header>
 
       {/* Hero Section */}
       <section id="home" className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-orange-100 to-orange-200" />
-        <div className="relative container mx-auto px-4 py-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-100/50 via-orange-100/50 to-yellow-100/50" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(251,191,36,0.1),transparent_50%)]" />
+        <div className="relative container mx-auto px-4 py-24">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-2">
-                <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
-                <span className="text-sm font-medium text-orange-700">線上一對一教學平台</span>
+              <div className="inline-flex items-center space-x-2 bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 shadow-sm border border-amber-200">
+                <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
+                <span className="text-sm font-medium text-amber-700">線上一對一教學平台</span>
               </div>
               
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-                No Limit Tutor
-                <br />
-                <span className="text-orange-600">無限可能的學習</span>
-              </h1>
+              <div className="space-y-4">
+                <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+                  No Limit Tutor
+                </h1>
+                <h2 className="text-3xl md:text-4xl font-bold text-amber-600 leading-tight">
+                  無限家教
+                </h2>
+              </div>
               
-              <p className="text-xl text-gray-600 leading-relaxed">
-                連接全球優質教師與學生，提供個人化的線上一對一教學體驗。
+              <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
+                連接全台灣優質教師與學生，提供個人化的線上一對一視訊教學體驗與支付安全保證。
                 <br />
-                專業師資、彈性時間、量身定制的學習方案。
+                專業師資、彈性時間、量身訂製的學習方案，以及自由無抽成的兼職教課環境。
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button 
                   size="lg" 
-                  className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-6 text-lg"
+                  className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
                 >
                   成為 No Limit Tutor 首批元老級教師
+                  <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="border-orange-600 text-orange-600 hover:bg-orange-50 px-8 py-6 text-lg"
+                  className="border-2 border-amber-500 text-amber-600 hover:bg-amber-50 px-8 py-6 text-lg font-semibold transition-all duration-300"
                   onClick={() => scrollToSection('features')}
                 >
                   了解更多
@@ -117,35 +105,36 @@ const Index = () => {
             </div>
             
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-orange-600 rounded-3xl transform rotate-3" />
-              <Card className="relative bg-white p-8 rounded-3xl shadow-xl">
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-400/20 to-orange-400/20 rounded-3xl transform rotate-2 blur-sm" />
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-orange-500/10 rounded-3xl transform -rotate-1" />
+              <Card className="relative bg-white/95 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border border-amber-200">
                 <div className="space-y-6">
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-                      <BookOpen className="w-6 h-6 text-orange-600" />
+                    <div className="w-14 h-14 bg-gradient-to-br from-amber-100 to-orange-100 rounded-full flex items-center justify-center">
+                      <BookOpen className="w-7 h-7 text-amber-600" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900">個人化學習</h3>
+                      <h3 className="font-bold text-gray-900 text-lg">個人化學習</h3>
                       <p className="text-sm text-gray-600">根據學生需求量身定制課程</p>
                     </div>
                   </div>
                   
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                      <Video className="w-6 h-6 text-blue-600" />
+                    <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full flex items-center justify-center">
+                      <Video className="w-7 h-7 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900">視訊教學</h3>
+                      <h3 className="font-bold text-gray-900 text-lg">視訊教學</h3>
                       <p className="text-sm text-gray-600">高品質線上一對一互動</p>
                     </div>
                   </div>
                   
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                      <Star className="w-6 h-6 text-green-600" />
+                    <div className="w-14 h-14 bg-gradient-to-br from-green-100 to-emerald-100 rounded-full flex items-center justify-center">
+                      <Star className="w-7 h-7 text-green-600" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900">優質師資</h3>
+                      <h3 className="font-bold text-gray-900 text-lg">優質師資</h3>
                       <p className="text-sm text-gray-600">經驗豐富的專業教師</p>
                     </div>
                   </div>
@@ -157,118 +146,193 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 bg-white">
+      <section id="features" className="py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">功能特色</h2>
-            <p className="text-xl text-gray-600">突破規則，知識無限 - 讓每個人都能享受優質的一對一教學</p>
+          <div className="text-center mb-20">
+            <div className="inline-block bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              功能特色
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">突破規則，知識無限</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">讓每個人都能享受優質的一對一教學</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-xl transition-all duration-300 border-0 bg-gradient-to-br from-amber-50 to-orange-50">
               <CardHeader>
-                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                  <Users className="w-6 h-6 text-orange-600" />
+                <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center mb-4">
+                  <Users className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle>師資介紹與篩選</CardTitle>
+                <CardTitle className="text-xl">師資介紹與篩選</CardTitle>
                 <CardDescription>智能推薦算法，根據熱門度、評分、價格等綜合排序</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• 依科目、價格、地區篩選</li>
-                  <li>• 可授課時間查詢</li>
-                  <li>• 星級評分系統</li>
-                  <li>• 學生評價展示</li>
+                <ul className="space-y-3 text-sm text-gray-600">
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
+                    <span>依科目、價格、地區篩選</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
+                    <span>可授課時間查詢</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
+                    <span>星級評分系統</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
+                    <span>學生評價展示</span>
+                  </li>
                 </ul>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-xl transition-all duration-300 border-0 bg-gradient-to-br from-blue-50 to-indigo-50">
               <CardHeader>
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <Clock className="w-6 h-6 text-blue-600" />
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-4">
+                  <Clock className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle>彈性預約系統</CardTitle>
+                <CardTitle className="text-xl">彈性預約系統</CardTitle>
                 <CardDescription>互動式時段選擇，即時預約確認</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• 25分鐘試教課程</li>
-                  <li>• 4、8、12、16堂課選擇</li>
-                  <li>• 自動月扣款訂閱</li>
-                  <li>• 隨時取消訂閱</li>
+                <ul className="space-y-3 text-sm text-gray-600">
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full" />
+                    <span>25分鐘試教課程</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full" />
+                    <span>4、8、12、16堂課選擇</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full" />
+                    <span>自動月扣款訂閱</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full" />
+                    <span>隨時取消訂閱</span>
+                  </li>
                 </ul>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-xl transition-all duration-300 border-0 bg-gradient-to-br from-green-50 to-emerald-50">
               <CardHeader>
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                  <Video className="w-6 h-6 text-green-600" />
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-4">
+                  <Video className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle>視訊教學平台</CardTitle>
+                <CardTitle className="text-xl">視訊教學平台</CardTitle>
                 <CardDescription>專業線上教室，支持多種互動功能</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• 高品質視訊通話</li>
-                  <li>• 螢幕分享功能</li>
-                  <li>• 課程筆記系統</li>
-                  <li>• 課後存取資料</li>
+                <ul className="space-y-3 text-sm text-gray-600">
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full" />
+                    <span>高品質視訊通話</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full" />
+                    <span>螢幕分享功能</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full" />
+                    <span>課程筆記系統</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full" />
+                    <span>課後存取資料</span>
+                  </li>
                 </ul>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-xl transition-all duration-300 border-0 bg-gradient-to-br from-purple-50 to-pink-50">
               <CardHeader>
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                  <MessageSquare className="w-6 h-6 text-purple-600" />
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-4">
+                  <MessageSquare className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle>安全聊天系統</CardTitle>
+                <CardTitle className="text-xl">安全聊天系統</CardTitle>
                 <CardDescription>加密通訊，保護用戶隱私</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• 文字即時聊天</li>
-                  <li>• 圖片檔案傳送</li>
-                  <li>• 基本加密保護</li>
-                  <li>• 25MB檔案限制</li>
+                <ul className="space-y-3 text-sm text-gray-600">
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full" />
+                    <span>文字即時聊天</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full" />
+                    <span>圖片檔案傳送</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full" />
+                    <span>基本加密保護</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full" />
+                    <span>25MB檔案限制</span>
+                  </li>
                 </ul>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-xl transition-all duration-300 border-0 bg-gradient-to-br from-yellow-50 to-orange-50">
               <CardHeader>
-                <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
-                  <DollarSign className="w-6 h-6 text-yellow-600" />
+                <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mb-4">
+                  <DollarSign className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle>透明收費機制</CardTitle>
+                <CardTitle className="text-xl">透明收費機制</CardTitle>
                 <CardDescription>公平定價，支持多種支付方式</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• 試教課50%優惠</li>
-                  <li>• 30天無條件退款</li>
-                  <li>• 綠界金流整合</li>
-                  <li>• 信用卡支付</li>
+                <ul className="space-y-3 text-sm text-gray-600">
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-yellow-500 rounded-full" />
+                    <span>試教課50%優惠</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-yellow-500 rounded-full" />
+                    <span>30天無條件退款</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-yellow-500 rounded-full" />
+                    <span>綠界金流整合</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-yellow-500 rounded-full" />
+                    <span>信用卡支付</span>
+                  </li>
                 </ul>
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-xl transition-all duration-300 border-0 bg-gradient-to-br from-red-50 to-rose-50">
               <CardHeader>
-                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                  <Shield className="w-6 h-6 text-red-600" />
+                <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-rose-500 rounded-2xl flex items-center justify-center mb-4">
+                  <Shield className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle>完善保障機制</CardTitle>
+                <CardTitle className="text-xl">完善保障機制</CardTitle>
                 <CardDescription>多重保護，確保教學品質</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• 課程發生認證</li>
-                  <li>• No-Show處理</li>
-                  <li>• 投訴檢舉系統</li>
-                  <li>• 客服爭議處理</li>
+                <ul className="space-y-3 text-sm text-gray-600">
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-red-500 rounded-full" />
+                    <span>課程發生認證</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-red-500 rounded-full" />
+                    <span>No-Show處理</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-red-500 rounded-full" />
+                    <span>投訴檢舉系統</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-red-500 rounded-full" />
+                    <span>客服爭議處理</span>
+                  </li>
                 </ul>
               </CardContent>
             </Card>
@@ -277,11 +341,13 @@ const Index = () => {
       </section>
 
       {/* Learning Process */}
-      <section id="process" className="py-20 bg-gray-50">
+      <section id="process" className="py-24 bg-gradient-to-br from-gray-50 to-amber-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">學習流程</h2>
-            <p className="text-xl text-gray-600">簡單四步，開始您的學習之旅</p>
+          <div className="text-center mb-20">
+            <div className="inline-block bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              學習流程
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">簡單四步，開始您的學習之旅</h2>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -290,38 +356,42 @@ const Index = () => {
                 step: "1",
                 title: "選擇教師",
                 description: "瀏覽師資介紹，根據科目、價格、評分篩選合適的教師",
-                icon: <Users className="w-6 h-6" />
+                icon: <Users className="w-8 h-8" />,
+                color: "from-amber-500 to-orange-500"
               },
               {
                 step: "2", 
                 title: "預約試教",
                 description: "選擇合適時間，預約25分鐘試教課程，體驗教學品質",
-                icon: <Clock className="w-6 h-6" />
+                icon: <Clock className="w-8 h-8" />,
+                color: "from-blue-500 to-indigo-500"
               },
               {
                 step: "3",
                 title: "開始學習",
                 description: "進入視訊教室，享受一對一個人化教學體驗",
-                icon: <Video className="w-6 h-6" />
+                icon: <Video className="w-8 h-8" />,
+                color: "from-green-500 to-emerald-500"
               },
               {
                 step: "4",
                 title: "持續進步",
                 description: "訂閱正式課程，與教師建立長期學習關係",
-                icon: <Star className="w-6 h-6" />
+                icon: <Star className="w-8 h-8" />,
+                color: "from-purple-500 to-pink-500"
               }
             ].map((item, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold">
+              <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm">
+                <CardHeader className="pb-4">
+                  <div className={`w-20 h-20 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg`}>
+                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-900 font-bold text-lg">
                       {item.step}
                     </div>
                   </div>
-                  <CardTitle className="text-lg">{item.title}</CardTitle>
+                  <CardTitle className="text-xl font-bold">{item.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-gray-600">{item.description}</p>
+                  <p className="text-gray-600 leading-relaxed">{item.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -330,61 +400,66 @@ const Index = () => {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="py-20 bg-white">
+      <section id="pricing" className="py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">收費方式</h2>
-            <p className="text-xl text-gray-600">透明公平的定價機制，讓學習更有價值</p>
+          <div className="text-center mb-20">
+            <div className="inline-block bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              收費方式
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">透明公平的定價機制</h2>
+            <p className="text-xl text-gray-600">讓學習更有價值</p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="border-2 border-orange-200 hover:border-orange-400 transition-colors">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="border-2 border-amber-200 hover:border-amber-400 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-amber-50 to-orange-50">
               <CardHeader className="text-center">
-                <Badge className="w-fit mx-auto mb-4 bg-orange-100 text-orange-800">體驗課程</Badge>
-                <CardTitle className="text-2xl">試教課程</CardTitle>
+                <Badge className="w-fit mx-auto mb-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white">體驗課程</Badge>
+                <CardTitle className="text-2xl font-bold">試教課程</CardTitle>
                 <CardDescription>25分鐘體驗</CardDescription>
-                <div className="text-3xl font-bold text-orange-600 mt-4">
+                <div className="text-3xl font-bold text-amber-600 mt-4">
                   正式課程 50% 折扣
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
-                <ul className="space-y-2">
-                  <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full" />
+                <ul className="space-y-3">
+                  <li className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
                     <span className="text-sm">25分鐘一對一教學</span>
                   </li>
-                  <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full" />
+                  <li className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
                     <span className="text-sm">了解教師教學風格</span>
                   </li>
-                  <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full" />
+                  <li className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
                     <span className="text-sm">不滿意可退費</span>
                   </li>
                 </ul>
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-blue-200 hover:border-blue-400 transition-colors">
-              <CardHeader className="text-center">
-                <Badge className="w-fit mx-auto mb-4 bg-blue-100 text-blue-800">推薦方案</Badge>
-                <CardTitle className="text-2xl">正式課程</CardTitle>
+            <Card className="border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-blue-50 to-indigo-50 relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <Badge className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-1">推薦方案</Badge>
+              </div>
+              <CardHeader className="text-center pt-8">
+                <CardTitle className="text-2xl font-bold">正式課程</CardTitle>
                 <CardDescription>50分鐘完整課程</CardDescription>
                 <div className="text-3xl font-bold text-blue-600 mt-4">
                   教師定價 × 1.25
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
-                <ul className="space-y-2">
-                  <li className="flex items-center space-x-2">
+                <ul className="space-y-3">
+                  <li className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-blue-500 rounded-full" />
                     <span className="text-sm">4/8/12/16堂課選擇</span>
                   </li>
-                  <li className="flex items-center space-x-2">
+                  <li className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-blue-500 rounded-full" />
                     <span className="text-sm">自動月扣款</span>
                   </li>
-                  <li className="flex items-center space-x-2">
+                  <li className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-blue-500 rounded-full" />
                     <span className="text-sm">隨時取消訂閱</span>
                   </li>
@@ -392,26 +467,26 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-green-200 hover:border-green-400 transition-colors">
+            <Card className="border-2 border-green-200 hover:border-green-400 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-green-50 to-emerald-50">
               <CardHeader className="text-center">
-                <Badge className="w-fit mx-auto mb-4 bg-green-100 text-green-800">品質保證</Badge>
-                <CardTitle className="text-2xl">退款保障</CardTitle>
+                <Badge className="w-fit mx-auto mb-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white">品質保證</Badge>
+                <CardTitle className="text-2xl font-bold">退款保障</CardTitle>
                 <CardDescription>30天保證期</CardDescription>
                 <div className="text-3xl font-bold text-green-600 mt-4">
                   100% 退款
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
-                <ul className="space-y-2">
-                  <li className="flex items-center space-x-2">
+                <ul className="space-y-3">
+                  <li className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-green-500 rounded-full" />
                     <span className="text-sm">購買後30天內</span>
                   </li>
-                  <li className="flex items-center space-x-2">
+                  <li className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-green-500 rounded-full" />
                     <span className="text-sm">未完成課程退款</span>
                   </li>
-                  <li className="flex items-center space-x-2">
+                  <li className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-green-500 rounded-full" />
                     <span className="text-sm">無條件申請</span>
                   </li>
@@ -423,62 +498,57 @@ const Index = () => {
       </section>
 
       {/* Teacher CTA */}
-      <section id="teacher" className="py-20 bg-gradient-to-br from-orange-50 to-orange-100">
+      <section id="teacher" className="py-24 bg-gradient-to-br from-amber-100 to-orange-100">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <div className="inline-block bg-white/80 text-amber-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              教師招募
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
               成為首批元老級教師
             </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              留下您的電子郵件，我們將在平台上線時第一時間通知您，並邀請您成為
+            <p className="text-xl text-gray-600 mb-12 leading-relaxed">
+              留下您的聯繫方式，我們將在平台上線時第一時間通知您，並邀請您成為
               <br />
               No Limit Tutor 的元老級教師
             </p>
             <Button 
               size="lg" 
-              className="bg-orange-600 hover:bg-orange-700 text-white px-12 py-6 text-xl"
+              className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white px-12 py-6 text-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
             >
               立即加入
+              <ArrowRight className="ml-2 w-6 h-6" />
             </Button>
-            <p className="text-sm text-gray-500 mt-4">
+            <p className="text-sm text-gray-500 mt-6">
               * 完全免費，我們承諾不會向您收取任何費用
             </p>
           </div>
         </div>
       </section>
 
-      {/* Email Collection */}
-      <section className="py-20 bg-white">
+      {/* Early Access CTA */}
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">搶先體驗</h2>
-            <p className="text-xl text-gray-600 mb-8">
-              訂閱我們的通知，第一時間了解 No Limit Tutor 最新動態
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="inline-block bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              搶先體驗
+            </div>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">搶先體驗</h2>
+            <p className="text-xl text-gray-600 mb-12">
+              第一時間了解 No Limit Tutor 最新動態
             </p>
             
-            <form onSubmit={handleEmailSubmit} className="space-y-4">
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Input
-                  type="email"
-                  placeholder="請輸入您的電子郵件地址"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="flex-1 px-4 py-3 text-lg"
-                />
-                <Button 
-                  type="submit" 
-                  size="lg" 
-                  disabled={isSubmitting}
-                  className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg"
-                >
-                  {isSubmitting ? '提交中...' : '立即訂閱'}
-                </Button>
-              </div>
-            </form>
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white px-12 py-6 text-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              onClick={() => window.open('https://forms.gle/TTiaHuDGhchzb4WD9', '_blank')}
+            >
+              立即訂閱
+              <ArrowRight className="ml-2 w-6 h-6" />
+            </Button>
             
-            <p className="text-sm text-gray-500 mt-4">
+            <p className="text-sm text-gray-500 mt-6">
               * 完全免費，我們承諾不會向您收取任何費用
             </p>
           </div>
@@ -486,22 +556,29 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-gray-900">
+      <footer className="py-16 bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
-                <GraduationCap className="w-5 h-5 text-white" />
+            <div className="flex items-center space-x-3 mb-6 md:mb-0">
+              <div className="w-10 h-10 bg-transparent rounded-xl flex items-center justify-center">
+                <img 
+                  src="/lovable-uploads/4e11ff9d-5010-4b7a-b3e5-9400b087e145.png" 
+                  alt="No Limit Tutor Logo"
+                  className="w-10 h-10 object-contain brightness-0 invert"
+                />
               </div>
-              <span className="text-xl font-bold text-white">No Limit Tutor</span>
+              <div className="flex flex-col">
+                <span className="text-xl font-bold text-white">No Limit Tutor</span>
+                <span className="text-sm text-amber-400 font-medium">無限家教</span>
+              </div>
             </div>
             
             <div className="text-center md:text-left">
-              <p className="text-gray-400 mb-2">
+              <p className="text-gray-400 mb-4 text-lg">
                 突破規則，知識無限 - 讓每個人都能享受優質的一對一教學
               </p>
               <p className="text-gray-500 text-sm">
-                © 2024 No Limit Tutor. 保留所有權利。
+                © 2024 No Limit Tutor. No Limit Tutor 無限家教為睿思博遠有限公司註冊之商標，All rights reserved
               </p>
             </div>
           </div>
