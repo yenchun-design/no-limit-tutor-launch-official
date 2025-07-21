@@ -39,10 +39,17 @@ const Index = () => {
                   No Limit Tutor<br />
                   <span className="text-primary">無限家教</span>
                 </h1>
-                <p className="text-xl text-muted-foreground leading-relaxed">
-                  連接全台灣優質教師與學生，提供個人化的線上一對一視訊教學體驗與支付安全保證。<br />
-                  專業師資、彈性時間、量身訂製的學習方案，以及自由無抽成的兼職教課環境
-                </p>
+                <div className="space-y-3 text-xl text-foreground leading-relaxed">
+                  <p>
+                    連接全台灣優質教師與學生，提供個人化的線上一對一視訊教學體驗、訂課系統、自動上課通知與支付安全保證。
+                  </p>
+                  <p>
+                    專業師資、彈性時間、為學生量身訂製的學習方案
+                  </p>
+                  <p>
+                    自由、民主、群眾導向，無抽成的兼職教課環境
+                  </p>
+                </div>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
