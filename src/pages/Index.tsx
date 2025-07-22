@@ -53,10 +53,10 @@ const Index = () => {
 
       {/* Hero Section */}
       <section id="home" className="relative overflow-hidden bg-gradient-to-br from-amber-400 via-orange-400 to-red-400">
-        <div className="relative container mx-auto px-4 py-12">
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">
-              <div className="space-y-4">
+        <div className="relative container mx-auto px-4 py-16">
+          <div className="max-w-6xl mx-auto">
+            <div className="space-y-8">
+              <div className="space-y-6">
                 <h1 className="text-5xl md:text-6xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
                   No Limit Tutor<br />
                   無限家教
@@ -67,36 +67,36 @@ const Index = () => {
                 </h2>
               </div>
               
-              <div className="space-y-4 text-lg text-black leading-relaxed max-w-2xl bg-white border-6 border-black p-6 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
-                <p className="font-bold text-lg">
+              <div className="space-y-6 text-xl text-black leading-relaxed max-w-5xl bg-white border-6 border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+                <p className="font-bold text-xl">
                   No Limit Tutor 是專為台灣師生打造的線上教學平台，讓老師自主開課、學生自由選師，透過平台完成預約、付款與視訊教學，全程安全透明。
                 </p>
-                <p className="font-bold text-base">
+                <p className="font-bold text-lg">
                   我們不從教師收入抽成，保障服務費由學生端負擔，讓教學更自由、收費更公平。
                 </p>
-                <div className="space-y-3 bg-gradient-to-r from-orange-100 to-amber-100 border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <div className="space-y-4 bg-gradient-to-r from-orange-100 to-amber-100 border-4 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                   <div className="flex items-center space-x-3">
                     <div className="w-4 h-4 bg-red-500 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
-                    <span className="font-black text-base">不滿意試教？全額退費</span>
+                    <span className="font-black text-lg">不滿意試教？全額退費</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-4 h-4 bg-blue-500 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
-                    <span className="font-black text-base">沒有綁約、沒有抽成、沒有名目費用</span>
+                    <span className="font-black text-lg">沒有綁約、沒有抽成、沒有名目費用</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-4 h-4 bg-green-500 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
-                    <span className="font-black text-base">教學與學習皆擁有真正的選擇權</span>
+                    <span className="font-black text-lg">教學與學習皆擁有真正的選擇權</span>
                   </div>
                 </div>
-                <div className="bg-gradient-to-r from-orange-300 to-red-300 border-6 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-                  <p className="font-black text-black text-lg">
+                <div className="bg-gradient-to-r from-orange-300 to-red-300 border-6 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                  <p className="font-black text-black text-xl">
                     現在開放招募首批元老教師與早鳥學生<br />
                     共同建立一個由群眾驅動的自主學習社群！
                   </p>
                 </div>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <div className="flex flex-col sm:flex-row gap-6 pt-4">
                 <Button 
                   size="lg" 
                   className="bg-orange-500 hover:bg-orange-600 text-black border-6 border-white shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
@@ -113,7 +113,7 @@ const Index = () => {
                   了解更多
                 </Button>
               </div>
-              <div className="text-center">
+              <div className="text-center pt-2">
                 <p className="text-sm font-bold text-black">
                   * 完全免費，我們承諾不會向您收取任何費用
                 </p>
@@ -124,7 +124,7 @@ const Index = () => {
       </section>
 
       {/* Three Service Principles Section */}
-      <section className="py-16 bg-gradient-to-br from-orange-100 to-amber-100">
+      <section className="py-20 bg-gradient-to-br from-orange-100 to-amber-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-8 border-black px-8 py-4 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mb-8 inline-block transform rotate-1">
