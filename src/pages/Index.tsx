@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -56,47 +57,88 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="relative overflow-hidden bg-amber-400">
-        <div className="relative container mx-auto px-4 py-24">
+      <section id="home" className="relative overflow-hidden bg-gradient-to-br from-amber-400 via-orange-400 to-red-400">
+        <div className="relative container mx-auto px-4 py-16">
+          {/* Three Service Principles - Now at the top */}
+          <div className="mb-16">
+            <div className="inline-flex items-center space-x-2 bg-white border-4 border-black px-6 py-3 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
+              <div className="w-3 h-3 bg-red-500 border-2 border-black" />
+              <span className="text-sm font-black text-black uppercase tracking-wide">No Limit Tutor 的三大服務主張</span>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              <div className="bg-gradient-to-br from-orange-100 to-amber-100 border-6 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] p-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-16 h-16 bg-amber-500 border-4 border-black flex items-center justify-center flex-shrink-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <BookOpen className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-black text-black text-lg uppercase mb-2">民主式、群眾導向平台</h3>
+                    <p className="text-sm text-black font-bold">老師自由授課，學生自選課題，無需綁定固定教材或長期合約</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-br from-orange-100 to-amber-100 border-6 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] p-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-16 h-16 bg-amber-500 border-4 border-black flex items-center justify-center flex-shrink-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <Video className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-black text-black text-lg uppercase mb-2">視訊教學</h3>
+                    <p className="text-sm text-black font-bold">簡潔、穩定的線上預約與視訊上課系統，實現一對一學習的彈性與效率</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-br from-orange-100 to-amber-100 border-6 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] p-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-16 h-16 bg-amber-500 border-4 border-black flex items-center justify-center flex-shrink-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <Star className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-black text-black text-lg uppercase mb-2">不抽成、沒有名目費用</h3>
+                    <p className="text-sm text-black font-bold">NLT 不從教師收入中抽成，保障服務費由學生支付。<br />老師拿回完整報酬，打造民主、群眾導向的線上學習空間。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-                <div className="inline-flex items-center space-x-2 bg-white border-4 border-black px-6 py-3 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-                  <div className="w-3 h-3 bg-orange-500 border-2 border-black" />
-                  <span className="text-sm font-black text-black uppercase tracking-wide">No Limit Tutor 的三大服務主張</span>
-                </div>
-              
               <div className="space-y-4">
-                <h1 className="text-5xl md:text-6xl font-black text-black leading-tight tracking-tight uppercase">
+                <h1 className="text-5xl md:text-6xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
                   No Limit Tutor 無限家教
                 </h1>
-                <h2 className="text-2xl md:text-3xl font-black text-black leading-tight bg-white px-4 py-2 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1">
+                <h2 className="text-2xl md:text-3xl font-black text-black leading-tight bg-white px-6 py-4 border-6 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1">
                   台灣首個民主、群眾導向的線上一對一家教平台
                 </h2>
               </div>
               
-              <div className="space-y-6 text-lg text-black leading-relaxed max-w-2xl bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-                <p className="font-bold">
+              <div className="space-y-6 text-lg text-black leading-relaxed max-w-2xl bg-white border-6 border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+                <p className="font-bold text-xl">
                   No Limit Tutor 是專為台灣師生打造的線上教學平台，讓老師自主開課、學生自由選師，透過平台完成預約、付款與視訊教學，全程安全透明。
                 </p>
-                <p className="font-bold">
+                <p className="font-bold text-lg">
                   我們不從教師收入抽成，服務費由學生端負擔，讓教學更自由、收費更公平。
                 </p>
-                <div className="space-y-3 bg-orange-100 border-4 border-black p-4">
+                <div className="space-y-4 bg-gradient-to-r from-orange-100 to-amber-100 border-4 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                   <div className="flex items-center space-x-3">
-                    <div className="w-4 h-4 bg-red-500 border-2 border-black" />
-                    <span className="font-black">不滿意試教？全額退費</span>
+                    <div className="w-4 h-4 bg-red-500 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
+                    <span className="font-black text-lg">不滿意試教？全額退費</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-4 h-4 bg-blue-500 border-2 border-black" />
-                    <span className="font-black">沒有綁約、沒有抽成、沒有名目費用</span>
+                    <div className="w-4 h-4 bg-blue-500 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
+                    <span className="font-black text-lg">沒有綁約、沒有抽成、沒有名目費用</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-4 h-4 bg-green-500 border-2 border-black" />
-                    <span className="font-black">教學與學習皆擁有真正的選擇權</span>
+                    <div className="w-4 h-4 bg-green-500 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
+                    <span className="font-black text-lg">教學與學習皆擁有真正的選擇權</span>
                   </div>
                 </div>
-                <div className="bg-orange-300 border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                  <p className="font-black text-black">
+                <div className="bg-gradient-to-r from-orange-300 to-red-300 border-6 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                  <p className="font-black text-black text-xl">
                     現在開放招募首批元老教師與早鳥學生<br />
                     共同建立一個由群眾驅動的自主學習社群！
                   </p>
@@ -106,15 +148,15 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button 
                   size="lg" 
-                  className="bg-orange-500 hover:bg-orange-400 text-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-lg px-8 py-6 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                  className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-400 hover:to-red-400 text-white border-6 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] font-black text-xl px-10 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
                   onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
                 >
                   成為首批元老級教師
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 w-6 h-6" />
                 </Button>
                 <Button 
                   size="lg" 
-                  className="bg-white hover:bg-gray-100 text-black border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-lg px-8 py-6 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                  className="bg-white hover:bg-gray-100 text-black border-6 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] font-black text-xl px-10 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
                   onClick={() => scrollToSection('features')}
                 >
                   了解更多
@@ -123,37 +165,23 @@ const Index = () => {
             </div>
             
             <div className="relative">
-              <div className="absolute inset-0 bg-orange-500 border-4 border-black transform rotate-3" />
-              <div className="absolute inset-0 bg-red-400 border-4 border-black transform -rotate-2" />
-              <div className="relative bg-white border-8 border-black p-8 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)]">
-                  <div className="space-y-8">
-                  <div className="flex items-start space-x-4 bg-orange-100 border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                    <div className="w-16 h-16 bg-orange-500 border-4 border-black flex items-center justify-center flex-shrink-0">
-                      <BookOpen className="w-8 h-8 text-white" />
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-500 border-6 border-black transform rotate-3 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]" />
+              <div className="absolute inset-0 bg-gradient-to-br from-red-400 to-pink-400 border-6 border-black transform -rotate-2 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]" />
+              <div className="relative bg-white border-8 border-black p-8 shadow-[20px_20px_0px_0px_rgba(0,0,0,1)]">
+                <div className="text-center">
+                  <h3 className="text-3xl font-black text-black mb-8 uppercase">立即體驗</h3>
+                  <div className="space-y-6">
+                    <div className="bg-gradient-to-r from-amber-100 to-orange-100 border-4 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                      <p className="font-black text-black text-lg">25分鐘試教課程</p>
+                      <p className="font-bold text-black">體驗教師教學風格</p>
                     </div>
-                    <div className="flex-1">
-                      <h3 className="font-black text-black text-lg uppercase"><strong>民主式、群眾導向平台</strong></h3>
-                      <p className="text-sm text-black font-bold">老師自由授課，學生自選課題，無需綁定固定教材或長期合約</p>
+                    <div className="bg-gradient-to-r from-blue-100 to-purple-100 border-4 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                      <p className="font-black text-black text-lg">50分鐘正式課程</p>
+                      <p className="font-bold text-black">深度一對一教學</p>
                     </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4 bg-orange-100 border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                    <div className="w-16 h-16 bg-orange-500 border-4 border-black flex items-center justify-center flex-shrink-0">
-                      <Video className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-black text-black text-lg uppercase">視訊教學</h3>
-                      <p className="text-sm text-black font-bold">簡潔、穩定的線上預約與視訊上課系統，實現一對一學習的彈性與效率</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4 bg-orange-100 border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                    <div className="w-16 h-16 bg-orange-500 border-4 border-black flex items-center justify-center flex-shrink-0">
-                      <Star className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-black text-black text-lg uppercase">不抽成、沒有名目費用</h3>
-                      <p className="text-sm text-black font-bold">NLT 不從教師收入中抽成，保障服務費由學生支付。<br />老師拿回完整報酬，打造民主、群眾導向的線上學習空間。</p>
+                    <div className="bg-gradient-to-r from-green-100 to-teal-100 border-4 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                      <p className="font-black text-black text-lg">彈性訂閱制度</p>
+                      <p className="font-bold text-black">隨時調整學習進度</p>
                     </div>
                   </div>
                 </div>
@@ -646,16 +674,16 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-start gap-8">
             <div className="flex items-center space-x-3">
-              <div className="w-16 h-16 bg-amber-400 rounded-2xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-amber-400 border-4 border-white flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)]">
                 <img 
-                  src="/lovable-uploads/a4afac6a-13e5-4713-8b1d-66db48ddd8e9.png" 
+                  src="/lovable-uploads/cc9d776e-5a85-4800-a1be-a3bc9ff7c138.png" 
                   alt="No Limit Tutor Logo"
-                  className="w-12 h-12 object-contain"
+                  className="w-8 h-8 object-contain"
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-2xl font-black text-white uppercase tracking-wide">No Limit Tutor</span>
-                <span className="text-sm text-amber-400 font-black uppercase">無限家教</span>
+                <span className="text-xl font-black text-white uppercase">No Limit Tutor</span>
+                <span className="text-sm text-amber-400 font-black">無限家教</span>
               </div>
             </div>
             
