@@ -236,7 +236,8 @@ const Privacy = () => {
                 突破規則，知識無限 - 讓每個人都能享受優質的一對一教學
               </p>
               <p className="text-gray-400 text-sm font-medium">
-                © 2025 No Limit Tutor. No Limit Tutor 無限家教為睿思博遠有限公司註冊之商標，All rights reserved
+                © 2025 No Limit Tutor. All rights reserved.<br />
+                No Limit Tutor 無限家教為睿思博遠有限公司註冊之商標
               </p>
             </div>
           </div>
