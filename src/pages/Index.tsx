@@ -32,7 +32,7 @@ const Index = () => {
       <header className="sticky top-0 z-50 w-full border-b-4 border-black bg-white shadow-[0_4px_0px_0px_rgba(0,0,0,1)]">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-yellow-400 border-4 border-black flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+            <div className="w-12 h-12 bg-amber-400 border-4 border-black flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
               <img 
                 src="/lovable-uploads/cc9d776e-5a85-4800-a1be-a3bc9ff7c138.png" 
                 alt="No Limit Tutor Logo"
@@ -56,12 +56,12 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="relative overflow-hidden bg-pink-300">
+      <section id="home" className="relative overflow-hidden bg-amber-400">
         <div className="relative container mx-auto px-4 py-24">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
                 <div className="inline-flex items-center space-x-2 bg-white border-4 border-black px-6 py-3 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-                  <div className="w-3 h-3 bg-amber-500 border-2 border-black" />
+                  <div className="w-3 h-3 bg-orange-500 border-2 border-black" />
                   <span className="text-sm font-black text-black uppercase tracking-wide">No Limit Tutor 的三大服務主張</span>
                 </div>
               
@@ -69,7 +69,7 @@ const Index = () => {
                 <h1 className="text-5xl md:text-6xl font-black text-black leading-tight tracking-tight uppercase">
                   No Limit Tutor 無限家教
                 </h1>
-                <h2 className="text-2xl md:text-3xl font-black text-black leading-tight bg-yellow-300 px-4 py-2 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1">
+                <h2 className="text-2xl md:text-3xl font-black text-black leading-tight bg-white px-4 py-2 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1">
                   台灣首個民主、群眾導向的線上一對一家教平台
                 </h2>
               </div>
@@ -81,7 +81,7 @@ const Index = () => {
                 <p className="font-bold">
                   我們不從教師收入抽成，服務費由學生端負擔，讓教學更自由、收費更公平。
                 </p>
-                <div className="space-y-3 bg-amber-100 border-4 border-black p-4">
+                <div className="space-y-3 bg-orange-100 border-4 border-black p-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-4 h-4 bg-red-500 border-2 border-black" />
                     <span className="font-black">不滿意試教？全額退費</span>
@@ -95,7 +95,7 @@ const Index = () => {
                     <span className="font-black">教學與學習皆擁有真正的選擇權</span>
                   </div>
                 </div>
-                <div className="bg-blue-300 border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <div className="bg-orange-300 border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                   <p className="font-black text-black">
                     現在開放招募首批元老教師與早鳥學生<br />
                     共同建立一個由群眾驅動的自主學習社群！
@@ -106,7 +106,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button 
                   size="lg" 
-                  className="bg-amber-400 hover:bg-amber-300 text-black border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-lg px-8 py-6 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                  className="bg-orange-500 hover:bg-orange-400 text-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-lg px-8 py-6 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
                   onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
                 >
                   成為首批元老級教師
@@ -123,13 +123,13 @@ const Index = () => {
             </div>
             
             <div className="relative">
-              <div className="absolute inset-0 bg-blue-400 border-4 border-black transform rotate-3" />
+              <div className="absolute inset-0 bg-orange-500 border-4 border-black transform rotate-3" />
               <div className="absolute inset-0 bg-red-400 border-4 border-black transform -rotate-2" />
               <div className="relative bg-white border-8 border-black p-8 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)]">
                   <div className="space-y-8">
-                  <div className="flex items-start space-x-4 bg-amber-100 border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                    <div className="w-16 h-16 bg-amber-400 border-4 border-black flex items-center justify-center flex-shrink-0">
-                      <BookOpen className="w-8 h-8 text-black" />
+                  <div className="flex items-start space-x-4 bg-orange-100 border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <div className="w-16 h-16 bg-orange-500 border-4 border-black flex items-center justify-center flex-shrink-0">
+                      <BookOpen className="w-8 h-8 text-white" />
                     </div>
                     <div className="flex-1">
                       <h3 className="font-black text-black text-lg uppercase"><strong>民主式、群眾導向平台</strong></h3>
@@ -137,9 +137,9 @@ const Index = () => {
                     </div>
                   </div>
                   
-                  <div className="flex items-start space-x-4 bg-blue-100 border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                    <div className="w-16 h-16 bg-blue-400 border-4 border-black flex items-center justify-center flex-shrink-0">
-                      <Video className="w-8 h-8 text-black" />
+                  <div className="flex items-start space-x-4 bg-orange-100 border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <div className="w-16 h-16 bg-orange-500 border-4 border-black flex items-center justify-center flex-shrink-0">
+                      <Video className="w-8 h-8 text-white" />
                     </div>
                     <div className="flex-1">
                       <h3 className="font-black text-black text-lg uppercase">視訊教學</h3>
@@ -147,9 +147,9 @@ const Index = () => {
                     </div>
                   </div>
                   
-                  <div className="flex items-start space-x-4 bg-green-100 border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                    <div className="w-16 h-16 bg-green-400 border-4 border-black flex items-center justify-center flex-shrink-0">
-                      <Star className="w-8 h-8 text-black" />
+                  <div className="flex items-start space-x-4 bg-orange-100 border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <div className="w-16 h-16 bg-orange-500 border-4 border-black flex items-center justify-center flex-shrink-0">
+                      <Star className="w-8 h-8 text-white" />
                     </div>
                     <div className="flex-1">
                       <h3 className="font-black text-black text-lg uppercase">不抽成、沒有名目費用</h3>
@@ -164,15 +164,15 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-24 bg-yellow-300">
+      <section id="features" className="py-24 bg-orange-200">
         <div className="container mx-auto px-4">
-      <div className="text-center mb-20">
-        <div className="inline-block bg-white border-4 border-black px-6 py-3 text-sm font-black mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
-          功能特色
-        </div>
-        <h2 className="text-4xl md:text-5xl font-black text-black mb-6 bg-pink-300 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 uppercase">完整的教學生態系統</h2>
-        <p className="text-xl text-black font-bold max-w-3xl mx-auto bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">從師資篩選到課程管理，為您提供全方位的學習支援</p>
-      </div>
+          <div className="text-center mb-20">
+            <div className="inline-block bg-white border-4 border-black px-6 py-3 text-sm font-black mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
+              功能特色
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black text-black mb-6 bg-amber-400 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 uppercase">完整的教學生態系統</h2>
+            <p className="text-xl text-black font-bold max-w-3xl mx-auto bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">從師資篩選到課程管理，為您提供全方位的學習支援</p>
+          </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-amber-300 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-6">
@@ -359,13 +359,13 @@ const Index = () => {
       </section>
 
       {/* Learning Process */}
-      <section id="process" className="py-24 bg-green-300">
+      <section id="process" className="py-24 bg-orange-300">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
             <div className="inline-block bg-white border-4 border-black px-6 py-3 text-sm font-black mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
               學習流程
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-black mb-6 bg-yellow-300 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 uppercase">簡單三步，開始您的學習之旅</h2>
+            <h2 className="text-4xl md:text-5xl font-black text-black mb-6 bg-amber-400 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 uppercase">簡單三步，開始您的學習之旅</h2>
             <p className="text-xl text-black font-bold max-w-3xl mx-auto bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">從註冊到上課，我們讓整個過程變得簡單而順暢</p>
           </div>
           
@@ -410,23 +410,23 @@ const Index = () => {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="py-24 bg-blue-300">
+      <section id="pricing" className="py-24 bg-orange-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
             <div className="inline-block bg-white border-4 border-black px-6 py-3 text-sm font-black mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
               收費方式
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-black mb-6 bg-pink-300 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 uppercase">透明公平的定價機制</h2>
+            <h2 className="text-4xl md:text-5xl font-black text-black mb-6 bg-amber-400 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 uppercase">透明公平的定價機制</h2>
             <p className="text-xl text-black font-bold bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">為教師與學生創造雙贏的學習環境</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 bg-amber-300">
+            <div className="border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 bg-orange-300">
               <div className="text-center p-6">
                 <div className="bg-white border-4 border-black px-4 py-2 text-black font-black mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase">體驗課程</div>
                 <h3 className="text-2xl font-black text-black mb-2 uppercase">試教課程</h3>
                 <p className="font-bold text-black mb-4">25分鐘體驗</p>
-                <div className="text-3xl font-black text-black mt-4 bg-yellow-300 border-4 border-black p-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <div className="text-3xl font-black text-black mt-4 bg-amber-400 border-4 border-black p-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                   正式課程 50% 折扣
                 </div>
               </div>
@@ -448,12 +448,12 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 bg-blue-400 relative">
+            <div className="border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 bg-orange-400 relative">
               <div className="text-center p-6">
                 <div className="bg-white border-4 border-black px-4 py-2 text-black font-black mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase">進入課程</div>
                 <h3 className="text-2xl font-black text-black mb-2 uppercase">正式課程</h3>
                 <p className="font-bold text-black mb-4">50分鐘完整課程</p>
-                <div className="text-3xl font-black text-black mt-4 bg-yellow-300 border-4 border-black p-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <div className="text-3xl font-black text-black mt-4 bg-amber-400 border-4 border-black p-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                   教師定價 + 保障服務費
                 </div>
               </div>
@@ -472,7 +472,7 @@ const Index = () => {
                     <span className="text-sm font-bold text-black">隨時取消訂閱</span>
                   </li>
                 </ul>
-                <div className="bg-pink-200 border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <div className="bg-orange-200 border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                   <p className="text-sm font-black text-black mb-2 uppercase">保障服務費用以確保:</p>
                   <ul className="space-y-2 text-xs text-black font-bold">
                     <li className="flex items-center space-x-2">
@@ -496,12 +496,12 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 bg-green-300">
+            <div className="border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 bg-orange-300">
               <div className="text-center p-6">
                 <div className="bg-white border-4 border-black px-4 py-2 text-black font-black mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase">品質保證</div>
                 <h3 className="text-2xl font-black text-black mb-2 uppercase">退款保障</h3>
                 <p className="font-bold text-black mb-4">30天保證期</p>
-                <div className="text-3xl font-black text-black mt-4 bg-yellow-300 border-4 border-black p-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <div className="text-3xl font-black text-black mt-4 bg-amber-400 border-4 border-black p-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                   100% 退款
                 </div>
               </div>
@@ -527,13 +527,13 @@ const Index = () => {
       </section>
 
       {/* Teacher CTA */}
-      <section id="teacher" className="py-24 bg-purple-300">
+      <section id="teacher" className="py-24 bg-orange-400">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block bg-white border-4 border-black px-6 py-3 text-sm font-black mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
               教師招募
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-black mb-8 bg-yellow-300 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 uppercase">
+            <h2 className="text-4xl md:text-5xl font-black text-black mb-8 bg-amber-300 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 uppercase">
               成為首批元老級教師
             </h2>
             <div className="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12">
@@ -545,13 +545,13 @@ const Index = () => {
             </div>
             <Button 
               size="lg" 
-              className="bg-amber-400 hover:bg-amber-300 text-black border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-xl px-12 py-6 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+              className="bg-orange-500 hover:bg-orange-400 text-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-xl px-12 py-6 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
               onClick={() => window.open('https://forms.gle/6cYoa9Lt2P7Wy8uu5', '_blank')}
             >
               立即加入
               <ArrowRight className="ml-2 w-6 h-6" />
             </Button>
-            <div className="bg-pink-300 border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mt-6 inline-block">
+            <div className="bg-orange-300 border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mt-6 inline-block">
               <p className="text-sm text-black font-black uppercase">
                 * 完全免費，我們承諾不會向您收取任何費用
               </p>
@@ -561,13 +561,13 @@ const Index = () => {
       </section>
 
       {/* Student CTA */}
-      <section className="py-24 bg-amber-300">
+      <section className="py-24 bg-orange-300">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block bg-white border-4 border-black px-6 py-3 text-sm font-black mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
               學生招募
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-black mb-8 bg-pink-300 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 uppercase">
+            <h2 className="text-4xl md:text-5xl font-black text-black mb-8 bg-amber-400 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 uppercase">
               成為早鳥學生
             </h2>
             <div className="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12">
@@ -595,13 +595,13 @@ const Index = () => {
       </section>
 
       {/* Early Access CTA */}
-      <section className="py-24 bg-red-300">
+      <section className="py-24 bg-orange-200">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-block bg-white border-4 border-black px-6 py-3 text-sm font-black mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
               搶先追蹤
             </div>
-            <h2 className="text-4xl font-black text-black mb-6 bg-yellow-300 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 uppercase">搶先追蹤</h2>
+            <h2 className="text-4xl font-black text-black mb-6 bg-amber-400 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 uppercase">搶先追蹤</h2>
             <div className="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12">
               <p className="text-xl text-black font-bold">
                 進一步了解 No Limit Tutor 文化與價值訴求，以及平台努力的方向<br />
@@ -642,31 +642,31 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-16 bg-black border-t-8 border-yellow-400">
+      <footer className="py-16 bg-black">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-3 mb-6 md:mb-0">
-              <div className="w-12 h-12 bg-yellow-400 border-4 border-white flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
+          <div className="flex flex-col md:flex-row justify-between items-start gap-8">
+            <div className="flex items-center space-x-3">
+              <div className="w-16 h-16 bg-amber-400 rounded-2xl flex items-center justify-center">
                 <img 
-                  src="/lovable-uploads/51a45798-27ad-4620-99ff-003ad04c3aad.png" 
+                  src="/lovable-uploads/a4afac6a-13e5-4713-8b1d-66db48ddd8e9.png" 
                   alt="No Limit Tutor Logo"
-                  className="w-8 h-8 object-contain"
+                  className="w-12 h-12 object-contain"
                 />
               </div>
               <div className="flex flex-col">
                 <span className="text-2xl font-black text-white uppercase tracking-wide">No Limit Tutor</span>
-                <span className="text-sm text-yellow-400 font-black uppercase">無限家教</span>
+                <span className="text-sm text-amber-400 font-black uppercase">無限家教</span>
               </div>
             </div>
             
-            <div className="text-center md:text-left">
-              <p className="text-white mb-4 text-lg font-bold bg-pink-500 border-4 border-white p-4 shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
+            <div className="text-left flex-1 max-w-2xl">
+              <p className="text-white mb-6 text-lg font-bold">
                 突破規則，知識無限 - 讓每個人都能享受優質的一對一教學
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-4">
-                <a href="/privacy" className="text-black bg-yellow-400 hover:bg-yellow-300 text-sm font-black uppercase border-4 border-white px-4 py-2 shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] transition-colors">隱私條款</a>
+              <div className="flex flex-wrap gap-4 mb-6">
+                <a href="/privacy" className="text-amber-400 hover:text-amber-300 text-sm font-bold underline transition-colors">隱私條款</a>
               </div>
-              <p className="text-white text-sm font-bold bg-gray-800 border-2 border-white p-2">
+              <p className="text-gray-400 text-sm font-medium">
                 © 2025 No Limit Tutor. No Limit Tutor 無限家教為睿思博遠有限公司註冊之商標，All rights reserved
               </p>
             </div>
