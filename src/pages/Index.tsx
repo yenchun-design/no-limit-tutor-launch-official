@@ -69,23 +69,40 @@ const Index = () => {
               </div>
               
               <div className="space-y-4">
-                <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
-                  No Limit Tutor
+                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                  No Limit Tutor 無限家教
                 </h1>
-                <h2 className="text-3xl md:text-4xl font-bold text-amber-600 leading-tight">
-                  無限家教
+                <h2 className="text-2xl md:text-3xl font-bold text-amber-600 leading-tight">
+                  台灣首個民主、群眾導向的線上一對一家教平台
                 </h2>
               </div>
               
-              <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
-                No Limit Tutor 是一個專為台灣師生設計的線上真人一對一家教上課平台。
-                <br />
-                連結全台優質教師與學生，學生能自由選擇教師，並透過平台完成預約、視訊上課，與安全付款流程。
-                <br />
-                No Limit Tutor 保障試教課，不滿意可全額退費
-                <br />
-                NLT 的核心價值是提供公平、透明、對師生友善的教學環境，並提升用戶的自主教學及學習體驗。
-              </p>
+              <div className="space-y-6 text-lg text-gray-600 leading-relaxed max-w-2xl">
+                <p>
+                  No Limit Tutor 是專為台灣師生打造的線上教學平台，讓老師自主開課、學生自由選師，透過平台完成預約、付款與視訊教學，全程安全透明。
+                </p>
+                <p>
+                  我們不從教師收入抽成，服務費由學生端負擔，讓教學更自由、收費更公平。
+                </p>
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
+                    <span>不滿意試教？全額退費</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
+                    <span>沒有綁約、沒有抽成、沒有名目費用</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
+                    <span>教學與學習皆擁有真正的選擇權</span>
+                  </div>
+                </div>
+                <p className="font-semibold text-amber-700">
+                  現在開放招募首批元老教師與早鳥學生<br />
+                  共同建立一個由群眾驅動的自主學習社群！
+                </p>
+              </div>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button 
@@ -111,34 +128,34 @@ const Index = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-amber-400/20 to-orange-400/20 rounded-3xl transform rotate-2 blur-sm" />
               <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-orange-500/10 rounded-3xl transform -rotate-1" />
               <Card className="relative bg-white/95 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border border-amber-200">
-                <div className="space-y-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-14 h-14 bg-gradient-to-br from-amber-100 to-orange-100 rounded-full flex items-center justify-center">
+                  <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-14 h-14 bg-gradient-to-br from-amber-100 to-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
                       <BookOpen className="w-7 h-7 text-amber-600" />
                     </div>
-                    <div>
+                    <div className="flex-1">
                       <h3 className="font-bold text-gray-900 text-lg"><strong>民主式、群眾導向平台</strong></h3>
                       <p className="text-sm text-gray-600">老師自由授課，學生自選課題，無需綁定固定教材或長期合約</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-center space-x-4">
-                    <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full flex items-center justify-center">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full flex items-center justify-center flex-shrink-0">
                       <Video className="w-7 h-7 text-blue-600" />
                     </div>
-                    <div>
+                    <div className="flex-1">
                       <h3 className="font-bold text-gray-900 text-lg">視訊教學</h3>
                       <p className="text-sm text-gray-600">簡潔、穩定的線上預約與視訊上課系統，實現一對一學習的彈性與效率</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-center space-x-4">
-                    <div className="w-14 h-14 bg-gradient-to-br from-green-100 to-emerald-100 rounded-full flex items-center justify-center">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-14 h-14 bg-gradient-to-br from-green-100 to-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
                       <Star className="w-7 h-7 text-green-600" />
                     </div>
-                    <div>
+                    <div className="flex-1">
                       <h3 className="font-bold text-gray-900 text-lg">不抽成、沒有名目費用</h3>
-                      <p className="text-sm text-gray-600">NLT 不抽取教師收入，平台保障服務費由學生端支付，確保教師能獲得完整報酬，並降低平台對教師與學生的壓力與操控性，打造民主、群眾導向的線上學習環境。</p>
+                      <p className="text-sm text-gray-600">NLT 不從教師收入中抽成，保障服務費由學生支付。<br />老師拿回完整報酬，打造民主、群眾導向的線上學習空間。</p>
                     </div>
                   </div>
                 </div>
@@ -155,8 +172,8 @@ const Index = () => {
             <div className="inline-block bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
               功能特色
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">No Limit Tutor 的三大服務主張</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">讓每個人都能享受優質的一對一教學</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">完整的教學生態系統</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">從師資篩選到課程管理，為您提供全方位的學習支援</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -165,8 +182,8 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center mb-4">
                   <Users className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-xl">師資介紹與篩選</CardTitle>
-                <CardDescription>根據熱門度、評分、價格等綜合排序與篩選條件</CardDescription>
+                <CardTitle className="text-xl">智能師資媒合</CardTitle>
+                <CardDescription>多維度篩選，精準匹配最適合的教師</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3 text-sm text-gray-600">
@@ -436,10 +453,8 @@ const Index = () => {
             </Card>
 
             <Card className="border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-blue-50 to-indigo-50 relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <Badge className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-1">進入課程</Badge>
-              </div>
-              <CardHeader className="text-center pt-8">
+              <CardHeader className="text-center">
+                <Badge className="w-fit mx-auto mb-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white">進入課程</Badge>
                 <CardTitle className="text-2xl font-bold">正式課程</CardTitle>
                 <CardDescription>50分鐘完整課程</CardDescription>
                 <div className="text-3xl font-bold text-blue-600 mt-4">
@@ -447,6 +462,27 @@ const Index = () => {
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
+                <div className="mb-4 p-4 bg-blue-100/50 rounded-lg border border-blue-200">
+                  <p className="text-sm font-medium text-blue-800 mb-2">保障服務費用以確保:</p>
+                  <ul className="space-y-2 text-xs text-blue-700">
+                    <li className="flex items-center space-x-2">
+                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
+                      <span>平台內視訊、安全金流、試教課退費保障</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
+                      <span>排課系統（自動通知老師，不用寫訊息）</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
+                      <span>評價系統</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
+                      <span>安全回報機制</span>
+                    </li>
+                  </ul>
+                </div>
                 <ul className="space-y-3">
                   <li className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-blue-500 rounded-full" />
@@ -459,18 +495,6 @@ const Index = () => {
                   <li className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-blue-500 rounded-full" />
                     <span className="text-sm">隨時取消訂閱</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full" />
-                    <span className="text-sm">平台內視訊、安全金流、試教課退費保障</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full" />
-                    <span className="text-sm">排課系統（自動通知老師，不用寫訊息）</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full" />
-                    <span className="text-sm">評價系統與安全回報機制</span>
                   </li>
                 </ul>
               </CardContent>
@@ -536,6 +560,36 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Student CTA */}
+      <section className="py-24 bg-gradient-to-br from-blue-100 to-indigo-100">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-block bg-white/80 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              學生招募
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+              成為早鳥學生
+            </h2>
+            <p className="text-xl text-gray-600 mb-12 leading-relaxed">
+              加入 No Limit Tutor 的學習社群，享受最優質的一對一教學體驗
+              <br />
+              早鳥學生將享有特別優惠與專屬權益
+            </p>
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white px-12 py-6 text-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              onClick={() => window.open('#', '_blank')}
+            >
+              立即加入學習
+              <ArrowRight className="ml-2 w-6 h-6" />
+            </Button>
+            <p className="text-sm text-gray-500 mt-6">
+              * 早鳥用戶享有特殊優惠價格與專屬學習權益
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Early Access CTA */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
@@ -551,7 +605,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
                 size="lg" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-blue-600"
                 onClick={() => window.open('https://www.facebook.com/nolimittutor', '_blank')}
               >
                 追蹤臉書
@@ -560,7 +614,7 @@ const Index = () => {
               
               <Button 
                 size="lg" 
-                className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-pink-500"
                 onClick={() => window.open('https://www.instagram.com/no_limit_tutor/', '_blank')}
               >
                 追蹤 IG
@@ -569,7 +623,7 @@ const Index = () => {
               
               <Button 
                 size="lg" 
-                className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-amber-500"
                 onClick={() => window.open('https://forms.gle/6cYoa9Lt2P7Wy8uu5', '_blank')}
               >
                 填寫表單
