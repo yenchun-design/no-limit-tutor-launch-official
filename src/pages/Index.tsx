@@ -62,14 +62,14 @@ const Index = () => {
                     No Limit Tutor<br />
                     無限家教
                   </h1>
-                  <h2 className="text-3xl md:text-4xl font-black text-black leading-tight bg-white px-6 py-4 border-6 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1">
+                  <h2 className="text-4xl md:text-5xl font-black text-black leading-tight bg-white px-8 py-6 border-6 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1">
                     台灣首個民主、群眾導向的線上一對一家教平台
                   </h2>
                 </div>
                 
                 <div className="hidden lg:block flex-shrink-0">
                   <img 
-                    src="/lovable-uploads/364d3470-729e-41fa-85f9-7644676981ce.png" 
+                    src="/lovable-uploads/14031a01-40e6-445e-a3b8-86de374b35e9.png" 
                     alt="No Limit Tutor Logo" 
                     className="w-32 h-32 object-contain"
                   />
@@ -77,10 +77,10 @@ const Index = () => {
               </div>
               
               <div className="space-y-6 text-xl text-black leading-relaxed max-w-5xl bg-white border-6 border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
-                <p className="font-bold text-xl">
+                <p className="font-bold text-2xl">
                   No Limit Tutor 是專為台灣師生打造的線上教學平台，讓老師自主開課、學生自由選師，透過平台完成預約、付款與視訊教學，全程安全透明。
                 </p>
-                <p className="font-bold text-lg">
+                <p className="font-bold text-xl">
                   我們不從教師收入抽成，保障服務費由學生端負擔，讓教學更自由、收費更公平。
                 </p>
                 <div className="space-y-4 bg-gradient-to-r from-orange-100 to-amber-100 border-4 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
@@ -97,7 +97,7 @@ const Index = () => {
                     <span className="font-black text-lg">教學與學習皆擁有真正的選擇權</span>
                   </div>
                 </div>
-                <div className="bg-gradient-to-r from-orange-300 to-red-300 border-6 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                <div className="bg-gradient-to-r from-orange-200 to-red-200 border-6 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
                   <p className="font-black text-black text-xl">
                     現在開放招募首批元老教師與早鳥學生<br />
                     共同建立一個由群眾驅動的自主學習社群！
@@ -108,7 +108,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-6 pt-4">
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-black border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-2xl px-16 py-10 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                  className="bg-gradient-to-r from-orange-300 to-orange-400 hover:from-orange-400 hover:to-orange-500 text-black border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-2xl px-16 py-10 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
                   onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
                 >
                   成為首批元老級教師
@@ -559,7 +559,7 @@ const Index = () => {
       </section>
 
       {/* Teacher CTA */}
-      <section id="teacher" className="py-20 bg-gradient-to-br from-orange-400 to-red-400">
+      <section id="teacher" className="py-20 bg-gradient-to-br from-orange-200 to-orange-300">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block bg-white border-4 border-black px-6 py-3 text-base font-black mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
@@ -577,7 +577,7 @@ const Index = () => {
             </div>
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-black border-6 border-white shadow-[16px_16px_0px_0px_rgba(255,255,255,1)] hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] font-black text-2xl px-18 py-10 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+              className="bg-gradient-to-r from-orange-300 to-orange-400 hover:from-orange-400 hover:to-orange-500 text-black border-6 border-white shadow-[16px_16px_0px_0px_rgba(255,255,255,1)] hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] font-black text-2xl px-20 py-12 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
               onClick={() => window.open('https://forms.gle/6cYoa9Lt2P7Wy8uu5', '_blank')}
             >
               立即加入
@@ -588,7 +588,7 @@ const Index = () => {
       </section>
 
       {/* Student CTA */}
-      <section className="py-20 bg-gradient-to-br from-orange-300 to-amber-300">
+      <section className="py-20 bg-gradient-to-br from-orange-200 to-amber-200">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block bg-white border-4 border-black px-6 py-3 text-base font-black mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
@@ -606,7 +606,7 @@ const Index = () => {
             </div>
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-black border-6 border-white shadow-[16px_16px_0px_0px_rgba(255,255,255,1)] hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] font-black text-2xl px-18 py-10 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+              className="bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-black border-6 border-white shadow-[16px_16px_0px_0px_rgba(255,255,255,1)] hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] font-black text-2xl px-20 py-12 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
               onClick={() => window.open('#', '_blank')}
             >
               立即加入學習
@@ -617,7 +617,7 @@ const Index = () => {
       </section>
 
       {/* Early Access CTA */}
-      <section className="py-20 bg-gradient-to-br from-orange-200 to-yellow-200">
+      <section className="py-20 bg-gradient-to-br from-orange-100 to-yellow-100">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-block bg-white border-4 border-black px-6 py-3 text-base font-black mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
@@ -634,7 +634,7 @@ const Index = () => {
             <div className="flex flex-col gap-6 justify-center items-center">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-black border-6 border-white shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 w-full max-w-lg"
+                className="bg-gradient-to-r from-blue-300 to-blue-400 hover:from-blue-400 hover:to-blue-500 text-black border-6 border-white shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 w-full max-w-lg"
                 onClick={() => window.open('https://www.facebook.com/nolimittutor', '_blank')}
               >
                 追蹤臉書 - 掌握 NLT 價值與動態
@@ -643,7 +643,7 @@ const Index = () => {
               
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-pink-600 to-pink-800 hover:from-pink-700 hover:to-pink-900 text-black border-6 border-white shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 w-full max-w-lg"
+                className="bg-gradient-to-r from-pink-300 to-pink-400 hover:from-pink-400 hover:to-pink-500 text-black border-6 border-white shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 w-full max-w-lg"
                 onClick={() => window.open('https://www.instagram.com/no_limit_tutor/', '_blank')}
               >
                 追蹤 IG - 觀看國外搞笑迷因學英文
@@ -652,7 +652,7 @@ const Index = () => {
               
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-yellow-600 to-yellow-800 hover:from-yellow-700 hover:to-yellow-900 text-black border-6 border-white shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 w-full max-w-lg"
+                className="bg-gradient-to-r from-yellow-300 to-yellow-400 hover:from-yellow-400 hover:to-yellow-500 text-black border-6 border-white shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 w-full max-w-lg"
                 onClick={() => window.open('https://forms.gle/6cYoa9Lt2P7Wy8uu5', '_blank')}
               >
                 填寫表單 - 成為 NLT 的一員
