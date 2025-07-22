@@ -63,10 +63,10 @@ const Index = () => {
         <div className="relative container mx-auto px-4 py-24">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <div className="inline-flex items-center space-x-2 bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 shadow-sm border border-amber-200">
-                <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
-                <span className="text-sm font-medium text-amber-700">線上一對一教學平台</span>
-              </div>
+                <div className="inline-flex items-center space-x-2 bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 shadow-sm border border-amber-200">
+                  <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
+                  <span className="text-sm font-medium text-amber-700">No Limit Tutor 的三大服務主張</span>
+                </div>
               
               <div className="space-y-4">
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
@@ -168,13 +168,13 @@ const Index = () => {
       {/* Features Section */}
       <section id="features" className="py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-20">
-            <div className="inline-block bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
-              功能特色
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">完整的教學生態系統</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">從師資篩選到課程管理，為您提供全方位的學習支援</p>
-          </div>
+      <div className="text-center mb-20">
+        <div className="inline-block bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+          功能特色
+        </div>
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">完整的教學生態系統</h2>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">從師資篩選到課程管理，為您提供全方位的學習支援</p>
+      </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="hover:shadow-xl transition-all duration-300 border-0 bg-gradient-to-br from-amber-50 to-orange-50">
@@ -182,8 +182,8 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center mb-4">
                   <Users className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-xl">智能師資媒合</CardTitle>
-                <CardDescription>多維度篩選，精準匹配最適合的教師</CardDescription>
+                <CardTitle className="text-xl">師資媒合</CardTitle>
+                <CardDescription>多元篩選，匹配最適合的教師</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3 text-sm text-gray-600">
@@ -227,7 +227,7 @@ const Index = () => {
                   </li>
                   <li className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-blue-500 rounded-full" />
-                    <span>自動月扣款訂閱</span>
+                    <span>自動月扣款訂閱 (含自動通知)</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-blue-500 rounded-full" />
@@ -257,11 +257,11 @@ const Index = () => {
                   </li>
                   <li className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-green-500 rounded-full" />
-                    <span>課程筆記系統</span>
+                    <span>即時文字聊天</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-green-500 rounded-full" />
-                    <span>課後存取資料</span>
+                    <span>評價回饋系統</span>
                   </li>
                 </ul>
               </CardContent>
@@ -321,7 +321,7 @@ const Index = () => {
                   </li>
                   <li className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-yellow-500 rounded-full" />
-                    <span>信用卡支付</span>
+                    <span>信用卡支付與刷退，安全、簡便</span>
                   </li>
                 </ul>
               </CardContent>
@@ -462,7 +462,21 @@ const Index = () => {
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="mb-4 p-4 bg-blue-100/50 rounded-lg border border-blue-200">
+                <ul className="space-y-3">
+                  <li className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full" />
+                    <span className="text-sm">4/8/12/16 堂課選擇</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full" />
+                    <span className="text-sm">自動月訂制</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full" />
+                    <span className="text-sm">隨時取消訂閱</span>
+                  </li>
+                </ul>
+                <div className="mt-4 p-4 bg-blue-100/50 rounded-lg border border-blue-200">
                   <p className="text-sm font-medium text-blue-800 mb-2">保障服務費用以確保:</p>
                   <ul className="space-y-2 text-xs text-blue-700">
                     <li className="flex items-center space-x-2">
@@ -483,20 +497,6 @@ const Index = () => {
                     </li>
                   </ul>
                 </div>
-                <ul className="space-y-3">
-                  <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full" />
-                    <span className="text-sm">4/8/12/16 堂課選擇</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full" />
-                    <span className="text-sm">自動月訂制</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full" />
-                    <span className="text-sm">隨時取消訂閱</span>
-                  </li>
-                </ul>
               </CardContent>
             </Card>
 
@@ -571,9 +571,9 @@ const Index = () => {
               成為早鳥學生
             </h2>
             <p className="text-xl text-gray-600 mb-12 leading-relaxed">
-              加入 No Limit Tutor 的學習社群，享受最優質的一對一教學體驗
+              加入 No Limit Tutor 的學習社群，享受最民主的一對一教學體驗
               <br />
-              早鳥學生將享有特別優惠與專屬權益
+              早鳥學生有機會享有特別優惠與專屬權益
             </p>
             <Button 
               size="lg" 
@@ -584,7 +584,7 @@ const Index = () => {
               <ArrowRight className="ml-2 w-6 h-6" />
             </Button>
             <p className="text-sm text-gray-500 mt-6">
-              * 早鳥用戶享有特殊優惠價格與專屬學習權益
+              * 平台上線後將優先通知您註冊使用
             </p>
           </div>
         </div>
@@ -599,7 +599,8 @@ const Index = () => {
             </div>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">搶先追蹤</h2>
             <p className="text-xl text-gray-600 mb-12">
-              第一時間了解 No Limit Tutor 最新動態
+              進一步了解 No Limit Tutor 文化與價值訴求，以及平台努力的方向<br />
+              加入討論，共同營造嶄新的民主式學習環境
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -608,7 +609,7 @@ const Index = () => {
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-blue-600"
                 onClick={() => window.open('https://www.facebook.com/nolimittutor', '_blank')}
               >
-                追蹤臉書
+                追蹤臉書 - 掌握 NLT 價值與動態
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               
@@ -617,7 +618,7 @@ const Index = () => {
                 className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-pink-500"
                 onClick={() => window.open('https://www.instagram.com/no_limit_tutor/', '_blank')}
               >
-                追蹤 IG
+                追蹤 IG - 觀看國外搞笑迷因學英文
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               
@@ -626,7 +627,7 @@ const Index = () => {
                 className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-amber-500"
                 onClick={() => window.open('https://forms.gle/6cYoa9Lt2P7Wy8uu5', '_blank')}
               >
-                填寫表單
+                填寫表單 - 成為 NLT 的一員
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </div>
