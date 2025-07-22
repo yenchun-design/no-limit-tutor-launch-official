@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -30,84 +29,38 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b-4 border-black bg-white shadow-[0_4px_0px_0px_rgba(0,0,0,1)]">
+      <header className="sticky top-0 z-50 w-full border-b-4 border-black bg-white shadow-[0_6px_0px_0px_rgba(0,0,0,1)]">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-amber-400 border-4 border-black flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+            <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 border-4 border-black flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
               <img 
-                src="/lovable-uploads/cc9d776e-5a85-4800-a1be-a3bc9ff7c138.png" 
+                src="/lovable-uploads/a4afac6a-13e5-4713-8b1d-66db48ddd8e9.png" 
                 alt="No Limit Tutor Logo"
                 className="w-8 h-8 object-contain"
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-black text-black uppercase">No Limit Tutor</span>
+              <span className="text-xl font-black text-black uppercase tracking-tight">No Limit Tutor</span>
               <span className="text-sm text-amber-600 font-black">無限家教</span>
             </div>
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <button onClick={() => scrollToSection('home')} className="text-sm font-black text-black hover:text-amber-600 transition-colors uppercase">首頁</button>
-            <button onClick={() => scrollToSection('features')} className="text-sm font-black text-black hover:text-amber-600 transition-colors uppercase">功能特色</button>
-            <button onClick={() => scrollToSection('process')} className="text-sm font-black text-black hover:text-amber-600 transition-colors uppercase">學習流程</button>
-            <button onClick={() => scrollToSection('pricing')} className="text-sm font-black text-black hover:text-amber-600 transition-colors uppercase">收費方式</button>
-            <button onClick={() => scrollToSection('teacher')} className="text-sm font-black text-black hover:text-amber-600 transition-colors uppercase">成為教師</button>
+            <button onClick={() => scrollToSection('home')} className="text-sm font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">首頁</button>
+            <button onClick={() => scrollToSection('features')} className="text-sm font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">功能特色</button>
+            <button onClick={() => scrollToSection('process')} className="text-sm font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">學習流程</button>
+            <button onClick={() => scrollToSection('pricing')} className="text-sm font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">收費方式</button>
+            <button onClick={() => scrollToSection('teacher')} className="text-sm font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">成為教師</button>
           </nav>
         </div>
       </header>
 
       {/* Hero Section */}
       <section id="home" className="relative overflow-hidden bg-gradient-to-br from-amber-400 via-orange-400 to-red-400">
-        <div className="relative container mx-auto px-4 py-16">
-          {/* Three Service Principles - Now at the top */}
-          <div className="mb-16">
-            <div className="inline-flex items-center space-x-2 bg-white border-4 border-black px-6 py-3 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
-              <div className="w-3 h-3 bg-red-500 border-2 border-black" />
-              <span className="text-sm font-black text-black uppercase tracking-wide">No Limit Tutor 的三大服務主張</span>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-              <div className="bg-gradient-to-br from-orange-100 to-amber-100 border-6 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] p-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-16 h-16 bg-amber-500 border-4 border-black flex items-center justify-center flex-shrink-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                    <BookOpen className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-black text-black text-lg uppercase mb-2">民主式、群眾導向平台</h3>
-                    <p className="text-sm text-black font-bold">老師自由授課，學生自選課題，無需綁定固定教材或長期合約</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-gradient-to-br from-orange-100 to-amber-100 border-6 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] p-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-16 h-16 bg-amber-500 border-4 border-black flex items-center justify-center flex-shrink-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                    <Video className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-black text-black text-lg uppercase mb-2">視訊教學</h3>
-                    <p className="text-sm text-black font-bold">簡潔、穩定的線上預約與視訊上課系統，實現一對一學習的彈性與效率</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-gradient-to-br from-orange-100 to-amber-100 border-6 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] p-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-16 h-16 bg-amber-500 border-4 border-black flex items-center justify-center flex-shrink-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                    <Star className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-black text-black text-lg uppercase mb-2">不抽成、沒有名目費用</h3>
-                    <p className="text-sm text-black font-bold">NLT 不從教師收入中抽成，保障服務費由學生支付。<br />老師拿回完整報酬，打造民主、群眾導向的線上學習空間。</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <div className="relative container mx-auto px-4 py-20">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <div className="space-y-4">
+              <div className="space-y-6">
                 <h1 className="text-5xl md:text-6xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
                   No Limit Tutor 無限家教
                 </h1>
@@ -164,24 +117,24 @@ const Index = () => {
               </div>
             </div>
             
-            <div className="relative">
+            <div className="relative lg:ml-8">
               <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-red-500 border-6 border-black transform rotate-3 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]" />
               <div className="absolute inset-0 bg-gradient-to-br from-red-400 to-pink-400 border-6 border-black transform -rotate-2 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]" />
               <div className="relative bg-white border-8 border-black p-8 shadow-[20px_20px_0px_0px_rgba(0,0,0,1)]">
                 <div className="text-center">
-                  <h3 className="text-3xl font-black text-black mb-8 uppercase">立即體驗</h3>
+                  <h3 className="text-3xl font-black text-black mb-8 uppercase tracking-wide">開始學習之旅</h3>
                   <div className="space-y-6">
                     <div className="bg-gradient-to-r from-amber-100 to-orange-100 border-4 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                      <p className="font-black text-black text-lg">25分鐘試教課程</p>
-                      <p className="font-bold text-black">體驗教師教學風格</p>
+                      <p className="font-black text-black text-lg">選擇優質教師</p>
+                      <p className="font-bold text-black">瀏覽師資與評價</p>
                     </div>
                     <div className="bg-gradient-to-r from-blue-100 to-purple-100 border-4 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                      <p className="font-black text-black text-lg">50分鐘正式課程</p>
-                      <p className="font-bold text-black">深度一對一教學</p>
+                      <p className="font-black text-black text-lg">預約試教課程</p>
+                      <p className="font-bold text-black">25分鐘體驗教學</p>
                     </div>
                     <div className="bg-gradient-to-r from-green-100 to-teal-100 border-4 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                      <p className="font-black text-black text-lg">彈性訂閱制度</p>
-                      <p className="font-bold text-black">隨時調整學習進度</p>
+                      <p className="font-black text-black text-lg">開始正式學習</p>
+                      <p className="font-bold text-black">靈活課程安排</p>
                     </div>
                   </div>
                 </div>
@@ -191,24 +144,74 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Three Service Principles Section */}
+      <section className="py-20 bg-gradient-to-br from-orange-100 to-amber-100">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center space-x-2 bg-white border-4 border-black px-6 py-3 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
+              <div className="w-3 h-3 bg-red-500 border-2 border-black" />
+              <span className="text-sm font-black text-black uppercase tracking-wide">No Limit Tutor 的三大服務主張</span>
+            </div>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div className="bg-gradient-to-br from-orange-200 to-amber-200 border-6 border-black shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-8">
+              <div className="flex items-start space-x-6">
+                <div className="w-20 h-20 bg-gradient-to-br from-amber-400 to-orange-500 border-4 border-black flex items-center justify-center flex-shrink-0 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                  <BookOpen className="w-10 h-10 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-black text-black text-xl uppercase mb-3 tracking-wide">民主式、群眾導向平台</h3>
+                  <p className="text-sm text-black font-bold leading-relaxed">老師自由授課，學生自選課題，無需綁定固定教材或長期合約</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gradient-to-br from-orange-200 to-amber-200 border-6 border-black shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-8">
+              <div className="flex items-start space-x-6">
+                <div className="w-20 h-20 bg-gradient-to-br from-amber-400 to-orange-500 border-4 border-black flex items-center justify-center flex-shrink-0 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                  <Video className="w-10 h-10 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-black text-black text-xl uppercase mb-3 tracking-wide">視訊教學</h3>
+                  <p className="text-sm text-black font-bold leading-relaxed">簡潔、穩定的線上預約與視訊上課系統，實現一對一學習的彈性與效率</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gradient-to-br from-orange-200 to-amber-200 border-6 border-black shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-8">
+              <div className="flex items-start space-x-6">
+                <div className="w-20 h-20 bg-gradient-to-br from-amber-400 to-orange-500 border-4 border-black flex items-center justify-center flex-shrink-0 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                  <Star className="w-10 h-10 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-black text-black text-xl uppercase mb-3 tracking-wide">不抽成、沒有名目費用</h3>
+                  <p className="text-sm text-black font-bold leading-relaxed">NLT 不從教師收入中抽成，保障服務費由學生支付。<br />老師拿回完整報酬，打造民主、群眾導向的線上學習空間。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
-      <section id="features" className="py-24 bg-orange-200">
+      <section id="features" className="py-24 bg-gradient-to-br from-amber-200 to-orange-200">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
-            <div className="inline-block bg-white border-4 border-black px-6 py-3 text-sm font-black mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
+            <div className="inline-block bg-white border-4 border-black px-6 py-3 text-sm font-black mb-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
               功能特色
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-black mb-6 bg-amber-400 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 uppercase">完整的教學生態系統</h2>
-            <p className="text-xl text-black font-bold max-w-3xl mx-auto bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">從師資篩選到課程管理，為您提供全方位的學習支援</p>
+            <h2 className="text-4xl md:text-5xl font-black text-black mb-6 bg-gradient-to-r from-amber-300 to-orange-300 border-6 border-black p-6 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 uppercase tracking-wide">完整的教學生態系統</h2>
+            <p className="text-xl text-black font-bold max-w-3xl mx-auto bg-white border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">從師資篩選到課程管理，為您提供全方位的學習支援</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-amber-300 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-6">
+            <div className="bg-gradient-to-br from-amber-300 to-orange-300 border-6 border-black shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-8">
               <div className="mb-6">
-                <div className="w-20 h-20 bg-white border-4 border-black flex items-center justify-center mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <div className="w-20 h-20 bg-white border-4 border-black flex items-center justify-center mb-4 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
                   <Users className="w-10 h-10 text-black" />
                 </div>
-                <h3 className="text-2xl font-black text-black mb-2 uppercase">師資媒合</h3>
+                <h3 className="text-2xl font-black text-black mb-2 uppercase tracking-wide">師資媒合</h3>
                 <p className="font-bold text-black">多元篩選，匹配最適合的教師</p>
               </div>
               <div className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
@@ -233,12 +236,12 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="bg-blue-300 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-6">
+            <div className="bg-gradient-to-br from-blue-300 to-blue-400 border-6 border-black shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-8">
               <div className="mb-6">
-                <div className="w-20 h-20 bg-white border-4 border-black flex items-center justify-center mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <div className="w-20 h-20 bg-white border-4 border-black flex items-center justify-center mb-4 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
                   <Clock className="w-10 h-10 text-black" />
                 </div>
-                <h3 className="text-2xl font-black text-black mb-2 uppercase">彈性預約系統</h3>
+                <h3 className="text-2xl font-black text-black mb-2 uppercase tracking-wide">彈性預約系統</h3>
                 <p className="font-bold text-black">互動式時段選擇，即時預約確認</p>
               </div>
               <div className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
@@ -263,12 +266,12 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="bg-green-300 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-6">
+            <div className="bg-gradient-to-br from-green-300 to-green-400 border-6 border-black shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-8">
               <div className="mb-6">
-                <div className="w-20 h-20 bg-white border-4 border-black flex items-center justify-center mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <div className="w-20 h-20 bg-white border-4 border-black flex items-center justify-center mb-4 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
                   <Video className="w-10 h-10 text-black" />
                 </div>
-                <h3 className="text-2xl font-black text-black mb-2 uppercase">視訊教學平台</h3>
+                <h3 className="text-2xl font-black text-black mb-2 uppercase tracking-wide">視訊教學平台</h3>
                 <p className="font-bold text-black">專業線上教室，支持多種互動功能</p>
               </div>
               <div className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
@@ -293,12 +296,12 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="bg-purple-300 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-6">
+            <div className="bg-gradient-to-br from-purple-300 to-purple-400 border-6 border-black shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-8">
               <div className="mb-6">
-                <div className="w-20 h-20 bg-white border-4 border-black flex items-center justify-center mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <div className="w-20 h-20 bg-white border-4 border-black flex items-center justify-center mb-4 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
                   <MessageSquare className="w-10 h-10 text-black" />
                 </div>
-                <h3 className="text-2xl font-black text-black mb-2 uppercase">安全聊天系統</h3>
+                <h3 className="text-2xl font-black text-black mb-2 uppercase tracking-wide">安全聊天系統</h3>
                 <p className="font-bold text-black">加密通訊，保護用戶隱私</p>
               </div>
               <div className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
@@ -323,12 +326,12 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="bg-yellow-300 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-6">
+            <div className="bg-gradient-to-br from-yellow-300 to-yellow-400 border-6 border-black shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-8">
               <div className="mb-6">
-                <div className="w-20 h-20 bg-white border-4 border-black flex items-center justify-center mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <div className="w-20 h-20 bg-white border-4 border-black flex items-center justify-center mb-4 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
                   <DollarSign className="w-10 h-10 text-black" />
                 </div>
-                <h3 className="text-2xl font-black text-black mb-2 uppercase">透明收費機制</h3>
+                <h3 className="text-2xl font-black text-black mb-2 uppercase tracking-wide">透明收費機制</h3>
                 <p className="font-bold text-black">公平定價，支持多種支付方式</p>
               </div>
               <div className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
@@ -353,12 +356,12 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="bg-red-300 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-6">
+            <div className="bg-gradient-to-br from-red-300 to-red-400 border-6 border-black shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-8">
               <div className="mb-6">
-                <div className="w-20 h-20 bg-white border-4 border-black flex items-center justify-center mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <div className="w-20 h-20 bg-white border-4 border-black flex items-center justify-center mb-4 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
                   <Shield className="w-10 h-10 text-black" />
                 </div>
-                <h3 className="text-2xl font-black text-black mb-2 uppercase">完善保障機制</h3>
+                <h3 className="text-2xl font-black text-black mb-2 uppercase tracking-wide">完善保障機制</h3>
                 <p className="font-bold text-black">多重保護，確保教學品質</p>
               </div>
               <div className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
@@ -387,7 +390,7 @@ const Index = () => {
       </section>
 
       {/* Learning Process */}
-      <section id="process" className="py-24 bg-orange-300">
+      <section id="process" className="py-24 bg-gradient-to-br from-orange-300 to-red-300">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
             <div className="inline-block bg-white border-4 border-black px-6 py-3 text-sm font-black mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
@@ -438,7 +441,7 @@ const Index = () => {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="py-24 bg-orange-100">
+      <section id="pricing" className="py-24 bg-gradient-to-br from-orange-200 to-amber-200">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
             <div className="inline-block bg-white border-4 border-black px-6 py-3 text-sm font-black mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
@@ -555,7 +558,7 @@ const Index = () => {
       </section>
 
       {/* Teacher CTA */}
-      <section id="teacher" className="py-24 bg-orange-400">
+      <section id="teacher" className="py-24 bg-gradient-to-br from-orange-400 to-red-400">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block bg-white border-4 border-black px-6 py-3 text-sm font-black mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
@@ -589,7 +592,7 @@ const Index = () => {
       </section>
 
       {/* Student CTA */}
-      <section className="py-24 bg-orange-300">
+      <section className="py-24 bg-gradient-to-br from-orange-300 to-amber-300">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block bg-white border-4 border-black px-6 py-3 text-sm font-black mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
@@ -623,7 +626,7 @@ const Index = () => {
       </section>
 
       {/* Early Access CTA */}
-      <section className="py-24 bg-orange-200">
+      <section className="py-24 bg-gradient-to-br from-orange-200 to-yellow-200">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-block bg-white border-4 border-black px-6 py-3 text-sm font-black mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
@@ -674,15 +677,15 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-start gap-8">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-amber-400 border-4 border-white flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)]">
+              <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 border-4 border-white flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)]">
                 <img 
-                  src="/lovable-uploads/cc9d776e-5a85-4800-a1be-a3bc9ff7c138.png" 
+                  src="/lovable-uploads/a4afac6a-13e5-4713-8b1d-66db48ddd8e9.png" 
                   alt="No Limit Tutor Logo"
                   className="w-8 h-8 object-contain"
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-black text-white uppercase">No Limit Tutor</span>
+                <span className="text-xl font-black text-white uppercase tracking-tight">No Limit Tutor</span>
                 <span className="text-sm text-amber-400 font-black">無限家教</span>
               </div>
             </div>
