@@ -42,11 +42,11 @@ const Index = () => {
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <button onClick={() => scrollToSection('home')} className="text-lg font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">首頁</button>
-            <button onClick={() => scrollToSection('features')} className="text-lg font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">功能特色</button>
-            <button onClick={() => scrollToSection('process')} className="text-lg font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">學習流程</button>
-            <button onClick={() => scrollToSection('pricing')} className="text-lg font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">收費方式</button>
-            <button onClick={() => scrollToSection('teacher')} className="text-lg font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">成為教師</button>
+            <button onClick={() => scrollToSection('home')} className="text-xl font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">首頁</button>
+            <button onClick={() => scrollToSection('features')} className="text-xl font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">功能特色</button>
+            <button onClick={() => scrollToSection('process')} className="text-xl font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">學習流程</button>
+            <button onClick={() => scrollToSection('pricing')} className="text-xl font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">收費方式</button>
+            <button onClick={() => scrollToSection('teacher')} className="text-xl font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">成為教師</button>
           </nav>
         </div>
       </header>
@@ -56,15 +56,24 @@ const Index = () => {
         <div className="relative container mx-auto px-4 py-16">
           <div className="max-w-6xl mx-auto">
             <div className="space-y-8">
-              <div className="space-y-6">
-                <h1 className="text-5xl md:text-6xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
-                  No Limit Tutor<br />
-                  無限家教
-                </h1>
-                <h2 className="text-2xl md:text-3xl font-black text-black leading-tight bg-white px-6 py-4 border-6 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1">
-                  台灣首個民主、群眾導向的<br />
-                  線上一對一家教平台
-                </h2>
+              <div className="flex items-start space-x-12">
+                <div className="flex-1 space-y-6">
+                  <h1 className="text-7xl md:text-8xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
+                    No Limit Tutor<br />
+                    無限家教
+                  </h1>
+                  <h2 className="text-3xl md:text-4xl font-black text-black leading-tight bg-white px-6 py-4 border-6 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1">
+                    台灣首個民主、群眾導向的線上一對一家教平台
+                  </h2>
+                </div>
+                
+                <div className="hidden lg:block flex-shrink-0">
+                  <img 
+                    src="/lovable-uploads/364d3470-729e-41fa-85f9-7644676981ce.png" 
+                    alt="No Limit Tutor Logo" 
+                    className="w-32 h-32 object-contain"
+                  />
+                </div>
               </div>
               
               <div className="space-y-6 text-xl text-black leading-relaxed max-w-5xl bg-white border-6 border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
@@ -99,15 +108,15 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-6 pt-4">
                 <Button 
                   size="lg" 
-                  className="bg-orange-500 hover:bg-orange-600 text-black border-6 border-white shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                  className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-black border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-2xl px-16 py-10 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
                   onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
                 >
                   成為首批元老級教師
-                  <ArrowRight className="ml-2 w-6 h-6" />
+                  <ArrowRight className="ml-2 w-8 h-8" />
                 </Button>
                 <Button 
                   size="lg" 
-                  className="bg-white hover:bg-gray-100 text-black border-6 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] font-black text-xl px-10 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                  className="bg-white hover:bg-gray-100 text-black border-6 border-black shadow-[14px_14px_0px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] font-black text-xl px-12 py-10 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
                   onClick={() => scrollToSection('features')}
                 >
                   了解更多
@@ -568,17 +577,12 @@ const Index = () => {
             </div>
             <Button 
               size="lg" 
-              className="bg-orange-500 hover:bg-orange-600 text-black border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-2xl px-14 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+              className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-black border-6 border-white shadow-[16px_16px_0px_0px_rgba(255,255,255,1)] hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] font-black text-2xl px-18 py-10 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
               onClick={() => window.open('https://forms.gle/6cYoa9Lt2P7Wy8uu5', '_blank')}
             >
               立即加入
-              <ArrowRight className="ml-2 w-7 h-7" />
+              <ArrowRight className="ml-2 w-8 h-8" />
             </Button>
-            <div className="text-center mt-4">
-              <p className="text-sm font-bold text-black">
-                * 完全免費，我們承諾不會向您收取任何費用
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -602,17 +606,12 @@ const Index = () => {
             </div>
             <Button 
               size="lg" 
-              className="bg-blue-500 hover:bg-blue-600 text-black border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-2xl px-14 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+              className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-black border-6 border-white shadow-[16px_16px_0px_0px_rgba(255,255,255,1)] hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] font-black text-2xl px-18 py-10 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
               onClick={() => window.open('#', '_blank')}
             >
               立即加入學習
-              <ArrowRight className="ml-2 w-7 h-7" />
+              <ArrowRight className="ml-2 w-8 h-8" />
             </Button>
-            <div className="text-center mt-4">
-              <p className="text-sm font-bold text-black">
-                * 平台上線後將優先通知您註冊使用
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -632,10 +631,10 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="flex flex-col gap-4 justify-center items-center">
+            <div className="flex flex-col gap-6 justify-center items-center">
               <Button 
                 size="lg" 
-                className="bg-blue-500 hover:bg-blue-600 text-black border-6 border-white shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] font-black text-xl px-10 py-6 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 w-full max-w-lg"
+                className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-black border-6 border-white shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 w-full max-w-lg"
                 onClick={() => window.open('https://www.facebook.com/nolimittutor', '_blank')}
               >
                 追蹤臉書 - 掌握 NLT 價值與動態
@@ -644,7 +643,7 @@ const Index = () => {
               
               <Button 
                 size="lg" 
-                className="bg-pink-500 hover:bg-pink-600 text-black border-6 border-white shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] font-black text-xl px-10 py-6 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 w-full max-w-lg"
+                className="bg-gradient-to-r from-pink-600 to-pink-800 hover:from-pink-700 hover:to-pink-900 text-black border-6 border-white shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 w-full max-w-lg"
                 onClick={() => window.open('https://www.instagram.com/no_limit_tutor/', '_blank')}
               >
                 追蹤 IG - 觀看國外搞笑迷因學英文
@@ -653,12 +652,18 @@ const Index = () => {
               
               <Button 
                 size="lg" 
-                className="bg-yellow-500 hover:bg-yellow-600 text-black border-6 border-white shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] font-black text-xl px-10 py-6 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 w-full max-w-lg"
+                className="bg-gradient-to-r from-yellow-600 to-yellow-800 hover:from-yellow-700 hover:to-yellow-900 text-black border-6 border-white shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 w-full max-w-lg"
                 onClick={() => window.open('https://forms.gle/6cYoa9Lt2P7Wy8uu5', '_blank')}
               >
                 填寫表單 - 成為 NLT 的一員
                 <ArrowRight className="ml-2 w-6 h-6" />
               </Button>
+            </div>
+            
+            <div className="text-center mt-6">
+              <p className="text-sm font-bold text-black">
+                * 平台上線後將優先通知您註冊使用
+              </p>
             </div>
           </div>
         </div>
@@ -679,10 +684,13 @@ const Index = () => {
             </div>
             
             <div className="text-left flex-1 max-w-2xl">
-              <p className="text-white mb-6 text-lg font-bold">
-                突破規則，知識無限 -<br />
-                讓每個人都能享受優質、民主、自在的一對一教學
-              </p>
+              <div className="mb-6">
+                <p className="text-3xl font-black text-white mb-4">No Limit Tutor</p>
+                <p className="text-white text-lg font-bold">
+                  突破規則，知識無限 -<br />
+                  讓每個人都能享受優質、民主、自在的一對一教學
+                </p>
+              </div>
               <div className="flex flex-wrap gap-4 mb-6">
                 <a href="/privacy" className="text-amber-400 hover:text-amber-300 text-sm font-bold underline transition-colors">隱私條款</a>
               </div>
