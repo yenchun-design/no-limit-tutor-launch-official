@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -30,93 +29,92 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/60 shadow-sm">
+      <header className="sticky top-0 z-50 w-full border-b-4 border-black bg-white shadow-[0_4px_0px_0px_rgba(0,0,0,1)]">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-transparent rounded-xl flex items-center justify-center">
+            <div className="w-12 h-12 bg-yellow-400 border-4 border-black flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
               <img 
                 src="/lovable-uploads/cc9d776e-5a85-4800-a1be-a3bc9ff7c138.png" 
                 alt="No Limit Tutor Logo"
-                className="w-10 h-10 object-contain"
+                className="w-8 h-8 object-contain"
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold text-gray-900">No Limit Tutor</span>
-              <span className="text-sm text-amber-600 font-medium">無限家教</span>
+              <span className="text-xl font-black text-black uppercase">No Limit Tutor</span>
+              <span className="text-sm text-amber-600 font-black">無限家教</span>
             </div>
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <button onClick={() => scrollToSection('home')} className="text-sm font-medium text-gray-700 hover:text-amber-600 transition-colors">首頁</button>
-            <button onClick={() => scrollToSection('features')} className="text-sm font-medium text-gray-700 hover:text-amber-600 transition-colors">功能特色</button>
-            <button onClick={() => scrollToSection('process')} className="text-sm font-medium text-gray-700 hover:text-amber-600 transition-colors">學習流程</button>
-            <button onClick={() => scrollToSection('pricing')} className="text-sm font-medium text-gray-700 hover:text-amber-600 transition-colors">收費方式</button>
-            <button onClick={() => scrollToSection('teacher')} className="text-sm font-medium text-gray-700 hover:text-amber-600 transition-colors">成為教師</button>
+            <button onClick={() => scrollToSection('home')} className="text-sm font-black text-black hover:text-amber-600 transition-colors uppercase">首頁</button>
+            <button onClick={() => scrollToSection('features')} className="text-sm font-black text-black hover:text-amber-600 transition-colors uppercase">功能特色</button>
+            <button onClick={() => scrollToSection('process')} className="text-sm font-black text-black hover:text-amber-600 transition-colors uppercase">學習流程</button>
+            <button onClick={() => scrollToSection('pricing')} className="text-sm font-black text-black hover:text-amber-600 transition-colors uppercase">收費方式</button>
+            <button onClick={() => scrollToSection('teacher')} className="text-sm font-black text-black hover:text-amber-600 transition-colors uppercase">成為教師</button>
           </nav>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-100/50 via-orange-100/50 to-yellow-100/50" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(251,191,36,0.1),transparent_50%)]" />
+      <section id="home" className="relative overflow-hidden bg-pink-300">
         <div className="relative container mx-auto px-4 py-24">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-                <div className="inline-flex items-center space-x-2 bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 shadow-sm border border-amber-200">
-                  <div className="w-2 h-2 bg-amber-500 rounded-full animate-pulse" />
-                  <span className="text-sm font-medium text-amber-700">No Limit Tutor 的三大服務主張</span>
+                <div className="inline-flex items-center space-x-2 bg-white border-4 border-black px-6 py-3 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                  <div className="w-3 h-3 bg-amber-500 border-2 border-black" />
+                  <span className="text-sm font-black text-black uppercase tracking-wide">No Limit Tutor 的三大服務主張</span>
                 </div>
               
               <div className="space-y-4">
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                <h1 className="text-5xl md:text-6xl font-black text-black leading-tight tracking-tight uppercase">
                   No Limit Tutor 無限家教
                 </h1>
-                <h2 className="text-2xl md:text-3xl font-bold text-amber-600 leading-tight">
+                <h2 className="text-2xl md:text-3xl font-black text-black leading-tight bg-yellow-300 px-4 py-2 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1">
                   台灣首個民主、群眾導向的線上一對一家教平台
                 </h2>
               </div>
               
-              <div className="space-y-6 text-lg text-gray-600 leading-relaxed max-w-2xl">
-                <p>
+              <div className="space-y-6 text-lg text-black leading-relaxed max-w-2xl bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                <p className="font-bold">
                   No Limit Tutor 是專為台灣師生打造的線上教學平台，讓老師自主開課、學生自由選師，透過平台完成預約、付款與視訊教學，全程安全透明。
                 </p>
-                <p>
+                <p className="font-bold">
                   我們不從教師收入抽成，服務費由學生端負擔，讓教學更自由、收費更公平。
                 </p>
-                <div className="space-y-2">
+                <div className="space-y-3 bg-amber-100 border-4 border-black p-4">
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
-                    <span>不滿意試教？全額退費</span>
+                    <div className="w-4 h-4 bg-red-500 border-2 border-black" />
+                    <span className="font-black">不滿意試教？全額退費</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
-                    <span>沒有綁約、沒有抽成、沒有名目費用</span>
+                    <div className="w-4 h-4 bg-blue-500 border-2 border-black" />
+                    <span className="font-black">沒有綁約、沒有抽成、沒有名目費用</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
-                    <span>教學與學習皆擁有真正的選擇權</span>
+                    <div className="w-4 h-4 bg-green-500 border-2 border-black" />
+                    <span className="font-black">教學與學習皆擁有真正的選擇權</span>
                   </div>
                 </div>
-                <p className="font-semibold text-amber-700">
-                  現在開放招募首批元老教師與早鳥學生<br />
-                  共同建立一個由群眾驅動的自主學習社群！
-                </p>
+                <div className="bg-blue-300 border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                  <p className="font-black text-black">
+                    現在開放招募首批元老教師與早鳥學生<br />
+                    共同建立一個由群眾驅動的自主學習社群！
+                  </p>
+                </div>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  className="bg-amber-400 hover:bg-amber-300 text-black border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-lg px-8 py-6 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
                   onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
                 >
-                  成為 No Limit Tutor 首批元老級教師
+                  成為首批元老級教師
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
                 <Button 
                   size="lg" 
-                  variant="outline" 
-                  className="border-2 border-amber-500 text-amber-600 hover:bg-amber-50 px-8 py-6 text-lg font-semibold transition-all duration-300"
+                  className="bg-white hover:bg-gray-100 text-black border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-lg px-8 py-6 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
                   onClick={() => scrollToSection('features')}
                 >
                   了解更多
@@ -125,250 +123,250 @@ const Index = () => {
             </div>
             
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-400/20 to-orange-400/20 rounded-3xl transform rotate-2 blur-sm" />
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-orange-500/10 rounded-3xl transform -rotate-1" />
-              <Card className="relative bg-white/95 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border border-amber-200">
-                  <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-14 h-14 bg-gradient-to-br from-amber-100 to-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <BookOpen className="w-7 h-7 text-amber-600" />
+              <div className="absolute inset-0 bg-blue-400 border-4 border-black transform rotate-3" />
+              <div className="absolute inset-0 bg-red-400 border-4 border-black transform -rotate-2" />
+              <div className="relative bg-white border-8 border-black p-8 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)]">
+                  <div className="space-y-8">
+                  <div className="flex items-start space-x-4 bg-amber-100 border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <div className="w-16 h-16 bg-amber-400 border-4 border-black flex items-center justify-center flex-shrink-0">
+                      <BookOpen className="w-8 h-8 text-black" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-bold text-gray-900 text-lg"><strong>民主式、群眾導向平台</strong></h3>
-                      <p className="text-sm text-gray-600">老師自由授課，學生自選課題，無需綁定固定教材或長期合約</p>
+                      <h3 className="font-black text-black text-lg uppercase"><strong>民主式、群眾導向平台</strong></h3>
+                      <p className="text-sm text-black font-bold">老師自由授課，學生自選課題，無需綁定固定教材或長期合約</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-start space-x-4">
-                    <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Video className="w-7 h-7 text-blue-600" />
+                  <div className="flex items-start space-x-4 bg-blue-100 border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <div className="w-16 h-16 bg-blue-400 border-4 border-black flex items-center justify-center flex-shrink-0">
+                      <Video className="w-8 h-8 text-black" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-bold text-gray-900 text-lg">視訊教學</h3>
-                      <p className="text-sm text-gray-600">簡潔、穩定的線上預約與視訊上課系統，實現一對一學習的彈性與效率</p>
+                      <h3 className="font-black text-black text-lg uppercase">視訊教學</h3>
+                      <p className="text-sm text-black font-bold">簡潔、穩定的線上預約與視訊上課系統，實現一對一學習的彈性與效率</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-start space-x-4">
-                    <div className="w-14 h-14 bg-gradient-to-br from-green-100 to-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Star className="w-7 h-7 text-green-600" />
+                  <div className="flex items-start space-x-4 bg-green-100 border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <div className="w-16 h-16 bg-green-400 border-4 border-black flex items-center justify-center flex-shrink-0">
+                      <Star className="w-8 h-8 text-black" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-bold text-gray-900 text-lg">不抽成、沒有名目費用</h3>
-                      <p className="text-sm text-gray-600">NLT 不從教師收入中抽成，保障服務費由學生支付。<br />老師拿回完整報酬，打造民主、群眾導向的線上學習空間。</p>
+                      <h3 className="font-black text-black text-lg uppercase">不抽成、沒有名目費用</h3>
+                      <p className="text-sm text-black font-bold">NLT 不從教師收入中抽成，保障服務費由學生支付。<br />老師拿回完整報酬，打造民主、群眾導向的線上學習空間。</p>
                     </div>
                   </div>
                 </div>
-              </Card>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-24 bg-white">
+      <section id="features" className="py-24 bg-yellow-300">
         <div className="container mx-auto px-4">
       <div className="text-center mb-20">
-        <div className="inline-block bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+        <div className="inline-block bg-white border-4 border-black px-6 py-3 text-sm font-black mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
           功能特色
         </div>
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">完整的教學生態系統</h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">從師資篩選到課程管理，為您提供全方位的學習支援</p>
+        <h2 className="text-4xl md:text-5xl font-black text-black mb-6 bg-pink-300 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 uppercase">完整的教學生態系統</h2>
+        <p className="text-xl text-black font-bold max-w-3xl mx-auto bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">從師資篩選到課程管理，為您提供全方位的學習支援</p>
       </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="hover:shadow-xl transition-all duration-300 border-0 bg-gradient-to-br from-amber-50 to-orange-50">
-              <CardHeader>
-                <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center mb-4">
-                  <Users className="w-8 h-8 text-white" />
+            <div className="bg-amber-300 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-6">
+              <div className="mb-6">
+                <div className="w-20 h-20 bg-white border-4 border-black flex items-center justify-center mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                  <Users className="w-10 h-10 text-black" />
                 </div>
-                <CardTitle className="text-xl">師資媒合</CardTitle>
-                <CardDescription>多元篩選，匹配最適合的教師</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3 text-sm text-gray-600">
+                <h3 className="text-2xl font-black text-black mb-2 uppercase">師資媒合</h3>
+                <p className="font-bold text-black">多元篩選，匹配最適合的教師</p>
+              </div>
+              <div className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <ul className="space-y-3 text-sm text-black font-bold">
                   <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
+                    <div className="w-4 h-4 bg-red-500 border-2 border-black" />
                     <span>依科目、價格、地區篩選</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
+                    <div className="w-4 h-4 bg-blue-500 border-2 border-black" />
                     <span>可授課時間查詢</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
+                    <div className="w-4 h-4 bg-green-500 border-2 border-black" />
                     <span>星級評分系統</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
+                    <div className="w-4 h-4 bg-pink-500 border-2 border-black" />
                     <span>學生評價展示</span>
                   </li>
                 </ul>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
-            <Card className="hover:shadow-xl transition-all duration-300 border-0 bg-gradient-to-br from-blue-50 to-indigo-50">
-              <CardHeader>
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-4">
-                  <Clock className="w-8 h-8 text-white" />
+            <div className="bg-blue-300 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-6">
+              <div className="mb-6">
+                <div className="w-20 h-20 bg-white border-4 border-black flex items-center justify-center mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                  <Clock className="w-10 h-10 text-black" />
                 </div>
-                <CardTitle className="text-xl">彈性預約系統</CardTitle>
-                <CardDescription>互動式時段選擇，即時預約確認</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3 text-sm text-gray-600">
+                <h3 className="text-2xl font-black text-black mb-2 uppercase">彈性預約系統</h3>
+                <p className="font-bold text-black">互動式時段選擇，即時預約確認</p>
+              </div>
+              <div className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <ul className="space-y-3 text-sm text-black font-bold">
                   <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full" />
+                    <div className="w-4 h-4 bg-red-500 border-2 border-black" />
                     <span>25分鐘試教課程</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full" />
+                    <div className="w-4 h-4 bg-yellow-500 border-2 border-black" />
                     <span>4、8、12、16堂課選擇</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full" />
+                    <div className="w-4 h-4 bg-green-500 border-2 border-black" />
                     <span>自動月扣款訂閱 (含自動通知)</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full" />
+                    <div className="w-4 h-4 bg-pink-500 border-2 border-black" />
                     <span>隨時取消訂閱</span>
                   </li>
                 </ul>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
-            <Card className="hover:shadow-xl transition-all duration-300 border-0 bg-gradient-to-br from-green-50 to-emerald-50">
-              <CardHeader>
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-4">
-                  <Video className="w-8 h-8 text-white" />
+            <div className="bg-green-300 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-6">
+              <div className="mb-6">
+                <div className="w-20 h-20 bg-white border-4 border-black flex items-center justify-center mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                  <Video className="w-10 h-10 text-black" />
                 </div>
-                <CardTitle className="text-xl">視訊教學平台</CardTitle>
-                <CardDescription>專業線上教室，支持多種互動功能</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3 text-sm text-gray-600">
+                <h3 className="text-2xl font-black text-black mb-2 uppercase">視訊教學平台</h3>
+                <p className="font-bold text-black">專業線上教室，支持多種互動功能</p>
+              </div>
+              <div className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <ul className="space-y-3 text-sm text-black font-bold">
                   <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full" />
+                    <div className="w-4 h-4 bg-red-500 border-2 border-black" />
                     <span>高品質視訊通話</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full" />
+                    <div className="w-4 h-4 bg-blue-500 border-2 border-black" />
                     <span>螢幕分享功能</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full" />
+                    <div className="w-4 h-4 bg-yellow-500 border-2 border-black" />
                     <span>即時文字聊天</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full" />
+                    <div className="w-4 h-4 bg-pink-500 border-2 border-black" />
                     <span>評價回饋系統</span>
                   </li>
                 </ul>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
-            <Card className="hover:shadow-xl transition-all duration-300 border-0 bg-gradient-to-br from-purple-50 to-pink-50">
-              <CardHeader>
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-4">
-                  <MessageSquare className="w-8 h-8 text-white" />
+            <div className="bg-purple-300 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-6">
+              <div className="mb-6">
+                <div className="w-20 h-20 bg-white border-4 border-black flex items-center justify-center mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                  <MessageSquare className="w-10 h-10 text-black" />
                 </div>
-                <CardTitle className="text-xl">安全聊天系統</CardTitle>
-                <CardDescription>加密通訊，保護用戶隱私</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3 text-sm text-gray-600">
+                <h3 className="text-2xl font-black text-black mb-2 uppercase">安全聊天系統</h3>
+                <p className="font-bold text-black">加密通訊，保護用戶隱私</p>
+              </div>
+              <div className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <ul className="space-y-3 text-sm text-black font-bold">
                   <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full" />
+                    <div className="w-4 h-4 bg-red-500 border-2 border-black" />
                     <span>文字即時聊天</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full" />
+                    <div className="w-4 h-4 bg-blue-500 border-2 border-black" />
                     <span>圖片檔案傳送</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full" />
+                    <div className="w-4 h-4 bg-green-500 border-2 border-black" />
                     <span>基本加密保護</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full" />
+                    <div className="w-4 h-4 bg-yellow-500 border-2 border-black" />
                     <span>25MB檔案限制</span>
                   </li>
                 </ul>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
-            <Card className="hover:shadow-xl transition-all duration-300 border-0 bg-gradient-to-br from-yellow-50 to-orange-50">
-              <CardHeader>
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mb-4">
-                  <DollarSign className="w-8 h-8 text-white" />
+            <div className="bg-yellow-300 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-6">
+              <div className="mb-6">
+                <div className="w-20 h-20 bg-white border-4 border-black flex items-center justify-center mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                  <DollarSign className="w-10 h-10 text-black" />
                 </div>
-                <CardTitle className="text-xl">透明收費機制</CardTitle>
-                <CardDescription>公平定價，支持多種支付方式</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3 text-sm text-gray-600">
+                <h3 className="text-2xl font-black text-black mb-2 uppercase">透明收費機制</h3>
+                <p className="font-bold text-black">公平定價，支持多種支付方式</p>
+              </div>
+              <div className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <ul className="space-y-3 text-sm text-black font-bold">
                   <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-yellow-500 rounded-full" />
+                    <div className="w-4 h-4 bg-red-500 border-2 border-black" />
                     <span>試教課 50 % 優惠，不滿意可全額退費</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-yellow-500 rounded-full" />
+                    <div className="w-4 h-4 bg-blue-500 border-2 border-black" />
                     <span>30天無條件退款</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-yellow-500 rounded-full" />
+                    <div className="w-4 h-4 bg-green-500 border-2 border-black" />
                     <span>綠界金流整合</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-yellow-500 rounded-full" />
+                    <div className="w-4 h-4 bg-pink-500 border-2 border-black" />
                     <span>信用卡支付與刷退，安全、簡便</span>
                   </li>
                 </ul>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
-            <Card className="hover:shadow-xl transition-all duration-300 border-0 bg-gradient-to-br from-red-50 to-rose-50">
-              <CardHeader>
-                <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-rose-500 rounded-2xl flex items-center justify-center mb-4">
-                  <Shield className="w-8 h-8 text-white" />
+            <div className="bg-red-300 border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-6">
+              <div className="mb-6">
+                <div className="w-20 h-20 bg-white border-4 border-black flex items-center justify-center mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                  <Shield className="w-10 h-10 text-black" />
                 </div>
-                <CardTitle className="text-xl">完善保障機制</CardTitle>
-                <CardDescription>多重保護，確保教學品質</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3 text-sm text-gray-600">
+                <h3 className="text-2xl font-black text-black mb-2 uppercase">完善保障機制</h3>
+                <p className="font-bold text-black">多重保護，確保教學品質</p>
+              </div>
+              <div className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <ul className="space-y-3 text-sm text-black font-bold">
                   <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-red-500 rounded-full" />
+                    <div className="w-4 h-4 bg-red-500 border-2 border-black" />
                     <span>課程發生認證</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-red-500 rounded-full" />
+                    <div className="w-4 h-4 bg-blue-500 border-2 border-black" />
                     <span>No-Show處理</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-red-500 rounded-full" />
+                    <div className="w-4 h-4 bg-green-500 border-2 border-black" />
                     <span>投訴檢舉系統</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-red-500 rounded-full" />
+                    <div className="w-4 h-4 bg-yellow-500 border-2 border-black" />
                     <span>客服爭議處理</span>
                   </li>
                 </ul>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Learning Process */}
-      <section id="process" className="py-24 bg-gradient-to-br from-gray-50 to-amber-50">
+      <section id="process" className="py-24 bg-green-300">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
-            <div className="inline-block bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <div className="inline-block bg-white border-4 border-black px-6 py-3 text-sm font-black mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
               學習流程
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">簡單三步，開始您的學習之旅</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">從註冊到上課，我們讓整個過程變得簡單而順暢</p>
+            <h2 className="text-4xl md:text-5xl font-black text-black mb-6 bg-yellow-300 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 uppercase">簡單三步，開始您的學習之旅</h2>
+            <p className="text-xl text-black font-bold max-w-3xl mx-auto bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">從註冊到上課，我們讓整個過程變得簡單而順暢</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -378,235 +376,243 @@ const Index = () => {
                 title: "選擇教師",
                 description: "瀏覽教師檔案，查看教師經驗、學生評價，選擇最適合您的老師",
                 icon: <Users className="w-8 h-8" />,
-                color: "from-amber-500 to-orange-500"
+                color: "bg-amber-300"
               },
               {
                 step: "2", 
                 title: "預約試教",
-                description: "預約25分鐘試教課程，請驗教師的教學風格，確認是否符合需求",
+                description: "預約25分鐘試教課程，驗證教師的教學風格，確認是否符合需求",
                 icon: <Clock className="w-8 h-8" />,
-                color: "from-blue-500 to-indigo-500"
+                color: "bg-blue-300"
               },
               {
                 step: "3",
                 title: "開始學習",
                 description: "購買課程方案，開始您的個人化學習旅程，隨時追蹤學習進度",
                 icon: <Video className="w-8 h-8" />,
-                color: "from-green-500 to-emerald-500"
+                color: "bg-pink-300"
               }
             ].map((item, index) => (
-              <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm">
-                <CardHeader className="pb-4">
-                  <div className={`w-20 h-20 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg`}>
-                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-900 font-bold text-lg">
-                      {item.step}
-                    </div>
+              <div key={index} className={`text-center border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 ${item.color} p-8`}>
+                <div className="pb-4">
+                  <div className="w-20 h-20 bg-white border-4 border-black flex items-center justify-center mx-auto mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <span className="text-4xl font-black text-black">{item.step}</span>
                   </div>
-                  <CardTitle className="text-xl font-bold">{item.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 leading-relaxed">{item.description}</p>
-                </CardContent>
-              </Card>
+                  <h3 className="text-2xl font-black text-black mb-4 uppercase">{item.title}</h3>
+                </div>
+                <div className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                  <p className="text-black font-bold leading-relaxed">{item.description}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="py-24 bg-white">
+      <section id="pricing" className="py-24 bg-blue-300">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
-            <div className="inline-block bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <div className="inline-block bg-white border-4 border-black px-6 py-3 text-sm font-black mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
               收費方式
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">透明公平的定價機制</h2>
-            <p className="text-xl text-gray-600">為教師與學生創造雙贏的學習環境</p>
+            <h2 className="text-4xl md:text-5xl font-black text-black mb-6 bg-pink-300 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 uppercase">透明公平的定價機制</h2>
+            <p className="text-xl text-black font-bold bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">為教師與學生創造雙贏的學習環境</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="border-2 border-amber-200 hover:border-amber-400 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-amber-50 to-orange-50">
-              <CardHeader className="text-center">
-                <Badge className="w-fit mx-auto mb-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white">體驗課程</Badge>
-                <CardTitle className="text-2xl font-bold">試教課程</CardTitle>
-                <CardDescription>25分鐘體驗</CardDescription>
-                <div className="text-3xl font-bold text-amber-600 mt-4">
+            <div className="border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 bg-amber-300">
+              <div className="text-center p-6">
+                <div className="bg-white border-4 border-black px-4 py-2 text-black font-black mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase">體驗課程</div>
+                <h3 className="text-2xl font-black text-black mb-2 uppercase">試教課程</h3>
+                <p className="font-bold text-black mb-4">25分鐘體驗</p>
+                <div className="text-3xl font-black text-black mt-4 bg-yellow-300 border-4 border-black p-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                   正式課程 50% 折扣
                 </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
+              </div>
+              <div className="bg-white border-t-4 border-black p-4">
                 <ul className="space-y-3">
                   <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
-                    <span className="text-sm">25分鐘一對一教學</span>
+                    <div className="w-4 h-4 bg-red-500 border-2 border-black" />
+                    <span className="text-sm font-bold text-black">25分鐘一對一教學</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
-                    <span className="text-sm">了解教師教學風格</span>
+                    <div className="w-4 h-4 bg-blue-500 border-2 border-black" />
+                    <span className="text-sm font-bold text-black">了解教師教學風格</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-amber-500 rounded-full" />
-                    <span className="text-sm">不滿意可退費</span>
+                    <div className="w-4 h-4 bg-green-500 border-2 border-black" />
+                    <span className="text-sm font-bold text-black">不滿意可退費</span>
                   </li>
                 </ul>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
-            <Card className="border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-blue-50 to-indigo-50 relative">
-              <CardHeader className="text-center">
-                <Badge className="w-fit mx-auto mb-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white">進入課程</Badge>
-                <CardTitle className="text-2xl font-bold">正式課程</CardTitle>
-                <CardDescription>50分鐘完整課程</CardDescription>
-                <div className="text-3xl font-bold text-blue-600 mt-4">
+            <div className="border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 bg-blue-400 relative">
+              <div className="text-center p-6">
+                <div className="bg-white border-4 border-black px-4 py-2 text-black font-black mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase">進入課程</div>
+                <h3 className="text-2xl font-black text-black mb-2 uppercase">正式課程</h3>
+                <p className="font-bold text-black mb-4">50分鐘完整課程</p>
+                <div className="text-3xl font-black text-black mt-4 bg-yellow-300 border-4 border-black p-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                   教師定價 + 保障服務費
                 </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <ul className="space-y-3">
+              </div>
+              <div className="bg-white border-t-4 border-black p-4">
+                <ul className="space-y-3 mb-4">
                   <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full" />
-                    <span className="text-sm">4/8/12/16 堂課選擇</span>
+                    <div className="w-4 h-4 bg-red-500 border-2 border-black" />
+                    <span className="text-sm font-bold text-black">4/8/12/16 堂課選擇</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full" />
-                    <span className="text-sm">自動月訂制</span>
+                    <div className="w-4 h-4 bg-blue-500 border-2 border-black" />
+                    <span className="text-sm font-bold text-black">自動月訂制</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full" />
-                    <span className="text-sm">隨時取消訂閱</span>
+                    <div className="w-4 h-4 bg-green-500 border-2 border-black" />
+                    <span className="text-sm font-bold text-black">隨時取消訂閱</span>
                   </li>
                 </ul>
-                <div className="mt-4 p-4 bg-blue-100/50 rounded-lg border border-blue-200">
-                  <p className="text-sm font-medium text-blue-800 mb-2">保障服務費用以確保:</p>
-                  <ul className="space-y-2 text-xs text-blue-700">
+                <div className="bg-pink-200 border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                  <p className="text-sm font-black text-black mb-2 uppercase">保障服務費用以確保:</p>
+                  <ul className="space-y-2 text-xs text-black font-bold">
                     <li className="flex items-center space-x-2">
-                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
+                      <div className="w-2 h-2 bg-red-500 border border-black" />
                       <span>平台內視訊、安全金流、試教課退費保障</span>
                     </li>
                     <li className="flex items-center space-x-2">
-                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
+                      <div className="w-2 h-2 bg-blue-500 border border-black" />
                       <span>排課系統（自動通知老師，不用寫訊息）</span>
                     </li>
                     <li className="flex items-center space-x-2">
-                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
+                      <div className="w-2 h-2 bg-green-500 border border-black" />
                       <span>評價系統</span>
                     </li>
                     <li className="flex items-center space-x-2">
-                      <div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
+                      <div className="w-2 h-2 bg-yellow-500 border border-black" />
                       <span>安全回報機制</span>
                     </li>
                   </ul>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
-            <Card className="border-2 border-green-200 hover:border-green-400 transition-all duration-300 hover:shadow-xl bg-gradient-to-br from-green-50 to-emerald-50">
-              <CardHeader className="text-center">
-                <Badge className="w-fit mx-auto mb-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white">品質保證</Badge>
-                <CardTitle className="text-2xl font-bold">退款保障</CardTitle>
-                <CardDescription>30天保證期</CardDescription>
-                <div className="text-3xl font-bold text-green-600 mt-4">
+            <div className="border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 bg-green-300">
+              <div className="text-center p-6">
+                <div className="bg-white border-4 border-black px-4 py-2 text-black font-black mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase">品質保證</div>
+                <h3 className="text-2xl font-black text-black mb-2 uppercase">退款保障</h3>
+                <p className="font-bold text-black mb-4">30天保證期</p>
+                <div className="text-3xl font-black text-black mt-4 bg-yellow-300 border-4 border-black p-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                   100% 退款
                 </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
+              </div>
+              <div className="bg-white border-t-4 border-black p-4">
                 <ul className="space-y-3">
                   <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full" />
-                    <span className="text-sm">購買後30天內</span>
+                    <div className="w-4 h-4 bg-red-500 border-2 border-black" />
+                    <span className="text-sm font-bold text-black">購買後30天內</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full" />
-                    <span className="text-sm">未完成課程退款</span>
+                    <div className="w-4 h-4 bg-blue-500 border-2 border-black" />
+                    <span className="text-sm font-bold text-black">未完成課程退款</span>
                   </li>
                   <li className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-green-500 rounded-full" />
-                    <span className="text-sm">無條件申請</span>
+                    <div className="w-4 h-4 bg-green-500 border-2 border-black" />
+                    <span className="text-sm font-bold text-black">無條件申請</span>
                   </li>
                 </ul>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Teacher CTA */}
-      <section id="teacher" className="py-24 bg-gradient-to-br from-amber-100 to-orange-100">
+      <section id="teacher" className="py-24 bg-purple-300">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block bg-white/80 text-amber-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-block bg-white border-4 border-black px-6 py-3 text-sm font-black mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
               教師招募
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+            <h2 className="text-4xl md:text-5xl font-black text-black mb-8 bg-yellow-300 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 uppercase">
               成為首批元老級教師
             </h2>
-            <p className="text-xl text-gray-600 mb-12 leading-relaxed">
-              留下您的聯繫方式，我們將在平台上線時第一時間通知您，並邀請您成為
-              <br />
-              No Limit Tutor 的元老級教師
-            </p>
+            <div className="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12">
+              <p className="text-xl text-black font-bold leading-relaxed">
+                留下您的聯繫方式，我們將在平台上線時第一時間通知您，並邀請您成為
+                <br />
+                No Limit Tutor 的元老級教師
+              </p>
+            </div>
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white px-12 py-6 text-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              className="bg-amber-400 hover:bg-amber-300 text-black border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-xl px-12 py-6 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
               onClick={() => window.open('https://forms.gle/6cYoa9Lt2P7Wy8uu5', '_blank')}
             >
               立即加入
               <ArrowRight className="ml-2 w-6 h-6" />
             </Button>
-            <p className="text-sm text-gray-500 mt-6">
-              * 完全免費，我們承諾不會向您收取任何費用
-            </p>
+            <div className="bg-pink-300 border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mt-6 inline-block">
+              <p className="text-sm text-black font-black uppercase">
+                * 完全免費，我們承諾不會向您收取任何費用
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Student CTA */}
-      <section className="py-24 bg-gradient-to-br from-blue-100 to-indigo-100">
+      <section className="py-24 bg-amber-300">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block bg-white/80 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-block bg-white border-4 border-black px-6 py-3 text-sm font-black mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
               學生招募
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+            <h2 className="text-4xl md:text-5xl font-black text-black mb-8 bg-pink-300 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 uppercase">
               成為早鳥學生
             </h2>
-            <p className="text-xl text-gray-600 mb-12 leading-relaxed">
-              加入 No Limit Tutor 的學習社群，享受最民主的一對一教學體驗
-              <br />
-              早鳥學生有機會享有特別優惠與專屬權益
-            </p>
+            <div className="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12">
+              <p className="text-xl text-black font-bold leading-relaxed">
+                加入 No Limit Tutor 的學習社群，享受最民主的一對一教學體驗
+                <br />
+                早鳥學生有機會享有特別優惠與專屬權益
+              </p>
+            </div>
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white px-12 py-6 text-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              className="bg-blue-400 hover:bg-blue-300 text-black border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-xl px-12 py-6 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
               onClick={() => window.open('#', '_blank')}
             >
               立即加入學習
               <ArrowRight className="ml-2 w-6 h-6" />
             </Button>
-            <p className="text-sm text-gray-500 mt-6">
-              * 平台上線後將優先通知您註冊使用
-            </p>
+            <div className="bg-green-300 border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mt-6 inline-block">
+              <p className="text-sm text-black font-black uppercase">
+                * 平台上線後將優先通知您註冊使用
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Early Access CTA */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-red-300">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-block bg-amber-100 text-amber-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-block bg-white border-4 border-black px-6 py-3 text-sm font-black mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
               搶先追蹤
             </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">搶先追蹤</h2>
-            <p className="text-xl text-gray-600 mb-12">
-              進一步了解 No Limit Tutor 文化與價值訴求，以及平台努力的方向<br />
-              加入討論，共同營造嶄新的民主式學習環境
-            </p>
+            <h2 className="text-4xl font-black text-black mb-6 bg-yellow-300 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 uppercase">搶先追蹤</h2>
+            <div className="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12">
+              <p className="text-xl text-black font-bold">
+                進一步了解 No Limit Tutor 文化與價值訴求，以及平台努力的方向<br />
+                加入討論，共同營造嶄新的民主式學習環境
+              </p>
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
                 size="lg" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-blue-600"
+                className="bg-blue-400 hover:bg-blue-300 text-black border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-lg px-8 py-4 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
                 onClick={() => window.open('https://www.facebook.com/nolimittutor', '_blank')}
               >
                 追蹤臉書 - 掌握 NLT 價值與動態
@@ -615,7 +621,7 @@ const Index = () => {
               
               <Button 
                 size="lg" 
-                className="bg-pink-500 hover:bg-pink-600 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-pink-500"
+                className="bg-pink-400 hover:bg-pink-300 text-black border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-lg px-8 py-4 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
                 onClick={() => window.open('https://www.instagram.com/no_limit_tutor/', '_blank')}
               >
                 追蹤 IG - 觀看國外搞笑迷因學英文
@@ -624,7 +630,7 @@ const Index = () => {
               
               <Button 
                 size="lg" 
-                className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-amber-500"
+                className="bg-yellow-400 hover:bg-yellow-300 text-black border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-lg px-8 py-4 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
                 onClick={() => window.open('https://forms.gle/6cYoa9Lt2P7Wy8uu5', '_blank')}
               >
                 填寫表單 - 成為 NLT 的一員
@@ -636,31 +642,31 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-16 bg-gray-900">
+      <footer className="py-16 bg-black border-t-8 border-yellow-400">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-3 mb-6 md:mb-0">
-              <div className="w-10 h-10 bg-transparent rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-yellow-400 border-4 border-white flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
                 <img 
-                  src="/lovable-uploads/cc9d776e-5a85-4800-a1be-a3bc9ff7c138.png" 
+                  src="/lovable-uploads/51a45798-27ad-4620-99ff-003ad04c3aad.png" 
                   alt="No Limit Tutor Logo"
-                  className="w-10 h-10 object-contain brightness-0 invert"
+                  className="w-8 h-8 object-contain"
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-white">No Limit Tutor</span>
-                <span className="text-sm text-amber-400 font-medium">無限家教</span>
+                <span className="text-2xl font-black text-white uppercase tracking-wide">No Limit Tutor</span>
+                <span className="text-sm text-yellow-400 font-black uppercase">無限家教</span>
               </div>
             </div>
             
             <div className="text-center md:text-left">
-              <p className="text-gray-400 mb-4 text-lg">
+              <p className="text-white mb-4 text-lg font-bold bg-pink-500 border-4 border-white p-4 shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
                 突破規則，知識無限 - 讓每個人都能享受優質的一對一教學
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-4">
-                <a href="/privacy" className="text-amber-400 hover:text-amber-300 text-sm transition-colors">隱私條款</a>
+                <a href="/privacy" className="text-black bg-yellow-400 hover:bg-yellow-300 text-sm font-black uppercase border-4 border-white px-4 py-2 shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] transition-colors">隱私條款</a>
               </div>
-              <p className="text-gray-500 text-sm">
+              <p className="text-white text-sm font-bold bg-gray-800 border-2 border-white p-2">
                 © 2025 No Limit Tutor. No Limit Tutor 無限家教為睿思博遠有限公司註冊之商標，All rights reserved
               </p>
             </div>
