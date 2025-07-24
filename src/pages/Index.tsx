@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -64,23 +63,23 @@ const Index = () => {
                       <h1 className="text-7xl md:text-8xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
                         No Limit Tutor
                       </h1>
-                      <div className="mt-4 mb-8">
+                      <div className="mt-4 mb-6">
                         <span className="text-6xl md:text-7xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
                           無限家教
                         </span>
                       </div>
                     </div>
                     
-                    <div className="flex-shrink-0 ml-8">
+                    <div className="flex-shrink-0 ml-4">
                       <img 
                         src="/lovable-uploads/6ed7f059-777c-4ced-8660-78aa11ba900f.png" 
                         alt="No Limit Tutor Logo" 
-                        className="w-28 h-28 md:w-32 md:h-32 object-contain"
+                        className="w-35 h-35 md:w-40 md:h-40 object-contain"
                       />
                     </div>
                   </div>
                   
-                  <div className="mt-10">
+                  <div className="mt-16">
                     <h2 className="text-4xl md:text-5xl font-black text-black leading-tight bg-white px-8 py-6 border-6 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1">
                       台灣首個民主、群眾導向的線上一對一家教平台
                     </h2>
@@ -88,7 +87,7 @@ const Index = () => {
                 </div>
               </div>
               
-              <div className="space-y-6 text-xl text-black leading-relaxed max-w-5xl bg-white border-6 border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mt-12">
+              <div className="space-y-6 text-xl text-black leading-relaxed max-w-5xl bg-white border-6 border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mt-16">
                 <p className="font-bold text-2xl">
                   No Limit Tutor 是專為台灣師生打造的線上教學平台，讓老師自主開課、學生自由選師，透過平台完成預約、付款與視訊教學，全程安全透明。
                 </p>
