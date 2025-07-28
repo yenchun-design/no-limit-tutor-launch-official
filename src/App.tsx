@@ -1,7 +1,7 @@
 
 import { Toaster } from "@/components/ui/toaster";
 import { Routes, Route } from "react-router-dom";
-import { ErrorBoundary } from "@/components/ErrorBoundary";
+import ErrorBoundary from "@/components/ErrorBoundary";
 import IndexSEO from "./pages/IndexSEO";
 import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
