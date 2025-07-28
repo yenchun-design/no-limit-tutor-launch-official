@@ -61,10 +61,10 @@ const Index = () => {
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
                       <h1 className="text-5xl md:text-6xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[4px_4px_0px_rgba(255,255,255,1)] mb-4">
-                        台灣首選線上家教平台｜找家教老師、彈性上課、立即試教
+                        No Limit Tutor 無限家教
                       </h1>
                       <div className="text-4xl md:text-5xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
-                        No Limit Tutor 無限家教
+                        台灣首個民主、群眾導向的線上一對一家教平台
                       </div>
                     </div>
                     
