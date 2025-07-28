@@ -18,11 +18,16 @@ const routesToPrerender = fs
 
 ;(async () => {
   for (const url of routesToPrerender) {
-    const appHtml = render(url);
-    const html = template.replace(`<!--app-html-->`, appHtml)
+    try {
+      const appHtml = render(url);
+      const html = template.replace(`<!--app-html-->`, appHtml)
 
-    const filePath = `dist${url === '/' ? '/index' : url}.html`
-    fs.writeFileSync(toAbsolute(filePath), html)
-    console.log('pre-rendered:', filePath)
+      const filePath = `dist${url === '/' ? '/index' : url}.html`
+      fs.writeFileSync(toAbsolute(filePath), html)
+      console.log('pre-rendered:', filePath)
+    } catch (error) {
+      console.error('Error prerendering route:', url, error.message)
+      process.exit(1)
+    }
   }
 })()
