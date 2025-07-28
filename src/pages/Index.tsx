@@ -60,26 +60,28 @@ const Index = () => {
                 <div className="flex-1 space-y-8">
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
-                      <h1 className="text-5xl md:text-6xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[4px_4px_0px_rgba(255,255,255,1)] mb-4">
-                        No Limit Tutor 無限家教
+                      <h1 className="text-7xl md:text-8xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
+                        No Limit Tutor
                       </h1>
-                      <div className="text-4xl md:text-5xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
-                        台灣首個民主、群眾導向的線上一對一家教平台
+                      <div className="mt-4 mb-6">
+                        <span className="text-6xl md:text-7xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
+                          無限家教
+                        </span>
                       </div>
                     </div>
                     
                     <div className="flex-shrink-0 ml-4">
                       <img 
                         src="/lovable-uploads/6ed7f059-777c-4ced-8660-78aa11ba900f.png" 
-                        alt="No Limit Tutor 平台畫面展示 - 線上家教老師平台標誌" 
+                        alt="No Limit Tutor Logo" 
                         className="w-35 h-35 md:w-40 md:h-40 object-contain"
                       />
                     </div>
                   </div>
                   
                   <div className="mt-16">
-                    <h2 className="text-3xl md:text-4xl font-black text-black leading-tight bg-white px-8 py-6 border-6 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1">
-                      <strong>線上家教老師平台</strong> - 台灣首個民主、群眾導向的線上一對一家教平台
+                    <h2 className="text-4xl md:text-5xl font-black text-black leading-tight bg-white px-8 py-6 border-6 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1">
+                      台灣首個民主、群眾導向的線上一對一家教平台
                     </h2>
                   </div>
                 </div>
@@ -87,15 +89,15 @@ const Index = () => {
               
               <div className="space-y-6 text-xl text-black leading-relaxed max-w-5xl bg-white border-6 border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mt-16">
                 <p className="font-bold text-2xl">
-                  No Limit Tutor 是專為台灣師生打造的<strong>線上家教老師平台</strong>，讓老師自主開課、學生自由選師，透過平台完成預約、付款與視訊教學，全程安全透明。這個<strong>無抽成教學平台</strong>為學生提供<strong>找家教老師</strong>的最佳選擇。
+                  No Limit Tutor 是專為台灣師生打造的線上教學平台，讓老師自主開課、學生自由選師，透過平台完成預約、付款與視訊教學，全程安全透明。
                 </p>
                 <p className="font-bold text-xl">
-                  我們不從教師收入抽成，保障服務費由學生端負擔，讓教學更自由、收費更公平。相較於其他<strong>家教平台比較</strong>，我們提供更透明的<strong>教師自主訂價、學生自由選課</strong>環境。
+                  我們不從教師收入抽成，保障服務費由學生端負擔，讓教學更自由、收費更公平。
                 </p>
                 <div className="space-y-4 bg-gradient-to-r from-orange-100 to-amber-100 border-4 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                   <div className="flex items-center space-x-3">
                     <div className="w-4 h-4 bg-red-500 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
-                    <span className="font-black text-lg"><strong>免費試教、保障退費</strong> - 不滿意試教？全額退費</span>
+                    <span className="font-black text-lg">不滿意試教？全額退費</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-4 h-4 bg-blue-500 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
@@ -103,13 +105,13 @@ const Index = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-4 h-4 bg-green-500 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
-                    <span className="font-black text-lg"><strong>學生自選教師，自由彈性排課</strong> - 教學與學習皆擁有真正的選擇權</span>
+                    <span className="font-black text-lg">教學與學習皆擁有真正的選擇權</span>
                   </div>
                 </div>
                 <div className="bg-gradient-to-r from-orange-200 to-red-200 border-6 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
                   <p className="font-black text-black text-xl">
                     現在開放招募首批元老教師與早鳥學生<br />
-                    共同建立一個由群眾驅動的自主學習社群！無論您需要<strong>線上英文家教</strong>或<strong>成人英文會話家教推薦</strong>，我們都能提供最優質的服務。
+                    共同建立一個由群眾驅動的自主學習社群！
                   </p>
                 </div>
               </div>
@@ -146,7 +148,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-8 border-black px-8 py-4 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mb-8 inline-block transform rotate-1">
-              <h2 className="text-3xl md:text-4xl font-black text-black uppercase tracking-wide">我們的特色：民主平台、彈性排課、保障學習體驗</h2>
+              <span className="text-4xl md:text-5xl font-black text-black uppercase tracking-wide">No Limit Tutor 的三大服務主張</span>
             </div>
           </div>
           
@@ -465,7 +467,7 @@ const Index = () => {
             <div className="border-8 border-black shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 bg-white">
               <div className="bg-blue-300 text-center p-6 border-b-4 border-black">
                 <div className="bg-white border-4 border-black px-4 py-2 text-black font-black mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase">體驗課程</div>
-                <h3 className="text-2xl font-black text-black mb-2 uppercase">保障試教，不滿意可退費</h3>
+                <h3 className="text-2xl font-black text-black mb-2 uppercase">試教課程</h3>
                 <p className="font-bold text-black mb-4 text-lg">25分鐘體驗</p>
                 <div className="text-3xl font-black text-black mt-4 bg-gradient-to-r from-yellow-300 to-amber-300 border-6 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
                   正式課程 50% 折扣
@@ -575,13 +577,13 @@ const Index = () => {
               教師招募
             </div>
             <h2 className="text-4xl md:text-5xl font-black text-black mb-8 bg-amber-300 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 uppercase">
-              家教老師招募中：免費加入、無抽成
+              成為首批元老級教師
             </h2>
             <div className="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
               <p className="text-xl text-black font-bold leading-relaxed">
                 留下您的聯繫方式，我們將在平台上線時第一時間通知您，並邀請您成為
                 <br />
-                <strong>No Limit Tutor 的元老級教師</strong>
+                No Limit Tutor 的元老級教師
               </p>
             </div>
             <Button 
@@ -604,13 +606,13 @@ const Index = () => {
               學生招募
             </div>
             <h2 className="text-4xl md:text-5xl font-black text-black mb-8 bg-amber-400 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 uppercase">
-              學生早鳥註冊：安全付款、彈性試教
+              成為早鳥學生
             </h2>
             <div className="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
               <p className="text-xl text-black font-bold leading-relaxed">
                 加入 No Limit Tutor 的學習社群，享受最民主的一對一教學體驗
                 <br />
-                <strong>早鳥學生有機會享有特別優惠與專屬權益</strong>
+                早鳥學生有機會享有特別優惠與專屬權益
               </p>
             </div>
             <Button 
