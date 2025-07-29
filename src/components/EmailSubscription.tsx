@@ -37,34 +37,46 @@ const EmailSubscription = () => {
     setIsSubmitting(true);
 
     try {
-      // Use type assertion to bypass TypeScript error until types are regenerated
-      const { error } = await (supabase as any)
+      const { error } = await supabase
         .from('email_list')
         .insert([{ email: email.toLowerCase().trim() }]);
 
       if (error) {
         console.error('Supabase error:', error);
-        if (error.code === '23505') { // Unique constraint violation
+        
+        // Handle duplicate email error specifically
+        if (error.code === '23505' || error.message?.includes('duplicate key value')) {
           toast({
             title: "Email 已存在",
-            description: "此 Email 已經註冊過了",
-            variant: "destructive",
+            description: "此 Email 已經註冊過了，感謝您的支持！",
+            variant: "default", // Changed from destructive to default for better UX
           });
-        } else {
-          throw error;
+          setEmail(''); // Clear the form even for duplicates
+          return; // Exit early, don't throw error
         }
-      } else {
+        
+        // Handle other database errors
         toast({
-          title: "訂閱成功！",
-          description: "感謝您的訂閱，我們會在平台上線時第一時間通知您",
+          title: "訂閱失敗",
+          description: "系統暫時無法處理您的請求，請稍後再試",
+          variant: "destructive",
         });
-        setEmail('');
+        return; // Exit early, don't throw error
       }
-    } catch (error) {
-      console.error('Error submitting email:', error);
+
+      // Success case
       toast({
-        title: "訂閱失敗",
-        description: "請稍後再試，或聯繫客服",
+        title: "訂閱成功！",
+        description: "感謝您的訂閱，我們會在平台上線時第一時間通知您",
+      });
+      setEmail('');
+
+    } catch (unexpectedError) {
+      // Catch any unexpected errors to prevent app crashes
+      console.error('Unexpected error during email subscription:', unexpectedError);
+      toast({
+        title: "系統錯誤",
+        description: "發生未預期的錯誤，請重新整理頁面後再試",
         variant: "destructive",
       });
     } finally {
