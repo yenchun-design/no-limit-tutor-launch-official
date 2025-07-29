@@ -95,7 +95,7 @@ const EmailSubscription = () => {
                     placeholder="請輸入您的 Email 地址"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="pl-10 h-12 text-lg border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-bold"
+                    className="pl-10 h-12 text-lg border-4 border-gray-400 bg-gray-100 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-bold focus:border-gray-600 hover:border-gray-500"
                     disabled={isSubmitting}
                   />
                 </div>
@@ -103,7 +103,7 @@ const EmailSubscription = () => {
                   type="submit"
                   size="lg"
                   disabled={isSubmitting}
-                  className="bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-6 border-white shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                  className="bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-xl px-12 py-6 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
                 >
                   {isSubmitting ? '送出中...' : '立即訂閱通知'}
                   <ArrowRight className="ml-2 w-6 h-6" />

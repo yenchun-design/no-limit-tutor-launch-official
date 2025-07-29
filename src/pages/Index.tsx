@@ -402,7 +402,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Email Subscription Section - NEW */}
+      {/* Email Subscription Section */}
       <EmailSubscription />
 
       {/* Learning Process */}
@@ -596,35 +596,6 @@ const Index = () => {
               onClick={() => window.open('https://forms.gle/6cYoa9Lt2P7Wy8uu5', '_blank')}
             >
               立即加入
-              <ArrowRight className="ml-2 w-8 h-8" />
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Student CTA */}
-      <section className="py-20 bg-gradient-to-br from-orange-200 to-amber-200">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block bg-white border-4 border-black px-6 py-3 text-base font-black mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
-              學生招募
-            </div>
-            <h2 className="text-4xl md:text-5xl font-black text-black mb-8 bg-amber-400 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 uppercase">
-              成為早鳥學生
-            </h2>
-            <div className="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
-              <p className="text-xl text-black font-bold leading-relaxed">
-                加入 No Limit Tutor 的學習社群，享受最民主的一對一教學體驗
-                <br />
-                早鳥學生有機會享有特別優惠與專屬權益
-              </p>
-            </div>
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-black border-6 border-white shadow-[16px_16px_0px_0px_rgba(255,255,255,1)] hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] font-black text-2xl px-20 py-12 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
-              onClick={() => window.open('#', '_blank')}
-            >
-              立即加入學習
               <ArrowRight className="ml-2 w-8 h-8" />
             </Button>
           </div>
