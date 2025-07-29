@@ -178,7 +178,6 @@ const Index = () => {
                 </div>
                 <div className="bg-gradient-to-r from-orange-200 to-red-200 border-6 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
                   <p className="font-black text-black text-xl">
-                    現在招募首批元老教師<br />
                     立即加入限額招募，共同建立一個群眾學習社群！！
                   </p>
                 </div>
@@ -474,7 +473,7 @@ const Index = () => {
               className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
               onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
             >
-              搶先成為首批無抽成教師
+              搶先成為元老級教師
               <ArrowRight className="ml-2 w-6 h-6" />
             </Button>
           </div>
@@ -488,7 +487,7 @@ const Index = () => {
             <div className="inline-block bg-white border-4 border-black px-6 py-3 text-base font-black mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
               學習流程
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-black mb-6 bg-amber-400 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 uppercase">簡單三步，開始您的學習之旅</h2>
+            <h2 className="text-4xl md:text-5xl font-black text-black mb-6 bg-amber-400 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 uppercase">簡單三步，開始你的學習之旅</h2>
             <p className="text-xl text-black font-bold max-w-3xl mx-auto bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">從註冊到上課，我們讓整個過程變得簡單而順暢</p>
           </div>
           
@@ -497,7 +496,7 @@ const Index = () => {
               {
                 step: "1",
                 title: "選擇教師",
-                description: "瀏覽教師檔案，查看教師經驗、學生評價，選擇最適合您的老師",
+                description: "瀏覽教師檔案，查看教師經驗、學生評價，選擇最適合你的老師",
                 icon: <Users className="w-8 h-8" />,
                 color: "bg-amber-300"
               },
@@ -511,7 +510,7 @@ const Index = () => {
               {
                 step: "3",
                 title: "開始學習",
-                description: "購買課程方案，開始您的個人化學習旅程，隨時追蹤學習進度",
+                description: "購買課程方案，開始你的個人化學習旅程，隨時追蹤學習進度",
                 icon: <Video className="w-8 h-8" />,
                 color: "bg-pink-300"
               }
@@ -537,7 +536,7 @@ const Index = () => {
               className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
               onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
             >
-              免費體驗線上家教平台
+              登記信箱，接收上線消息
               <ArrowRight className="ml-2 w-6 h-6" />
             </Button>
           </div>
@@ -673,9 +672,7 @@ const Index = () => {
             </h2>
             <div className="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
               <p className="text-xl text-black font-bold leading-relaxed">
-                留下您的聯繫方式，我們將在平台上線時第一時間通知您，並邀請您成為
-                <br />
-                No Limit Tutor 的元老級教師
+                留下你的聯繫方式，我們將在平台上線時第一時間通知你
               </p>
             </div>
             <Button 
@@ -699,13 +696,11 @@ const Index = () => {
               搶先通知
             </div>
             <h2 className="text-4xl md:text-5xl font-black text-black mb-8 bg-amber-300 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 uppercase">
-              平台上線第一時間通知您
+              平台上線第一時間通知你
             </h2>
             <div className="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
               <p className="text-xl text-black font-bold leading-relaxed">
-                留下您的 Email，我們會在 No Limit Tutor 正式上線時
-                <br />
-                第一時間通知您註冊使用，享有早鳥優惠！
+                留下你的 Email，我們會在 No Limit Tutor 正式上線時，第一時間通知你
               </p>
             </div>
             
@@ -715,7 +710,7 @@ const Index = () => {
                   <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 w-5 h-5" />
                   <Input
                     type="email"
-                    placeholder="請輸入您的 Email 地址"
+                    placeholder="請輸入你的 Email 地址"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="pl-12 h-14 text-lg border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] font-bold"
@@ -736,7 +731,7 @@ const Index = () => {
             
             <div className="text-center mt-6">
               <p className="text-sm font-bold text-black">
-                * 我們承諾不會濫用您的 Email，也不會分享給第三方
+                * 我們承諾不會濫用你的 Email，也不會分享給第三方
               </p>
             </div>
           </div>
@@ -755,7 +750,7 @@ const Index = () => {
             <div className="bg-white border-6 border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mb-12">
               <p className="text-2xl text-black font-bold leading-relaxed">
                 越來越多優秀教師選擇 No Limit Tutor<br />
-                成為首批元老教師，享有平台發展紅利！
+                成為首批元老教師，有望享有平台發展紅利！
               </p>
             </div>
             
@@ -817,7 +812,7 @@ const Index = () => {
             
             <div className="text-center mt-6">
               <p className="text-sm font-bold text-black">
-                * 平台上線後將優先通知您註冊使用
+                * 平台上線後將優先通知你註冊使用
               </p>
             </div>
           </div>
