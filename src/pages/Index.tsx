@@ -100,7 +100,25 @@ const Index = () => {
             <button onClick={() => scrollToSection('process')} className="text-xl font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">學習流程</button>
             <button onClick={() => scrollToSection('pricing')} className="text-xl font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">收費方式</button>
             <button onClick={() => scrollToSection('teacher')} className="text-xl font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">成為教師</button>
+            <Button 
+              size="sm" 
+              className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-3 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-sm px-6 py-3 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+              onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
+            >
+              立即加入教師招募
+            </Button>
           </nav>
+          
+          {/* Mobile CTA Button */}
+          <div className="md:hidden">
+            <Button 
+              size="sm" 
+              className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-3 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-sm px-4 py-3 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+              onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
+            >
+              加入招募
+            </Button>
+          </div>
         </div>
       </header>
 
@@ -451,6 +469,18 @@ const Index = () => {
               </div>
             </div>
           </div>
+          
+          {/* Mid-Page CTA */}
+          <div className="text-center mt-16">
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+              onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
+            >
+              搶先成為首批無抽成教師
+              <ArrowRight className="ml-2 w-6 h-6" />
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -501,6 +531,18 @@ const Index = () => {
                 </div>
               </div>
             ))}
+          </div>
+          
+          {/* CTA */}
+          <div className="text-center mt-16">
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+              onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
+            >
+              免費體驗線上家教平台
+              <ArrowRight className="ml-2 w-6 h-6" />
+            </Button>
           </div>
         </div>
       </section>
@@ -704,6 +746,34 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Teacher Stats Section */}
+      <section className="py-20 bg-gradient-to-br from-green-100 to-green-200">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-8 border-black px-12 py-8 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 mb-12">
+              <h2 className="text-5xl md:text-6xl font-black text-black uppercase tracking-wide">
+                目前已有 11 位老師加入
+              </h2>
+            </div>
+            <div className="bg-white border-6 border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mb-12">
+              <p className="text-2xl text-black font-bold leading-relaxed">
+                越來越多優秀教師選擇 No Limit Tutor<br />
+                成為首批元老教師，享有平台發展紅利！
+              </p>
+            </div>
+            
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white border-6 border-white shadow-[16px_16px_0px_0px_rgba(255,255,255,1)] hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] font-black text-2xl px-16 py-10 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+              onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
+            >
+              立即加入教師招募
+              <ArrowRight className="ml-2 w-8 h-8" />
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Social Media Follow Section */}
       <section className="py-20 bg-gradient-to-br from-orange-100 to-yellow-100">
         <div className="container mx-auto px-4">
@@ -752,6 +822,42 @@ const Index = () => {
               <p className="text-sm font-bold text-black">
                 * 平台上線後將優先通知您註冊使用
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final Footer CTA */}
+      <section className="py-20 bg-gradient-to-br from-red-400 to-red-500">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white border-6 border-black px-8 py-6 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mb-12">
+              <h2 className="text-4xl md:text-5xl font-black text-black mb-4 uppercase">
+                準備好開始了嗎？
+              </h2>
+              <p className="text-2xl text-black font-bold">
+                加入 No Limit Tutor，共建民主學習新時代
+              </p>
+            </div>
+            
+            <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-white to-gray-100 hover:from-gray-100 hover:to-gray-200 text-black border-6 border-black shadow-[14px_14px_0px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 w-full md:w-auto"
+                onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
+              >
+                立即加入教師招募
+                <ArrowRight className="ml-2 w-6 h-6" />
+              </Button>
+              
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-yellow-300 to-yellow-400 hover:from-yellow-400 hover:to-yellow-500 text-black border-6 border-black shadow-[14px_14px_0px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 w-full md:w-auto"
+                onClick={() => scrollToSection('home')}
+              >
+                回到頂部了解更多
+                <ArrowRight className="ml-2 w-6 h-6" />
+              </Button>
             </div>
           </div>
         </div>
