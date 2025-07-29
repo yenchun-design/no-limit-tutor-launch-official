@@ -95,6 +95,7 @@ const Index = () => {
           
           <nav className="hidden md:flex items-center space-x-8">
             <button onClick={() => scrollToSection('home')} className="text-xl font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">首頁</button>
+            <button onClick={() => scrollToSection('principles')} className="text-xl font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">NLT 三大主張</button>
             <button onClick={() => scrollToSection('features')} className="text-xl font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">功能特色</button>
             <button onClick={() => scrollToSection('process')} className="text-xl font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">學習流程</button>
             <button onClick={() => scrollToSection('pricing')} className="text-xl font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">收費方式</button>
@@ -126,7 +127,7 @@ const Index = () => {
                       <img 
                         src="/lovable-uploads/6ed7f059-777c-4ced-8660-78aa11ba900f.png" 
                         alt="No Limit Tutor Logo" 
-                        className="w-35 h-35 md:w-40 md:h-40 object-contain"
+                        className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 object-contain"
                       />
                     </div>
                   </div>
@@ -196,7 +197,7 @@ const Index = () => {
       </section>
 
       {/* Three Service Principles Section */}
-      <section className="py-20 bg-gradient-to-br from-orange-100 to-amber-100">
+      <section id="principles" className="py-20 bg-gradient-to-br from-orange-100 to-amber-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-8 border-black px-8 py-4 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mb-8 inline-block transform rotate-1">
