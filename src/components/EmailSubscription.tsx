@@ -37,7 +37,8 @@ const EmailSubscription = () => {
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase
+      // Use type assertion to bypass TypeScript error until types are regenerated
+      const { error } = await (supabase as any)
         .from('email_list')
         .insert([{ email: email.toLowerCase().trim() }]);
 

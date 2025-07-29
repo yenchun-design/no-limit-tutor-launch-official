@@ -14,6 +14,27 @@ export type Database = {
   }
   public: {
     Tables: {
+      email_list: {
+        Row: {
+          email: string
+          id: string
+          is_active: boolean
+          subscribed_at: string
+        }
+        Insert: {
+          email: string
+          id?: string
+          is_active?: boolean
+          subscribed_at?: string
+        }
+        Update: {
+          email?: string
+          id?: string
+          is_active?: boolean
+          subscribed_at?: string
+        }
+        Relationships: []
+      }
       email_subscriptions: {
         Row: {
           email: string
