@@ -142,10 +142,10 @@ const Index = () => {
               
               <div className="space-y-6 text-2xl text-black leading-relaxed max-w-5xl bg-white border-6 border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mt-16">
                 <p className="font-bold text-3xl">
-                  No Limit Tutor 是專為台灣師生打造的線上教學平台，開課、預約、付款與視訊上課，全程安全透明。
+                  No Limit Tutor 是專為台灣師生打造的線上教學網，綠界金流、國家監管，全程安全透明。
                 </p>
                 <p className="font-bold text-2xl">
-                  平台不從老師抽成，提供學生 100% 隨時退款保障，並確保師生教學與交易安全。
+                  平台不從老師抽成，且提供學生 100% 隨時退款保障，同時確保師生教學與交易安全。
                 </p>
                 <div className="space-y-4 bg-gradient-to-r from-orange-100 to-amber-100 border-4 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                   <div className="flex items-center space-x-3">
@@ -163,8 +163,8 @@ const Index = () => {
                 </div>
                 <div className="bg-gradient-to-r from-orange-200 to-red-200 border-6 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
                   <p className="font-black text-black text-xl">
-                    現在開放招募首批元老教師與早鳥學生<br />
-                    共同建立一個由群眾驅動的自主學習社群！
+                    現在招募首批元老教師<br />
+                    立即加入限額招募，共同建立一個群眾學習社群！！
                   </p>
                 </div>
               </div>
@@ -250,7 +250,7 @@ const Index = () => {
                 </div>
               </div>
               <div className="bg-white p-6">
-                <p className="text-xl text-black font-bold leading-relaxed">NLT 不從教師收入中抽成，而是在教師定價上增加些許費用，以保障學生退款權益、師生良性互動，以及金流安全。</p>
+                <p className="text-xl text-black font-bold leading-relaxed">NLT 不從教師收入中抽成，而是在教師定價上增加些許費用，以保障學生退款、師生良性互動，以及金流安全。</p>
               </div>
             </div>
           </div>
