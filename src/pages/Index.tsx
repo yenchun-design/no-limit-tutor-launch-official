@@ -714,8 +714,8 @@ const Index = () => {
             <h2 className="text-4xl font-black text-black mb-6 bg-amber-400 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 uppercase">社群互動</h2>
             <div className="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
               <p className="text-xl text-black font-bold">
-                進一步了解 No Limit Tutor 文化與價值訴求，以及平台努力的方向<br />
-                加入討論，共同營造嶄新的民主式學習環境
+                進一步了解 No Limit Tutor 文化與價值訴求，及平台努力的方向<br />
+                提供回饋，共造嶄新的民主學習環境
               </p>
             </div>
             
