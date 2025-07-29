@@ -38,10 +38,11 @@ const EmailSubscription = () => {
 
     try {
       const { error } = await supabase
-        .from('email_subscriptions')
+        .from('email_list')
         .insert([{ email: email.toLowerCase().trim() }]);
 
       if (error) {
+        console.error('Supabase error:', error);
         if (error.code === '23505') { // Unique constraint violation
           toast({
             title: "Email 已存在",
