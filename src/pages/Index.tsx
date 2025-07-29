@@ -588,7 +588,7 @@ const Index = () => {
             </div>
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-orange-300 to-orange-400 hover:from-orange-400 hover:to-orange-500 text-black border-6 border-white shadow-[16px_16px_0px_0px_rgba(255,255,255,1)] hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] font-black text-2xl px-20 py-12 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+              className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-6 border-black shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] font-black text-2xl px-20 py-12 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
               onClick={() => window.open('https://forms.gle/6cYoa9Lt2P7Wy8uu5', '_blank')}
             >
               立即加入
