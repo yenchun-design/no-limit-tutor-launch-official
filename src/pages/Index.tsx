@@ -402,9 +402,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Email Subscription Section */}
-      <EmailSubscription />
-
       {/* Learning Process */}
       <section id="process" className="py-20 bg-gradient-to-br from-orange-300 to-red-300">
         <div className="container mx-auto px-4">
@@ -602,6 +599,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Email Subscription Section */}
+      <EmailSubscription />
+
       {/* Early Access CTA */}
       <section className="py-20 bg-gradient-to-br from-orange-100 to-yellow-100">
         <div className="container mx-auto px-4">
@@ -609,7 +609,7 @@ const Index = () => {
             <div className="inline-block bg-white border-4 border-black px-6 py-3 text-base font-black mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
               搶先追蹤
             </div>
-            <h2 className="text-4xl font-black text-black mb-6 bg-amber-400 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 uppercase">搶先追蹤</h2>
+            <h2 className="text-4xl font-black text-black mb-6 bg-amber-400 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 uppercase">社群互動</h2>
             <div className="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
               <p className="text-xl text-black font-bold">
                 進一步了解 No Limit Tutor 文化與價值訴求，以及平台努力的方向<br />
