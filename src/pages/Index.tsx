@@ -87,12 +87,12 @@ const Index = () => {
                 </div>
               </div>
               
-              <div className="space-y-6 text-xl text-black leading-relaxed max-w-5xl bg-white border-6 border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mt-16">
-                <p className="font-bold text-2xl">
-                  No Limit Tutor 是專為台灣師生打造的線上教學平台，讓老師自主開課、學生自由選師，透過平台完成預約、付款與視訊教學，全程安全透明。
+              <div className="space-y-6 text-2xl text-black leading-relaxed max-w-5xl bg-white border-6 border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mt-16">
+                <p className="font-bold text-3xl">
+                  No Limit Tutor 是專為台灣師生打造的線上教學平台，老師自由開課、學生自由選師，透過平台完成預約、付款與視訊教學，全程透明更安全。
                 </p>
-                <p className="font-bold text-xl">
-                  我們不從教師收入抽成，保障服務費由學生端負擔，讓教學更自由、收費更公平。
+                <p className="font-bold text-2xl">
+                  平台不從老師抽成，保障服務費由學生負擔，以提供學生 100% 隨時退款保障，讓教學更自由、收費更公平。
                 </p>
                 <div className="space-y-4 bg-gradient-to-r from-orange-100 to-amber-100 border-4 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                   <div className="flex items-center space-x-3">
@@ -160,12 +160,12 @@ const Index = () => {
                     <BookOpen className="w-10 h-10 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-black text-black text-xl uppercase mb-3 tracking-wide">民主式、群眾導向平台</h3>
+                    <h3 className="font-black text-black text-2xl uppercase mb-3 tracking-wide">民主式、群眾導向平台</h3>
                   </div>
                 </div>
               </div>
               <div className="bg-white p-6">
-                <p className="text-lg text-black font-bold leading-relaxed">老師自由授課，學生自選課題，無需綁定固定教材或長期合約</p>
+                <p className="text-xl text-black font-bold leading-relaxed">老師自由授課，學生自選課題，無需綁定固定教材或長期合約</p>
               </div>
             </div>
             
@@ -176,12 +176,12 @@ const Index = () => {
                     <Video className="w-10 h-10 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-black text-black text-xl uppercase mb-3 tracking-wide">視訊教學</h3>
+                    <h3 className="font-black text-black text-2xl uppercase mb-3 tracking-wide">視訊教學</h3>
                   </div>
                 </div>
               </div>
               <div className="bg-white p-6">
-                <p className="text-lg text-black font-bold leading-relaxed">簡潔、穩定的線上預約與視訊上課系統，實現一對一學習的彈性與效率</p>
+                <p className="text-xl text-black font-bold leading-relaxed">簡潔、穩定的線上預約與視訊上課系統，實現一對一學習的彈性與效率</p>
               </div>
             </div>
             
@@ -192,12 +192,12 @@ const Index = () => {
                     <Star className="w-10 h-10 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-black text-black text-xl uppercase mb-3 tracking-wide">不抽成、沒有名目費用</h3>
+                    <h3 className="font-black text-black text-2xl uppercase mb-3 tracking-wide">不抽成、沒有名目費用</h3>
                   </div>
                 </div>
               </div>
               <div className="bg-white p-6">
-                <p className="text-lg text-black font-bold leading-relaxed">NLT 不從教師收入中抽成，保障服務費由學生支付。<br />老師拿回完整報酬，打造民主、群眾導向的線上學習空間。</p>
+                <p className="text-xl text-black font-bold leading-relaxed">NLT 不從教師收入中抽成，而是在教師定價上增加些許費用，以保障學生退款權益、師生良性互動，以及金流安全。</p>
               </div>
             </div>
           </div>
