@@ -15,15 +15,67 @@ import {
   Shield,
   BookOpen,
   Globe,
-  ArrowRight
+  ArrowRight,
+  Mail
 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 const Index = () => {
   const { toast } = useToast();
+  const [email, setEmail] = useState('');
+  const [isSubmittingEmail, setIsSubmittingEmail] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleEmailSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!email.trim()) {
+      toast({
+        title: "請輸入 Email",
+        description: "請輸入有效的 Email 地址",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmittingEmail(true);
+    
+    try {
+      const { error } = await supabase
+        .from('email_list')
+        .insert([{ email: email.trim() }]);
+
+      if (error) {
+        if (error.code === '23505') { // Unique constraint violation
+          toast({
+            title: "Email 已存在",
+            description: "此 Email 已在我們的通知列表中",
+            variant: "destructive",
+          });
+        } else {
+          throw error;
+        }
+      } else {
+        toast({
+          title: "訂閱成功！",
+          description: "我們會在平台上線時第一時間通知您",
+        });
+        setEmail('');
+      }
+    } catch (error) {
+      toast({
+        title: "訂閱失敗",
+        description: "請稍後再試，或聯繫我們的客服",
+        variant: "destructive",
+      });
+      console.error('Email subscription error:', error);
+    } finally {
+      setIsSubmittingEmail(false);
+    }
   };
 
   return (
@@ -119,7 +171,7 @@ const Index = () => {
               <div className="flex flex-col sm:flex-row gap-6 pt-4">
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-orange-300 to-orange-400 hover:from-orange-400 hover:to-orange-500 text-black border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-2xl px-16 py-10 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                  className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-2xl px-16 py-10 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
                   onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
                 >
                   成為首批元老級教師
@@ -588,7 +640,7 @@ const Index = () => {
             </div>
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-orange-300 to-orange-400 hover:from-orange-400 hover:to-orange-500 text-black border-6 border-white shadow-[16px_16px_0px_0px_rgba(255,255,255,1)] hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] font-black text-2xl px-20 py-12 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+              className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-6 border-white shadow-[16px_16px_0px_0px_rgba(255,255,255,1)] hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] font-black text-2xl px-20 py-12 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
               onClick={() => window.open('https://forms.gle/6cYoa9Lt2P7Wy8uu5', '_blank')}
             >
               立即加入
@@ -627,7 +679,59 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Early Access CTA */}
+      {/* Email Collection Section */}
+      <section className="py-20 bg-gradient-to-br from-yellow-100 to-orange-100">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-block bg-white border-4 border-black px-6 py-3 text-base font-black mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
+              搶先通知
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black text-black mb-8 bg-amber-300 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 uppercase">
+              平台上線第一時間通知您
+            </h2>
+            <div className="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
+              <p className="text-xl text-black font-bold leading-relaxed">
+                留下您的 Email，我們會在 No Limit Tutor 正式上線時
+                <br />
+                第一時間通知您註冊使用，享有早鳥優惠！
+              </p>
+            </div>
+            
+            <form onSubmit={handleEmailSubmit} className="max-w-2xl mx-auto">
+              <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+                <div className="relative flex-1 min-w-0 max-w-md">
+                  <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 w-5 h-5" />
+                  <Input
+                    type="email"
+                    placeholder="請輸入您的 Email 地址"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="pl-12 h-14 text-lg border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] font-bold"
+                    disabled={isSubmittingEmail}
+                  />
+                </div>
+                <Button 
+                  type="submit"
+                  size="lg"
+                  disabled={isSubmittingEmail}
+                  className="bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-4 border-white shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] font-black text-lg px-8 py-3 h-14 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                >
+                  {isSubmittingEmail ? '訂閱中...' : '立即訂閱通知'}
+                  {!isSubmittingEmail && <ArrowRight className="ml-2 w-5 h-5" />}
+                </Button>
+              </div>
+            </form>
+            
+            <div className="text-center mt-6">
+              <p className="text-sm font-bold text-black">
+                * 我們承諾不會濫用您的 Email，也不會分享給第三方
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Media Follow Section */}
       <section className="py-20 bg-gradient-to-br from-orange-100 to-yellow-100">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
