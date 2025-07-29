@@ -160,7 +160,7 @@ const Index = () => {
               
               <div className="space-y-6 text-2xl text-black leading-relaxed max-w-5xl bg-white border-6 border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mt-16">
                 <p className="font-bold text-2xl">
-                  平台不從老師抽成，且提供學生 100% 隨時退款保障，同時確保師生教學與交易安全。
+                  平台不從老師抽成、提供學生 100% 隨時退款保障，並確保師生教學與交易安全。
                 </p>
                 <div className="space-y-4 bg-gradient-to-r from-orange-100 to-amber-100 border-4 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                   <div className="flex items-center space-x-3">
