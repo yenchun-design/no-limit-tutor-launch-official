@@ -18,6 +18,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import EmailSubscription from '@/components/EmailSubscription';
 
 const Index = () => {
   const { toast } = useToast();
@@ -400,6 +401,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Email Subscription Section - NEW */}
+      <EmailSubscription />
 
       {/* Learning Process */}
       <section id="process" className="py-20 bg-gradient-to-br from-orange-300 to-red-300">
