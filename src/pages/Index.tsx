@@ -44,7 +44,6 @@ const Index = () => {
           
           <nav className="hidden md:flex items-center space-x-8">
             <button onClick={() => scrollToSection('home')} className="text-xl font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">首頁</button>
-            <button onClick={() => scrollToSection('principles')} className="text-xl font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">NLT 三大主張</button>
             <button onClick={() => scrollToSection('features')} className="text-xl font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">功能特色</button>
             <button onClick={() => scrollToSection('process')} className="text-xl font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">學習流程</button>
             <button onClick={() => scrollToSection('pricing')} className="text-xl font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">收費方式</button>
@@ -146,7 +145,7 @@ const Index = () => {
       </section>
 
       {/* Three Service Principles Section */}
-      <section id="principles" className="py-20 bg-gradient-to-br from-orange-100 to-amber-100">
+      <section className="py-20 bg-gradient-to-br from-orange-100 to-amber-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-8 border-black px-8 py-4 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mb-8 inline-block transform rotate-1">
