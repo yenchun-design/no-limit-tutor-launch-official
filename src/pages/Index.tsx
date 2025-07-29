@@ -62,7 +62,7 @@ const Index = () => {
       } else {
         toast({
           title: "訂閱成功！",
-          description: "我們會在平台上線時第一時間通知您",
+          description: "我們會在平台上線時第一時間通知你",
         });
         setEmail('');
       }
@@ -206,7 +206,7 @@ const Index = () => {
               </div>
               <div className="text-center pt-2">
                 <p className="text-sm font-bold text-black">
-                  * 完全免費，我們承諾不會向您收取任何費用
+                  * 完全免費，我們承諾不會向你收取任何費用
                 </p>
               </div>
             </div>
@@ -285,7 +285,7 @@ const Index = () => {
             <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-8 border-black px-8 py-6 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] mb-8 inline-block transform -rotate-1">
               <h2 className="text-4xl md:text-5xl font-black text-black uppercase tracking-wide">完整的教學生態系統</h2>
             </div>
-            <p className="text-xl text-black font-bold max-w-3xl mx-auto bg-white border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">從師資篩選到課程管理，為您提供全方位的學習支援</p>
+            <p className="text-xl text-black font-bold max-w-3xl mx-auto bg-white border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">從師資篩選到課程管理，為你提供全方位的學習支援</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -850,14 +850,34 @@ const Index = () => {
                 <ArrowRight className="ml-2 w-6 h-6" />
               </Button>
               
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-yellow-300 to-yellow-400 hover:from-yellow-400 hover:to-yellow-500 text-black border-6 border-black shadow-[14px_14px_0px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 w-full md:w-auto"
-                onClick={() => scrollToSection('home')}
-              >
-                回到頂部了解更多
-                <ArrowRight className="ml-2 w-6 h-6" />
-              </Button>
+              <div className="bg-gradient-to-r from-yellow-100 to-amber-100 border-6 border-black shadow-[14px_14px_0px_0px_rgba(0,0,0,1)] p-8 w-full md:w-auto">
+                <div className="flex items-center justify-center mb-4">
+                  <Mail className="w-8 h-8 text-black mr-3" />
+                  <h3 className="text-2xl font-black text-black">輸入你的 Email 地址</h3>
+                </div>
+                <p className="text-xl font-bold text-black text-center mb-6">平台上線後立即通知你！</p>
+                <form onSubmit={handleEmailSubmit} className="space-y-4">
+                  <Input
+                    type="email"
+                    placeholder="請輸入你的 Email 地址"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full px-4 py-3 text-lg border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-bold"
+                    required
+                  />
+                  <Button 
+                    type="submit"
+                    disabled={isSubmittingEmail}
+                    className="w-full bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-xl py-3 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                  >
+                    {isSubmittingEmail ? '訂閱中...' : '立即訂閱通知'}
+                    <ArrowRight className="ml-2 w-6 h-6" />
+                  </Button>
+                </form>
+                <p className="text-sm font-bold text-black text-center mt-4">
+                  * 我們承諾不會濫用你的 Email，也不會分享給第三方
+                </p>
+              </div>
             </div>
           </div>
         </div>
