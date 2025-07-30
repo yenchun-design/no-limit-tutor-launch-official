@@ -908,7 +908,7 @@ const Index = () => {
             </div>
             <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-8 border-black px-12 py-8 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 mb-12">
               <h2 className="text-5xl md:text-6xl font-black text-black uppercase tracking-wide">
-                目前已有 {emailCount} 位老師加入
+                目前已有 {emailCount} 位老師申請加入
               </h2>
             </div>
             <div className="bg-white border-6 border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mb-8">
