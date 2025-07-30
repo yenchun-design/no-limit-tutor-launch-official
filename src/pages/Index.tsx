@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -25,6 +25,28 @@ const Index = () => {
   const { toast } = useToast();
   const [email, setEmail] = useState('');
   const [isSubmittingEmail, setIsSubmittingEmail] = useState(false);
+  const [emailCount, setEmailCount] = useState(11); // Default fallback value
+
+  // Fetch email count from Supabase
+  useEffect(() => {
+    const fetchEmailCount = async () => {
+      try {
+        const { count, error } = await supabase
+          .from('email_list')
+          .select('*', { count: 'exact', head: true });
+        
+        if (error) {
+          console.error('Error fetching email count:', error);
+        } else if (count !== null) {
+          setEmailCount(count);
+        }
+      } catch (error) {
+        console.error('Error fetching email count:', error);
+      }
+    };
+
+    fetchEmailCount();
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
@@ -65,6 +87,8 @@ const Index = () => {
           description: "我們會在平台上線時第一時間通知你",
         });
         setEmail('');
+        // Update email count after successful submission
+        setEmailCount(prevCount => prevCount + 1);
       }
     } catch (error) {
       toast({
@@ -884,7 +908,7 @@ const Index = () => {
             </div>
             <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-8 border-black px-12 py-8 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 mb-12">
               <h2 className="text-5xl md:text-6xl font-black text-black uppercase tracking-wide">
-                目前已有 11 位老師加入
+                目前已有 {emailCount} 位老師加入
               </h2>
             </div>
             <div className="bg-white border-6 border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mb-8">
