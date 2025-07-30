@@ -186,7 +186,7 @@ const Index = () => {
               <div className="flex flex-col items-center gap-6 pt-4">
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-2xl px-16 py-10 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                  className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
                   onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
                 >
                   成為首批元老級教師
