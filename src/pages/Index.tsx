@@ -918,21 +918,13 @@ const Index = () => {
               </p>
             </div>
             <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-2xl px-16 py-10 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
-                onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
-              >
-                立即加入教師招募
-                <ArrowRight className="ml-2 w-6 h-6" />
-              </Button>
               
               <div className="bg-gradient-to-r from-yellow-100 to-amber-100 border-6 border-black shadow-[14px_14px_0px_0px_rgba(0,0,0,1)] p-8 w-full md:w-auto max-w-lg">
                 <div className="flex items-center justify-center mb-4">
                   <Mail className="w-8 h-8 text-black mr-3" />
                   <h3 className="text-2xl font-black text-black">輸入你的 Email 地址</h3>
                 </div>
-                <p className="text-xl font-bold text-black text-center mb-6">平台上線後立即通知你！</p>
+                <p className="text-xl font-bold text-black text-center mb-6">申請加入 NLT 老師行列！</p>
                 <form onSubmit={handleEmailSubmit} className="space-y-4">
                   <input
                     type="email"
@@ -947,7 +939,7 @@ const Index = () => {
                     disabled={isSubmittingEmail}
                     className="w-full bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-xl py-3 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {isSubmittingEmail ? '訂閱中...' : '立即訂閱通知'}
+                    {isSubmittingEmail ? '訂閱中...' : '加入教師招募'}
                     <ArrowRight className="ml-2 w-6 h-6" />
                   </button>
                 </form>
@@ -955,6 +947,15 @@ const Index = () => {
                   * 我們承諾不會濫用你的 Email，也不會分享給第三方
                 </p>
               </div>
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-2xl px-16 py-10 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
+              >
+                立即加入教師招募
+                <ArrowRight className="ml-2 w-6 h-6" />
+              </Button>
+              
             </div>
           </div>
         </div>
