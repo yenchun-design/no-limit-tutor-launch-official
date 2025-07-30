@@ -3,50 +3,74 @@
 
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 5
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 5
+Crawl-delay: 1
 
-User-agent: Applebot
+User-agent: Slurp
 Allow: /
-Crawl-delay: 5
-
-User-agent: Yandex
-Allow: /
-Crawl-delay: 5
-
-User-agent: Baiduspider
-Allow: /
-Crawl-delay: 5
+Crawl-delay: 1
 
 User-agent: DuckDuckBot
 Allow: /
-Crawl-delay: 5
+Crawl-delay: 1
 
-# ==== ALLOW AI ANSWER ENGINE BOTS ====
-
-User-agent: GPTBot
+User-agent: Baiduspider
 Allow: /
-Crawl-delay: 5
+Crawl-delay: 2
 
-User-agent: CCBot
+User-agent: YandexBot
 Allow: /
-Crawl-delay: 5
-
-User-agent: ClaudeBot
-Allow: /
-Crawl-delay: 5
-
-User-agent: PerplexityBot
-Allow: /
-Crawl-delay: 5
-
-# ==== ALLOW SOCIAL MEDIA CRAWLERS FOR LINK PREVIEWS ====
+Crawl-delay: 2
 
 User-agent: facebookexternalhit
 Allow: /
+
+User-agent: Applebot
+Allow: /
+Crawl-delay: 1
+
+# ==== AI CRAWLERS & ANSWER ENGINES ====
+
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Google-Extended
+Allow: /
+Crawl-delay: 1
+
+User-agent: CCBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: ClaudeBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: ChatGPT-User
+Allow: /
+Crawl-delay: 1
+
+User-agent: Anthropic-AI
+Allow: /
+Crawl-delay: 1
+
+User-agent: Claude-Web
+Allow: /
+Crawl-delay: 1
+
+User-agent: Meta-ExternalAgent
+Allow: /
+Crawl-delay: 1
+
+# ==== SOCIAL MEDIA CRAWLERS FOR LINK PREVIEWS ====
 
 User-agent: Twitterbot
 Allow: /
@@ -54,11 +78,54 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
-# ==== ALLOW ALL OTHER BOTS ====
+User-agent: WhatsApp
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+User-agent: SkypeUriPreview
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+User-agent: DiscordBot
+Allow: /
+
+# ==== ENTERPRISE & RESEARCH CRAWLERS ====
+
+User-agent: MJ12bot
+Allow: /
+Crawl-delay: 5
+
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: MozBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: archive.org_bot
+Allow: /
+Crawl-delay: 2
+
+User-agent: ia_archiver
+Allow: /
+Crawl-delay: 2
+
+# ==== ALLOW ALL OTHER BOTS BY DEFAULT ====
 
 User-agent: *
 Allow: /
+Crawl-delay: 5
 
-# ==== SITEMAP FOR SEARCH ENGINES ====
+# ==== SITEMAP LOCATIONS ====
 
 Sitemap: https://join.nolimittutor.com/sitemap.xml
+Sitemap: https://www.nolimittutor.com/sitemap.xml
