@@ -780,7 +780,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Teacher Stats Section */}
       <section className="py-20 bg-gradient-to-br from-green-100 to-green-200">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -790,7 +789,7 @@ const Index = () => {
       </section>
 
       {/* Social Media Follow Section */}
-      <section className="py-20 bg-gradient-to-br from-orange-100 to-yellow-100">
+      <section className="py-20 bg-gradient-to-br from-green-100 to-green-200">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-block bg-white border-4 border-black px-6 py-3 text-base font-black mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
