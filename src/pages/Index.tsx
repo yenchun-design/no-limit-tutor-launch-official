@@ -918,7 +918,7 @@ const Index = () => {
                 <p className="text-3xl font-black text-white mb-4">No Limit Tutor</p>
                 <p className="text-white text-lg font-bold">
                   突破規則，知識無限 -<br />
-                  讓每個人都能享受優質、民主、自在的一對一教學
+                  優質、民主、自在的一對一教學
                 </p>
               </div>
               <div className="flex flex-wrap gap-4 mb-6">
