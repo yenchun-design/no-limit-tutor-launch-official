@@ -27,6 +27,7 @@ export default defineConfig(({ mode }) => ({
       },
     },
   },
+  publicDir: 'public', // Ensure public directory is copied to dist
   ssr: {
     // Ensure these packages are not externalized for SSR
     noExternal: ['react', 'react-dom'],

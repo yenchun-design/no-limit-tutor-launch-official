@@ -38,9 +38,23 @@ const ensureDirectoryExists = (filePath) => {
   }
 }
 
+// Ensure sitemap.xml is copied to dist folder
+const ensureSitemapExists = () => {
+  const sourcePath = toAbsolute('public/sitemap.xml')
+  const targetPath = toAbsolute('dist/sitemap.xml')
+  
+  if (fs.existsSync(sourcePath) && !fs.existsSync(targetPath)) {
+    fs.copyFileSync(sourcePath, targetPath)
+    console.log('Copied sitemap.xml to dist folder')
+  }
+}
+
 const routesToPrerender = getRoutesFromApp()
 
 ;(async () => {
+  // Ensure sitemap is available in dist
+  ensureSitemapExists()
+  
   for (const url of routesToPrerender) {
     try {
       const appHtml = render(url)

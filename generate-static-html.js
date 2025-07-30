@@ -40,11 +40,29 @@ function ensureDirectoryExists(filePath) {
   }
 }
 
+// Function to copy static files like sitemap.xml and robots.txt
+function copyStaticFiles() {
+  const staticFiles = ['sitemap.xml', 'robots.txt']
+  
+  staticFiles.forEach(file => {
+    const sourcePath = toAbsolute(`public/${file}`)
+    const targetPath = toAbsolute(`dist/${file}`)
+    
+    if (fs.existsSync(sourcePath)) {
+      fs.copyFileSync(sourcePath, targetPath)
+      console.log(`Copied ${file} to dist folder`)
+    }
+  })
+}
+
 const routesToPrerender = extractRoutesFromApp()
 
 console.log('Generating static HTML files for the following routes:')
 console.log(routesToPrerender.join(', '))
 console.log('\n' + '='.repeat(80) + '\n')
+
+// Copy static files first
+copyStaticFiles()
 
 for (const url of routesToPrerender) {
   try {
