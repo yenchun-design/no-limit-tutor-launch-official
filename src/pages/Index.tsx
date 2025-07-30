@@ -183,7 +183,7 @@ const Index = () => {
                 </div>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-6 pt-4">
+              <div className="flex flex-col items-center gap-6 pt-4">
                 <Button 
                   size="lg" 
                   className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-2xl px-16 py-10 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
@@ -192,29 +192,33 @@ const Index = () => {
                   成為首批元老級教師
                   <ArrowRight className="ml-2 w-8 h-8" />
                 </Button>
-   <form onSubmit={handleEmailSubmit} className="w-full max-w-xs mx-auto mt-6">
-  <div className="flex flex-col space-y-4">
-    <input
-      type="email"
-      value={email}
-      onChange={(e) => setEmail(e.target.value)}
-      placeholder="請輸入你的 Email 地址"
-      disabled={isSubmittingEmail}
-      className="w-full h-12 px-4 text-center text-base font-black text-gray-700 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:outline-none focus:ring-2 focus:ring-black"
-    />
-    <button
-      type="submit"
-      disabled={isSubmittingEmail}
-      className="w-full h-12 bg-green-500 hover:bg-green-600 text-black text-base font-black tracking-wide border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center transform hover:translate-x-0.5 hover:translate-y-0.5 transition"
-    >
-      {isSubmittingEmail ? '訂閱中...' : '立即訂閱通知'}
-      {!isSubmittingEmail && <ArrowRight className="ml-2 w-5 h-5" />}
-    </button>
-  </div>
-  <p className="text-xs font-black text-black text-center mt-4">
-    * 我們承諾不會濫用你的 Email，也不會分享給第三方
-  </p>
-</form>
+
+                {/* Email Form - Consistent design */}
+                <div className="w-full max-w-md">
+                  <form onSubmit={handleEmailSubmit}>
+                    <div className="flex flex-col space-y-4">
+                      <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="請輸入你的 Email 地址"
+                        disabled={isSubmittingEmail}
+                        className="w-full h-14 px-4 text-center text-lg font-black text-gray-700 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:outline-none focus:ring-2 focus:ring-black"
+                      />
+                      <button
+                        type="submit"
+                        disabled={isSubmittingEmail}
+                        className="w-full h-14 bg-green-500 hover:bg-green-600 text-black text-lg font-black tracking-wide border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center transform hover:translate-x-0.5 hover:translate-y-0.5 transition disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        {isSubmittingEmail ? '訂閱中...' : '立即訂閱通知'}
+                        {!isSubmittingEmail && <ArrowRight className="ml-2 w-6 h-6" />}
+                      </button>
+                    </div>
+                    <p className="text-sm font-black text-black text-center mt-4">
+                      * 我們承諾不會濫用你的 Email，也不會分享給第三方
+                    </p>
+                  </form>
+                </div>
               </div>
               <div className="text-center pt-2">
                 <p className="text-sm font-bold text-black">
@@ -484,37 +488,43 @@ const Index = () => {
           
           {/* Mid-Page CTA */}
           <div className="text-center mt-16">
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
-              onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
-            >
-              搶先成為元老級教師
-              <ArrowRight className="ml-2 w-6 h-6" />
-            </Button>
-            <form onSubmit={handleEmailSubmit} className="w-full max-w-xs mx-auto mt-6">
-  <div className="flex flex-col space-y-4">
-    <input
-      type="email"
-      value={email}
-      onChange={(e) => setEmail(e.target.value)}
-      placeholder="請輸入你的 Email 地址"
-      disabled={isSubmittingEmail}
-      className="w-full h-12 px-4 text-center text-base font-black text-gray-700 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:outline-none focus:ring-2 focus:ring-black"
-    />
-    <button
-      type="submit"
-      disabled={isSubmittingEmail}
-      className="w-full h-12 bg-green-500 hover:bg-green-600 text-black text-base font-black tracking-wide border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center transform hover:translate-x-0.5 hover:translate-y-0.5 transition"
-    >
-      {isSubmittingEmail ? '訂閱中...' : '立即訂閱通知'}
-      {!isSubmittingEmail && <ArrowRight className="ml-2 w-5 h-5" />}
-    </button>
-  </div>
-  <p className="text-xs font-black text-black text-center mt-4">
-    * 我們承諾不會濫用你的 Email，也不會分享給第三方
-  </p>
-</form>
+            <div className="flex flex-col items-center gap-6">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
+              >
+                搶先成為元老級教師
+                <ArrowRight className="ml-2 w-6 h-6" />
+              </Button>
+
+              {/* Email Form - Consistent design */}
+              <div className="w-full max-w-md">
+                <form onSubmit={handleEmailSubmit}>
+                  <div className="flex flex-col space-y-4">
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="請輸入你的 Email 地址"
+                      disabled={isSubmittingEmail}
+                      className="w-full h-14 px-4 text-center text-lg font-black text-gray-700 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:outline-none focus:ring-2 focus:ring-black"
+                    />
+                    <button
+                      type="submit"
+                      disabled={isSubmittingEmail}
+                      className="w-full h-14 bg-green-500 hover:bg-green-600 text-black text-lg font-black tracking-wide border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center transform hover:translate-x-0.5 hover:translate-y-0.5 transition disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {isSubmittingEmail ? '訂閱中...' : '立即訂閱通知'}
+                      {!isSubmittingEmail && <ArrowRight className="ml-2 w-6 h-6" />}
+                    </button>
+                  </div>
+                  <p className="text-sm font-black text-black text-center mt-4">
+                    * 我們承諾不會濫用你的 Email，也不會分享給第三方
+                  </p>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -702,33 +712,47 @@ const Index = () => {
                 留下你的聯繫方式，我們將在平台上線時第一時間通知你
               </p>
             </div>
-            <form onSubmit={handleEmailSubmit} className="w-full max-w-xs mx-auto mt-6">
-  <div className="flex flex-col space-y-4">
-    <input
-      type="email"
-      value={email}
-      onChange={(e) => setEmail(e.target.value)}
-      placeholder="請輸入你的 Email 地址"
-      disabled={isSubmittingEmail}
-      className="w-full h-12 px-4 text-center text-base font-black text-gray-700 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:outline-none focus:ring-2 focus:ring-black"
-    />
-    <button
-      type="submit"
-      disabled={isSubmittingEmail}
-      className="w-full h-12 bg-green-500 hover:bg-green-600 text-black text-base font-black tracking-wide border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center transform hover:translate-x-0.5 hover:translate-y-0.5 transition"
-    >
-      {isSubmittingEmail ? '訂閱中...' : '立即訂閱通知'}
-      {!isSubmittingEmail && <ArrowRight className="ml-2 w-5 h-5" />}
-    </button>
-  </div>
-  <p className="text-xs font-black text-black text-center mt-4">
-    * 我們承諾不會濫用你的 Email，也不會分享給第三方
-  </p>
-</form>
+
+            <div className="flex flex-col items-center gap-6">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
+              >
+                立即加入教師招募
+                <ArrowRight className="ml-2 w-6 h-6" />
+              </Button>
+
+              {/* Email Form - Consistent design */}
+              <div className="w-full max-w-md">
+                <form onSubmit={handleEmailSubmit}>
+                  <div className="flex flex-col space-y-4">
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="請輸入你的 Email 地址"
+                      disabled={isSubmittingEmail}
+                      className="w-full h-14 px-4 text-center text-lg font-black text-gray-700 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:outline-none focus:ring-2 focus:ring-black"
+                    />
+                    <button
+                      type="submit"
+                      disabled={isSubmittingEmail}
+                      className="w-full h-14 bg-green-500 hover:bg-green-600 text-black text-lg font-black tracking-wide border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center transform hover:translate-x-0.5 hover:translate-y-0.5 transition disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {isSubmittingEmail ? '訂閱中...' : '立即訂閱通知'}
+                      {!isSubmittingEmail && <ArrowRight className="ml-2 w-6 h-6" />}
+                    </button>
+                  </div>
+                  <p className="text-sm font-black text-black text-center mt-4">
+                    * 我們承諾不會濫用你的 Email，也不會分享給第三方
+                  </p>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-
 
       {/* Email Collection Section */}
       <section className="py-20 bg-gradient-to-br from-yellow-100 to-orange-100">
@@ -746,30 +770,43 @@ const Index = () => {
               </p>
             </div>
             
-            <form onSubmit={handleEmailSubmit} className="max-w-2xl mx-auto">
-              <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-                <div className="relative flex-1 min-w-0 max-w-md">
-                  <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 w-5 h-5" />
-                  <Input
-                    type="email"
-                    placeholder="請輸入你的 Email 地址"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="pl-12 h-14 text-lg border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] font-bold"
-                    disabled={isSubmittingEmail}
-                  />
-                </div>
-                <Button 
-                  type="submit"
-                  size="lg"
-                  disabled={isSubmittingEmail}
-                  className="bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-4 border-white shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] font-black text-lg px-8 py-3 h-14 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
-                >
-                  {isSubmittingEmail ? '訂閱中...' : '立即訂閱通知'}
-                  {!isSubmittingEmail && <ArrowRight className="ml-2 w-5 h-5" />}
-                </Button>
+            <div className="flex flex-col items-center gap-6">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
+              >
+                搶先成為元老級教師
+                <ArrowRight className="ml-2 w-6 h-6" />
+              </Button>
+
+              {/* Email Form - Consistent design */}
+              <div className="w-full max-w-md">
+                <form onSubmit={handleEmailSubmit}>
+                  <div className="flex flex-col space-y-4">
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="請輸入你的 Email 地址"
+                      disabled={isSubmittingEmail}
+                      className="w-full h-14 px-4 text-center text-lg font-black text-gray-700 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:outline-none focus:ring-2 focus:ring-black"
+                    />
+                    <button
+                      type="submit"
+                      disabled={isSubmittingEmail}
+                      className="w-full h-14 bg-green-500 hover:bg-green-600 text-black text-lg font-black tracking-wide border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center transform hover:translate-x-0.5 hover:translate-y-0.5 transition disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {isSubmittingEmail ? '訂閱中...' : '立即訂閱通知'}
+                      {!isSubmittingEmail && <ArrowRight className="ml-2 w-6 h-6" />}
+                    </button>
+                  </div>
+                  <p className="text-sm font-black text-black text-center mt-4">
+                    * 我們承諾不會濫用你的 Email，也不會分享給第三方
+                  </p>
+                </form>
               </div>
-            </form>
+            </div>
             
             <div className="text-center mt-6">
               <p className="text-sm font-bold text-black">
@@ -856,7 +893,7 @@ const Index = () => {
                 成為首批元老教師，有望享有平台發展紅利！
               </p>
             </div>
-            <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
+            <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-2xl px-16 py-10 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
@@ -866,29 +903,29 @@ const Index = () => {
                 <ArrowRight className="ml-2 w-6 h-6" />
               </Button>
               
-              <div className="bg-gradient-to-r from-yellow-100 to-amber-100 border-6 border-black shadow-[14px_14px_0px_0px_rgba(0,0,0,1)] p-8 w-full md:w-auto">
+              <div className="bg-gradient-to-r from-yellow-100 to-amber-100 border-6 border-black shadow-[14px_14px_0px_0px_rgba(0,0,0,1)] p-8 w-full md:w-auto max-w-lg">
                 <div className="flex items-center justify-center mb-4">
                   <Mail className="w-8 h-8 text-black mr-3" />
                   <h3 className="text-2xl font-black text-black">輸入你的 Email 地址</h3>
                 </div>
                 <p className="text-xl font-bold text-black text-center mb-6">平台上線後立即通知你！</p>
                 <form onSubmit={handleEmailSubmit} className="space-y-4">
-                  <Input
+                  <input
                     type="email"
                     placeholder="請輸入你的 Email 地址"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-4 py-3 text-lg border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-bold"
+                    className="w-full px-4 py-3 text-lg border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-bold focus:outline-none focus:ring-2 focus:ring-black"
                     required
                   />
-                  <Button 
+                  <button
                     type="submit"
                     disabled={isSubmittingEmail}
-                    className="w-full bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-xl py-3 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                    className="w-full bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-xl py-3 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmittingEmail ? '訂閱中...' : '立即訂閱通知'}
                     <ArrowRight className="ml-2 w-6 h-6" />
-                  </Button>
+                  </button>
                 </form>
                 <p className="text-sm font-bold text-black text-center mt-4">
                   * 我們承諾不會濫用你的 Email，也不會分享給第三方
