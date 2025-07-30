@@ -567,18 +567,6 @@ const Index = () => {
               </div>
             ))}
           </div>
-          
-          {/* CTA */}
-          <div className="text-center mt-16">
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
-              onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
-            >
-              登記信箱，接收上線消息
-              <ArrowRight className="ml-2 w-6 h-6" />
-            </Button>
-          </div>
         </div>
       </section>
 
@@ -714,14 +702,29 @@ const Index = () => {
                 留下你的聯繫方式，我們將在平台上線時第一時間通知你
               </p>
             </div>
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-6 border-white shadow-[16px_16px_0px_0px_rgba(255,255,255,1)] hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] font-black text-2xl px-20 py-12 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
-              onClick={() => window.open('https://forms.gle/6cYoa9Lt2P7Wy8uu5', '_blank')}
-            >
-              立即加入
-              <ArrowRight className="ml-2 w-8 h-8" />
-            </Button>
+            <form onSubmit={handleEmailSubmit} className="w-full max-w-xs mx-auto mt-6">
+  <div className="flex flex-col space-y-4">
+    <input
+      type="email"
+      value={email}
+      onChange={(e) => setEmail(e.target.value)}
+      placeholder="請輸入你的 Email 地址"
+      disabled={isSubmittingEmail}
+      className="w-full h-12 px-4 text-center text-base font-black text-gray-700 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:outline-none focus:ring-2 focus:ring-black"
+    />
+    <button
+      type="submit"
+      disabled={isSubmittingEmail}
+      className="w-full h-12 bg-green-500 hover:bg-green-600 text-black text-base font-black tracking-wide border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center transform hover:translate-x-0.5 hover:translate-y-0.5 transition"
+    >
+      {isSubmittingEmail ? '訂閱中...' : '立即訂閱通知'}
+      {!isSubmittingEmail && <ArrowRight className="ml-2 w-5 h-5" />}
+    </button>
+  </div>
+  <p className="text-xs font-black text-black text-center mt-4">
+    * 我們承諾不會濫用你的 Email，也不會分享給第三方
+  </p>
+</form>
           </div>
         </div>
       </section>
@@ -781,26 +784,7 @@ const Index = () => {
       <section className="py-20 bg-gradient-to-br from-green-100 to-green-200">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-8 border-black px-12 py-8 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 mb-12">
-              <h2 className="text-5xl md:text-6xl font-black text-black uppercase tracking-wide">
-                目前已有 11 位老師加入
-              </h2>
-            </div>
-            <div className="bg-white border-6 border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mb-12">
-              <p className="text-2xl text-black font-bold leading-relaxed">
-                越來越多優秀教師選擇 No Limit Tutor<br />
-                成為首批元老教師，有望享有平台發展紅利！
-              </p>
-            </div>
             
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white border-6 border-white shadow-[16px_16px_0px_0px_rgba(255,255,255,1)] hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] font-black text-2xl px-16 py-10 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
-              onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
-            >
-              立即加入教師招募
-              <ArrowRight className="ml-2 w-8 h-8" />
-            </Button>
           </div>
         </div>
       </section>
@@ -870,7 +854,17 @@ const Index = () => {
                 加入 No Limit Tutor，共建民主學習新時代
               </p>
             </div>
-            
+            <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-8 border-black px-12 py-8 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 mb-12">
+              <h2 className="text-5xl md:text-6xl font-black text-black uppercase tracking-wide">
+                目前已有 11 位老師加入
+              </h2>
+            </div>
+            <div className="bg-white border-6 border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mb-12">
+              <p className="text-2xl text-black font-bold leading-relaxed">
+                越來越多優秀教師選擇 No Limit Tutor<br />
+                成為首批元老教師，有望享有平台發展紅利！
+              </p>
+            </div>
             <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
               <Button 
                 size="lg" 
