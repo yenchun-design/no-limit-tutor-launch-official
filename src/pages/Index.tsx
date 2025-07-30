@@ -160,7 +160,7 @@ const Index = () => {
               
               <div className="space-y-6 text-2xl text-black leading-relaxed max-w-5xl bg-white border-6 border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mt-16">
                 <p className="font-bold text-2xl">
-                  平台不從老師抽成、提供學生 100% 隨時退款保障，並確保師生教學與交易安全。
+                  No Limit Tutor 是專為台灣師生打造的線上教學平台，不從老師抽成、提供學生 100% 隨時退款保障，並確保師生安全
                 </p>
                 <div className="space-y-4 bg-gradient-to-r from-orange-100 to-amber-100 border-4 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                   <div className="flex items-center space-x-3">
@@ -173,12 +173,12 @@ const Index = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-4 h-4 bg-green-500 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
-                    <span className="font-black text-lg">教學與學習皆擁有真正的選擇權</span>
+                    <span className="font-black text-lg">公平的缺席、爭議、退款與回報機制</span>
                   </div>
                 </div>
                 <div className="bg-gradient-to-r from-orange-200 to-red-200 border-6 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-                  <p className="font-black text-black text-xl">
-                    立即加入限額招募，共同建立一個群眾學習社群！！
+                  <p className="font-black text-black text-2xl">
+                    立即加入限額招募，共同建立一個群眾學習社群！
                   </p>
                 </div>
               </div>
@@ -192,13 +192,29 @@ const Index = () => {
                   成為首批元老級教師
                   <ArrowRight className="ml-2 w-8 h-8" />
                 </Button>
-                <Button 
-                  size="lg" 
-                  className="bg-white hover:bg-gray-100 text-black border-6 border-black shadow-[14px_14px_0px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] font-black text-xl px-12 py-10 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
-                  onClick={() => scrollToSection('features')}
-                >
-                  了解更多
-                </Button>
+   <form onSubmit={handleEmailSubmit} className="w-full max-w-xs mx-auto mt-6">
+  <div className="flex flex-col space-y-4">
+    <input
+      type="email"
+      value={email}
+      onChange={(e) => setEmail(e.target.value)}
+      placeholder="請輸入你的 Email 地址"
+      disabled={isSubmittingEmail}
+      className="w-full h-12 px-4 text-center text-base font-black text-gray-700 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:outline-none focus:ring-2 focus:ring-black"
+    />
+    <button
+      type="submit"
+      disabled={isSubmittingEmail}
+      className="w-full h-12 bg-green-500 hover:bg-green-600 text-black text-base font-black tracking-wide border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center transform hover:translate-x-0.5 hover:translate-y-0.5 transition"
+    >
+      {isSubmittingEmail ? '訂閱中...' : '立即訂閱通知'}
+      {!isSubmittingEmail && <ArrowRight className="ml-2 w-5 h-5" />}
+    </button>
+  </div>
+  <p className="text-xs font-black text-black text-center mt-4">
+    * 我們承諾不會濫用你的 Email，也不會分享給第三方
+  </p>
+</form>
               </div>
               <div className="text-center pt-2">
                 <p className="text-sm font-bold text-black">
