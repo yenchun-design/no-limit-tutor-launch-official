@@ -780,14 +780,6 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-green-100 to-green-200">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            
-          </div>
-        </div>
-      </section>
-
       {/* Social Media Follow Section */}
       <section className="py-20 bg-gradient-to-br from-green-100 to-green-200">
         <div className="container mx-auto px-4">
@@ -858,7 +850,7 @@ const Index = () => {
                 目前已有 11 位老師加入
               </h2>
             </div>
-            <div className="bg-white border-6 border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mb-12">
+            <div className="bg-white border-6 border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mb-8">
               <p className="text-2xl text-black font-bold leading-relaxed">
                 越來越多優秀教師選擇 No Limit Tutor<br />
                 成為首批元老教師，有望享有平台發展紅利！
@@ -867,7 +859,7 @@ const Index = () => {
             <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-white to-gray-100 hover:from-gray-100 hover:to-gray-200 text-black border-6 border-black shadow-[14px_14px_0px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 w-full md:w-auto"
+                className="bg-gradient-to-r from-white to-gray-100 hover:from-gray-100 hover:to-gray-200 text-black border-6 border-black shadow-[14px_14px_0px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] font-black text-xl px-12 py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 w-full md:w-auto mb-8"
                 onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
               >
                 立即加入教師招募
