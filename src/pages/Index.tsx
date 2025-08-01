@@ -111,7 +111,7 @@ const Index = () => {
             <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 border-4 border-black flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
               <span className="text-2xl font-black text-black">N</span>
             </div>
-            <div className="flex flex-col leading-[1.1]">
+            <div className="flex flex-col leading-tight">
               <span className="text-xl font-black text-black uppercase tracking-tight">No Limit Tutor</span>
               <span className="text-sm text-amber-600 font-black">無限家教</span>
             </div>
