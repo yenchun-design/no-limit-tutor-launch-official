@@ -778,69 +778,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Email Collection Section */}
-      <section className="py-20 bg-gradient-to-br from-yellow-100 to-orange-100">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block bg-white border-4 border-black px-6 py-3 text-base font-black mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
-              搶先通知
-            </div>
-            <h2 className="text-4xl md:text-5xl font-black text-black mb-8 bg-amber-300 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 uppercase">
-              平台上線第一時間通知你
-            </h2>
-            <div className="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
-              <p className="text-xl text-black font-bold leading-relaxed">
-                留下你的 Email，我們會在 No Limit Tutor 正式上線時，第一時間通知你
-              </p>
-            </div>
-            
-            <div className="flex flex-col items-center gap-6">
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-lg md:text-2xl px-8 md:px-12 py-6 md:py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
-                onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
-              >
-                搶先成為元老級教師
-                <ArrowRight className="ml-2 w-5 h-5 md:w-6 md:h-6" />
-              </Button>
-
-              {/* Email Form - Consistent design */}
-              <div className="w-full max-w-md">
-                <form onSubmit={handleEmailSubmit}>
-                  <div className="flex flex-col space-y-4">
-                    <input
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="請輸入你的 Email 地址"
-                      disabled={isSubmittingEmail}
-                      className="w-full h-14 px-4 text-center text-lg font-black text-gray-700 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:outline-none focus:ring-2 focus:ring-black"
-                    />
-                    <button
-                      type="submit"
-                      disabled={isSubmittingEmail}
-                      className="w-full h-14 bg-green-500 hover:bg-green-600 text-black text-lg md:text-xl font-black tracking-wide border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center transform hover:translate-x-0.5 hover:translate-y-0.5 transition disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      {isSubmittingEmail ? '訂閱中...' : '立即訂閱通知'}
-                      {!isSubmittingEmail && <ArrowRight className="ml-2 w-5 h-5 md:w-6 md:h-6" />}
-                    </button>
-                  </div>
-                  <p className="text-sm font-black text-black text-center mt-4">
-                    * 我們承諾不會濫用你的 Email，也不會分享給第三方
-                  </p>
-                </form>
-              </div>
-            </div>
-            
-            <div className="text-center mt-6">
-              <p className="text-sm font-bold text-black">
-                * 我們承諾不會濫用你的 Email，也不會分享給第三方
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Social Media Follow Section */}
       <section className="py-20 bg-gradient-to-br from-green-100 to-green-200">
         <div className="container mx-auto px-4">
