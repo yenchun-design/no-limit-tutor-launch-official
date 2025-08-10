@@ -200,50 +200,86 @@ const Index = () => {
                     <span className="font-black text-lg">公平的缺席、爭議、退款與回報機制</span>
                   </div>
                 </div>
-                <div className="bg-gradient-to-r from-orange-200 to-red-200 border-6 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+              </div>
+
+              {/* Teacher Count Display - 新增的核心區塊 */}
+              <div className="flex flex-col items-center gap-8 pt-8">
+                <div className="w-full max-w-4xl">
+                  <div className="bg-white border-6 border-black px-8 py-6 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] mb-8 text-center">
+                    <h3 className="text-3xl md:text-4xl font-black text-black mb-4 uppercase tracking-wide">
+                      準備好開始了嗎？
+                    </h3>
+                    <p className="text-xl md:text-2xl text-black font-bold">
+                      加入 No Limit Tutor，共建民主學習新時代
+                    </p>
+                  </div>
+                  
+                  {/* 教師數量展示 */}
+                  <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-8 border-black px-12 py-8 shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] mb-8 text-center transform rotate-1">
+                    <h2 className="text-5xl md:text-6xl font-black text-black uppercase tracking-wide mb-4">
+                      目前已有 {emailCount} 位老師申請加入
+                    </h2>
+                    <p className="text-2xl font-black text-black">
+                      越來越多優秀教師選擇 No Limit Tutor
+                    </p>
+                  </div>
+
+                  <div className="bg-white border-6 border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mb-8 text-center">
+                    <p className="text-2xl text-black font-bold leading-relaxed">
+                      成為首批元老教師，有望享有平台發展紅利！
+                    </p>
+                  </div>
+                </div>
+
+                {/* CTA Buttons and Email Form */}
+                <div className="flex flex-col lg:flex-row gap-8 justify-center items-center w-full max-w-5xl">
+                  <Button 
+                    size="lg" 
+                    className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-lg md:text-2xl px-8 md:px-12 py-6 md:py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                    onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
+                  >
+                    立即加入教師招募
+                    <ArrowRight className="ml-2 w-6 h-6 md:w-8 md:h-8" />
+                  </Button>
+
+                  {/* Email Form Block */}
+                  <div className="bg-gradient-to-r from-yellow-100 to-amber-100 border-6 border-black shadow-[14px_14px_0px_0px_rgba(0,0,0,1)] p-8 w-full lg:w-auto max-w-lg">
+                    <div className="flex items-center justify-center mb-4">
+                      <Mail className="w-8 h-8 text-black mr-3" />
+                      <h3 className="text-2xl font-black text-black">輸入你的 Email 地址</h3>
+                    </div>
+                    <p className="text-xl font-bold text-black text-center mb-6">申請加入 NLT 老師行列！</p>
+                    <form onSubmit={handleEmailSubmit} className="space-y-4">
+                      <input
+                        type="email"
+                        placeholder="請輸入你的 Email 地址"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="w-full px-4 py-3 text-lg border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-bold focus:outline-none focus:ring-2 focus:ring-black"
+                        required
+                      />
+                      <button
+                        type="submit"
+                        disabled={isSubmittingEmail}
+                        className="w-full bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-lg md:text-xl py-3 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        {isSubmittingEmail ? '訂閱中...' : '加入教師招募'}
+                        <ArrowRight className="ml-2 w-5 h-5 md:w-6 md:h-6" />
+                      </button>
+                    </form>
+                    <p className="text-sm font-bold text-black text-center mt-4">
+                      * 我們承諾不會濫用你的 Email，也不會分享給第三方
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-orange-200 to-red-200 border-6 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] text-center max-w-4xl">
                   <p className="font-black text-black text-2xl">
                     立即加入限額招募，共同建立一個群眾學習社群！
                   </p>
                 </div>
               </div>
               
-              <div className="flex flex-col items-center gap-6 pt-4">
-                <Button 
-                  size="lg" 
-                  className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-lg md:text-2xl px-8 md:px-12 py-6 md:py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
-                  onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
-                >
-                  成為首批元老級教師
-                  <ArrowRight className="ml-2 w-6 h-6 md:w-8 md:h-8" />
-                </Button>
-
-                {/* Email Form - Consistent design */}
-                <div className="w-full max-w-md">
-                  <form onSubmit={handleEmailSubmit}>
-                    <div className="flex flex-col space-y-4">
-                      <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        placeholder="請輸入你的 Email 地址"
-                        disabled={isSubmittingEmail}
-                        className="w-full h-14 px-4 text-center text-lg font-black text-gray-700 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:outline-none focus:ring-2 focus:ring-black"
-                      />
-                      <button
-                        type="submit"
-                        disabled={isSubmittingEmail}
-                        className="w-full h-14 bg-green-500 hover:bg-green-600 text-black text-lg md:text-xl font-black tracking-wide border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center transform hover:translate-x-0.5 hover:translate-y-0.5 transition disabled:opacity-50 disabled:cursor-not-allowed"
-                      >
-                        {isSubmittingEmail ? '訂閱中...' : '立即訂閱通知'}
-                        {!isSubmittingEmail && <ArrowRight className="ml-2 w-5 h-5 md:w-6 md:h-6" />}
-                      </button>
-                    </div>
-                    <p className="text-sm font-black text-black text-center mt-4">
-                      * 我們承諾不會濫用你的 Email，也不會分享給第三方
-                    </p>
-                  </form>
-                </div>
-              </div>
               <div className="text-center pt-2">
                 <p className="text-sm font-bold text-black">
                   * 完全免費，我們承諾不會向你收取任何費用
@@ -785,7 +821,7 @@ const Index = () => {
             <div className="inline-block bg-white border-4 border-black px-6 py-3 text-base font-black mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
               搶先追蹤
             </div>
-            <h2 className="text-4xl font-black text-black mb-6 bg-amber-400 border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 uppercase">社群互動</h2>
+            <h2 className="text-4xl font-black text-black mb-6 bg-amber-400 border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 uppercase">社群互動</h2>
             <div className="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8">
               <p className="text-xl text-black font-bold">
                 進一步了解 No Limit Tutor 文化與價值訴求，及平台努力的方向<br />
@@ -831,30 +867,28 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Final Footer CTA */}
+      {/* Final Footer CTA - 移除重複的教師數量顯示 */}
       <section className="py-20 bg-gradient-to-br from-red-400 to-red-500">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white border-6 border-black px-8 py-6 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mb-12">
               <h2 className="text-4xl md:text-5xl font-black text-black mb-4 uppercase">
-                準備好開始了嗎？
+                還在等什麼？
               </h2>
               <p className="text-2xl text-black font-bold">
-                加入 No Limit Tutor，共建民主學習新時代
+                現在就加入 No Limit Tutor 教師行列
               </p>
             </div>
-            <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-8 border-black px-12 py-8 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 mb-12">
-              <h2 className="text-5xl md:text-6xl font-black text-black uppercase tracking-wide">
-                目前已有 {emailCount} 位老師申請加入
-              </h2>
-            </div>
-            <div className="bg-white border-6 border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mb-8">
-              <p className="text-2xl text-black font-bold leading-relaxed">
-                越來越多優秀教師選擇 No Limit Tutor<br />
-                成為首批元老教師，有望享有平台發展紅利！
-              </p>
-            </div>
+            
             <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-xl md:text-2xl px-12 md:px-16 py-8 md:py-10 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
+              >
+                立即加入教師招募
+                <ArrowRight className="ml-2 w-5 h-5 md:w-6 md:h-6" />
+              </Button>
               
               <div className="bg-gradient-to-r from-yellow-100 to-amber-100 border-6 border-black shadow-[14px_14px_0px_0px_rgba(0,0,0,1)] p-8 w-full md:w-auto max-w-lg">
                 <div className="flex items-center justify-center mb-4">
@@ -884,15 +918,6 @@ const Index = () => {
                   * 我們承諾不會濫用你的 Email，也不會分享給第三方
                 </p>
               </div>
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-xl md:text-2xl px-12 md:px-16 py-8 md:py-10 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
-                onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
-              >
-                立即加入教師招募
-                <ArrowRight className="ml-2 w-5 h-5 md:w-6 md:h-6" />
-              </Button>
-              
             </div>
           </div>
         </div>
