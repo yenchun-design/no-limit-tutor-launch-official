@@ -124,6 +124,7 @@ const Index = () => {
             <button onClick={() => scrollToSection('features')} className="text-lg font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">功能</button>
             <button onClick={() => scrollToSection('process')} className="text-lg font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">流程</button>
             <button onClick={() => scrollToSection('pricing')} className="text-lg font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">收費</button>
+            <button onClick={() => scrollToSection('social')} className="text-lg font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">社群連結</button>
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-3 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] font-black text-lg px-6 py-3 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
@@ -274,24 +275,24 @@ const Index = () => {
       </section>
 
       {/* Student Guidance Section */}
-      <section className="py-12 md:py-16 bg-gradient-to-br from-blue-100 to-blue-200">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-blue-100 to-blue-200">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white border-4 md:border-6 border-black p-6 md:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mb-6 md:mb-8">
-              <div className="flex items-center justify-center mb-4 md:mb-6">
-                <UserCheck className="w-6 h-6 md:w-8 md:h-8 text-blue-600 mr-3 md:mr-4" />
-                <h2 className="text-2xl md:text-3xl font-black text-black">學生專區</h2>
+            <div className="bg-white border-4 md:border-6 border-black p-8 md:p-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mb-6 md:mb-8">
+              <div className="flex items-center justify-center mb-6 md:mb-8">
+                <UserCheck className="w-8 h-8 md:w-12 md:h-12 text-blue-600 mr-4 md:mr-6" />
+                <h2 className="text-3xl md:text-5xl font-black text-black">學生專區</h2>
               </div>
-              <p className="text-lg md:text-xl font-bold text-black mb-6">
+              <p className="text-2xl md:text-3xl font-bold text-black mb-8 md:mb-12">
                 平台開發中，搶先登記優先通知！
               </p>
               <Button
                 size="lg"
-                className="w-full max-w-md bg-blue-500 hover:bg-blue-600 text-white border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] font-black text-lg md:text-xl px-6 md:px-8 py-4 md:py-6 transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                className="w-full max-w-md bg-blue-500 hover:bg-blue-600 text-white border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] font-black text-xl md:text-2xl px-8 md:px-12 py-6 md:py-8 transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
                 onClick={() => window.open('https://forms.gle/6cYoa9Lt2P7Wy8uu5', '_blank')}
               >
                 學生登記表單
-                <ExternalLink className="ml-2 md:ml-3 w-5 h-5 md:w-6 md:h-6" />
+                <ExternalLink className="ml-3 md:ml-4 w-6 h-6 md:w-8 md:h-8" />
               </Button>
             </div>
           </div>
@@ -302,39 +303,39 @@ const Index = () => {
       <section id="principles" className="py-16 md:py-24 bg-gradient-to-br from-orange-100 to-amber-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 md:mb-20">
-            <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-4 md:border-8 border-black px-6 md:px-12 py-4 md:py-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1">
-              <span className="text-2xl md:text-4xl font-black text-black uppercase tracking-wide">NLT 三大服務主張</span>
+            <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-4 md:border-8 border-black px-8 md:px-16 py-6 md:py-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1">
+              <span className="text-3xl md:text-5xl font-black text-black uppercase tracking-wide">NLT 三大服務主張</span>
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 max-w-6xl mx-auto">
             {/* Principle cards with consistent sizing and larger fonts */}
             {[
               {
-                icon: <BookOpen className="w-8 h-8 md:w-12 md:h-12 text-white" />,
+                icon: <BookOpen className="w-12 h-12 md:w-16 md:h-16 text-white" />,
                 title: "民主、群眾導向",
                 description: "自由授課，自選課題，無綁定教材或長期合約"
               },
               {
-                icon: <Video className="w-8 h-8 md:w-12 md:h-12 text-white" />,
+                icon: <Video className="w-12 h-12 md:w-16 md:h-16 text-white" />,
                 title: "視訊教學",
                 description: "穩定線上預約與視訊系統，實現一對一彈性學習"
               },
               {
-                icon: <Star className="w-8 h-8 md:w-12 md:h-12 text-white" />,
+                icon: <Star className="w-12 h-12 md:w-16 md:h-16 text-white" />,
                 title: "零抽成",
                 description: "不從教師抽成，而是增加服務費保障退款、安全互動與金流。"
               }
             ].map((principle, index) => (
               <div key={index} className="bg-white border-4 md:border-6 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 h-full flex flex-col">
-                <div className="bg-gradient-to-br from-orange-200 to-amber-200 p-6 md:p-10 border-b-4 border-black flex flex-col items-center text-center">
-                  <div className="w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-amber-400 to-orange-500 border-4 border-black flex items-center justify-center mb-4 md:mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                <div className="bg-gradient-to-br from-orange-200 to-amber-200 p-8 md:p-12 border-b-4 border-black flex flex-col items-center text-center">
+                  <div className="w-20 h-20 md:w-28 md:h-28 bg-gradient-to-br from-amber-400 to-orange-500 border-4 border-black flex items-center justify-center mb-6 md:mb-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
                     {principle.icon}
                   </div>
-                  <h3 className="font-black text-black text-xl md:text-2xl uppercase tracking-wide">{principle.title}</h3>
+                  <h3 className="font-black text-black text-2xl md:text-3xl uppercase tracking-wide">{principle.title}</h3>
                 </div>
-                <div className="bg-white p-6 md:p-8 flex-grow flex items-center">
-                  <p className="text-lg md:text-xl text-black font-bold leading-relaxed text-center">{principle.description}</p>
+                <div className="bg-white p-8 md:p-10 flex-grow flex items-center">
+                  <p className="text-xl md:text-2xl text-black font-bold leading-relaxed text-center">{principle.description}</p>
                 </div>
               </div>
             ))}
@@ -562,7 +563,7 @@ const Index = () => {
       </section>
 
       {/* Social Media Follow Section - Consistent alignment and larger text */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-green-100 to-green-200">
+      <section id="social" className="py-16 md:py-24 bg-gradient-to-br from-green-100 to-green-200">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block bg-white border-4 border-black px-4 md:px-6 py-2 md:py-3 text-lg md:text-xl font-black mb-6 md:mb-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
