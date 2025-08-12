@@ -129,7 +129,7 @@ const Index = () => {
               className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-3 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] font-black text-lg px-6 py-3 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
               onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
             >
-              立即加入
+              立即加入教師招募
             </Button>
           </nav>
           
@@ -139,7 +139,7 @@ const Index = () => {
               className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-3 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] font-black text-lg px-4 py-3 uppercase tracking-wide transform hover:translate-x-0.5 hover:translate-y-0.5 transition-all duration-200"
               onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
             >
-              加入
+              加入招募
             </Button>
           </div>
         </div>
