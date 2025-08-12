@@ -149,18 +149,18 @@ const Index = () => {
 
       {/* Hero Section */}
       <section id="home" className="relative overflow-hidden bg-gradient-to-br from-amber-400 via-orange-400 to-red-400">
-        <div className="relative container mx-auto px-4 py-16">
+        <div className="relative container mx-auto px-4 py-8 md:py-16">
           <div className="max-w-7xl mx-auto">
-            <div className="space-y-8">
-              <div className="flex items-start space-x-12">
-                <div className="flex-1 space-y-6 md:space-y-8">
+            <div className="space-y-4 md:space-y-8">
+              <div className="flex items-start space-x-6 md:space-x-12">
+                <div className="flex-1 space-y-3 md:space-y-6">
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
-                      <h1 className="text-7xl md:text-8xl font-black text-black leading-tight md:leading-tight tracking-tight uppercase drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
+                      <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-black leading-[0.85] md:leading-tight tracking-tight uppercase drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
                         No Limit Tutor
                       </h1>
-                      <div className="mt-2 mb-4 md:mt-4 md:mb-6">
-                        <span className="text-6xl md:text-7xl font-black text-black leading-tight md:leading-tight tracking-tight uppercase drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
+                      <div className="mt-1 mb-2 md:mt-2 md:mb-4">
+                        <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-black leading-[0.85] md:leading-tight tracking-tight uppercase drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
                           無限家教
                         </span>
                       </div>
@@ -170,63 +170,63 @@ const Index = () => {
                       <img 
                         src="/lovable-uploads/6ed7f059-777c-4ced-8660-78aa11ba900f.png" 
                         alt="No Limit Tutor Logo" 
-                        className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-40 lg:h-40 object-contain"
+                        className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 object-contain"
                       />
                     </div>
                   </div>
                   
-                  <div className="mt-12 md:mt-16">
-                    <h2 className="text-4xl md:text-5xl font-black text-black leading-tight bg-white px-8 py-6 border-6 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1">
+                  <div className="mt-4 md:mt-12 lg:mt-16">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-black leading-tight bg-white px-4 md:px-8 py-3 md:py-6 border-4 md:border-6 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1">
                       台灣首個民主、群眾導向的線上一對一家教平台
                     </h2>
                   </div>
                 </div>
               </div>
               
-              <div className="space-y-6 text-2xl text-black leading-relaxed max-w-5xl bg-white border-6 border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mt-12 md:mt-16">
-                <p className="font-bold text-2xl">
+              <div className="space-y-4 md:space-y-6 text-lg md:text-2xl text-black leading-relaxed max-w-5xl bg-white border-4 md:border-6 border-black p-4 md:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mt-6 md:mt-12 lg:mt-16">
+                <p className="font-bold text-lg md:text-2xl">
                   No Limit Tutor 是專為台灣師生打造的線上教學平台，不從老師抽成、提供學生 100% 隨時退款保障，並確保師生安全
                 </p>
-                <div className="space-y-4 bg-gradient-to-r from-orange-100 to-amber-100 border-4 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                <div className="space-y-3 md:space-y-4 bg-gradient-to-r from-orange-100 to-amber-100 border-3 md:border-4 border-black p-4 md:p-6 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                   <div className="flex items-center space-x-3">
-                    <div className="w-4 h-4 bg-red-500 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
-                    <span className="font-black text-lg">不滿意試教？全額退費</span>
+                    <div className="w-3 h-3 md:w-4 md:h-4 bg-red-500 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
+                    <span className="font-black text-sm md:text-lg">不滿意試教？全額退費</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-4 h-4 bg-blue-500 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
-                    <span className="font-black text-lg">沒有綁約、沒有抽成、沒有名目費用</span>
+                    <div className="w-3 h-3 md:w-4 md:h-4 bg-blue-500 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
+                    <span className="font-black text-sm md:text-lg">沒有綁約、沒有抽成、沒有名目費用</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-4 h-4 bg-green-500 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
-                    <span className="font-black text-lg">公平的缺席、爭議、退款與回報機制</span>
+                    <div className="w-3 h-3 md:w-4 md:h-4 bg-green-500 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
+                    <span className="font-black text-sm md:text-lg">公平的缺席、爭議、退款與回報機制</span>
                   </div>
                 </div>
               </div>
 
               {/* Teacher Count Display and Signup - Fixed Layout */}
-              <div className="flex flex-col items-center gap-8 pt-8">
+              <div className="flex flex-col items-center gap-6 md:gap-8 pt-4 md:pt-8">
                 <div className="w-full max-w-6xl">
-                  <div className="bg-white border-6 border-black px-8 py-6 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] mb-8 text-center">
-                    <h3 className="text-3xl md:text-4xl font-black text-black mb-4 uppercase tracking-wide">
+                  <div className="bg-white border-4 md:border-6 border-black px-4 md:px-8 py-4 md:py-6 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] mb-6 md:mb-8 text-center">
+                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-black mb-2 md:mb-4 uppercase tracking-wide">
                       準備好開始了嗎？
                     </h3>
-                    <p className="text-xl md:text-2xl text-black font-bold">
+                    <p className="text-lg md:text-xl lg:text-2xl text-black font-bold">
                       加入 No Limit Tutor，共建民主學習新時代
                     </p>
                   </div>
                   
                   {/* 教師數量展示 - Fixed width */}
-                  <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-8 border-black px-12 py-8 shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] mb-8 text-center transform rotate-1">
-                    <h2 className="text-4xl md:text-5xl font-black text-black uppercase tracking-wide mb-4">
+                  <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-6 md:border-8 border-black px-6 md:px-12 py-4 md:py-8 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] md:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] mb-6 md:mb-8 text-center transform rotate-1">
+                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-black text-black uppercase tracking-wide mb-2 md:mb-4">
                       目前已有 {emailCount} 位老師申請加入
                     </h2>
-                    <p className="text-xl md:text-2xl font-black text-black">
+                    <p className="text-lg md:text-xl lg:text-2xl font-black text-black">
                       越來越多優秀教師選擇 No Limit Tutor
                     </p>
                   </div>
 
-                  <div className="bg-white border-6 border-black p-8 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mb-8 text-center">
-                    <p className="text-2xl text-black font-bold leading-relaxed">
+                  <div className="bg-white border-4 md:border-6 border-black p-4 md:p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mb-6 md:mb-8 text-center">
+                    <p className="text-lg md:text-2xl text-black font-bold leading-relaxed">
                       成為首批元老教師，有望享有平台發展紅利！
                     </p>
                   </div>
@@ -234,67 +234,67 @@ const Index = () => {
 
                 {/* Signup Options - Fixed Layout */}
                 <div className="w-full max-w-6xl">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
                     {/* Traditional Buttons */}
-                    <div className="space-y-6">
+                    <div className="space-y-4 md:space-y-6">
                       <Button 
                         size="lg" 
-                        className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-6 border-white shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-lg md:text-2xl px-8 md:px-12 py-6 md:py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                        className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-4 md:border-6 border-white shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] md:shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] md:hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-lg md:text-2xl px-6 md:px-12 py-4 md:py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
                         onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
                       >
                         立即加入教師招募
-                        <ArrowRight className="ml-2 w-6 h-6 md:w-8 md:h-8" />
+                        <ArrowRight className="ml-2 w-5 h-5 md:w-8 md:h-8" />
                       </Button>
 
                       {/* Email Form Block */}
-                      <div className="bg-gradient-to-r from-yellow-100 to-amber-100 border-6 border-black shadow-[14px_14px_0px_0px_rgba(0,0,0,1)] p-8">
-                        <div className="flex items-center justify-center mb-4">
-                          <Mail className="w-8 h-8 text-black mr-3" />
-                          <h3 className="text-2xl font-black text-black">輸入你的 Email 地址</h3>
+                      <div className="bg-gradient-to-r from-yellow-100 to-amber-100 border-4 md:border-6 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[14px_14px_0px_0px_rgba(0,0,0,1)] p-4 md:p-8">
+                        <div className="flex items-center justify-center mb-3 md:mb-4">
+                          <Mail className="w-6 h-6 md:w-8 md:h-8 text-black mr-2 md:mr-3" />
+                          <h3 className="text-lg md:text-2xl font-black text-black">輸入你的 Email 地址</h3>
                         </div>
-                        <p className="text-xl font-bold text-black text-center mb-6">申請加入 NLT 老師行列！</p>
-                        <form onSubmit={handleEmailSubmit} className="space-y-4">
+                        <p className="text-lg md:text-xl font-bold text-black text-center mb-4 md:mb-6">申請加入 NLT 老師行列！</p>
+                        <form onSubmit={handleEmailSubmit} className="space-y-3 md:space-y-4">
                           <input
                             type="email"
                             placeholder="請輸入你的 Email 地址"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="w-full px-4 py-3 text-lg border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-bold focus:outline-none focus:ring-2 focus:ring-black"
+                            className="w-full px-3 md:px-4 py-2 md:py-3 text-base md:text-lg border-3 md:border-4 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-bold focus:outline-none focus:ring-2 focus:ring-black"
                             required
                           />
                           <button
                             type="submit"
                             disabled={isSubmittingEmail}
-                            className="w-full bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-lg md:text-xl py-3 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="w-full bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-3 md:border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-base md:text-xl py-2 md:py-3 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                           >
-                            {isSubmittingEmail ? '訂閱中...' : '加入教師招募'}
-                            <ArrowRight className="ml-2 w-5 h-5 md:w-6 md:h-6" />
+                            {isSubmittingEmail ? '訂閱中...' : '加入NLT 首批教師行列'}
+                            <ArrowRight className="ml-2 w-4 h-4 md:w-6 md:h-6" />
                           </button>
                         </form>
-                        <p className="text-sm font-bold text-black text-center mt-4">
+                        <p className="text-xs md:text-sm font-bold text-black text-center mt-3 md:mt-4">
                           * 我們承諾不會濫用你的 Email，也不會分享給第三方
                         </p>
                       </div>
                     </div>
 
                     {/* Google Form Embed - Trust Building */}
-                    <div className="bg-white border-6 border-black shadow-[14px_14px_0px_0px_rgba(0,0,0,1)] p-6">
-                      <div className="mb-6 text-center">
-                        <div className="flex items-center justify-center mb-4">
-                          <Shield className="w-8 h-8 text-green-600 mr-3" />
-                          <h3 className="text-2xl font-black text-black">安全可信的 Google 表單</h3>
+                    <div className="bg-white border-4 md:border-6 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[14px_14px_0px_0px_rgba(0,0,0,1)] p-4 md:p-6">
+                      <div className="mb-4 md:mb-6 text-center">
+                        <div className="flex items-center justify-center mb-3 md:mb-4">
+                          <Shield className="w-6 h-6 md:w-8 md:h-8 text-green-600 mr-2 md:mr-3" />
+                          <h3 className="text-lg md:text-2xl font-black text-black">安全可信的 Google 表單</h3>
                         </div>
-                        <p className="text-lg font-bold text-black mb-4">
+                        <p className="text-base md:text-lg font-bold text-black mb-3 md:mb-4">
                           使用 Google 表單確保資料安全，你也可以直接填寫
                         </p>
-                        <div className="flex items-center justify-center space-x-2 mb-4">
-                          <div className="w-4 h-4 bg-green-500 border-2 border-black" />
-                          <span className="font-black text-black">Google 加密保護</span>
+                        <div className="flex items-center justify-center space-x-2 mb-3 md:mb-4">
+                          <div className="w-3 h-3 md:w-4 md:h-4 bg-green-500 border-2 border-black" />
+                          <span className="font-black text-black text-sm md:text-base">Google 加密保護</span>
                         </div>
                       </div>
                       
                       {/* Google Form Iframe */}
-                      <div className="bg-gray-50 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] overflow-hidden">
+                      <div className="bg-gray-50 border-3 md:border-4 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] overflow-hidden">
                         <iframe 
                           src="https://docs.google.com/forms/d/e/1FAIpQLSfvGBKdtBHUgOJL1xQoiIk6jMhMhvHe7j5qBF8Zp8n0-g_R6A/viewform?embedded=true"
                           width="100%" 
@@ -308,29 +308,29 @@ const Index = () => {
                         </iframe>
                       </div>
                       
-                      <div className="mt-4 text-center">
+                      <div className="mt-3 md:mt-4 text-center">
                         <Button
                           size="sm"
-                          className="bg-blue-500 hover:bg-blue-600 text-white border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black px-6 py-2 transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                          className="bg-blue-500 hover:bg-blue-600 text-white border-3 md:border-4 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black px-4 md:px-6 py-1 md:py-2 transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
                           onClick={() => window.open('https://forms.gle/NhuXSdB74J7pfrQY6', '_blank')}
                         >
                           在新分頁開啟表單
-                          <ExternalLink className="ml-2 w-4 h-4" />
+                          <ExternalLink className="ml-2 w-3 h-3 md:w-4 md:h-4" />
                         </Button>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-orange-200 to-red-200 border-6 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] text-center max-w-6xl w-full">
-                  <p className="font-black text-black text-2xl">
+                <div className="bg-gradient-to-r from-orange-200 to-red-200 border-4 md:border-6 border-black p-4 md:p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] text-center max-w-6xl w-full">
+                  <p className="font-black text-black text-lg md:text-2xl">
                     立即加入限額招募，共同建立一個群眾學習社群！
                   </p>
                 </div>
               </div>
               
               <div className="text-center pt-2">
-                <p className="text-sm font-bold text-black">
+                <p className="text-xs md:text-sm font-bold text-black">
                   * 完全免費，我們承諾不會向你收取任何費用
                 </p>
               </div>
@@ -624,7 +624,7 @@ const Index = () => {
                       disabled={isSubmittingEmail}
                       className="w-full h-14 bg-green-500 hover:bg-green-600 text-black text-lg md:text-xl font-black tracking-wide border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center transform hover:translate-x-0.5 hover:translate-y-0.5 transition disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      {isSubmittingEmail ? '訂閱中...' : '立即訂閱通知'}
+                      {isSubmittingEmail ? '訂閱中...' : '加入NLT 首批教師行列'}
                       {!isSubmittingEmail && <ArrowRight className="ml-2 w-5 h-5 md:w-6 md:h-6" />}
                     </button>
                   </div>
@@ -806,7 +806,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Teacher CTA */}
+      {/* Teacher CTA - Consolidated Section */}
       <section id="teacher" className="py-20 bg-gradient-to-br from-orange-200 to-orange-300">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -849,7 +849,7 @@ const Index = () => {
                       disabled={isSubmittingEmail}
                       className="w-full h-14 bg-green-500 hover:bg-green-600 text-black text-lg md:text-xl font-black tracking-wide border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center transform hover:translate-x-0.5 hover:translate-y-0.5 transition disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      {isSubmittingEmail ? '訂閱中...' : '立即訂閱通知'}
+                      {isSubmittingEmail ? '訂閱中...' : '加入NLT 首批教師行列'}
                       {!isSubmittingEmail && <ArrowRight className="ml-2 w-5 h-5 md:w-6 md:h-6" />}
                     </button>
                   </div>
