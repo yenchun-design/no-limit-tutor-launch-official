@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -343,59 +342,59 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section - Consistent alignment and larger text */}
+      {/* Features Section - Restored to previous version UI */}
       <section id="features" className="py-16 md:py-24 bg-gradient-to-br from-amber-200 to-orange-200">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 md:mb-20">
-            <div className="inline-block bg-white border-3 md:border-4 border-black px-4 md:px-6 py-2 md:py-3 text-lg md:text-xl font-black mb-6 md:mb-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
+            <div className="inline-block bg-white border-4 md:border-6 border-black px-6 md:px-8 py-3 md:py-4 text-xl md:text-2xl font-black mb-6 md:mb-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
               功能特色
             </div>
-            <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-4 md:border-8 border-black px-6 md:px-12 py-4 md:py-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1">
-              <h2 className="text-2xl md:text-4xl font-black text-black uppercase tracking-wide">完整教學生態系統</h2>
+            <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-4 md:border-8 border-black px-8 md:px-12 py-6 md:py-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1">
+              <h2 className="text-3xl md:text-5xl font-black text-black uppercase tracking-wide">完整的教學生態系統</h2>
             </div>
-            <p className="text-lg md:text-xl text-black font-bold max-w-3xl mx-auto bg-white border-3 md:border-4 border-black p-4 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mt-6 md:mt-8">從師資篩選到課程管理，全方位學習支援</p>
+            <p className="text-xl md:text-2xl text-black font-bold max-w-3xl mx-auto bg-white border-4 md:border-6 border-black p-6 md:p-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] mt-8 md:mt-12">從師資篩選到課程管理，全方位學習支援</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
-            {/* Feature cards with consistent sizing and larger fonts */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 max-w-7xl mx-auto">
+            {/* Feature cards with previous version design */}
             {[
               {
-                icon: <Users className="w-8 h-8 md:w-12 md:h-12 text-black" />,
+                icon: <Users className="w-12 h-12 md:w-16 md:h-16 text-black" />,
                 title: "師資媒合",
                 subtitle: "多元篩選最適教師",
                 color: "bg-gradient-to-br from-amber-300 to-orange-300",
                 features: ["依科目、價格篩選", "時間查詢", "星級評分", "學生評價"]
               },
               {
-                icon: <Clock className="w-8 h-8 md:w-12 md:h-12 text-black" />,
+                icon: <Clock className="w-12 h-12 md:w-16 md:h-16 text-black" />,
                 title: "彈性預約",
                 subtitle: "即時預約確認",
                 color: "bg-gradient-to-br from-blue-300 to-blue-400",
                 features: ["25分鐘試教", "4-16堂課選擇", "自動月扣款", "隨時取消"]
               },
               {
-                icon: <Video className="w-8 h-8 md:w-12 md:h-12 text-black" />,
+                icon: <Video className="w-12 h-12 md:w-16 md:h-16 text-black" />,
                 title: "視訊教學",
                 subtitle: "專業線上教室",
                 color: "bg-gradient-to-br from-green-300 to-green-400",
                 features: ["高品質視訊", "螢幕分享", "即時聊天", "評價回饋"]
               },
               {
-                icon: <MessageSquare className="w-8 h-8 md:w-12 md:h-12 text-black" />,
+                icon: <MessageSquare className="w-12 h-12 md:w-16 md:h-16 text-black" />,
                 title: "安全聊天",
                 subtitle: "加密通訊保護",
                 color: "bg-gradient-to-br from-purple-300 to-purple-400",
                 features: ["文字聊天", "圖片傳送", "基本加密", "25MB限制"]
               },
               {
-                icon: <DollarSign className="w-8 h-8 md:w-12 md:h-12 text-black" />,
+                icon: <DollarSign className="w-12 h-12 md:w-16 md:h-16 text-black" />,
                 title: "透明收費",
                 subtitle: "公平定價機制",
                 color: "bg-gradient-to-br from-yellow-300 to-yellow-400",
                 features: ["試教50%優惠", "30天退款", "綠界金流", "信用卡支付"]
               },
               {
-                icon: <Shield className="w-8 h-8 md:w-12 md:h-12 text-black" />,
+                icon: <Shield className="w-12 h-12 md:w-16 md:h-16 text-black" />,
                 title: "完善保障",
                 subtitle: "多重品質保護",
                 color: "bg-gradient-to-br from-red-300 to-red-400",
@@ -404,17 +403,22 @@ const Index = () => {
             ].map((feature, index) => (
               <div key={index} className={`${feature.color} border-4 md:border-6 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-6 md:p-8 h-full flex flex-col`}>
                 <div className="mb-6 md:mb-8 text-center">
-                  <div className="w-16 h-16 md:w-24 md:h-24 bg-white border-4 border-black flex items-center justify-center mb-4 md:mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mx-auto">
+                  <div className="w-20 h-20 md:w-24 md:h-24 bg-white border-4 border-black flex items-center justify-center mb-4 md:mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mx-auto">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl md:text-2xl font-black text-black mb-2 md:mb-3 uppercase tracking-wide">{feature.title}</h3>
-                  <p className="font-bold text-black text-lg md:text-xl">{feature.subtitle}</p>
+                  <h3 className="text-2xl md:text-3xl font-black text-black mb-3 md:mb-4 uppercase tracking-wide">{feature.title}</h3>
+                  <p className="font-bold text-black text-xl md:text-2xl">{feature.subtitle}</p>
                 </div>
-                <div className="bg-white border-3 md:border-4 border-black p-4 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex-grow">
-                  <ul className="space-y-3 md:space-y-4 text-base md:text-lg text-black font-bold">
+                <div className="bg-white border-4 md:border-6 border-black p-6 md:p-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex-grow">
+                  <ul className="space-y-4 md:space-y-6 text-lg md:text-xl text-black font-bold">
                     {feature.features.map((item, i) => (
-                      <li key={i} className="flex items-center space-x-3">
-                        <div className="w-3 h-3 md:w-4 md:h-4 bg-red-500 border-2 border-black flex-shrink-0" />
+                      <li key={i} className="flex items-center space-x-4">
+                        <div className={`w-4 h-4 md:w-5 md:h-5 border-2 border-black flex-shrink-0 ${
+                          i === 0 ? 'bg-red-500' : 
+                          i === 1 ? 'bg-blue-500' : 
+                          i === 2 ? 'bg-green-500' : 
+                          'bg-purple-500'
+                        }`} />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -606,6 +610,79 @@ const Index = () => {
               <p className="text-base md:text-lg font-bold text-black">
                 * 平台上線後將優先通知你註冊使用
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer CTA Section - Added back from previous version */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-red-400 to-red-500">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            {/* Teacher Count Banner */}
+            <div className="text-center mb-12 md:mb-16">
+              <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-4 md:border-8 border-black px-8 md:px-12 py-8 md:py-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] md:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] transform rotate-1 inline-block mb-8 md:mb-12">
+                <h2 className="text-4xl md:text-6xl font-black text-black uppercase tracking-wide mb-3 md:mb-4">
+                  目前已有
+                </h2>
+                <div className="text-5xl md:text-7xl font-black text-black uppercase tracking-wide mb-3 md:mb-4">
+                  {emailCount} 位老師
+                </div>
+                <div className="text-4xl md:text-6xl font-black text-black uppercase tracking-wide">
+                  申請加入
+                </div>
+              </div>
+              
+              <div className="bg-white border-4 md:border-8 border-black p-8 md:p-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] md:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)]">
+                <p className="text-2xl md:text-3xl font-black text-black mb-6 md:mb-8">
+                  越來越多優秀教師選擇 No Limit Tutor
+                </p>
+                <p className="text-xl md:text-2xl font-bold text-black">
+                  成為首批元老教師，有望享有平台發展紅利！
+                </p>
+              </div>
+            </div>
+
+            {/* Email Form Section */}
+            <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-4 md:border-8 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] md:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] p-8 md:p-12 mb-8 md:mb-12">
+              <div className="flex items-center justify-center mb-6 md:mb-8">
+                <Mail className="w-8 h-8 md:w-10 md:h-10 text-black mr-4 md:mr-6" />
+                <h3 className="text-2xl md:text-4xl font-black text-black">輸入你的 Email 地址</h3>
+              </div>
+              <p className="text-xl md:text-2xl font-black text-black text-center mb-8 md:mb-10">申請加入 NLT 老師行列！</p>
+              <form onSubmit={handleEmailSubmit} className="space-y-6 md:space-y-8">
+                <input
+                  type="email"
+                  placeholder="請輸入你的 Email 地址"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full h-16 md:h-20 px-6 md:px-8 text-xl md:text-2xl text-center border-4 md:border-6 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] font-bold focus:outline-none focus:ring-2 focus:ring-black"
+                  required
+                />
+                <button
+                  type="submit"
+                  disabled={isSubmittingEmail}
+                  className="w-full h-16 md:h-20 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-4 md:border-6 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] font-black text-xl md:text-2xl uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmittingEmail ? '訂閱中...' : '加入教師招募'}
+                  <ArrowRight className="ml-4 md:ml-6 w-6 h-6 md:w-8 md:h-8" />
+                </button>
+              </form>
+              <p className="text-lg md:text-xl font-bold text-black text-center mt-6 md:mt-8">
+                * 我們承諾不會濫用你的 Email，也不會分享給第三方
+              </p>
+            </div>
+
+            {/* Main CTA Button */}
+            <div className="text-center">
+              <Button 
+                size="lg" 
+                className="w-full max-w-2xl bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white border-4 md:border-8 border-white shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] md:shadow-[20px_20px_0px_0px_rgba(255,255,255,1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] md:hover:shadow-[16px_16px_0px_0px_rgba(255,255,255,1)] font-black text-2xl md:text-3xl px-8 md:px-16 py-8 md:py-12 uppercase tracking-wide transform hover:translate-x-2 hover:translate-y-2 transition-all duration-200"
+                onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
+              >
+                立即加入教師招募
+                <ArrowRight className="ml-4 md:ml-6 w-8 h-8 md:w-10 md:h-10" />
+              </Button>
             </div>
           </div>
         </div>
