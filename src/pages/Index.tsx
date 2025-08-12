@@ -17,7 +17,8 @@ import {
   Globe,
   ArrowRight,
   Mail,
-  ExternalLink
+  ExternalLink,
+  UserCheck
 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
@@ -149,187 +150,193 @@ const Index = () => {
 
       {/* Hero Section */}
       <section id="home" className="relative overflow-hidden bg-gradient-to-br from-amber-400 via-orange-400 to-red-400">
-        <div className="relative container mx-auto px-4 py-8 md:py-16">
+        <div className="relative container mx-auto px-4 py-6 md:py-16">
           <div className="max-w-7xl mx-auto">
-            <div className="space-y-4 md:space-y-8">
-              <div className="flex items-start space-x-6 md:space-x-12">
-                <div className="flex-1 space-y-3 md:space-y-6">
+            <div className="space-y-3 md:space-y-8">
+              <div className="flex items-start space-x-4 md:space-x-12">
+                <div className="flex-1 space-y-2 md:space-y-6">
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
-                      <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-black leading-[0.85] md:leading-tight tracking-tight uppercase drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
+                      <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-black leading-[0.8] md:leading-tight tracking-tight uppercase drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
                         No Limit Tutor
                       </h1>
-                      <div className="mt-1 mb-2 md:mt-2 md:mb-4">
-                        <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-black leading-[0.85] md:leading-tight tracking-tight uppercase drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
+                      <div className="mt-1 mb-1 md:mt-2 md:mb-4">
+                        <span className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-black leading-[0.8] md:leading-tight tracking-tight uppercase drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
                           無限家教
                         </span>
                       </div>
                     </div>
                     
-                    <div className="flex-shrink-0 ml-4">
+                    <div className="flex-shrink-0 ml-2 md:ml-4">
                       <img 
                         src="/lovable-uploads/6ed7f059-777c-4ced-8660-78aa11ba900f.png" 
                         alt="No Limit Tutor Logo" 
-                        className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 object-contain"
+                        className="w-16 h-16 sm:w-20 sm:h-20 md:w-32 md:h-32 lg:w-40 lg:h-40 object-contain"
                       />
                     </div>
                   </div>
                   
-                  <div className="mt-4 md:mt-12 lg:mt-16">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-black leading-tight bg-white px-4 md:px-8 py-3 md:py-6 border-4 md:border-6 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1">
+                  <div className="mt-3 md:mt-12 lg:mt-16">
+                    <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-black text-black leading-tight bg-white px-3 md:px-8 py-2 md:py-6 border-3 md:border-6 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1">
                       台灣首個民主、群眾導向的線上一對一家教平台
                     </h2>
                   </div>
                 </div>
               </div>
               
-              <div className="space-y-4 md:space-y-6 text-lg md:text-2xl text-black leading-relaxed max-w-5xl bg-white border-4 md:border-6 border-black p-4 md:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mt-6 md:mt-12 lg:mt-16">
-                <p className="font-bold text-lg md:text-2xl">
+              <div className="space-y-3 md:space-y-6 text-base md:text-2xl text-black leading-relaxed max-w-5xl bg-white border-3 md:border-6 border-black p-3 md:p-8 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mt-4 md:mt-12 lg:mt-16">
+                <p className="font-bold text-base md:text-2xl">
                   No Limit Tutor 是專為台灣師生打造的線上教學平台，不從老師抽成、提供學生 100% 隨時退款保障，並確保師生安全
                 </p>
-                <div className="space-y-3 md:space-y-4 bg-gradient-to-r from-orange-100 to-amber-100 border-3 md:border-4 border-black p-4 md:p-6 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 md:w-4 md:h-4 bg-red-500 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
+                <div className="space-y-2 md:space-y-4 bg-gradient-to-r from-orange-100 to-amber-100 border-2 md:border-4 border-black p-3 md:p-6 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                  <div className="flex items-center space-x-2 md:space-x-3">
+                    <div className="w-2 h-2 md:w-4 md:h-4 bg-red-500 border-1 md:border-2 border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] md:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
                     <span className="font-black text-sm md:text-lg">不滿意試教？全額退費</span>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 md:w-4 md:h-4 bg-blue-500 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
+                  <div className="flex items-center space-x-2 md:space-x-3">
+                    <div className="w-2 h-2 md:w-4 md:h-4 bg-blue-500 border-1 md:border-2 border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] md:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
                     <span className="font-black text-sm md:text-lg">沒有綁約、沒有抽成、沒有名目費用</span>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 md:w-4 md:h-4 bg-green-500 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
+                  <div className="flex items-center space-x-2 md:space-x-3">
+                    <div className="w-2 h-2 md:w-4 md:h-4 bg-green-500 border-1 md:border-2 border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)] md:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
                     <span className="font-black text-sm md:text-lg">公平的缺席、爭議、退款與回報機制</span>
                   </div>
                 </div>
               </div>
 
               {/* Teacher Count Display and Signup - Fixed Layout */}
-              <div className="flex flex-col items-center gap-6 md:gap-8 pt-4 md:pt-8">
+              <div className="flex flex-col items-center gap-4 md:gap-8 pt-3 md:pt-8">
                 <div className="w-full max-w-6xl">
-                  <div className="bg-white border-4 md:border-6 border-black px-4 md:px-8 py-4 md:py-6 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] mb-6 md:mb-8 text-center">
-                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-black text-black mb-2 md:mb-4 uppercase tracking-wide">
+                  <div className="bg-white border-3 md:border-6 border-black px-3 md:px-8 py-3 md:py-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] mb-4 md:mb-8 text-center">
+                    <h3 className="text-xl md:text-3xl lg:text-4xl font-black text-black mb-1 md:mb-4 uppercase tracking-wide">
                       準備好開始了嗎？
                     </h3>
-                    <p className="text-lg md:text-xl lg:text-2xl text-black font-bold">
+                    <p className="text-base md:text-xl lg:text-2xl text-black font-bold">
                       加入 No Limit Tutor，共建民主學習新時代
                     </p>
                   </div>
                   
                   {/* 教師數量展示 - Fixed width */}
-                  <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-6 md:border-8 border-black px-6 md:px-12 py-4 md:py-8 shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] md:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] mb-6 md:mb-8 text-center transform rotate-1">
-                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-black text-black uppercase tracking-wide mb-2 md:mb-4">
+                  <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-4 md:border-8 border-black px-4 md:px-12 py-3 md:py-8 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] mb-4 md:mb-8 text-center transform rotate-1">
+                    <h2 className="text-xl md:text-4xl lg:text-5xl font-black text-black uppercase tracking-wide mb-1 md:mb-4">
                       目前已有 {emailCount} 位老師申請加入
                     </h2>
-                    <p className="text-lg md:text-xl lg:text-2xl font-black text-black">
+                    <p className="text-base md:text-xl lg:text-2xl font-black text-black">
                       越來越多優秀教師選擇 No Limit Tutor
                     </p>
                   </div>
 
-                  <div className="bg-white border-4 md:border-6 border-black p-4 md:p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mb-6 md:mb-8 text-center">
-                    <p className="text-lg md:text-2xl text-black font-bold leading-relaxed">
+                  <div className="bg-white border-3 md:border-6 border-black p-3 md:p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mb-4 md:mb-8 text-center">
+                    <p className="text-base md:text-2xl text-black font-bold leading-relaxed">
                       成為首批元老教師，有望享有平台發展紅利！
                     </p>
                   </div>
                 </div>
 
-                {/* Signup Options - Fixed Layout */}
+                {/* Student/Teacher Guidance Section */}
                 <div className="w-full max-w-6xl">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
-                    {/* Traditional Buttons */}
-                    <div className="space-y-4 md:space-y-6">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8">
+                    {/* Teacher Signup */}
+                    <div className="space-y-3 md:space-y-6">
+                      <div className="bg-gradient-to-r from-red-100 to-red-200 border-3 md:border-4 border-black p-3 md:p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] text-center">
+                        <div className="flex items-center justify-center mb-2 md:mb-3">
+                          <GraduationCap className="w-5 h-5 md:w-8 md:h-8 text-black mr-2 md:mr-3" />
+                          <h3 className="text-lg md:text-2xl font-black text-black">我是老師</h3>
+                        </div>
+                        <p className="text-sm md:text-lg font-bold text-black">想要加入 NLT 教師行列</p>
+                      </div>
+
                       <Button 
                         size="lg" 
-                        className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-4 md:border-6 border-white shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] md:shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] md:hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-lg md:text-2xl px-6 md:px-12 py-4 md:py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                        className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-3 md:border-6 border-white shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] md:shadow-[14px_14px_0px_0px_rgba(255,255,255,1)] hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] md:hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-base md:text-2xl px-4 md:px-12 py-3 md:py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
                         onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
                       >
                         立即加入教師招募
-                        <ArrowRight className="ml-2 w-5 h-5 md:w-8 md:h-8" />
+                        <ArrowRight className="ml-4 md:ml-8 w-4 h-4 md:w-8 md:h-8" />
                       </Button>
 
                       {/* Email Form Block */}
-                      <div className="bg-gradient-to-r from-yellow-100 to-amber-100 border-4 md:border-6 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[14px_14px_0px_0px_rgba(0,0,0,1)] p-4 md:p-8">
-                        <div className="flex items-center justify-center mb-3 md:mb-4">
-                          <Mail className="w-6 h-6 md:w-8 md:h-8 text-black mr-2 md:mr-3" />
-                          <h3 className="text-lg md:text-2xl font-black text-black">輸入你的 Email 地址</h3>
+                      <div className="bg-gradient-to-r from-yellow-100 to-amber-100 border-3 md:border-6 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[14px_14px_0px_0px_rgba(0,0,0,1)] p-3 md:p-8">
+                        <div className="flex items-center justify-center mb-2 md:mb-4">
+                          <Mail className="w-4 h-4 md:w-8 md:h-8 text-black mr-1 md:mr-3" />
+                          <h3 className="text-base md:text-2xl font-black text-black">輸入你的 Email 地址</h3>
                         </div>
-                        <p className="text-lg md:text-xl font-bold text-black text-center mb-4 md:mb-6">申請加入 NLT 老師行列！</p>
-                        <form onSubmit={handleEmailSubmit} className="space-y-3 md:space-y-4">
+                        <p className="text-sm md:text-xl font-bold text-black text-center mb-3 md:mb-6">申請加入 NLT 老師行列！</p>
+                        <form onSubmit={handleEmailSubmit} className="space-y-2 md:space-y-4">
                           <input
                             type="email"
                             placeholder="請輸入你的 Email 地址"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="w-full px-3 md:px-4 py-2 md:py-3 text-base md:text-lg border-3 md:border-4 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-bold focus:outline-none focus:ring-2 focus:ring-black"
+                            className="w-full px-2 md:px-4 py-2 md:py-3 text-sm md:text-lg border-2 md:border-4 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-bold focus:outline-none focus:ring-2 focus:ring-black"
                             required
                           />
                           <button
                             type="submit"
                             disabled={isSubmittingEmail}
-                            className="w-full bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-3 md:border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-base md:text-xl py-2 md:py-3 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="w-full bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-2 md:border-4 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-sm md:text-xl py-2 md:py-3 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                           >
                             {isSubmittingEmail ? '訂閱中...' : '加入NLT 首批教師行列'}
-                            <ArrowRight className="ml-2 w-4 h-4 md:w-6 md:h-6" />
+                            <ArrowRight className="ml-1 md:ml-2 w-3 h-3 md:w-6 md:h-6" />
                           </button>
                         </form>
-                        <p className="text-xs md:text-sm font-bold text-black text-center mt-3 md:mt-4">
+                        <p className="text-xs md:text-sm font-bold text-black text-center mt-2 md:mt-4">
                           * 我們承諾不會濫用你的 Email，也不會分享給第三方
                         </p>
                       </div>
                     </div>
 
-                    {/* Google Form Embed - Trust Building */}
-                    <div className="bg-white border-4 md:border-6 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[14px_14px_0px_0px_rgba(0,0,0,1)] p-4 md:p-6">
-                      <div className="mb-4 md:mb-6 text-center">
-                        <div className="flex items-center justify-center mb-3 md:mb-4">
-                          <Shield className="w-6 h-6 md:w-8 md:h-8 text-green-600 mr-2 md:mr-3" />
-                          <h3 className="text-lg md:text-2xl font-black text-black">安全可信的 Google 表單</h3>
+                    {/* Student Guidance Section */}
+                    <div className="bg-white border-3 md:border-6 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[14px_14px_0px_0px_rgba(0,0,0,1)] p-3 md:p-6">
+                      <div className="mb-3 md:mb-6 text-center">
+                        <div className="flex items-center justify-center mb-2 md:mb-4">
+                          <UserCheck className="w-5 h-5 md:w-8 md:h-8 text-blue-600 mr-2 md:mr-3" />
+                          <h3 className="text-lg md:text-2xl font-black text-black">我是學生</h3>
                         </div>
-                        <p className="text-base md:text-lg font-bold text-black mb-3 md:mb-4">
-                          使用 Google 表單確保資料安全，你也可以直接填寫
+                        <p className="text-sm md:text-lg font-bold text-black mb-2 md:mb-4">
+                          想要找家教或了解更多
                         </p>
-                        <div className="flex items-center justify-center space-x-2 mb-3 md:mb-4">
-                          <div className="w-3 h-3 md:w-4 md:h-4 bg-green-500 border-2 border-black" />
-                          <span className="font-black text-black text-sm md:text-base">Google 加密保護</span>
+                        <div className="bg-blue-50 border-2 md:border-3 border-black p-2 md:p-3 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] md:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] mb-3 md:mb-4">
+                          <p className="text-xs md:text-base font-bold text-black">
+                            平台預計 2025 年正式上線<br />
+                            現在可以先填寫表單，我們會優先通知你！
+                          </p>
                         </div>
                       </div>
                       
-                      {/* Google Form Iframe */}
-                      <div className="bg-gray-50 border-3 md:border-4 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] overflow-hidden">
-                        <iframe 
-                          src="https://docs.google.com/forms/d/e/1FAIpQLSfvGBKdtBHUgOJL1xQoiIk6jMhMhvHe7j5qBF8Zp8n0-g_R6A/viewform?embedded=true"
-                          width="100%" 
-                          height="400"
-                          frameBorder="0" 
-                          marginHeight={0} 
-                          marginWidth={0}
-                          className="w-full"
-                        >
-                          載入中…
-                        </iframe>
-                      </div>
-                      
-                      <div className="mt-3 md:mt-4 text-center">
+                      <div className="space-y-3 md:space-y-4">
                         <Button
-                          size="sm"
-                          className="bg-blue-500 hover:bg-blue-600 text-white border-3 md:border-4 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black px-4 md:px-6 py-1 md:py-2 transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                          size="lg"
+                          className="w-full bg-gradient-to-r from-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white border-3 md:border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] font-black text-sm md:text-lg px-4 md:px-6 py-3 md:py-4 transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
                           onClick={() => window.open('https://forms.gle/NhuXSdB74J7pfrQY6', '_blank')}
                         >
-                          在新分頁開啟表單
-                          <ExternalLink className="ml-2 w-3 h-3 md:w-4 md:h-4" />
+                          學生表單 - 搶先預約家教
+                          <ExternalLink className="ml-1 md:ml-2 w-3 h-3 md:w-4 md:h-4" />
                         </Button>
+                        
+                        <div className="bg-green-50 border-2 md:border-3 border-black p-2 md:p-3 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] md:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+                          <div className="flex items-center space-x-1 md:space-x-2 mb-1 md:mb-2">
+                            <div className="w-2 h-2 md:w-3 md:h-3 bg-green-500 border-1 md:border-2 border-black" />
+                            <span className="font-black text-black text-xs md:text-sm">Google 表單安全可信</span>
+                          </div>
+                          <div className="flex items-center space-x-1 md:space-x-2">
+                            <div className="w-2 h-2 md:w-3 md:h-3 bg-blue-500 border-1 md:border-2 border-black" />
+                            <span className="font-black text-black text-xs md:text-sm">優先通知平台上線</span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-orange-200 to-red-200 border-4 md:border-6 border-black p-4 md:p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] text-center max-w-6xl w-full">
-                  <p className="font-black text-black text-lg md:text-2xl">
+                <div className="bg-gradient-to-r from-orange-200 to-red-200 border-3 md:border-6 border-black p-3 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] text-center max-w-6xl w-full">
+                  <p className="font-black text-black text-base md:text-2xl">
                     立即加入限額招募，共同建立一個群眾學習社群！
                   </p>
                 </div>
               </div>
               
-              <div className="text-center pt-2">
+              <div className="text-center pt-1 md:pt-2">
                 <p className="text-xs md:text-sm font-bold text-black">
                   * 完全免費，我們承諾不會向你收取任何費用
                 </p>
@@ -416,11 +423,15 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             <div className="bg-gradient-to-br from-amber-300 to-orange-300 border-6 border-black shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-8 h-full flex flex-col">
               <div className="mb-6">
-                <div className="w-20 h-20 bg-white border-4 border-black flex items-center justify-center mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                  <Users className="w-10 h-10 text-black" />
+                <div className="flex items-start space-x-4 md:space-x-6">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-white border-4 border-black flex items-center justify-center flex-shrink-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <Users className="w-8 h-8 md:w-10 md:h-10 text-black" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl md:text-2xl font-black text-black mb-2 uppercase tracking-wide">師資媒合</h3>
+                    <p className="font-bold text-black text-sm md:text-base">多元篩選，匹配最適合的教師</p>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-black text-black mb-2 uppercase tracking-wide">師資媒合</h3>
-                <p className="font-bold text-black text-base">多元篩選，匹配最適合的教師</p>
               </div>
               <div className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex-grow">
                 <ul className="space-y-3 text-sm text-black font-bold">
@@ -446,11 +457,15 @@ const Index = () => {
 
             <div className="bg-gradient-to-br from-blue-300 to-blue-400 border-6 border-black shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-8 h-full flex flex-col">
               <div className="mb-6">
-                <div className="w-20 h-20 bg-white border-4 border-black flex items-center justify-center mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                  <Clock className="w-10 h-10 text-black" />
+                <div className="flex items-start space-x-4 md:space-x-6">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-white border-4 border-black flex items-center justify-center flex-shrink-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <Clock className="w-8 h-8 md:w-10 md:h-10 text-black" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl md:text-2xl font-black text-black mb-2 uppercase tracking-wide">彈性預約系統</h3>
+                    <p className="font-bold text-black text-sm md:text-base">互動式時段選擇，即時預約確認</p>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-black text-black mb-2 uppercase tracking-wide">彈性預約系統</h3>
-                <p className="font-bold text-black text-base">互動式時段選擇，即時預約確認</p>
               </div>
               <div className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex-grow">
                 <ul className="space-y-3 text-sm text-black font-bold">
@@ -476,11 +491,15 @@ const Index = () => {
 
             <div className="bg-gradient-to-br from-green-300 to-green-400 border-6 border-black shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-8 h-full flex flex-col">
               <div className="mb-6">
-                <div className="w-20 h-20 bg-white border-4 border-black flex items-center justify-center mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                  <Video className="w-10 h-10 text-black" />
+                <div className="flex items-start space-x-4 md:space-x-6">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-white border-4 border-black flex items-center justify-center flex-shrink-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <Video className="w-8 h-8 md:w-10 md:h-10 text-black" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl md:text-2xl font-black text-black mb-2 uppercase tracking-wide">視訊教學平台</h3>
+                    <p className="font-bold text-black text-sm md:text-base">專業線上教室，支持多種互動功能</p>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-black text-black mb-2 uppercase tracking-wide">視訊教學平台</h3>
-                <p className="font-bold text-black text-base">專業線上教室，支持多種互動功能</p>
               </div>
               <div className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex-grow">
                 <ul className="space-y-3 text-sm text-black font-bold">
@@ -506,11 +525,15 @@ const Index = () => {
 
             <div className="bg-gradient-to-br from-purple-300 to-purple-400 border-6 border-black shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-8 h-full flex flex-col">
               <div className="mb-6">
-                <div className="w-20 h-20 bg-white border-4 border-black flex items-center justify-center mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                  <MessageSquare className="w-10 h-10 text-black" />
+                <div className="flex items-start space-x-4 md:space-x-6">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-white border-4 border-black flex items-center justify-center flex-shrink-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <MessageSquare className="w-8 h-8 md:w-10 md:h-10 text-black" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl md:text-2xl font-black text-black mb-2 uppercase tracking-wide">安全聊天系統</h3>
+                    <p className="font-bold text-black text-sm md:text-base">加密通訊，保護用戶隱私</p>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-black text-black mb-2 uppercase tracking-wide">安全聊天系統</h3>
-                <p className="font-bold text-black text-base">加密通訊，保護用戶隱私</p>
               </div>
               <div className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex-grow">
                 <ul className="space-y-3 text-sm text-black font-bold">
@@ -536,11 +559,15 @@ const Index = () => {
 
             <div className="bg-gradient-to-br from-yellow-300 to-yellow-400 border-6 border-black shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-8 h-full flex flex-col">
               <div className="mb-6">
-                <div className="w-20 h-20 bg-white border-4 border-black flex items-center justify-center mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                  <DollarSign className="w-10 h-10 text-black" />
+                <div className="flex items-start space-x-4 md:space-x-6">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-white border-4 border-black flex items-center justify-center flex-shrink-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <DollarSign className="w-8 h-8 md:w-10 md:h-10 text-black" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl md:text-2xl font-black text-black mb-2 uppercase tracking-wide">透明收費機制</h3>
+                    <p className="font-bold text-black text-sm md:text-base">公平定價，支持多種支付方式</p>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-black text-black mb-2 uppercase tracking-wide">透明收費機制</h3>
-                <p className="font-bold text-black text-base">公平定價，支持多種支付方式</p>
               </div>
               <div className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex-grow">
                 <ul className="space-y-3 text-sm text-black font-bold">
@@ -566,11 +593,15 @@ const Index = () => {
 
             <div className="bg-gradient-to-br from-red-300 to-red-400 border-6 border-black shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-8 h-full flex flex-col">
               <div className="mb-6">
-                <div className="w-20 h-20 bg-white border-4 border-black flex items-center justify-center mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                  <Shield className="w-10 h-10 text-black" />
+                <div className="flex items-start space-x-4 md:space-x-6">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-white border-4 border-black flex items-center justify-center flex-shrink-0 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <Shield className="w-8 h-8 md:w-10 md:h-10 text-black" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl md:text-2xl font-black text-black mb-2 uppercase tracking-wide">完善保障機制</h3>
+                    <p className="font-bold text-black text-sm md:text-base">多重保護，確保教學品質</p>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-black text-black mb-2 uppercase tracking-wide">完善保障機制</h3>
-                <p className="font-bold text-black text-base">多重保護，確保教學品質</p>
               </div>
               <div className="bg-white border-4 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex-grow">
                 <ul className="space-y-3 text-sm text-black font-bold">
