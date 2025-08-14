@@ -251,7 +251,7 @@ const Index = () => {
                       <Mail className="w-6 h-6 md:w-8 md:h-8 text-black mr-3 md:mr-4" />
                       <h3 className="text-xl md:text-3xl font-black text-black">輸入你的 Email 地址</h3>
                     </div>
-                    <p className="text-lg md:text-2xl font-black text-black text-center mb-6 md:mb-8">申請加入 NLT 老師行列！</p>
+                    <p className="text-lg md:text-2xl font-black text-black text-center mb-6 md:mb-8">搶先成為 NLT 首批教師！</p>
                     <form onSubmit={handleEmailSubmit} className="space-y-4 md:space-y-6">
                       <input
                         type="email"
@@ -266,7 +266,7 @@ const Index = () => {
                         disabled={isSubmittingEmail}
                         className="w-full h-14 md:h-20 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-4 md:border-6 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] font-black text-lg md:text-2xl uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                       >
-                        {isSubmittingEmail ? '訂閱中...' : '加入教師招募'}
+                        {isSubmittingEmail ? '訂閱中...' : '搶先登記'}
                         <ArrowRight className="ml-3 md:ml-4 w-5 h-5 md:w-7 md:h-7" />
                       </button>
                     </form>
@@ -445,7 +445,7 @@ const Index = () => {
             <div className="inline-block bg-white border-3 md:border-4 border-black px-4 md:px-6 py-2 md:py-3 text-lg md:text-xl font-black mb-6 md:mb-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
               學習流程
             </div>
-            <h2 className="text-2xl md:text-4xl font-black text-black mb-6 md:mb-8 bg-amber-400 border-4 border-black p-4 md:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 uppercase">簡單三步，開始學習</h2>
+            <h2 className="text-2xl md:text-4xl font-black text-black mb-6 md:mb-8 bg-amber-400 border-4 border-black p-4 md:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 uppercase">簡單三步，開始學習</h2>
             <p className="text-lg md:text-xl text-black font-bold max-w-3xl mx-auto bg-white border-3 md:border-4 border-black p-4 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">從註冊到上課，簡單順暢</p>
           </div>
           
@@ -493,8 +493,8 @@ const Index = () => {
             <div className="inline-block bg-white border-3 md:border-4 border-black px-4 md:px-6 py-2 md:py-3 text-lg md:text-xl font-black mb-6 md:mb-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
               收費方式
             </div>
-            <h2 className="text-2xl md:text-4xl font-black text-black mb-6 md:mb-8 bg-amber-400 border-4 border-black p-4 md:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 uppercase">透明公平定價</h2>
-            <p className="text-lg md:text-xl text-black font-bold bg-white border-3 md:border-4 border-black p-4 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] max-w-2xl mx-auto">雙贏學習環境</p>
+            <h2 className="text-2xl md:text-4xl font-black text-black mb-6 md:mb-8 bg-amber-400 border-4 border-black p-4 md:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 uppercase">透明公平定價</h2>
+            <p className="text-lg md:text-xl text-black font-bold bg-white border-3 md:border-4 border-black p-4 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] max-w-2xl mx-auto">雙贏學習環境</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
@@ -534,7 +534,7 @@ const Index = () => {
                   <ul className="space-y-3 md:space-y-4">
                     {plan.features.map((feature, i) => (
                       <li key={i} className="flex items-center space-x-3">
-                        <div className="w-3 h-3 md:w-4 md:h-4 bg-red-500 border-2 border-black flex-shrink-0" />
+                        <div className="w-3 h-3 md:w-4 md:h-4 bg-red-500 border border-black" />
                         <span className="text-lg md:text-xl font-bold text-black">{feature}</span>
                       </li>
                     ))}
@@ -861,7 +861,7 @@ const Index = () => {
                   越來越多優秀教師選擇 No Limit Tutor
                 </p>
                 <p className="text-xl md:text-2xl font-bold text-black">
-                  成為首批元老教師，有望享有平台發展紅利！
+                  成為首批元老教師，搶占平台發展先機！
                 </p>
               </div>
             </div>
@@ -870,9 +870,9 @@ const Index = () => {
             <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-4 md:border-8 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] md:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] p-8 md:p-12 mb-8 md:mb-12">
               <div className="flex items-center justify-center mb-6 md:mb-8">
                 <Mail className="w-8 h-8 md:w-10 md:h-10 text-black mr-4 md:mr-6" />
-                <h3 className="text-2xl md:text-4xl font-black text-black">輸入你的 Email 地址</h3>
+                <h3 className="text-2xl md:text-4xl font-black text-black">最後機會！立即登記</h3>
               </div>
-              <p className="text-xl md:text-2xl font-black text-black text-center mb-8 md:mb-10">申請加入 NLT 老師行列！</p>
+              <p className="text-xl md:text-2xl font-black text-black text-center mb-8 md:mb-10">成為 NLT 首批元老教師</p>
               <form onSubmit={handleEmailSubmit} className="space-y-6 md:space-y-8">
                 <input
                   type="email"
@@ -887,7 +887,7 @@ const Index = () => {
                   disabled={isSubmittingEmail}
                   className="w-full h-16 md:h-20 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-4 md:border-6 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] font-black text-xl md:text-2xl uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmittingEmail ? '訂閱中...' : '加入教師招募'}
+                  {isSubmittingEmail ? '訂閱中...' : '立即登記'}
                   <ArrowRight className="ml-4 md:ml-6 w-6 h-6 md:w-8 md:h-8" />
                 </button>
               </form>
@@ -906,6 +906,37 @@ const Index = () => {
                 立即加入教師招募
                 <ArrowRight className="ml-4 md:ml-6 w-8 h-8 md:w-10 md:h-10" />
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final Student Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-blue-200 to-indigo-200">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white border-4 md:border-6 border-black p-8 md:p-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mb-6 md:mb-8">
+              <div className="flex items-center justify-center mb-6 md:mb-8">
+                <GraduationCap className="w-8 h-8 md:w-12 md:h-12 text-indigo-600 mr-4 md:mr-6" />
+                <h2 className="text-3xl md:text-5xl font-black text-black">想學習新技能？</h2>
+              </div>
+              <p className="text-2xl md:text-3xl font-bold text-black mb-6 md:mb-8">
+                NLT 學生平台即將上線
+              </p>
+              <p className="text-lg md:text-xl font-bold text-black mb-8 md:mb-12">
+                無論是語言學習、程式設計、藝術才藝，都能找到最適合的老師
+              </p>
+              <Button
+                size="lg"
+                className="w-full max-w-md bg-indigo-500 hover:bg-indigo-600 text-white border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] font-black text-xl md:text-2xl px-8 md:px-12 py-6 md:py-8 transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                onClick={() => window.open('https://forms.gle/6cYoa9Lt2P7Wy8uu5', '_blank')}
+              >
+                學生搶先登記
+                <ExternalLink className="ml-3 md:ml-4 w-6 h-6 md:w-8 md:h-8" />
+              </Button>
+              <p className="text-base md:text-lg font-bold text-black text-center mt-4 md:mt-6">
+                平台上線時將優先通知你註冊使用
+              </p>
             </div>
           </div>
         </div>
