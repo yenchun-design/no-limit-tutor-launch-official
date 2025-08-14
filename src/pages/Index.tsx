@@ -18,7 +18,13 @@ import {
   ArrowRight,
   Mail,
   ExternalLink,
-  UserCheck
+  UserCheck,
+  HelpCircle,
+  CheckCircle,
+  XCircle,
+  CreditCard,
+  Calendar,
+  RefreshCw
 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
@@ -124,6 +130,7 @@ const Index = () => {
             <button onClick={() => scrollToSection('features')} className="text-lg font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">功能</button>
             <button onClick={() => scrollToSection('process')} className="text-lg font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">流程</button>
             <button onClick={() => scrollToSection('pricing')} className="text-lg font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">收費</button>
+            <button onClick={() => scrollToSection('faq')} className="text-lg font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">FAQ</button>
             <button onClick={() => scrollToSection('social')} className="text-lg font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">社群連結</button>
             <Button 
               size="lg" 
@@ -562,15 +569,230 @@ const Index = () => {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 md:py-24 bg-gradient-to-br from-purple-100 to-purple-200">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12 md:mb-20">
+            <div className="inline-block bg-white border-4 md:border-6 border-black px-6 md:px-8 py-3 md:py-4 text-xl md:text-2xl font-black mb-6 md:mb-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
+              常見問題
+            </div>
+            <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-4 md:border-8 border-black px-8 md:px-12 py-6 md:py-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1">
+              <h2 className="text-3xl md:text-5xl font-black text-black uppercase tracking-wide">解答你的疑問</h2>
+            </div>
+            <p className="text-xl md:text-2xl text-black font-bold max-w-3xl mx-auto bg-white border-4 md:border-6 border-black p-6 md:p-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] mt-8 md:mt-12">了解 NLT 如何解決傳統家教平台的痛點</p>
+          </div>
+          
+          <div className="max-w-5xl mx-auto space-y-8 md:space-y-12">
+            {/* FAQ Categories */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+              
+              {/* Platform Features FAQ */}
+              <div className="bg-white border-4 md:border-6 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] p-6 md:p-8">
+                <div className="flex items-center mb-6 md:mb-8">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-purple-400 to-purple-500 border-4 border-black flex items-center justify-center mr-4 md:mr-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <HelpCircle className="w-6 h-6 md:w-8 md:h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-black text-black uppercase">平台特色</h3>
+                </div>
+                
+                <div className="space-y-6 md:space-y-8">
+                  <div className="bg-gradient-to-r from-purple-100 to-purple-200 border-3 md:border-4 border-black p-4 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <h4 className="font-black text-lg md:text-xl text-black mb-3 md:mb-4 flex items-center">
+                      <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-green-600 mr-2 md:mr-3" />
+                      為什麼選擇 NLT？
+                    </h4>
+                    <p className="text-base md:text-lg font-bold text-black">
+                      NLT 是台灣首個零抽成、民主導向的線上家教平台。不像其他平台壓榨老師或綁定學生，我們提供公平透明的學習環境，讓師生都能自由選擇。
+                    </p>
+                  </div>
+                  
+                  <div className="bg-gradient-to-r from-purple-100 to-purple-200 border-3 md:border-4 border-black p-4 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <h4 className="font-black text-lg md:text-xl text-black mb-3 md:mb-4 flex items-center">
+                      <Video className="w-5 h-5 md:w-6 md:h-6 text-blue-600 mr-2 md:mr-3" />
+                      如何上課？
+                    </h4>
+                    <p className="text-base md:text-lg font-bold text-black">
+                      透過我們的專業視訊教室系統，支援螢幕分享、即時聊天、課程筆記等功能。一對一線上教學，彈性預約時間。
+                    </p>
+                  </div>
+                  
+                  <div className="bg-gradient-to-r from-purple-100 to-purple-200 border-3 md:border-4 border-black p-4 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <h4 className="font-black text-lg md:text-xl text-black mb-3 md:mb-4 flex items-center">
+                      <BookOpen className="w-5 h-5 md:w-6 md:h-6 text-orange-600 mr-2 md:mr-3" />
+                      有哪些課程科目？
+                    </h4>
+                    <p className="text-base md:text-lg font-bold text-black">
+                      涵蓋語言學習、程式設計、商業技能、學科輔導、才藝教學等多元科目。從英文、日文到 Python、UI/UX，應有盡有。
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Pricing & Payment FAQ */}
+              <div className="bg-white border-4 md:border-6 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] p-6 md:p-8">
+                <div className="flex items-center mb-6 md:mb-8">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-green-400 to-green-500 border-4 border-black flex items-center justify-center mr-4 md:mr-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <DollarSign className="w-6 h-6 md:w-8 md:h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-black text-black uppercase">收費方式</h3>
+                </div>
+                
+                <div className="space-y-6 md:space-y-8">
+                  <div className="bg-gradient-to-r from-green-100 to-green-200 border-3 md:border-4 border-black p-4 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <h4 className="font-black text-lg md:text-xl text-black mb-3 md:mb-4 flex items-center">
+                      <XCircle className="w-5 h-5 md:w-6 md:h-6 text-red-600 mr-2 md:mr-3" />
+                      真的零抽成嗎？
+                    </h4>
+                    <p className="text-base md:text-lg font-bold text-black">
+                      是的！老師設定的價格就是老師實拿的金額。我們透過向學生收取 25% 服務費來維持平台運作，確保視訊品質、金流安全等服務。
+                    </p>
+                  </div>
+                  
+                  <div className="bg-gradient-to-r from-green-100 to-green-200 border-3 md:border-4 border-black p-4 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <h4 className="font-black text-lg md:text-xl text-black mb-3 md:mb-4 flex items-center">
+                      <CreditCard className="w-5 h-5 md:w-6 md:h-6 text-blue-600 mr-2 md:mr-3" />
+                      如何付款？
+                    </h4>
+                    <p className="text-base md:text-lg font-bold text-black">
+                      支援信用卡付款，透過綠界金流確保安全。採用按月訂閱制，可選擇 4、8、12、16 堂課方案，隨時可取消。
+                    </p>
+                  </div>
+                  
+                  <div className="bg-gradient-to-r from-green-100 to-green-200 border-3 md:border-4 border-black p-4 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <h4 className="font-black text-lg md:text-xl text-black mb-3 md:mb-4 flex items-center">
+                      <RefreshCw className="w-5 h-5 md:w-6 md:h-6 text-purple-600 mr-2 md:mr-3" />
+                      可以退款嗎？
+                    </h4>
+                    <p className="text-base md:text-lg font-bold text-black">
+                      試教課不滿意可全額退費。正式課程購買後 30 天內，未使用的課程可無條件申請 100% 退款。
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Safety & Quality FAQ */}
+              <div className="bg-white border-4 md:border-6 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] p-6 md:p-8">
+                <div className="flex items-center mb-6 md:mb-8">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-red-400 to-red-500 border-4 border-black flex items-center justify-center mr-4 md:mr-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <Shield className="w-6 h-6 md:w-8 md:h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-black text-black uppercase">安全保障</h3>
+                </div>
+                
+                <div className="space-y-6 md:space-y-8">
+                  <div className="bg-gradient-to-r from-red-100 to-red-200 border-3 md:border-4 border-black p-4 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <h4 className="font-black text-lg md:text-xl text-black mb-3 md:mb-4 flex items-center">
+                      <UserCheck className="w-5 h-5 md:w-6 md:h-6 text-green-600 mr-2 md:mr-3" />
+                      師資如何把關？
+                    </h4>
+                    <p className="text-base md:text-lg font-bold text-black">
+                      所有教師都需經過身份驗證與資格審核。學生評價系統確保教學品質，不適任教師會被系統自動排除。
+                    </p>
+                  </div>
+                  
+                  <div className="bg-gradient-to-r from-red-100 to-red-200 border-3 md:border-4 border-black p-4 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <h4 className="font-black text-lg md:text-xl text-black mb-3 md:mb-4 flex items-center">
+                      <MessageSquare className="w-5 h-5 md:w-6 md:h-6 text-blue-600 mr-2 md:mr-3" />
+                      上課安全嗎？
+                    </h4>
+                    <p className="text-base md:text-lg font-bold text-black">
+                      平台內建加密聊天系統，支援投訴檢舉機制。所有課程都有完整記錄，確保師生互動安全。
+                    </p>
+                  </div>
+                  
+                  <div className="bg-gradient-to-r from-red-100 to-red-200 border-3 md:border-4 border-black p-4 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <h4 className="font-black text-lg md:text-xl text-black mb-3 md:mb-4 flex items-center">
+                      <Clock className="w-5 h-5 md:w-6 md:h-6 text-orange-600 mr-2 md:mr-3" />
+                      老師沒出現怎麼辦？
+                    </h4>
+                    <p className="text-base md:text-lg font-bold text-black">
+                      教師 No-Show 會留下記錄，學生可獲得該堂課全額退款。多次 No-Show 的教師會被停用帳號。
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Getting Started FAQ */}
+              <div className="bg-white border-4 md:border-6 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] p-6 md:p-8">
+                <div className="flex items-center mb-6 md:mb-8">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-400 to-blue-500 border-4 border-black flex items-center justify-center mr-4 md:mr-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <Calendar className="w-6 h-6 md:w-8 md:h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-black text-black uppercase">開始使用</h3>
+                </div>
+                
+                <div className="space-y-6 md:space-y-8">
+                  <div className="bg-gradient-to-r from-blue-100 to-blue-200 border-3 md:border-4 border-black p-4 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <h4 className="font-black text-lg md:text-xl text-black mb-3 md:mb-4 flex items-center">
+                      <Star className="w-5 h-5 md:w-6 md:h-6 text-yellow-600 mr-2 md:mr-3" />
+                      什麼是試教課？
+                    </h4>
+                    <p className="text-base md:text-lg font-bold text-black">
+                      25 分鐘體驗課程，只需正式課程 50% 費用。讓你先了解老師教學風格，滿意再購買正式課程。
+                    </p>
+                  </div>
+                  
+                  <div className="bg-gradient-to-r from-blue-100 to-blue-200 border-3 md:border-4 border-black p-4 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <h4 className="font-black text-lg md:text-xl text-black mb-3 md:mb-4 flex items-center">
+                      <Users className="w-5 h-5 md:w-6 md:h-6 text-purple-600 mr-2 md:mr-3" />
+                      如何選擇老師？
+                    </h4>
+                    <p className="text-base md:text-lg font-bold text-black">
+                      可依科目、價格、時間、評分等條件篩選。每位老師都有詳細介紹、學生評價和教學影片，幫你找到最適合的老師。
+                    </p>
+                  </div>
+                  
+                  <div className="bg-gradient-to-r from-blue-100 to-blue-200 border-3 md:border-4 border-black p-4 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    <h4 className="font-black text-lg md:text-xl text-black mb-3 md:mb-4 flex items-center">
+                      <Globe className="w-5 h-5 md:w-6 md:h-6 text-green-600 mr-2 md:mr-3" />
+                      什麼時候上線？
+                    </h4>
+                    <p className="text-base md:text-lg font-bold text-black">
+                      平台目前開發中，正在招募首批優質教師。預計 2025 年正式上線，現在登記可享元老教師優惠！
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact CTA */}
+            <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-4 md:border-8 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] md:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] p-8 md:p-12 text-center">
+              <h3 className="text-2xl md:text-4xl font-black text-black mb-6 md:mb-8 uppercase">還有其他問題？</h3>
+              <p className="text-xl md:text-2xl font-bold text-black mb-8 md:mb-10">
+                我們很樂意為你解答！歡迎透過社群媒體聯繫我們
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center max-w-2xl mx-auto">
+                <Button 
+                  size="lg" 
+                  className="bg-blue-500 hover:bg-blue-600 text-white border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-lg md:text-xl px-6 md:px-8 py-4 md:py-6 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                  onClick={() => window.open('https://www.facebook.com/nolimittutor', '_blank')}
+                >
+                  Facebook 粉專
+                  <ExternalLink className="ml-3 w-5 h-5" />
+                </Button>
+                <Button 
+                  size="lg" 
+                  className="bg-pink-500 hover:bg-pink-600 text-white border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-lg md:text-xl px-6 md:px-8 py-4 md:py-6 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+                  onClick={() => window.open('https://www.instagram.com/no_limit_tutor/', '_blank')}
+                >
+                  Instagram
+                  <ExternalLink className="ml-3 w-5 h-5" />
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Social Media Follow Section - Consistent alignment and larger text */}
       <section id="social" className="py-16 md:py-24 bg-gradient-to-br from-green-100 to-green-200">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block bg-white border-4 border-black px-4 md:px-6 py-2 md:py-3 text-lg md:text-xl font-black mb-6 md:mb-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
+            <div className="inline-block bg-white border-4 border-black px-4 md:px-6 py-2 md:py-3 text-lg md:text-xl font-black mb-6 md:mb-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
               搶先追蹤
             </div>
-            <h2 className="text-2xl md:text-4xl font-black text-black mb-6 md:mb-8 bg-amber-400 border-4 border-black p-4 md:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 uppercase">社群互動</h2>
-            <div className="bg-white border-4 border-black p-6 md:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-4xl font-black text-black mb-6 md:mb-8 bg-amber-400 border-4 border-black p-4 md:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 uppercase">社群互動</h2>
+            <div className="bg-white border-4 border-black p-6 md:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] mb-8 md:mb-12">
               <p className="text-lg md:text-xl text-black font-bold">
                 進一步了解 No Limit Tutor 文化與價值訴求，及平台努力的方向<br />
                 提供回饋，共造嶄新的民主學習環境
