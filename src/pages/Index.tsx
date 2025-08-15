@@ -184,7 +184,7 @@ const Index = () => {
               {/* Main Value Proposition - Larger and more prominent */}
               <div className="text-center">
                 <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black text-black leading-tight bg-white px-6 md:px-12 py-6 md:py-10 border-4 md:border-8 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 mb-8">
-                  台灣首個民主、群眾導向線上家教平台
+                  台灣首個民主、群眾導向的一對一線上家教平台
                 </h2>
               </div>
               
@@ -192,7 +192,7 @@ const Index = () => {
               <div className="max-w-5xl mx-auto">
                 <div className="bg-white border-4 md:border-8 border-black p-6 md:p-10 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)]">
                   <p className="font-black text-xl md:text-3xl text-center mb-6 md:mb-8">
-                    專為台灣師生打造，不抽成、100% 退款保障、確保安全
+                    NLT 專為台灣師生打造，不抽成、100% 退款保障、確保師生安全
                   </p>
                   <div className="grid grid-cols-1 gap-4 md:gap-6 bg-gradient-to-r from-orange-100 to-amber-100 border-3 md:border-6 border-black p-4 md:p-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
                     <div className="flex items-center space-x-3 md:space-x-4">
@@ -241,7 +241,7 @@ const Index = () => {
                   <div className="text-center">
                     <Button 
                       size="lg" 
-                      className="w-full max-w-2xl bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-4 md:border-8 border-white shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] md:shadow-[20px_20px_0px_0px_rgba(255,255,255,1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] md:hover:shadow-[16px_16px_0px_0px_rgba(255,255,255,1)] font-black text-xl md:text-3xl px-8 md:px-16 py-6 md:py-10 uppercase tracking-wide transform hover:translate-x-2 hover:translate-y-2 transition-all duration-200 flex items-center justify-center"
+                      className="w-full max-w-4xl bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-4 md:border-8 border-white shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] md:shadow-[20px_20px_0px_0px_rgba(255,255,255,1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] md:hover:shadow-[16px_16px_0px_0px_rgba(255,255,255,1)] font-black text-xl md:text-3xl px-8 md:px-16 py-6 md:py-10 uppercase tracking-wide transform hover:translate-x-2 hover:translate-y-2 transition-all duration-200 flex items-center justify-center"
                       onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
                     >
                       立即加入教師招募
@@ -306,50 +306,6 @@ const Index = () => {
                 <ExternalLink className="ml-3 md:ml-4 w-6 h-6 md:w-8 md:h-8" />
               </Button>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Three Service Principles Section - Consistent alignment */}
-      <section id="principles" className="py-16 md:py-24 bg-gradient-to-br from-orange-100 to-amber-100">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 md:mb-20">
-            <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-4 md:border-8 border-black px-8 md:px-16 py-6 md:py-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1">
-              <span className="text-3xl md:text-5xl font-black text-black uppercase tracking-wide">NLT 三大服務主張</span>
-            </div>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 max-w-6xl mx-auto">
-            {/* Principle cards with consistent sizing and larger fonts */}
-            {[
-              {
-                icon: <BookOpen className="w-12 h-12 md:w-16 md:h-16 text-white" />,
-                title: "民主、群眾導向",
-                description: "自由授課，自選課題，無綁定教材或長期合約"
-              },
-              {
-                icon: <Video className="w-12 h-12 md:w-16 md:h-16 text-white" />,
-                title: "視訊教學",
-                description: "穩定線上預約與視訊系統，實現一對一彈性學習"
-              },
-              {
-                icon: <Star className="w-12 h-12 md:w-16 md:h-16 text-white" />,
-                title: "零抽成",
-                description: "不從教師抽成，而是增加服務費保障退款、安全互動與金流。"
-              }
-            ].map((principle, index) => (
-              <div key={index} className="bg-white border-4 md:border-6 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 h-full flex flex-col">
-                <div className="bg-gradient-to-br from-orange-200 to-amber-200 p-8 md:p-12 border-b-4 border-black flex flex-col items-center text-center">
-                  <div className="w-20 h-20 md:w-28 md:h-28 bg-gradient-to-br from-amber-400 to-orange-500 border-4 border-black flex items-center justify-center mb-6 md:mb-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-                    {principle.icon}
-                  </div>
-                  <h3 className="font-black text-black text-2xl md:text-3xl uppercase tracking-wide">{principle.title}</h3>
-                </div>
-                <div className="bg-white p-8 md:p-10 flex-grow flex items-center">
-                  <p className="text-xl md:text-2xl text-black font-bold leading-relaxed text-center">{principle.description}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -562,54 +518,6 @@ const Index = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Learning Process - Consistent alignment and larger text */}
-      <section id="process" className="py-16 md:py-24 bg-gradient-to-br from-orange-300 to-red-300">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 md:mb-20">
-            <div className="inline-block bg-white border-3 md:border-4 border-black px-4 md:px-6 py-2 md:py-3 text-lg md:text-xl font-black mb-6 md:mb-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
-              學習流程
-            </div>
-            <h2 className="text-2xl md:text-4xl font-black text-black mb-6 md:mb-8 bg-amber-400 border-4 border-black p-4 md:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 uppercase">簡單三步，開始學習</h2>
-            <p className="text-lg md:text-xl text-black font-bold max-w-3xl mx-auto bg-white border-3 md:border-4 border-black p-4 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">從註冊到上課，簡單順暢</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
-            {[
-              {
-                step: "1",
-                title: "選擇教師",
-                description: "瀏覽教師檔案，查看評價，選擇最適合的老師",
-                color: "bg-amber-300"
-              },
-              {
-                step: "2", 
-                title: "預約試教",
-                description: "25分鐘試教課程，確認教學風格",
-                color: "bg-blue-300"
-              },
-              {
-                step: "3",
-                title: "開始學習",
-                description: "購買方案，開始個人化學習旅程",
-                color: "bg-pink-300"
-              }
-            ].map((item, index) => (
-              <div key={index} className={`text-center border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 ${item.color} p-6 md:p-10 h-full flex flex-col`}>
-                <div className="pb-4 md:pb-6">
-                  <div className="w-16 h-16 md:w-24 md:h-24 bg-white border-4 border-black flex items-center justify-center mx-auto mb-4 md:mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                    <span className="text-3xl md:text-5xl font-black text-black">{item.step}</span>
-                  </div>
-                  <h3 className="text-xl md:text-2xl font-black text-black mb-4 md:mb-6 uppercase">{item.title}</h3>
-                </div>
-                <div className="bg-white border-3 md:border-4 border-black p-4 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex-grow flex items-center">
-                  <p className="text-black font-bold leading-relaxed text-lg md:text-xl text-center">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -1072,6 +980,51 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+            {/* Three Service Principles Section - Consistent alignment */}
+      <section id="principles" className="py-16 md:py-24 bg-gradient-to-br from-orange-100 to-amber-100">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12 md:mb-20">
+            <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-4 md:border-8 border-black px-8 md:px-16 py-6 md:py-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1">
+              <span className="text-3xl md:text-5xl font-black text-black uppercase tracking-wide">NLT 三大服務主張</span>
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 max-w-6xl mx-auto">
+            {/* Principle cards with consistent sizing and larger fonts */}
+            {[
+              {
+                icon: <BookOpen className="w-12 h-12 md:w-16 md:h-16 text-white" />,
+                title: "民主、群眾導向",
+                description: "自由授課，自選課題，無綁定教材或長期合約"
+              },
+              {
+                icon: <Video className="w-12 h-12 md:w-16 md:h-16 text-white" />,
+                title: "視訊教學",
+                description: "穩定線上預約與視訊系統，實現一對一彈性學習"
+              },
+              {
+                icon: <Star className="w-12 h-12 md:w-16 md:h-16 text-white" />,
+                title: "零抽成",
+                description: "不從教師抽成，而是增加服務費保障退款、安全互動與金流。"
+              }
+            ].map((principle, index) => (
+              <div key={index} className="bg-white border-4 md:border-6 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 h-full flex flex-col">
+                <div className="bg-gradient-to-br from-orange-200 to-amber-200 p-8 md:p-12 border-b-4 border-black flex flex-col items-center text-center">
+                  <div className="w-20 h-20 md:w-28 md:h-28 bg-gradient-to-br from-amber-400 to-orange-500 border-4 border-black flex items-center justify-center mb-6 md:mb-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                    {principle.icon}
+                  </div>
+                  <h3 className="font-black text-black text-2xl md:text-3xl uppercase tracking-wide">{principle.title}</h3>
+                </div>
+                <div className="bg-white p-8 md:p-10 flex-grow flex items-center">
+                  <p className="text-xl md:text-2xl text-black font-bold leading-relaxed text-center">{principle.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* Footer */}
       <footer className="py-12 md:py-20 bg-black">
