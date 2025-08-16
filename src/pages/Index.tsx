@@ -610,7 +610,7 @@ const Index = () => {
                     </thead>
                     <tbody>
                       <tr>
-                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">NLT</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">No Limit Tutor</td>
                         <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">0%</td>
                         <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">25%</td>
                         <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">全額退款</td>
@@ -621,14 +621,14 @@ const Index = () => {
                         <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">台灣知名平台A</td>
                         <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">8-38%</td>
                         <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">10%</td>
-                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">可以，但流程緩慢、麻煩，且只能退成外幣</td>
-                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">18 - 48% (不包含外幣匯差)</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">可以，但流程困難，只能退成外幣</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">18 - 48% (+ 匯差)</td>
                       </tr>
                       <tr>
                         <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">國際知名平台B</td>
                         <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">20-35%</td>
                         <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">0%</td>
-                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">可以，但流程被刻意設計得耗時、人工、麻煩</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">可以，但流程困能</td>
                         <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">20 - 35%</td>
                       </tr>
                       <tr>
@@ -636,7 +636,7 @@ const Index = () => {
                         <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">不透明</td>
                         <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">不透明</td>
                         <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">多數購買超過七天就不能全額退款</td>
-                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">不透明，可能在35 - 60%之間不等</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">不透明，可能在33 - 65%之間不等</td>
                       </tr>
                     </tbody>
                   </table>
