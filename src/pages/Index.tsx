@@ -860,7 +860,7 @@ const Index = () => {
               常見問題
             </div>
             <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-3 md:border-6 border-black px-6 md:px-10 py-5 md:py-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[13px_13px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1">
-              <h2 className="text-2xl md:text-4xl font-black text-black uppercase tracking-wide">你可能想知道的問題</h2>
+              <h2 className="text-2xl md:text-3xl font-black text-black uppercase tracking-wide">你可能想知道的問題</h2>
             </div>
           </div>
           
@@ -926,7 +926,7 @@ const Index = () => {
             <div className="inline-block bg-white border-4 border-black px-4 md:px-6 py-2 md:py-3 text-lg md:text-xl font-black mb-6 md:mb-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
               搶先追蹤
             </div>
-            <h2 className="text-2xl md:text-4xl font-black text-black mb-6 md:mb-8 bg-amber-400 border-4 border-black p-4 md:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 uppercase">社群互動</h2>
+            <h2 className="text-2xl md:text-3xl font-black text-black mb-6 md:mb-8 bg-amber-400 border-4 border-black p-4 md:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 uppercase">社群互動</h2>
             <div className="bg-white border-4 border-black p-6 md:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] mb-8 md:mb-12">
               <p className="text-lg md:text-xl text-black font-bold">
                 進一步了解 No Limit Tutor 文化與價值訴求，及平台努力的方向<br />
@@ -980,13 +980,13 @@ const Index = () => {
             {/* Teacher Count Banner */}
             <div className="text-center mb-12 md:mb-16">
               <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-4 md:border-8 border-black px-8 md:px-12 py-8 md:py-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] md:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] transform rotate-1 inline-block mb-8 md:mb-12">
-                <h2 className="text-4xl md:text-6xl font-black text-black uppercase tracking-wide mb-3 md:mb-4">
+                <h2 className="text-3xl md:text-5xl font-black text-black uppercase tracking-wide mb-3 md:mb-4">
                   目前已有
                 </h2>
-                <div className="text-5xl md:text-7xl font-black text-black uppercase tracking-wide mb-3 md:mb-4">
+                <div className="text-4xl md:text-6xl font-black text-black uppercase tracking-wide mb-3 md:mb-4">
                   {emailCount} 位老師
                 </div>
-                <div className="text-4xl md:text-6xl font-black text-black uppercase tracking-wide">
+                <div className="text-3xl md:text-5xl font-black text-black uppercase tracking-wide">
                   申請加入
                 </div>
               </div>
@@ -1053,7 +1053,7 @@ const Index = () => {
             <div className="bg-white border-4 md:border-6 border-black p-8 md:p-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mb-6 md:mb-8">
               <div className="flex items-center justify-center mb-6 md:mb-8">
                 <GraduationCap className="w-8 h-8 md:w-12 md:h-12 text-indigo-600 mr-4 md:mr-6" />
-                <h2 className="text-3xl md:text-5xl font-black text-black">想學習新技能？</h2>
+                <h2 className="text-2xl md:text-4xl font-black text-black">想學習新技能？</h2>
               </div>
               <p className="text-2xl md:text-3xl font-bold text-black mb-6 md:mb-8">
                 NLT 學生平台即將上線
@@ -1082,7 +1082,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 md:mb-16">
             <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-4 md:border-6 border-black px-8 md:px-12 py-6 md:py-10 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1">
-              <span className="text-3xl md:text-4xl font-black text-black uppercase tracking-wide">NLT 三大服務主張</span>
+              <span className="text-2xl md:text-3xl font-black text-black uppercase tracking-wide">NLT 三大服務主張</span>
             </div>
           </div>
           
