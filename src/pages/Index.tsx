@@ -130,19 +130,19 @@ const Index = () => {
     },
     {
       question: "如果試上不滿意怎麼辦？",
-      answer: "25分鐘試教課程不滿意可申請全額退費。正式課程在購買後30天內，未完成的課程也可無條件申請100%退款。"
+      answer: "25分鐘試教課程不滿意可申請全額退費。正式課程在購買後30天內，未完成也未訂閱的課程也可無條件申請100%退款。"
     },
     {
       question: "平台什麼時候會正式上線？",
-      answer: "平台目前開發中，正在招募首批優質教師。預計 2025 年正式上線，現在登記可享元老教師優惠！"
+      answer: "平台目前開發中，正在招募首批優質教師。預計 2026 年正式上線，現在登記可享元老教師優惠！"
     },
     {
       question: "如何確保教師品質？",
-      answer: "所有教師都需經過身份驗證與資格審核。學生評價系統確保教學品質，不適任教師會被系統自動排除。"
+      answer: "這是一個民主、群眾導向的線上一對一教學平台，學生自己透過老師介紹與試教課來判斷教師品質。<br />記得，試教不滿意，可全額退款！訂閱了卻不想上，也可以退款！"
     },
     {
       question: "支援哪些科目和語言？",
-      answer: "涵蓋語言學習、程式設計、商業技能、學科輔導、才藝教學等多元科目。從英文、日文到 Python、UI/UX，應有盡有。"
+      answer: "涵蓋學科輔導、語言學習、程式設計、商業技能、才藝教學等多元科目。從英文、日文到 Python、UI/UX，應有盡有。隨著平台越來越多老師加入，會有更多科目可以學習！"
     }
   ];
 
@@ -351,9 +351,9 @@ const Index = () => {
               NLT 是什麼
             </div>
             <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-3 md:border-5 border-black px-6 md:px-8 py-5 md:py-5 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1">
-              <h2 className="text-2xl md:text-3xl font-black text-black uppercase tracking-wide">像 AmazingTalker 但更公平</h2>
+              <h2 className="text-2xl md:text-3xl font-black text-black uppercase tracking-wide">不是 AmazingTalker 但運作方式有點像</h2>
             </div>
-            <p className="text-lg md:text-lg text-black font-bold max-w-2xl mx-auto bg-white border-3 md:border-4 border-black p-5 md:p-5 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] mt-6 md:mt-8">一對一線上家教平台，但對老師零抽成，真正為師生服務</p>
+            <p className="text-lg md:text-lg text-black font-bold max-w-2xl mx-auto bg-white border-3 md:border-4 border-black p-5 md:p-5 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] mt-6 md:mt-8">台灣第一個民主式一對一線上教學網，對老師零抽成，確保師生教學與收付安全</p>
           </div>
           
           <div className="max-w-5xl mx-auto">
@@ -374,19 +374,19 @@ const Index = () => {
                       <div className="w-6 h-6 md:w-6 md:h-6 bg-green-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
                         <span className="text-white font-black text-sm">1</span>
                       </div>
-                      <p className="text-sm md:text-base font-bold text-black">老師、學生完全免費註冊使用，學生可無中介直接連絡老師</p>
+                      <p className="text-sm md:text-base font-bold text-black">免費註冊使用，學生可直接連絡老師，無須透過 NLT</p>
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="w-6 h-6 md:w-6 md:h-6 bg-blue-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
                         <span className="text-white font-black text-sm">2</span>
                       </div>
-                      <p className="text-sm md:text-base font-bold text-black">老師自訂每 50 分鐘學費，按小時提供可訂課時段</p>
+                      <p className="text-sm md:text-base font-bold text-black">老師自訂每 50 分鐘學費</p>
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="w-6 h-6 md:w-6 md:h-6 bg-purple-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
                         <span className="text-white font-black text-sm">3</span>
                       </div>
-                      <p className="text-sm md:text-base font-bold text-black">NLT 會在老師學費基礎上加些許保障服務費</p>
+                      <p className="text-sm md:text-base font-bold text-black">NLT 會在老師費用基礎上加一些保障服務費</p>
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="w-6 h-6 md:w-6 md:h-6 bg-orange-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -397,7 +397,7 @@ const Index = () => {
                   </div>
                   <div className="bg-green-100 border-2 border-black p-3 md:p-3 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mt-4 md:mt-4">
                     <p className="text-xs md:text-sm font-bold text-black">
-                      <strong>注：</strong>保障服務費 = 平台成本，是 NLT 用以提供學生無條件 100% 退費權益、幫老師吸引更多新學生、雙方安全金流收付、無中介直接溝通，以及平台持續進步的成本。
+                      <strong>注：</strong>注：保障服務費 = 平台成本 + 微薄收益。是 NLT 用以提供學生無條件 100% 退費權利、幫老師吸引更多新學生的基礎。這個費用也提供了了雙方的安全收付、溝通系統、平台生態系，以及持續開發的動能。
                     </p>
                   </div>
                 </div>
@@ -418,23 +418,23 @@ const Index = () => {
                       <div className="w-6 h-6 md:w-6 md:h-6 bg-red-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
                         <span className="text-white font-black text-sm">1</span>
                       </div>
-                      <p className="text-sm md:text-base font-bold text-black">自選家教，清楚需求<br />依照片、履歷、學生評價選擇老師</p>
+                      <p className="text-sm md:text-base font-bold text-black">依照片、履歷、學生評價自選老師<br />課前私訊老師溝通需求</p>
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="w-6 h-6 md:w-6 md:h-6 bg-green-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
                         <span className="text-white font-black text-sm">2</span>
                       </div>
-                      <p className="text-sm md:text-base font-bold text-black">選擇時間，預約上課<br />購買課程後彈性選擇上課時間，若需取消可在12小時前取消課程</p>
+                      <p className="text-sm md:text-base font-bold text-black">選擇時間，預約上課</p>
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="w-6 h-6 md:w-6 md:h-6 bg-purple-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
                         <span className="text-white font-black text-sm">3</span>
                       </div>
-                      <p className="text-sm md:text-base font-bold text-black">彈性地點，開啟課程<br />不管在哪，手機、電腦、平板皆可任何上課，使用內建視訊教室開啟課程</p>
+                      <p className="text-sm md:text-base font-bold text-black">彈性地點，開啟課程<br />不管在哪，一台筆電就可上課</p>
                     </div>
                     <div className="bg-blue-100 border-2 border-black p-3 md:p-3 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mt-4 md:mt-4">
                       <p className="text-xs md:text-sm font-bold text-black">
-                        學生可主動用 NLT 聊天室聯絡老師，確認需求。試教不滿意可申請全額退費！
+                        學生自主、自由選師，試教不滿意可全額退費！
                       </p>
                     </div>
                   </div>
@@ -459,7 +459,7 @@ const Index = () => {
                     </div>
                     <h4 className="text-base md:text-lg font-black text-black">100% 退款保障</h4>
                   </div>
-                  <p className="text-sm md:text-base font-bold text-black">試上不滿意？全額退費，零風險學習</p>
+                  <p className="text-sm md:text-base font-bold text-black">試上不滿意？全額退費，零風險尋找老師</p>
                 </div>
                 
                 <div className="bg-white border-3 border-black p-4 md:p-5 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
@@ -469,7 +469,7 @@ const Index = () => {
                     </div>
                     <h4 className="text-base md:text-lg font-black text-black">優質師資</h4>
                   </div>
-                  <p className="text-sm md:text-base font-bold text-black">老師零抽成，更有動力提供優質教學</p>
+                  <p className="text-sm md:text-base font-bold text-black">老師零抽成，鼓勵提供優質教學</p>
                 </div>
                 
                 <div className="bg-white border-3 border-black p-4 md:p-5 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
@@ -479,7 +479,7 @@ const Index = () => {
                     </div>
                     <h4 className="text-base md:text-lg font-black text-black">彈性上課</h4>
                   </div>
-                  <p className="text-sm md:text-base font-bold text-black">24/7 隨時上課，12小時前可免費取消</p>
+                  <p className="text-sm md:text-base font-bold text-black">24/7 隨時上課，沒上到的課可以全額退款</p>
                 </div>
                 
                 <div className="bg-white border-3 border-black p-4 md:p-5 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
@@ -498,19 +498,19 @@ const Index = () => {
                 <h4 className="text-lg md:text-xl font-black text-black text-center mb-4 md:mb-4 uppercase">彈性課程方案</h4>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
                   <div className="bg-blue-200 border-2 border-black p-3 md:p-3 text-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                    <div className="text-2xl md:text-3xl font-black text-black">4堂</div>
+                    <div className="text-2xl md:text-3xl font-black text-black">4堂/月</div>
                     <div className="text-sm md:text-base font-bold text-black">體驗方案</div>
                   </div>
                   <div className="bg-green-200 border-2 border-black p-3 md:p-3 text-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                    <div className="text-2xl md:text-3xl font-black text-black">8堂</div>
+                    <div className="text-2xl md:text-3xl font-black text-black">8堂/月</div>
                     <div className="text-sm md:text-base font-bold text-black">入門方案</div>
                   </div>
                   <div className="bg-yellow-200 border-2 border-black p-3 md:p-3 text-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                    <div className="text-2xl md:text-3xl font-black text-black">12堂</div>
+                    <div className="text-2xl md:text-3xl font-black text-black">12堂/月</div>
                     <div className="text-sm md:text-base font-bold text-black">進階方案</div>
                   </div>
                   <div className="bg-purple-200 border-2 border-black p-3 md:p-3 text-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                    <div className="text-2xl md:text-3xl font-black text-black">16堂</div>
+                    <div className="text-2xl md:text-3xl font-black text-black">16堂/月</div>
                     <div className="text-sm md:text-base font-bold text-black">密集方案</div>
                   </div>
                 </div>
@@ -519,7 +519,7 @@ const Index = () => {
 
             {/* 透明公開的收費機制 */}
             <div className="bg-gradient-to-r from-pink-100 to-pink-200 border-3 md:border-5 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[13px_13px_0px_0px_rgba(0,0,0,1)] p-6 md:p-8 mb-8 md:mb-8">
-              <h3 className="text-xl md:text-2xl font-black text-black text-center mb-6 md:mb-6 uppercase">透明公開的收費機制</h3>
+              <h3 className="text-xl md:text-2xl font-black text-black text-center mb-6 md:mb-6 uppercase">透明公開的平台營利機制</h3>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 mb-6 md:mb-6">
                 {/* 對老師 */}
@@ -528,7 +528,7 @@ const Index = () => {
                     <div className="w-10 h-10 md:w-11 md:h-11 bg-white border-3 border-black flex items-center justify-center mr-3 md:mr-3">
                       <GraduationCap className="w-5 h-5 md:w-6 md:h-6 text-green-600" />
                     </div>
-                    <h4 className="text-lg md:text-xl font-black text-black">對老師</h4>
+                    <h4 className="text-lg md:text-3xl font-black text-black">對老師</h4>
                   </div>
                   
                   <div className="bg-white border-2 border-black p-4 md:p-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] mb-4 md:mb-4">
@@ -547,7 +547,7 @@ const Index = () => {
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-green-600" />
-                        <span className="text-sm md:text-base font-bold text-black">按時收款</span>
+                        <span className="text-sm md:text-base font-bold text-black">安全保障收款</span>
                       </div>
                     </div>
                   </div>
@@ -559,7 +559,7 @@ const Index = () => {
                     <div className="w-10 h-10 md:w-11 md:h-11 bg-white border-3 border-black flex items-center justify-center mr-3 md:mr-3">
                       <Users className="w-5 h-5 md:w-6 md:h-6 text-blue-600" />
                     </div>
-                    <h4 className="text-lg md:text-xl font-black text-black">對學生</h4>
+                    <h4 className="text-lg md:text-3xl font-black text-black">對學生</h4>
                   </div>
                   
                   <div className="bg-white border-2 border-black p-4 md:p-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] mb-4 md:mb-4">
@@ -578,11 +578,11 @@ const Index = () => {
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-blue-600" />
-                        <span className="text-sm md:text-base font-bold text-black">平台維護與客服</span>
+                        <span className="text-sm md:text-base font-bold text-black">售後服務、爭議排解</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-blue-600" />
-                        <span className="text-sm md:text-base font-bold text-black">安全金流與視訊系統</span>
+                        <span className="text-sm md:text-base font-bold text-black">試教不滿意退費，無風險嘗試新老師</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-blue-600" />
@@ -877,7 +877,7 @@ const Index = () => {
             <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-3 md:border-6 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] p-6 md:p-10 text-center mt-8 md:mt-12">
               <h3 className="text-xl md:text-3xl font-black text-black mb-5 md:mb-6 uppercase">還有其他問題？</h3>
               <p className="text-lg md:text-xl font-bold text-black mb-6 md:mb-8">
-                我們很樂意為你解答！歡迎透過社群媒體聯繫我們
+                我們很樂意為你解答！<br />歡迎透過社群媒體訊息聯繫我們
               </p>
               <div className="flex flex-col sm:flex-row gap-3 md:gap-5 justify-center max-w-xl mx-auto">
                 <Button 
