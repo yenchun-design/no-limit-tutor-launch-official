@@ -547,7 +547,7 @@ const Index = () => {
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-green-600" />
-                        <span className="text-sm md:text-base font-bold text-black">安全保障收款</span>
+                        <span className="text-sm md:text-base font-bold text-black">學生先付才上課，保證收款</span>
                       </div>
                     </div>
                   </div>
@@ -570,11 +570,11 @@ const Index = () => {
                     <div className="space-y-2 md:space-y-2">
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-blue-600" />
-                        <span className="text-sm md:text-base font-bold text-black">老師收費 $500，學生付 $625</span>
+                        <span className="text-sm md:text-base font-bold text-black">老師收費 $500，學生付 $500 + 25% = $625</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-blue-600" />
-                        <span className="text-sm md:text-base font-bold text-black">100% 退款保障</span>
+                        <span className="text-sm md:text-base font-bold text-black">試教 100% 退款保障</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-blue-600" />
@@ -582,11 +582,11 @@ const Index = () => {
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-blue-600" />
-                        <span className="text-sm md:text-base font-bold text-black">試教不滿意退費，無風險嘗試新老師</span>
+                        <span className="text-sm md:text-base font-bold text-black">上完課老師才有收入，沒上完的可退費豐富教師資料庫</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-blue-600" />
-                        <span className="text-sm md:text-base font-bold text-black">安全金流、豐富教師資料庫</span>
+                        <span className="text-sm md:text-base font-bold text-black">豐富教師資料庫</span>
                       </div>
                     </div>
                   </div>
@@ -603,38 +603,40 @@ const Index = () => {
                         <th className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">平台</th>
                         <th className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">老師抽成</th>
                         <th className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">學生服務費</th>
-                        <th className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">平台總收益率</th>
                         <th className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">退款政策</th>
+                        <th className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">平台費用率</th>
+
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-green-600">NLT</td>
-                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-green-600">0%</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">NLT</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">0%</td>
                         <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">25%</td>
-                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">25%</td>
-                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-green-600">100% 原路退款</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">全額退款</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-green-600">20% (國內業界最低)</td>
+
                       </tr>
                       <tr>
-                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">平台A</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">台灣知名平台A</td>
                         <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">8-38%</td>
                         <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">10%</td>
-                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">77%</td>
-                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">退成平台幣，外幣計算</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">可以，但流程緩慢、麻煩，且只能退成外幣</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">18 - 48% (不包含外幣匯差)</td>
                       </tr>
                       <tr>
-                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">平台B</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">國際知名平台B</td>
                         <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">20-35%</td>
                         <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">0%</td>
-                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">35%</td>
-                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">不能退款</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">可以，但流程被刻意設計得耗時、人工、麻煩</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">20 - 35%</td>
                       </tr>
                       <tr>
-                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">其他多數平台</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">其他平台 (TutorABC, Engoo, YesOnline, EasyTalk etc.)</td>
                         <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">不透明</td>
                         <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">不透明</td>
-                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">不透明</td>
-                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">不能退款</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">多數購買超過七天就不能全額退款</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">不透明，可能在35 - 60%之間不等</td>
                       </tr>
                     </tbody>
                   </table>
