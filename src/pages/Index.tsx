@@ -138,7 +138,7 @@ const Index = () => {
     },
     {
       question: "如何確保教師品質？",
-      answer: "這是一個民主、群眾導向的線上一對一教學平台，學生自己透過老師介紹與試教課來判斷教師品質。<br />記得，試教不滿意，可全額退款！訂閱了卻不想上，也可以退款！"
+      answer: "這是一個民主、群眾導向的線上一對一教學平台，學生自己透過老師介紹與試教課來判斷教師品質。記得，試教不滿意，可全額退款！訂閱了卻不想上，也可以退款！"
     },
     {
       question: "支援哪些科目和語言？",
@@ -368,7 +368,7 @@ const Index = () => {
                   <h3 className="text-xl md:text-xl font-black text-black uppercase">NLT 如何運作</h3>
                 </div>
                 
-                <div className="bg-white border-2 md:border-3 border-black p-4 md:p-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+                <div className="bg-white border-2 md:border-3 border-black p-4 md:p-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,0,1)]">
                   <div className="space-y-3 md:space-y-3">
                     <div className="flex items-start space-x-3">
                       <div className="w-6 h-6 md:w-6 md:h-6 bg-green-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -397,7 +397,7 @@ const Index = () => {
                   </div>
                   <div className="bg-green-100 border-2 border-black p-3 md:p-3 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mt-4 md:mt-4">
                     <p className="text-xs md:text-sm font-bold text-black">
-                      <strong>注：</strong>注：保障服務費 = 平台成本 + 微薄收益。是 NLT 用以提供學生無條件 100% 退費權利、幫老師吸引更多新學生的基礎。這個費用也提供了了雙方的安全收付、溝通系統、平台生態系，以及持續開發的動能。
+                      <strong>注：</strong>保障服務費 = 平台成本 + 微薄收益。是 NLT 用以提供學生無條件 100% 退費權利、幫老師吸引更多新學生的基礎。這個費用也提供了雙方的安全收付、溝通系統、平台生態系，以及持續開發的動能。
                     </p>
                   </div>
                 </div>
@@ -418,7 +418,7 @@ const Index = () => {
                       <div className="w-6 h-6 md:w-6 md:h-6 bg-red-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
                         <span className="text-white font-black text-sm">1</span>
                       </div>
-                      <p className="text-sm md:text-base font-bold text-black">依照片、履歷、學生評價自選老師<br />課前私訊老師溝通需求</p>
+                      <p className="text-sm md:text-base font-bold text-black">依照片、履歷、學生評價自選老師{'\n'}課前私訊老師溝通需求</p>
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="w-6 h-6 md:w-6 md:h-6 bg-green-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -430,11 +430,11 @@ const Index = () => {
                       <div className="w-6 h-6 md:w-6 md:h-6 bg-purple-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
                         <span className="text-white font-black text-sm">3</span>
                       </div>
-                      <p className="text-sm md:text-base font-bold text-black">彈性地點，開啟課程<br />不管在哪，一台筆電就可上課</p>
+                      <p className="text-sm md:text-base font-bold text-black">彈性地點，開啟課程{'\n'}不管在哪，一台筆電就可上課</p>
                     </div>
                     <div className="bg-blue-100 border-2 border-black p-3 md:p-3 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mt-4 md:mt-4">
                       <p className="text-xs md:text-sm font-bold text-black">
-                        學生自主、自由選師，試教不滿意可全額退費！
+                        學生自主、自由選師，學生可主動用 NLT 聊天室聯絡老師，確認需求。試教不滿意可全額退費！
                       </p>
                     </div>
                   </div>
@@ -586,7 +586,7 @@ const Index = () => {
                       </div>
                       <div className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-blue-600" />
-                        <span className="text-sm md:text-base font-bold text-black">豐富教師資料庫</span>
+                        <span className="text-sm md:text-base font-bold text-black">安全金流、豐富教師資料庫</span>
                       </div>
                     </div>
                   </div>
@@ -597,27 +597,44 @@ const Index = () => {
               <div className="bg-yellow-300 border-3 border-black p-5 md:p-5 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
                 <h4 className="text-lg md:text-xl font-black text-black text-center mb-4 md:mb-4 uppercase">與其他平台比較</h4>
                 <div className="overflow-x-auto">
-                  <table className="w-full border-2 border-black bg-white">
+                  <table className="w-full border-2 border-black bg-white text-sm">
                     <thead>
                       <tr className="bg-black text-white">
-                        <th className="border-2 border-black p-2 md:p-3 text-sm md:text-base font-black">平台</th>
-                        <th className="border-2 border-black p-2 md:p-3 text-sm md:text-base font-black">老師抽成</th>
-                        <th className="border-2 border-black p-2 md:p-3 text-sm md:text-base font-black">學生服務費</th>
-                        <th className="border-2 border-black p-2 md:p-3 text-sm md:text-base font-black">退款政策</th>
+                        <th className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">平台</th>
+                        <th className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">老師抽成</th>
+                        <th className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">學生服務費</th>
+                        <th className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">平台總收益率</th>
+                        <th className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">退款政策</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td className="border-2 border-black p-2 md:p-3 text-sm md:text-base font-black text-green-600">NLT</td>
-                        <td className="border-2 border-black p-2 md:p-3 text-sm md:text-base font-black text-green-600">0%</td>
-                        <td className="border-2 border-black p-2 md:p-3 text-sm md:text-base font-black">25%</td>
-                        <td className="border-2 border-black p-2 md:p-3 text-sm md:text-base font-black text-green-600">100% 退款</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-green-600">NLT</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-green-600">0%</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">25%</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">25%</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-green-600">100% 原路退款</td>
                       </tr>
                       <tr>
-                        <td className="border-2 border-black p-2 md:p-3 text-sm md:text-base font-black">其他平台</td>
-                        <td className="border-2 border-black p-2 md:p-3 text-sm md:text-base font-black text-red-600">20-30%</td>
-                        <td className="border-2 border-black p-2 md:p-3 text-sm md:text-base font-black">0-15%</td>
-                        <td className="border-2 border-black p-2 md:p-3 text-sm md:text-base font-black">有限制</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">平台A</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">8-38%</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">10%</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">77%</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">退成平台幣，外幣計算</td>
+                      </tr>
+                      <tr>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">平台B</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">20-35%</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">0%</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">35%</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">不能退款</td>
+                      </tr>
+                      <tr>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black">其他多數平台</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">不透明</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">不透明</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">不透明</td>
+                        <td className="border-2 border-black p-2 md:p-3 text-xs md:text-sm font-black text-red-600">不能退款</td>
                       </tr>
                     </tbody>
                   </table>
@@ -639,24 +656,24 @@ const Index = () => {
                   <div className="w-10 h-10 md:w-11 md:h-11 bg-red-500 border-3 border-black flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
                     <Heart className="w-5 h-5 md:w-6 md:h-6 text-white" />
                   </div>
-                  <h4 className="text-lg md:text-lg font-black text-black mb-2 md:mb-3 uppercase">零抽成政策</h4>
-                  <p className="text-base md:text-base font-bold text-black">老師收多少賺多少，沒有隱藏費用</p>
+                  <h4 className="text-lg md:text-lg font-black text-black mb-2 md:mb-3 uppercase">對老師 0 抽成</h4>
+                  <p className="text-base md:text-base font-bold text-black">珍惜台灣教育工作者與寶貴教育資源</p>
                 </div>
                 
                 <div className="bg-white border-3 border-black p-5 md:p-5 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] text-center">
                   <div className="w-10 h-10 md:w-11 md:h-11 bg-blue-500 border-3 border-black flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
                     <RefreshCw className="w-5 h-5 md:w-6 md:h-6 text-white" />
                   </div>
-                  <h4 className="text-lg md:text-lg font-black text-black mb-2 md:mb-3 uppercase">100% 退款保障</h4>
-                  <p className="text-base md:text-base font-bold text-black">試上不滿意怎麼辦，學習零風險</p>
+                  <h4 className="text-lg md:text-lg font-black text-black mb-2 md:mb-3 uppercase">100% 原路退款新台幣保障</h4>
+                  <p className="text-base md:text-base font-bold text-black">試教不滿意或課程未完成，原路退回新台幣</p>
                 </div>
                 
                 <div className="bg-white border-3 border-black p-5 md:p-5 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] text-center">
                   <div className="w-10 h-10 md:w-11 md:h-11 bg-green-500 border-3 border-black flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
                     <Users className="w-5 h-5 md:w-6 md:h-6 text-white" />
                   </div>
-                  <h4 className="text-lg md:text-lg font-black text-black mb-2 md:mb-3 uppercase">民主治理</h4>
-                  <p className="text-base md:text-base font-bold text-black">師生共同參與平台規則制定</p>
+                  <h4 className="text-lg md:text-lg font-black text-black mb-2 md:mb-3 uppercase">平台商業模式公開透明</h4>
+                  <p className="text-base md:text-base font-bold text-black">所有收費機制完全透明，無隱藏費用</p>
                 </div>
               </div>
             </div>
@@ -672,9 +689,9 @@ const Index = () => {
               功能特色
             </div>
             <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-4 md:border-6 border-black px-8 md:px-10 py-6 md:py-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1">
-              <h2 className="text-3xl md:text-4xl font-black text-black uppercase tracking-wide">完整的教學生態系統</h2>
+              <h2 className="text-3xl md:text-4xl font-black text-black uppercase tracking-wide">教學生態系統詳解</h2>
             </div>
-            <p className="text-xl md:text-xl text-black font-bold max-w-3xl mx-auto bg-white border-4 md:border-5 border-black p-6 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] mt-8 md:mt-10">從師資篩選到課程管理，全方位學習支援</p>
+            <p className="text-xl md:text-xl text-black font-bold max-w-3xl mx-auto bg-white border-4 md:border-5 border-black p-6 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] mt-8 md:mt-10">深入了解完整功能，全方位學習支援</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 max-w-7xl mx-auto">
@@ -866,7 +883,7 @@ const Index = () => {
                   </button>
                   {expandedFaq === index && (
                     <div className="border-t-3 border-black bg-gray-50 p-5 md:p-6">
-                      <p className="text-base md:text-lg font-bold text-black leading-relaxed">{item.answer}</p>
+                      <p className="text-base md:text-lg font-bold text-black leading-relaxed whitespace-pre-line">{item.answer}</p>
                     </div>
                   )}
                 </div>
@@ -877,7 +894,7 @@ const Index = () => {
             <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-3 md:border-6 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] p-6 md:p-10 text-center mt-8 md:mt-12">
               <h3 className="text-xl md:text-3xl font-black text-black mb-5 md:mb-6 uppercase">還有其他問題？</h3>
               <p className="text-lg md:text-xl font-bold text-black mb-6 md:mb-8">
-                我們很樂意為你解答！<br />歡迎透過社群媒體訊息聯繫我們
+                我們很樂意為你解答！{'\n'}歡迎透過社群媒體訊息聯繫我們
               </p>
               <div className="flex flex-col sm:flex-row gap-3 md:gap-5 justify-center max-w-xl mx-auto">
                 <Button 
@@ -912,7 +929,7 @@ const Index = () => {
             <h2 className="text-2xl md:text-4xl font-black text-black mb-6 md:mb-8 bg-amber-400 border-4 border-black p-4 md:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 uppercase">社群互動</h2>
             <div className="bg-white border-4 border-black p-6 md:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] mb-8 md:mb-12">
               <p className="text-lg md:text-xl text-black font-bold">
-                進一步了解 No Limit Tutor 文化與價值訴求，及平台努力的方向<br />
+                進一步了解 No Limit Tutor 文化與價值訴求，及平台努力的方向{'\n'}
                 提供回饋，共造嶄新的民主學習環境
               </p>
             </div>
