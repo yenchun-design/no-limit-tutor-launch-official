@@ -1,1125 +1,534 @@
-import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Badge } from '@/components/ui/badge';
-import { 
-  GraduationCap, 
-  Users, 
-  Clock, 
-  Star, 
-  MessageSquare, 
-  Video,
-  DollarSign,
-  Shield,
-  BookOpen,
-  Globe,
-  ArrowRight,
-  Mail,
-  ExternalLink,
-  UserCheck,
-  HelpCircle,
-  CheckCircle,
-  XCircle,
-  CreditCard,
-  Calendar,
-  RefreshCw,
-  Search,
-  MousePointer,
-  PlayCircle,
-  Wallet,
-  ChevronDown,
-  ChevronUp,
-  Heart,
-  Target,
-  Zap
-} from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
-import { supabase } from '@/integrations/supabase/client';
+
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Check, Star, Users, BookOpen, Shield, Clock, MessageCircle, RefreshCw } from "lucide-react";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 const Index = () => {
-  const { toast } = useToast();
-  const [email, setEmail] = useState('');
-  const [isSubmittingEmail, setIsSubmittingEmail] = useState(false);
-  const [emailCount, setEmailCount] = useState(11);
-  const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
-
-  // Fetch email count from Supabase
-  useEffect(() => {
-    const fetchEmailCount = async () => {
-      try {
-        const { count, error } = await supabase
-          .from('email_list')
-          .select('*', { count: 'exact', head: true });
-        
-        if (error) {
-          console.error('Error fetching email count:', error);
-        } else if (count !== null) {
-          setEmailCount(count);
-        }
-      } catch (error) {
-        console.error('Error fetching email count:', error);
-      }
-    };
-
-    fetchEmailCount();
-  }, []);
-
-  const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
-
-  const handleEmailSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!email.trim()) {
-      toast({
-        title: "請輸入 Email",
-        description: "請輸入有效的 Email 地址",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    setIsSubmittingEmail(true);
-    
-    try {
-      const { error } = await supabase
-        .from('email_list')
-        .insert([{ email: email.trim() }]);
-
-      if (error) {
-        if (error.code === '23505') {
-          toast({
-            title: "Email 已存在",
-            description: "此 Email 已在我們的通知列表中",
-            variant: "destructive",
-          });
-        } else {
-          throw error;
-        }
-      } else {
-        toast({
-          title: "訂閱成功！",
-          description: "我們會在平台上線時第一時間通知你",
-        });
-        setEmail('');
-        setEmailCount(prevCount => prevCount + 1);
-      }
-    } catch (error) {
-      toast({
-        title: "訂閱失敗",
-        description: "請稍後再試，或聯繫我們的客服",
-        variant: "destructive",
-      });
-      console.error('Email subscription error:', error);
-    } finally {
-      setIsSubmittingEmail(false);
-    }
-  };
-
-  const toggleFaq = (index: number) => {
-    setExpandedFaq(expandedFaq === index ? null : index);
-  };
-
-  const faqItems = [
-    {
-      question: "NLT 真的對老師零抽成嗎？",
-      answer: "是的！老師設定多少課程費用，就實拿多少。我們只向學生收取 25% 的服務費用來維持平台運作。"
-    },
-    {
-      question: "如果試上不滿意怎麼辦？",
-      answer: "25分鐘試教課程不滿意可申請全額退費。正式課程在購買後30天內，未完成亦未訂閱的課程，也可無條件申請 100% 退款。"
-    },
-    {
-      question: "平台什麼時候會正式上線？",
-      answer: "平台目前開發中，正在招募首批優質教師。預計 2026 年正式上線，現在登記，有機會成為資深元老教師！"
-    },
-    {
-      question: "如何確保教師品質？",
-      answer: "你可以藉由老師自介與評價系統了解老師的教學經驗，並用「100% 可退款」的試教課嘗試新老師，並善用評價系統，幫助其他人了解老師的能力與教學品質。"
-    },
-    {
-      question: "支援哪些科目和語言？",
-      answer: "我們目前有意願的老師能教國高中學科輔導、英文，程式基礎與商業技能。\n隨著未來更多優秀老師加入，會陸續加入才藝、日文、UI/UX 等多元課程。"
-    }
-  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
-      {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b-4 border-black bg-white shadow-[0_6px_0px_0px_rgba(0,0,0,1)]">
-        <div className="container mx-auto px-4 h-16 md:h-20 flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-amber-400 to-orange-500 border-2 md:border-3 border-black flex items-center justify-center shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] md:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-              <span className="text-xl md:text-2xl font-black text-black">N</span>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
+      {/* Navigation */}
+      <nav className="bg-white/90 backdrop-blur-sm sticky top-0 z-50 border-b">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">N</span>
+              </div>
+              <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                NLT
+              </span>
             </div>
-            <div className="flex flex-col leading-tight">
-              <span className="text-base md:text-lg font-black text-black uppercase tracking-tight">No Limit Tutor</span>
-              <span className="text-sm md:text-base text-amber-600 font-black">無限家教</span>
+            <div className="hidden md:flex space-x-8">
+              <button onClick={() => scrollToSection('about')} className="text-gray-600 hover:text-blue-600 transition-colors">
+                NLT 是什麼
+              </button>
+              <button onClick={() => scrollToSection('how-it-works')} className="text-gray-600 hover:text-blue-600 transition-colors">
+                如何運作
+              </button>
+              <button onClick={() => scrollToSection('pricing')} className="text-gray-600 hover:text-blue-600 transition-colors">
+                NLT 學習體驗流程
+              </button>
+              <button onClick={() => scrollToSection('faq')} className="text-gray-600 hover:text-blue-600 transition-colors">
+                熱門問答集
+              </button>
             </div>
-          </div>
-          
-          <nav className="hidden lg:flex items-center space-x-5">
-            <button onClick={() => scrollToSection('home')} className="text-sm md:text-base font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">首頁</button>
-            <button onClick={() => scrollToSection('what-is-nlt')} className="text-sm md:text-base font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">NLT 是什麼</button>
-            <button onClick={() => scrollToSection('features')} className="text-sm md:text-base font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">功能</button>
-            <button onClick={() => scrollToSection('pricing')} className="text-sm md:text-base font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">收費</button>
-            <button onClick={() => scrollToSection('faq')} className="text-sm md:text-base font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">FAQ</button>
-            <button onClick={() => scrollToSection('social')} className="text-sm md:text-base font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">社群連結</button>
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-2 md:border-3 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] font-black text-sm md:text-base px-4 py-2 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
-              onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
-            >
-              立即加入教師招募
-            </Button>
-          </nav>
-          
-          <div className="lg:hidden">
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-2 md:border-3 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] md:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] font-black text-base md:text-lg px-3 py-2 uppercase tracking-wide transform hover:translate-x-0.5 hover:translate-y-0.5 transition-all duration-200"
-              onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
-            >
-              加入招募
+            <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+              進入課程
             </Button>
           </div>
         </div>
-      </header>
+      </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative overflow-hidden bg-gradient-to-br from-amber-400 via-orange-400 to-red-400 pb-10 md:pb-16">
-        <div className="relative container mx-auto px-4 py-12 md:py-20">
-          <div className="max-w-5xl mx-auto">
-            <div className="space-y-8 md:space-y-12">
-              {/* Title and Logo */}
-              <div className="text-center">
-                <div className="mb-6 md:mb-8">
-                  <img 
-                    src="/lovable-uploads/6ed7f059-777c-4ced-8660-78aa11ba900f.png" 
-                    alt="No Limit Tutor Logo" 
-                    className="w-20 h-20 md:w-24 md:h-24 object-contain mx-auto mb-4 md:mb-5"
-                  />
-                </div>
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[3px_3px_0px_rgba(255,255,255,1)] md:drop-shadow-[4px_4px_0px_rgba(255,255,255,1)] mb-4 md:mb-5">
-                  No Limit Tutor
-                </h1>
-                <div className="mb-8 md:mb-10">
-                  <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[3px_3px_0px_rgba(255,255,255,1)] md:drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
-                    無限家教
-                  </span>
-                </div>
-              </div>
-              
-              {/* Main Value Proposition */}
-              <div className="text-center">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-black leading-tight bg-white px-6 md:px-10 py-6 md:py-8 border-3 md:border-5 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 mb-8 md:mb-10">
-                  台灣第一個民主、群眾導向的一對一家教平台
-                </h2>
-              </div>
-              
-              {/* Key Benefits */}
-              <div className="max-w-4xl mx-auto">
-                <div className="bg-white border-3 md:border-5 border-black p-6 md:p-8 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] mb-8 md:mb-10">
-                  <p className="font-black text-xl md:text-2xl text-center mb-6 md:mb-8">
-                   NLT 專為台灣師生打造，國內研發、台灣金流，交易透明安全，學習更安心
-                  </p>
-                  <div className="grid grid-cols-1 gap-4 md:gap-6 bg-gradient-to-r from-orange-100 to-amber-100 border-2 md:border-4 border-black p-4 md:p-6 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
-                    <div className="flex items-center space-x-3 md:space-x-4">
-                      <div className="w-4 h-4 md:w-5 md:h-5 bg-red-500 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
-                      <span className="font-black text-lg md:text-xl">不滿意試教？全額退費</span>
-                    </div>
-                    <div className="flex items-center space-x-3 md:space-x-4">
-                      <div className="w-4 h-4 md:w-5 md:h-5 bg-blue-500 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
-                      <span className="font-black text-lg md:text-xl">對老師零抽成、零綁約、零名目費用</span>
-                    </div>
-                    <div className="flex items-center space-x-3 md:space-x-4">
-                      <div className="w-4 h-4 md:w-5 md:h-5 bg-green-500 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
-                      <span className="font-black text-lg md:text-xl">公平爭議處理機制</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* CTA Section */}
-              <div className="space-y-8 md:space-y-10">
-                {/* Teacher Count */}
-                <div className="text-center">
-                  <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-3 md:border-5 border-black px-8 md:px-12 py-8 md:py-12 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[13px_13px_0px_0px_rgba(0,0,0,1)] transform rotate-1 inline-block max-w-3xl w-full">
-                    <h2 className="text-3xl md:text-4xl font-black text-black uppercase tracking-wide mb-3 md:mb-4">
-                      已有 {emailCount} 位老師申請
-                    </h2>
-                    <p className="text-2xl md:text-3xl font-black text-black">
-                      搶先成為元老級教師
-                    </p>
-                  </div>
-                </div>
-
-                {/* Main Action */}
-                <div className="max-w-3xl mx-auto space-y-6 md:space-y-8">
-                  {/* Call to Action Message */}
-                  <div className="bg-white border-3 md:border-5 border-black p-6 md:p-8 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[13px_13px_0px_0px_rgba(0,0,0,1)] text-center">
-                    <h2 className="text-2xl md:text-3xl font-black text-black mb-4 md:mb-6">
-                      還在等什麼？
-                    </h2>
-                    <p className="text-xl md:text-2xl font-black text-black">
-                      現在就加入 No Limit Tutor 教師行列
-                    </p>
-                  </div>
-
-                  {/* Primary CTA Button */}
-                  <div className="text-center">
-                    <Button 
-                      size="lg" 
-                      className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-3 md:border-5 border-white shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] md:shadow-[13px_13px_0px_0px_rgba(255,255,255,1)] hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] md:hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-lg md:text-xl px-6 md:px-10 py-5 md:py-6 uppercase tracking-wide transform hover:translate-x-2 hover:translate-y-2 transition-all duration-200 flex items-center justify-center"
-                      onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
-                    >
-                      立即加入教師招募
-                      <ArrowRight className="ml-2 md:ml-3 w-5 h-5 md:w-6 md:h-6" />
-                    </Button>
-                  </div>
-
-                  {/* Email Form */}
-                  <div className="bg-gradient-to-r from-yellow-100 to-amber-100 border-3 md:border-5 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[13px_13px_0px_0px_rgba(0,0,0,1)] p-6 md:p-8">
-                    <div className="flex items-center justify-center mb-4 md:mb-6">
-                      <Mail className="w-5 h-5 md:w-6 md:h-6 text-black mr-3 md:mr-4" />
-                      <h3 className="text-xl md:text-2xl font-black text-black">輸入你的 Email 地址</h3>
-                    </div>
-                    <p className="text-lg md:text-xl font-black text-black text-center mb-6 md:mb-8">搶先成為 NLT 首批教師！</p>
-                    <form onSubmit={handleEmailSubmit} className="space-y-4 md:space-y-6">
-                      <input
-                        type="email"
-                        placeholder="請輸入你的 Email 地址"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        className="w-full h-14 md:h-16 px-5 md:px-7 text-lg md:text-xl text-center border-3 md:border-4 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] font-bold focus:outline-none focus:ring-2 focus:ring-black"
-                        required
-                      />
-                      <button
-                        type="submit"
-                        disabled={isSubmittingEmail}
-                        className="w-full h-14 md:h-16 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-3 md:border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] font-black text-base md:text-lg uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
-                      >
-                        {isSubmittingEmail ? '訂閱中...' : '加入教師招募'}
-                        <ArrowRight className="ml-3 md:ml-4 w-5 h-5 md:w-6 md:h-6" />
-                      </button>
-                    </form>
-                    <p className="text-sm md:text-base font-bold text-black text-center mt-4 md:mt-6">
-                      * 我們承諾不會濫用你的 Email，也不會分享給第三方
-                    </p>
-                  </div>
-                </div>
-              </div>
+      <section className="py-20 text-center">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-center mb-8">
+            <div className="w-24 h-24 md:w-28 md:h-28 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-2xl">
+              <span className="text-white font-bold text-3xl md:text-4xl">N</span>
             </div>
+          </div>
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            No Limit Tutor
+          </h1>
+          <p className="text-2xl md:text-3xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+            連接全球優質華語教師，打造專屬你的學習體驗
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-xl px-10 py-4">
+              開始學習
+            </Button>
+            <Button size="lg" variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 text-xl px-10 py-4">
+              成為教師
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* Student Guidance Section */}
-      <section className="py-16 md:py-20 bg-gradient-to-br from-blue-100 to-blue-200 mt-10 md:mt-16">
+      {/* Service Guarantee */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="bg-white border-3 md:border-4 border-black p-8 md:p-10 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-6 md:mb-8">
-              <div className="flex items-center justify-center mb-6 md:mb-8">
-                <UserCheck className="w-7 h-7 md:w-9 md:h-9 text-blue-600 mr-4 md:mr-5" />
-                <h2 className="text-3xl md:text-4xl font-black text-black">學生專區</h2>
-              </div>
-              <p className="text-2xl md:text-2xl font-bold text-black mb-8 md:mb-10">
-                平台開發中，搶先登記優先通知！
-              </p>
-              <Button
-                size="lg"
-                className="w-full max-w-sm bg-blue-500 hover:bg-blue-600 text-white border-3 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] font-black text-lg md:text-lg px-8 md:px-10 py-6 md:py-6 transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
-                onClick={() => window.open('https://forms.gle/6cYoa9Lt2P7Wy8uu5', '_blank')}
-              >
-                學生登記表單
-                <ExternalLink className="ml-3 md:ml-4 w-6 h-6 md:w-7 md:h-7" />
-              </Button>
-            </div>
+          <div className="max-w-4xl mx-auto">
+            <Card className="border-2 border-blue-200 shadow-lg">
+              <CardHeader className="text-center pb-4">
+                <CardTitle className="text-2xl font-bold text-blue-600 mb-2">保障服務費用來確保</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-gray-700">學生試教不滿意，100% 退款</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-gray-700">未消耗課程，剩餘金額 100% 退回（不會像其他平台一樣不給退）</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-gray-700">I人、E人都愛的排課系統（自動通知老師，不用寫訊息）</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-gray-700">老師評價系統</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-gray-700">平台內視訊、安全金流</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-gray-700">安全回報機制</span>
+                  </div>
+                  <div className="flex items-start space-x-3 md:col-span-2">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-gray-700">檢舉與仲裁機制</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* What is NLT Section */}
-      <section id="what-is-nlt" className="py-16 md:py-20 bg-gradient-to-br from-blue-50 to-indigo-100 mt-10 md:mt-16">
+      {/* About Section */}
+      <section id="about" className="py-20 bg-gradient-to-r from-blue-50 to-purple-50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12 md:mb-16">
-            <div className="inline-block bg-white border-3 md:border-4 border-black px-5 md:px-6 py-3 md:py-3 text-lg md:text-lg font-black mb-6 md:mb-8 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
-              NLT 是什麼
-            </div>
-            <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-3 md:border-5 border-black px-8 md:px-10 py-6 md:py-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 mb-8 md:mb-10">
-              <h2 className="text-3xl md:text-4xl font-black text-black uppercase tracking-wide">不是 AmazingTalker 但使用方法很像</h2>
-            </div>
-            <p className="text-xl md:text-xl text-black font-bold max-w-2xl mx-auto bg-white border-3 md:border-4 border-black p-5 md:p-6 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] mt-8 md:mt-10">先講結論：NLT 是一個讓老師拿到 100% 課程費用，學生享有 100% 退款保障的線上家教平台</p>
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              NLT 是什麼？
+            </h2>
+            <p className="text-2xl md:text-3xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              No Limit Tutor 是一個專為華語學習者設計的線上教學平台，連接全球優質華語教師與學習者
+            </p>
           </div>
           
-          <div className="max-w-5xl mx-auto">
-            {/* Main Content Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-8 mb-12 md:mb-12">
-              {/* NLT 如何運作 */}
-              <div className="bg-gradient-to-br from-green-300 to-green-400 border-3 md:border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6 md:p-6">
-                <div className="flex items-center mb-6 md:mb-6">
-                  <div className="w-12 h-12 md:w-13 md:h-13 bg-white border-3 border-black flex items-center justify-center mr-4 md:mr-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                    <Heart className="w-6 h-6 md:w-7 md:h-7 text-green-600" />
-                  </div>
-                  <h3 className="text-2xl md:text-2xl font-black text-black uppercase">NLT 如何運作</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="text-center hover:shadow-lg transition-shadow border-2 hover:border-blue-200">
+              <CardHeader>
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-white" />
                 </div>
-                
-                <div className="bg-white border-2 md:border-3 border-black p-5 md:p-5 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                  <div className="space-y-4 md:space-y-4">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-7 h-7 md:w-7 md:h-7 bg-green-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <span className="text-white font-black text-sm">1</span>
-                      </div>
-                      <p className="text-lg md:text-lg font-bold text-black">免費註冊（永遠免費使用！）</p>
-                    </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="w-7 h-7 md:w-7 md:h-7 bg-blue-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <span className="text-white font-black text-sm">2</span>
-                      </div>
-                      <p className="text-lg md:text-lg font-bold text-black">老師自訂每堂課學費（50 分鐘）</p>
-                    </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="w-7 h-7 md:w-7 md:h-7 bg-purple-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <span className="text-white font-black text-sm">3</span>
-                      </div>
-                      <p className="text-lg md:text-lg font-bold text-black">NLT 在老師費用基礎上加保障服務費</p>
-                    </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="w-7 h-7 md:w-7 md:h-7 bg-orange-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <span className="text-white font-black text-sm">4</span>
-                      </div>
-                      <p className="text-lg md:text-lg font-bold text-black">學生支付老師與 NLT 保障服務費，享受平台保障的權利</p>
-                    </div>
-                  </div>
-                  <div className="bg-green-100 border-2 border-black p-4 md:p-4 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mt-5 md:mt-5">
-                    <p className="text-base md:text-lg font-bold text-black">
-                      <strong>注：</strong>保障服務費讓學生享有一般家教沒有的權益，比如試教全額退款、學費退款，與 NLT 老師聊天、互動評價系統等。
-                    </p>
-                  </div>
-                </div>
-              </div>
+                <CardTitle className="text-xl font-bold text-gray-800">全球師資</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">來自世界各地的專業華語教師，提供多元化的教學風格與文化體驗</p>
+              </CardContent>
+            </Card>
 
-              {/* 如何使用 NLT */}
-              <div className="bg-gradient-to-br from-blue-300 to-blue-400 border-3 md:border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6 md:p-6">
-                <div className="flex items-center mb-6 md:mb-6">
-                  <div className="w-12 h-12 md:w-13 md:h-13 bg-white border-3 border-black flex items-center justify-center mr-4 md:mr-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                    <Target className="w-6 h-6 md:w-7 md:h-7 text-blue-600" />
-                  </div>
-                  <h3 className="text-2xl md:text-2xl font-black text-black uppercase">如何使用 NLT</h3>
+            <Card className="text-center hover:shadow-lg transition-shadow border-2 hover:border-blue-200">
+              <CardHeader>
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <BookOpen className="w-8 h-8 text-white" />
                 </div>
-                
-                <div className="bg-white border-2 md:border-3 border-black p-5 md:p-5 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                  <div className="space-y-4 md:space-y-4">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-7 h-7 md:w-7 md:h-7 bg-red-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <span className="text-white font-black text-sm">1</span>
-                      </div>
-                      <p className="text-lg md:text-lg font-bold text-black">老師建立自介頁，學生瀏覽選擇老師</p>
-                    </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="w-7 h-7 md:w-7 md:h-7 bg-green-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <span className="text-white font-black text-sm">2</span>
-                      </div>
-                      <p className="text-lg md:text-lg font-bold text-black">學生選擇時間，預約上課</p>
-                    </div>
-                    <div className="flex items-start space-x-4">
-                      <div className="w-7 h-7 md:w-7 md:h-7 bg-purple-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <span className="text-white font-black text-sm">3</span>
-                      </div>
-                      <p className="text-lg md:text-lg font-bold text-black">登入 NLT，開始一對一視訊課程</p>
-                    </div>
-                    <div className="bg-blue-100 border-2 border-black p-4 md:p-4 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mt-5 md:mt-5">
-                      <p className="text-base md:text-lg font-bold text-black">
-                        學生課後可以確認課程、進行評價，或回報錯誤與爭議，NLT 提供協助服務。
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                <CardTitle className="text-xl font-bold text-gray-800">彈性學習</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">24/7 隨時隨地學習，自由選擇課程時間與頻率，完全配合你的生活節奏</p>
+              </CardContent>
+            </Card>
 
-            {/* 4個愛用NLT的理由 */}
-            <div className="bg-gradient-to-r from-yellow-200 to-amber-200 border-3 md:border-5 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[13px_13px_0px_0px_rgba(0,0,0,1)] p-6 md:p-8 mb-8 md:mb-8">
-              <div className="text-center mb-6 md:mb-6">
-                <div className="flex items-center justify-center mb-4 md:mb-4">
-                  <Zap className="w-6 h-6 md:w-7 md:h-7 text-black mr-3 md:mr-3" />
-                  <h3 className="text-2xl md:text-3xl font-black text-black uppercase">4 個愛用 NLT 的理由</h3>
+            <Card className="text-center hover:shadow-lg transition-shadow border-2 hover:border-blue-200">
+              <CardHeader>
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-white" />
                 </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-5 mb-6 md:mb-6">
-                <div className="bg-white border-3 border-black p-4 md:p-5 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
-                  <div className="flex items-center mb-3 md:mb-3">
-                    <div className="w-6 h-6 md:w-7 md:h-7 bg-red-500 border-2 border-black flex items-center justify-center mr-3 md:mr-3">
-                      <span className="text-white font-black text-sm">1</span>
-                    </div>
-                    <h4 className="text-lg md:text-xl font-black text-black">100% 退款保障</h4>
-                  </div>
-                  <p className="text-lg md:text-lg font-bold text-black">試上不滿意？全額退費，零風險找到適合自己的老師</p>
-                </div>
-                
-                <div className="bg-white border-3 border-black p-4 md:p-5 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
-                  <div className="flex items-center mb-3 md:mb-3">
-                    <div className="w-6 h-6 md:w-7 md:h-7 bg-blue-500 border-2 border-black flex items-center justify-center mr-3 md:mr-3">
-                      <span className="text-white font-black text-sm">2</span>
-                    </div>
-                    <h4 className="text-lg md:text-xl font-black text-black">優質師資</h4>
-                  </div>
-                  <p className="text-lg md:text-lg font-bold text-black">老師 0 抽成，鼓勵高品質教學，完整心力給學生</p>
-                </div>
-                
-                <div className="bg-white border-3 border-black p-4 md:p-5 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
-                  <div className="flex items-center mb-3 md:mb-3">
-                    <div className="w-6 h-6 md:w-7 md:h-7 bg-green-500 border-2 border-black flex items-center justify-center mr-3 md:mr-3">
-                      <span className="text-white font-black text-sm">3</span>
-                    </div>
-                    <h4 className="text-lg md:text-xl font-black text-black">彈性上課</h4>
-                  </div>
-                  <p className="text-lg md:text-lg font-bold text-black">24/7 隨時上課，沒上到的課 30 天內可以全額退款</p>
-                </div>
-                
-                <div className="bg-white border-3 border-black p-4 md:p-5 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
-                  <div className="flex items-center mb-3 md:mb-3">
-                    <div className="w-6 h-6 md:w-7 md:h-7 bg-purple-500 border-2 border-black flex items-center justify-center mr-3 md:mr-3">
-                      <span className="text-white font-black text-sm">4</span>
-                    </div>
-                    <h4 className="text-lg md:text-xl font-black text-black">第三方保障</h4>
-                  </div>
-                  <p className="text-lg md:text-lg font-bold text-black">NLT 公平透明處理爭議，讓師生沒有擔憂，專心上課！</p>
-                </div>
-              </div>
-
-              {/* 彈性課程方案 */}
-              <div className="bg-white border-3 border-black p-6 md:p-6 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
-                <h4 className="text-2xl md:text-3xl font-black text-black text-center mb-5 md:mb-6 uppercase">彈性課程方案</h4>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
-                  <div className="bg-blue-200 border-2 border-black p-3 md:p-4 text-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                    <div className="text-2xl md:text-3xl lg:text-4xl font-black text-black leading-none mb-1">1堂/週</div>
-                    <div className="text-sm md:text-base lg:text-lg font-bold text-black">新手冒險家</div>
-                  </div>
-                  <div className="bg-green-200 border-2 border-black p-3 md:p-4 text-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                    <div className="text-2xl md:text-3xl lg:text-4xl font-black text-black leading-none mb-1">2堂/週</div>
-                    <div className="text-sm md:text-base lg:text-lg font-bold text-black">成長見習生</div>
-                  </div>
-                  <div className="bg-yellow-200 border-2 border-black p-3 md:p-4 text-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                    <div className="text-2xl md:text-3xl lg:text-4xl font-black text-black leading-none mb-1">3堂/週</div>
-                    <div className="text-sm md:text-base lg:text-lg font-bold text-black">鍛鍊騎士</div>
-                  </div>
-                  <div className="bg-purple-200 border-2 border-black p-3 md:p-4 text-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                    <div className="text-2xl md:text-3xl lg:text-4xl font-black text-black leading-none mb-1">4堂/週</div>
-                    <div className="text-sm md:text-base lg:text-lg font-bold text-black">知識狂戰士</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* 透明公開的收費機制 */}
-            <div className="bg-gradient-to-r from-pink-100 to-pink-200 border-3 md:border-5 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[13px_13px_0px_0px_rgba(0,0,0,1)] p-8 md:p-10 mb-10 md:mb-10">
-              <h3 className="text-3xl md:text-4xl font-black text-black text-center mb-8 md:mb-8 uppercase">透明公開的平台營利機制</h3>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-8">
-                {/* 對老師 */}
-                <div className="bg-green-300 border-3 border-black p-6 md:p-8 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
-                  <div className="flex items-center justify-center mb-6 md:mb-8">
-                    <div className="w-12 h-12 md:w-13 md:h-13 bg-white border-3 border-black flex items-center justify-center mr-4 md:mr-6">
-                      <GraduationCap className="w-6 h-6 md:w-7 md:h-7 text-green-600" />
-                    </div>
-                    <h4 className="text-2xl md:text-3xl font-black text-black">對老師</h4>
-                  </div>
-                  
-                  <div className="bg-white border-2 border-black p-5 md:p-6 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] mb-6 md:mb-8">
-                    <div className="text-center mb-4 md:mb-6">
-                      <div className="text-5xl md:text-6xl font-black text-green-600">0%</div>
-                      <div className="text-2xl md:text-3xl font-black text-black">平台抽成</div>
-                    </div>
-                    <div className="space-y-3 md:space-y-4">
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="w-6 h-6 text-green-600" />
-                        <span className="text-xl font-bold text-black">設定 $500/堂，實拿 $500</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="w-6 h-6 text-green-600" />
-                        <span className="text-xl font-bold text-black">學生先付才上課</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="w-6 h-6 text-green-600" />
-                        <span className="text-xl font-bold text-black">無隱藏費用</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* 對學生 */}
-                <div className="bg-blue-300 border-3 border-black p-6 md:p-8 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
-                  <div className="flex items-center justify-center mb-6 md:mb-8">
-                    <div className="w-12 h-12 md:w-13 md:h-13 bg-white border-3 border-black flex items-center justify-center mr-4 md:mr-6">
-                      <Users className="w-6 h-6 md:w-7 md:h-7 text-blue-600" />
-                    </div>
-                    <h4 className="text-2xl md:text-3xl font-black text-black">對學生</h4>
-                  </div>
-                  
-                  <div className="bg-white border-2 border-black p-5 md:p-6 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] mb-6 md:mb-8">
-                    <div className="text-center mb-4 md:mb-6">
-                      <div className="text-5xl md:text-6xl font-black text-blue-600">25%</div>
-                      <div className="text-2xl md:text-3xl font-black text-black">保障服務費</div>
-                    </div>
-                    <div className="space-y-3 md:space-y-4">
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="w-6 h-6 text-blue-600" />
-                        <span className="text-xl md:text-xl font-bold text-black">老師設定 $500，學生付 $625</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="w-6 h-6 text-blue-600" />
-                        <span className="text-xl md:text-xl font-bold text-black">試教退款依賴保障服務費</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="w-6 h-6 text-blue-600" />
-                        <span className="text-xl md:text-xl font-bold text-black">第三方服務、爭議排解</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="w-6 h-6 text-blue-600" />
-                        <span className="text-xl md:text-xl font-bold text-black">隨時可退款成新台幣</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="w-6 h-6 text-blue-600" />
-                        <span className="text-xl md:text-xl font-bold text-black">與老師們聊天、評價系統</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* 與其他平台比較 */}
-              <div className="bg-yellow-300 border-3 border-black p-6 md:p-6 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
-                <h4 className="text-2xl md:text-3xl font-black text-black text-center mb-5 md:mb-6 uppercase">與其他平台比較</h4>
-                <div className="overflow-x-auto" style={{ minWidth: '100%' }}>
-                  <div style={{ minWidth: '1000px' }}>
-                    <table className="w-full border-2 border-black bg-white text-sm relative">
-                      <thead>
-                        <tr className="bg-black text-white">
-                          <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-black z-10">平台</th>
-                          <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">老師抽成</th>
-                          <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">學生服務費</th>
-                          <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">退款政策</th>
-                          <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">平台費用率</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10">No Limit Tutor</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">0%</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">25%</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">全額退款</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-green-600">20% (國內業界最低)</td>
-                        </tr>
-                        <tr>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10">平台A</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">8-38%</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">10%</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">退款麻煩有匯損，預設退成平台幣</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">18-48%</td>
-                        </tr>
-                        <tr>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10">平台B</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">20-35%</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">0%</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">極難退款，通常退不成</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">20-35%</td>
-                        </tr>
-                        <tr>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10">其他多數平台</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black ">不透明</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black ">不透明</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black ">超過七天不能退款，只能轉讓或吸收損失</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">不透明，可能在33-65%之間不等</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* NLT 獨有優勢 */}
-            <div className="bg-gradient-to-r from-yellow-200 to-amber-200 border-3 md:border-5 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[13px_13px_0px_0px_rgba(0,0,0,1)] p-6 md:p-8">
-              <div className="text-center mb-6 md:mb-8">
-                <div className="flex items-center justify-center mb-4 md:mb-4">
-                  <Star className="w-6 h-6 md:w-7 md:h-7 text-black mr-3 md:mr-3" />
-                  <h3 className="text-2xl md:text-3xl font-black text-black uppercase">NLT 獨有優勢</h3>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-5">
-                <div className="bg-white border-3 border-black p-5 md:p-5 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] text-center">
-                  <div className="w-10 h-10 md:w-11 md:h-11 bg-red-500 border-3 border-black flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                    <Heart className="w-5 h-5 md:w-6 md:h-6 text-white" />
-                  </div>
-                  <h4 className="text-xl md:text-xl font-black text-black mb-2 md:mb-3 uppercase">對老師 0 抽成</h4>
-                  <p className="text-lg md:text-lg font-bold text-black">珍惜台灣教育工作者與寶貴教育資源</p>
-                </div>
-                
-                <div className="bg-white border-3 border-black p-5 md:p-5 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] text-center">
-                  <div className="w-10 h-10 md:w-11 md:h-11 bg-blue-500 border-3 border-black flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                    <RefreshCw className="w-5 h-5 md:w-6 md:h-6 text-white" />
-                  </div>
-                  <h4 className="text-xl md:text-xl font-black text-black mb-2 md:mb-3 uppercase">100% 新台幣退款保障</h4>
-                  <p className="text-lg md:text-lg font-bold text-black">沒有點數制，不綁課程包，原卡退回新台幣</p>
-                </div>
-                
-                <div className="bg-white border-3 border-black p-5 md:p-5 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] text-center">
-                  <div className="w-10 h-10 md:w-11 md:h-11 bg-green-500 border-3 border-black flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                    <Users className="w-5 h-5 md:w-6 md:h-6 text-white" />
-                  </div>
-                  <h4 className="text-xl md:text-xl font-black text-black mb-2 md:mb-3 uppercase">平台商業模式公開透明</h4>
-                  <p className="text-lg md:text-lg font-bold text-black">所有收費只有一筆，毫無隱藏費用</p>
-                </div>
-              </div>
-            </div>
+                <CardTitle className="text-xl font-bold text-gray-800">品質保證</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">嚴格的教師審核機制，完善的評價系統，確保每堂課都是高品質的學習體驗</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="features" className="py-16 md:py-20 bg-gradient-to-br from-amber-200 to-orange-200 mt-10 md:mt-16">
+      {/* How it works */}
+      <section id="how-it-works" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12 md:mb-16">
-            <div className="inline-block bg-white border-3 md:border-3 border-black px-5 md:px-6 py-3 md:py-3 text-lg md:text-lg font-black mb-6 md:mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
-              功能特色
-            </div>
-            <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-4 md:border-6 border-black px-8 md:px-10 py-6 md:py-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1">
-              <h2 className="text-2xl md:text-3xl font-black text-black uppercase tracking-wide">教學生態系統詳解</h2>
-            </div>
-            <p className="text-lg md:text-lg text-black font-bold max-w-3xl mx-auto bg-white border-3 md:border-3 border-black p-5 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] mt-8 md:mt-10">深入了解完整功能，全方位學習支援</p>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">NLT 如何運作</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              簡單四個步驟，開始你的華語學習之旅
+            </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 max-w-7xl mx-auto">
-            {/* Feature cards */}
-            {[
-              {
-                icon: <Users className="w-12 h-12 md:w-13 md:h-13 text-black" />,
-                title: "師資媒合",
-                subtitle: "多元篩選最適教師",
-                color: "bg-gradient-to-br from-amber-300 to-orange-300",
-                features: ["依科目、價格篩選", "時間查詢", "星級評分", "學生評價"]
-              },
-              {
-                icon: <Clock className="w-12 h-12 md:w-13 md:h-13 text-black" />,
-                title: "彈性預約",
-                subtitle: "即時預約確認",
-                color: "bg-gradient-to-br from-blue-300 to-blue-400",
-                features: ["25分鐘試教", "4-16堂課選擇", "自動月扣款", "隨時取消"]
-              },
-              {
-                icon: <Video className="w-12 h-12 md:w-13 md:h-13 text-black" />,
-                title: "視訊教學",
-                subtitle: "專業線上教室",
-                color: "bg-gradient-to-br from-green-300 to-green-400",
-                features: ["高品質視訊", "螢幕分享", "即時聊天", "評價回饋"]
-              },
-              {
-                icon: <MessageSquare className="w-12 h-12 md:w-13 md:h-13 text-black" />,
-                title: "安全聊天",
-                subtitle: "加密通訊保護",
-                color: "bg-gradient-to-br from-purple-300 to-purple-400",
-                features: ["文字聊天", "圖片傳送", "基本加密", "25MB限制"]
-              },
-              {
-                icon: <DollarSign className="w-12 h-12 md:w-13 md:h-13 text-black" />,
-                title: "透明收費",
-                subtitle: "公平定價機制",
-                color: "bg-gradient-to-br from-yellow-300 to-yellow-400",
-                features: ["試教50%優惠", "30天退款", "綠界金流", "信用卡支付"]
-              },
-              {
-                icon: <Shield className="w-12 h-12 md:w-13 md:h-13 text-black" />,
-                title: "完善保障",
-                subtitle: "多重品質保護",
-                color: "bg-gradient-to-br from-red-300 to-red-400",
-                features: ["課程認證", "No-Show處理", "投訴檢舉", "客服爭議"]
-              }
-            ].map((feature, index) => (
-              <div key={index} className={`${feature.color} border-4 md:border-5 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-6 md:p-6 h-full flex flex-col`}>
-                <div className="mb-6 md:mb-6 text-center">
-                  <div className="w-20 h-20 md:w-19 md:h-19 bg-white border-4 border-black flex items-center justify-center mb-4 md:mb-5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mx-auto">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl md:text-xl font-black text-black mb-3 md:mb-3 uppercase">{feature.title}</h3>
-                  <p className="font-bold text-black text-lg md:text-lg">{feature.subtitle}</p>
-                </div>
-                <div className="bg-white border-4 md:border-5 border-black p-6 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex-grow">
-                  <ul className="space-y-4 md:space-y-5 text-base md:text-base text-black font-bold">
-                    {feature.features.map((item, i) => (
-                      <li key={i} className="flex items-center space-x-4">
-                        <div className={`w-4 h-4 md:w-4 md:h-4 border-2 border-black flex-shrink-0 ${
-                          i === 0 ? 'bg-red-500' : 
-                          i === 1 ? 'bg-blue-500' : 
-                          i === 2 ? 'bg-green-500' : 
-                          'bg-purple-500'
-                        }`} />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white font-bold text-2xl">1</span>
               </div>
-            ))}
+              <h3 className="text-xl font-semibold mb-4 text-gray-800">免費註冊，免費使用</h3>
+              <p className="text-gray-600">快速註冊帳號，立即開始探索平台功能</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white font-bold text-2xl">2</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-4 text-gray-800">老師自訂每堂課 (50 分鐘) 學費</h3>
+              <p className="text-gray-600">教師根據經驗和專業設定合理的課程費用</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white font-bold text-2xl">3</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-4 text-gray-800">NLT 在老師費用基礎加保障服務費</h3>
+              <p className="text-gray-600">透明的收費機制，保障雙方權益</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white font-bold text-2xl">4</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-4 text-gray-800">學生支付老師與 NLT 保障服務費，享受平台保障的權利</h3>
+              <p className="text-gray-600">享受完整的學習保障和優質服務體驗</p>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-sm text-gray-500 max-w-2xl mx-auto">
+              <strong>注：</strong>保障服務費確保學習品質與雙方權益，是合理且必要的服務投資
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* How to use NLT */}
+      <section className="py-20 bg-gradient-to-r from-blue-50 to-purple-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">如何使用 NLT</h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            <Card className="p-8 border-2 hover:border-blue-200 hover:shadow-lg transition-all">
+              <CardHeader className="text-center pb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <BookOpen className="w-8 h-8 text-white" />
+                </div>
+                <CardTitle className="text-2xl font-bold text-gray-800">課程流程</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-gray-700">老師建立自介頁，學生瀏覽選擇老師</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-gray-700">學生選擇時間，預約上課</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-gray-700">上 NLT 視訊，開始課程</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="p-8 border-2 hover:border-green-200 hover:shadow-lg transition-all">
+              <CardHeader className="text-center pb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <CardTitle className="text-2xl font-bold text-gray-800">學習支援</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-gray-700">課程聊天室，即時溝通無障礙</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-gray-700">不滿意課程？100% 退款保障</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-gray-700">完善的評價與回饋機制</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-gray-700">24/7 客服支援，學習無憂</span>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="py-16 md:py-20 bg-gradient-to-br from-orange-200 to-amber-200 mt-10 md:mt-16">
+      <section id="pricing" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 md:mb-20">
-            <div className="inline-block bg-white border-3 md:border-3 border-black px-5 md:px-6 py-3 md:py-3 text-xl md:text-xl font-black mb-8 md:mb-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
-              收費方式
-            </div>
-            <h2 className="text-3xl md:text-4xl font-black text-black mb-8 md:mb-8 bg-amber-400 border-4 border-black p-5 md:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 uppercase">透明公平定價</h2>
-            <p className="text-xl md:text-xl text-black font-bold bg-white border-3 md:border-3 border-black p-5 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] max-w-2xl mx-auto">雙贏學習環境</p>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">NLT 學習體驗流程</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              透明公平的定價機制，讓學習更有保障
+            </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-8 max-w-6xl mx-auto">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
+            {/* For Teachers */}
+            <Card className="relative overflow-hidden border-2 border-green-200 hover:shadow-xl transition-all">
+              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-green-500 to-green-600"></div>
+              <CardHeader className="text-center pt-8">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <BookOpen className="w-8 h-8 text-green-600" />
+                </div>
+                <CardTitle className="text-2xl font-bold text-gray-800">對老師</CardTitle>
+                <CardDescription className="text-4xl font-bold text-green-600 mt-4">
+                  0%
+                  <span className="text-lg font-normal text-gray-600 ml-2">平台抽成</span>
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span className="text-gray-700">設定 $500/堂，實拿 $500</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span className="text-gray-700">學生先付款上課</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span className="text-gray-700">無隱藏費用</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* For Students */}
+            <Card className="relative overflow-hidden border-2 border-blue-200 hover:shadow-xl transition-all">
+              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 to-blue-600"></div>
+              <CardHeader className="text-center pt-8">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-blue-600" />
+                </div>
+                <CardTitle className="text-2xl font-bold text-gray-800">對學生</CardTitle>
+                <CardDescription className="text-4xl font-bold text-blue-600 mt-4">
+                  25%
+                  <span className="text-lg font-normal text-gray-600 ml-2">保障服務費</span>
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Check className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                  <span className="text-gray-700">老師設定 $500，學生付 $625</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Check className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                  <span className="text-gray-700">試教退款依照保障服務費</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Check className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                  <span className="text-gray-700">第三方服務、爭議排解</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Check className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                  <span className="text-gray-700">隨時可退款成新台幣</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Check className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                  <span className="text-gray-700">與老師們聊天、評價系統</span>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Course Plans */}
+          <div className="mb-16">
+            <h3 className="text-3xl font-bold text-center mb-12 text-gray-800">彈性課程方案</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+              {['1堂/週', '2堂/週', '3堂/週', '4堂/週'].map((plan, index) => (
+                <Card key={index} className="text-center hover:shadow-lg transition-shadow border-2 hover:border-blue-200">
+                  <CardContent className="p-6">
+                    <div className="text-2xl font-bold text-blue-600 mb-2">{plan}</div>
+                    <p className="text-gray-600 text-sm">彈性安排學習節奏</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Comparison Table */}
+          <div className="mb-16">
+            <h3 className="text-3xl font-bold text-center mb-12 text-gray-800">與其他平台比較</h3>
+            <div className="overflow-x-auto">
+              <div className="inline-block min-w-full">
+                <Table className="w-full">
+                  <TableHeader className="bg-gray-50">
+                    <TableRow>
+                      <TableHead className="sticky left-0 bg-gray-50 z-10 w-32 min-w-[8rem] font-bold text-center border-r">平台</TableHead>
+                      <TableHead className="text-center min-w-[6rem]">老師抽成</TableHead>
+                      <TableHead className="text-center min-w-[6rem]">退款政策</TableHead>
+                      <TableHead className="text-center min-w-[6rem]">課程彈性</TableHead>
+                      <TableHead className="text-center min-w-[6rem]">平台功能</TableHead>
+                      <TableHead className="text-center min-w-[6rem]">客服支援</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow className="bg-blue-50">
+                      <TableCell className="sticky left-0 bg-blue-100 z-10 font-bold text-center border-r">No Limit Tutor</TableCell>
+                      <TableCell className="text-center text-green-600 font-semibold">0%</TableCell>
+                      <TableCell className="text-center text-green-600 font-semibold">100% 退款</TableCell>
+                      <TableCell className="text-center text-green-600 font-semibold">完全彈性</TableCell>
+                      <TableCell className="text-center text-green-600 font-semibold">完整功能</TableCell>
+                      <TableCell className="text-center text-green-600 font-semibold">24/7 支援</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="sticky left-0 bg-gray-50 z-10 font-semibold text-center border-r">平台 A</TableCell>
+                      <TableCell className="text-center text-red-600">8-38%</TableCell>
+                      <TableCell className="text-center text-orange-600">部分退款</TableCell>
+                      <TableCell className="text-center text-orange-600">限制較多</TableCell>
+                      <TableCell className="text-center text-orange-600">基本功能</TableCell>
+                      <TableCell className="text-center text-orange-600">工作時間</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="sticky left-0 bg-gray-50 z-10 font-semibold text-center border-r">平台 B</TableCell>
+                      <TableCell className="text-center text-red-600">20-35%</TableCell>
+                      <TableCell className="text-center text-red-600">不退款</TableCell>
+                      <TableCell className="text-center text-red-600">固定時段</TableCell>
+                      <TableCell className="text-center text-red-600">功能有限</TableCell>
+                      <TableCell className="text-center text-red-600">回應較慢</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="sticky left-0 bg-gray-50 z-10 font-semibold text-center border-r">其他多數平台</TableCell>
+                      <TableCell className="text-center text-red-600">不透明</TableCell>
+                      <TableCell className="text-center text-red-600">條件嚴格</TableCell>
+                      <TableCell className="text-center text-red-600">彈性有限</TableCell>
+                      <TableCell className="text-center text-red-600">陽春介面</TableCell>
+                      <TableCell className="text-center text-red-600">支援不足</TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="py-20 bg-gradient-to-r from-blue-50 to-purple-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">熱門問答集</h2>
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-6">
             {[
               {
-                type: "體驗課程",
-                title: "試教課程",
-                duration: "25分鐘體驗",
-                price: "正式課程 50% 折扣",
-                features: ["25分鐘一對一教學", "了解教師教學風格", "不滿意可退費"]
+                question: "如何選擇適合的老師？",
+                answer: "您可以透過老師的自介影片、教學經歷、學生評價等資訊來選擇。我們建議先預約試教課程，親自體驗老師的教學風格。"
               },
               {
-                type: "進入課程",
-                title: "正式課程",
-                duration: "50分鐘完整課程",
-                price: "教師定價 + 保障服務費",
-                features: ["4/8/12/16 堂課選擇", "自動月訂制", "隨時取消訂閱"]
+                question: "課程費用如何計算？",
+                answer: "老師自訂每堂課（50分鐘）的費用，NLT 會加收 25% 的保障服務費。例如老師收費 $500，學生實付 $625。"
               },
               {
-                type: "品質保證",
-                title: "退款保障",
-                duration: "30天保證期",
-                price: "100% 退款",
-                features: ["購買後30天內", "未完成課程退款", "無條件申請"]
+                question: "如果不滿意課程可以退款嗎？",
+                answer: "當然可以！我們提供 100% 退款保障。試教不滿意可全額退款，未消耗的課程餘額也可隨時退回。"
+              },
+              {
+                question: "平台提供哪些學習支援？",
+                answer: "我們提供課程聊天室、自動排課系統、老師評價機制、平台內視訊功能、24/7 客服支援等完整服務。"
               }
-            ].map((plan, index) => (
-              <div key={index} className="border-4 md:border-5 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 bg-white h-full flex flex-col">
-                <div className="bg-blue-300 text-center p-8 md:p-8 border-b-4 border-black">
-                  <div className="bg-white border-4 border-black px-5 py-3 md:px-6 md:py-3 text-black font-black mb-5 md:mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] uppercase text-xl md:text-xl">{plan.type}</div>
-                  <h3 className="text-2xl md:text-2xl font-black text-black mb-4 md:mb-4 uppercase">{plan.title}</h3>
-                  <p className="font-bold text-black mb-5 md:mb-6 text-xl md:text-xl">{plan.duration}</p>
-                  <div className="text-2xl md:text-2xl font-black text-black bg-gradient-to-r from-yellow-300 to-amber-300 border-4 md:border-5 border-black p-5 md:p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-                    {plan.price}
-                  </div>
-                </div>
-                <div className="bg-white p-5 md:p-6 flex-grow">
-                  <ul className="space-y-4 md:space-y-4">
-                    {plan.features.map((feature, i) => (
-                      <li key={i} className="flex items-center space-x-4">
-                        <div className="w-4 h-4 md:w-4 md:h-4 bg-red-500 border border-black" />
-                        <span className="text-xl md:text-xl font-bold text-black">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  {index === 1 && (
-                    <div className="bg-orange-200 border-4 border-black p-5 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] mt-5 md:mt-6">
-                      <p className="text-xl md:text-xl font-black text-black mb-4 md:mb-4 uppercase">保障服務費用來確保：</p>
-                      <ul className="space-y-3 md:space-y-3 text-lg md:text-lg text-black font-bold">
-                        <li className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-red-500 border border-black" />
-                          <span>學生試教不滿意， 100% 退款</span>
-                        </li>
-                        <li className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-blue-500 border border-black" />
-                          <span>未消耗課程，剩餘金額 100% 退回 (不會像其他平台一樣不給退)</span>
-                        </li>
-                        <li className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-green-500 border border-black" />
-                          <span>I人、E人都愛的排課系統 (自動通知老師，不用寫訊息)</span>
-                        </li>
-                        <li className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-yellow-500 border border-black" />
-                          <span>老師評價系統</span>
-                        </li>
-                        <li className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-purple-500 border border-black" />
-                          <span>平台內視訊、安全金流</span>
-                        </li>
-                        <li className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-pink-500 border border-black" />
-                          <span>安全回報機制</span>
-                        </li>
-                        <li className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-indigo-500 border border-black" />
-                          <span>檢舉與仲裁機制</span>
-                        </li>
-                      </ul>
-                    </div>
-                  )}
-                </div>
-              </div>
+            ].map((item, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-3 text-gray-800">{item.question}</h3>
+                  <p className="text-gray-600 leading-relaxed">{item.answer}</p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section id="faq" className="py-16 md:py-20 bg-gradient-to-br from-purple-100 to-purple-200 mt-10 md:mt-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 md:mb-20">
-            <div className="inline-block bg-white border-3 md:border-5 border-black px-6 md:px-8 py-3 md:py-4 text-xl md:text-2xl font-black mb-6 md:mb-8 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
-              常見問題
-            </div>
-            <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-3 md:border-6 border-black px-8 md:px-12 py-6 md:py-8 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[13px_13px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1">
-              <h2 className="text-3xl md:text-4xl font-black text-black uppercase tracking-wide">熱門問答集</h2>
-            </div>
-          </div>
-          
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-5 md:space-y-6">
-              {faqItems.map((item, index) => (
-                <div key={index} className="bg-white border-3 md:border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-                  <button
-                    onClick={() => toggleFaq(index)}
-                    className="w-full p-6 md:p-8 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
-                  >
-                    <h3 className="text-xl md:text-2xl font-black text-black pr-5 leading-snug">{item.question}</h3>
-                    <div className="w-10 h-10 md:w-12 md:h-12 bg-black border-2 border-black flex items-center justify-center shadow-[2px_2px_0px_0px_rgba(0,0,0,0.3)]">
-                      {expandedFaq === index ? (
-                        <ChevronUp className="w-6 h-6 md:w-7 md:h-7 text-white" />
-                      ) : (
-                        <ChevronDown className="w-6 h-6 md:w-7 md:h-7 text-white" />
-                      )}
-                    </div>
-                  </button>
-                  {expandedFaq === index && (
-                    <div className="border-t-3 border-black bg-gray-50 p-6 md:p-8">
-                      <p className="text-lg md:text-xl font-bold text-black leading-relaxed whitespace-pre-line">{item.answer}</p>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-
-            {/* Contact CTA */}
-            <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-3 md:border-6 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] p-6 md:p-10 text-center mt-8 md:mt-12">
-              <h3 className="text-xl md:text-3xl font-black text-black mb-5 md:mb-6 uppercase">還有其他問題？</h3>
-              <p className="text-lg md:text-xl font-bold text-black mb-6 md:mb-8">
-                我們很樂意為你解答！<br />歡迎在社群媒體「發送訊息」聯繫 No Limit Tutor！
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 md:gap-5 justify-center max-w-xl mx-auto">
-                <Button 
-                  size="lg" 
-                  className="bg-blue-500 hover:bg-blue-600 text-white border-3 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] font-black text-base md:text-lg px-5 md:px-6 py-3 md:py-5 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
-                  onClick={() => window.open('https://www.facebook.com/nolimittutor', '_blank')}
-                >
-                  Facebook 粉專
-                  <ExternalLink className="ml-2 w-4 h-4" />
-                </Button>
-                <Button 
-                  size="lg" 
-                  className="bg-pink-500 hover:bg-pink-600 text-white border-3 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] font-black text-base md:text-lg px-5 md:px-6 py-3 md:py-5 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
-                  onClick={() => window.open('https://www.instagram.com/no_limit_tutor/', '_blank')}
-                >
-                  Instagram
-                  <ExternalLink className="ml-2 w-4 h-4" />
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Social Media Follow Section */}
-      <section id="social" className="py-16 md:py-20 bg-gradient-to-br from-green-100 to-green-200 mt-10 md:mt-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block bg-white border-4 border-black px-4 md:px-6 py-2 md:py-3 text-lg md:text-xl font-black mb-6 md:mb-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
-              搶先追蹤
-            </div>
-            <h2 className="text-2xl md:text-3xl font-black text-black mb-6 md:mb-8 bg-amber-400 border-4 border-black p-4 md:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1 uppercase">社群互動</h2>
-            <div className="bg-white border-4 border-black p-6 md:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] mb-8 md:mb-12">
-              <p className="text-lg md:text-xl text-black font-bold">
-                進一步了解 No Limit Tutor 文化與價值訴求，及平台努力的方向<br />
-                提供回饋，共造嶄新的民主學習環境
-              </p>
-            </div>
-            
-            <div className="space-y-6 md:space-y-8 max-w-2xl mx-auto">
-              {[
-                {
-                  text: "追蹤臉書 - 掌握 NLT 價值與動態",
-                  url: "https://www.facebook.com/nolimittutor",
-                  color: "bg-gradient-to-r from-blue-300 to-blue-400 hover:from-blue-400 hover:to-blue-500"
-                },
-                {
-                  text: "追蹤 IG - 觀看國外搞笑迷因學英文",
-                  url: "https://www.instagram.com/no_limit_tutor/",
-                  color: "bg-gradient-to-r from-pink-300 to-pink-400 hover:from-pink-400 hover:to-pink-500"
-                },
-                {
-                  text: "填寫表單 - 成為 NLT 的一員",
-                  url: "https://forms.gle/6cYoa9Lt2P7Wy8uu5",
-                  color: "bg-gradient-to-r from-yellow-300 to-yellow-400 hover:from-yellow-400 hover:to-yellow-500"
-                }
-              ].map((item, index) => (
-                <Button 
-                  key={index}
-                  size="lg" 
-                  className={`w-full ${item.color} text-black border-4 md:border-6 border-white shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] md:shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] md:hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] font-black text-lg md:text-xl px-6 md:px-8 py-6 md:py-8 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200`}
-                  onClick={() => window.open(item.url, '_blank')}
-                >
-                  {item.text}
-                  <ArrowRight className="ml-3 md:ml-4 w-5 h-5 md:w-6 md:h-6" />
-                </Button>
-              ))}
-            </div>
-            
-            <div className="text-center mt-6 md:mt-8">
-              <p className="text-base md:text-lg font-bold text-black">
-                * 平台上線後將優先通知你註冊使用
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer CTA Section */}
-      <section className="py-16 md:py-20 bg-gradient-to-br from-red-400 to-red-500 mt-10 md:mt-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            {/* Teacher Count Banner */}
-            <div className="text-center mb-12 md:mb-16">
-              <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-4 md:border-8 border-black px-8 md:px-12 py-8 md:py-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] md:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] transform rotate-1 inline-block mb-8 md:mb-12">
-                <h2 className="text-3xl md:text-5xl font-black text-black uppercase tracking-wide mb-3 md:mb-4">
-                  目前已有
-                </h2>
-                <div className="text-4xl md:text-6xl font-black text-black uppercase tracking-wide mb-3 md:mb-4">
-                  {emailCount} 位老師
-                </div>
-                <div className="text-3xl md:text-5xl font-black text-black uppercase tracking-wide">
-                  申請加入
-                </div>
-              </div>
-              
-              <div className="bg-white border-4 md:border-8 border-black p-8 md:p-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] md:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)]">
-                <p className="text-2xl md:text-3xl font-black text-black mb-6 md:mb-8">
-                  越來越多優秀教師選擇 No Limit Tutor
-                </p>
-                <p className="text-xl md:text-2xl font-bold text-black">
-                  成為首批元老教師，搶占平台發展先機！
-                </p>
-              </div>
-            </div>
-
-            {/* Email Form Section */}
-            <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-4 md:border-8 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] md:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] p-8 md:p-12 mb-8 md:mb-12">
-              <div className="flex items-center justify-center mb-6 md:mb-8">
-                <Mail className="w-8 h-8 md:w-10 md:h-10 text-black mr-4 md:mr-6" />
-                <h3 className="text-2xl md:text-4xl font-black text-black">最後機會！立即登記</h3>
-              </div>
-              <p className="text-xl md:text-2xl font-black text-black text-center mb-8 md:mb-10">成為 NLT 首批元老教師</p>
-              <form onSubmit={handleEmailSubmit} className="space-y-6 md:space-y-8">
-                <input
-                  type="email"
-                  placeholder="請輸入你的 Email 地址"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full h-16 md:h-20 px-6 md:px-8 text-xl md:text-2xl text-center border-4 md:border-6 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] font-bold focus:outline-none focus:ring-2 focus:ring-black"
-                  required
-                />
-                <button
-                  type="submit"
-                  disabled={isSubmittingEmail}
-                  className="w-full h-16 md:h-20 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-4 md:border-6 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] font-black text-xl md:text-2xl uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmittingEmail ? '訂閱中...' : '立即成為 NLT 老師'}
-                  <ArrowRight className="ml-4 md:ml-6 w-6 h-6 md:w-8 md:h-8" />
-                </button>
-              </form>
-              <p className="text-lg md:text-xl font-bold text-black text-center mt-6 md:mt-8">
-                * 我們承諾不會濫用你的 Email，也不會分享給第三方
-              </p>
-            </div>
-
-            {/* Main CTA Button */}
-            <div className="text-center">
-              <Button 
-                size="lg" 
-                className="w-full max-w-2xl bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white border-4 md:border-8 border-white shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] md:shadow-[20px_20px_0px_0px_rgba(255,255,255,1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] md:hover:shadow-[16px_16px_0px_0px_rgba(255,255,255,1)] font-black text-2xl md:text-3xl px-8 md:px-16 py-8 md:py-12 uppercase tracking-wide transform hover:translate-x-2 hover:translate-y-2 transition-all duration-200"
-                onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
-              >
-                立即加入教師招募
-                <ArrowRight className="ml-4 md:ml-6 w-8 h-8 md:w-10 md:h-10" />
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final Student Section */}
-      <section className="py-16 md:py-20 bg-gradient-to-br from-blue-200 to-indigo-200 mt-10 md:mt-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white border-4 md:border-6 border-black p-8 md:p-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] mb-6 md:mb-8">
-              <div className="flex items-center justify-center mb-6 md:mb-8">
-                <GraduationCap className="w-8 h-8 md:w-12 md:h-12 text-indigo-600 mr-4 md:mr-6" />
-                <h2 className="text-2xl md:text-4xl font-black text-black">想學習新技能？</h2>
-              </div>
-              <p className="text-2xl md:text-3xl font-bold text-black mb-6 md:mb-8">
-                NLT 學生平台即將上線
-              </p>
-              <p className="text-lg md:text-xl font-bold text-black mb-8 md:mb-12">
-                無論是語言學習、程式設計、藝術才藝，都能找到最適合的老師
-              </p>
-              <Button
-                size="lg"
-                className="w-full max-w-md bg-indigo-500 hover:bg-indigo-600 text-white border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] font-black text-xl md:text-2xl px-8 md:px-12 py-6 md:py-8 transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
-                onClick={() => window.open('https://forms.gle/6cYoa9Lt2P7Wy8uu5', '_blank')}
-              >
-                學生搶先登記
-                <ExternalLink className="ml-3 md:ml-4 w-6 h-6 md:w-8 md:h-8" />
-              </Button>
-              <p className="text-base md:text-lg font-bold text-black text-center mt-4 md:mt-6">
-                平台上線時將優先通知你註冊使用
-              </p>
-            </div>
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">準備開始學習了嗎？</h2>
+          <p className="text-xl mb-12 max-w-2xl mx-auto opacity-90">
+            加入 NLT 大家庭，與全球優質華語教師一起開啟你的學習之旅
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 text-xl px-10 py-4">
+              立即註冊學習
+            </Button>
+            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 text-xl px-10 py-4">
+              申請成為教師
+            </Button>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-10 md:py-13 bg-black mt-10 md:mt-16">
+      <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-10">
-            <div className="flex items-center space-x-3 md:space-x-3">
-              <div className="w-12 h-12 md:w-13 md:h-13 bg-gradient-to-br from-amber-400 to-orange-500 border-3 md:border-3 border-white flex items-center justify-center shadow-[3px_3px_0px_0px_rgba(255,255,255,0.3)]">
-                <span className="text-2xl md:text-2xl font-black text-black">N</span>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <div className="flex items-center space-x-2 mb-4">
+                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold">N</span>
+                </div>
+                <span className="text-xl font-bold">NLT</span>
               </div>
-              <div className="flex flex-col">
-                <span className="text-xl md:text-2xl font-black text-white uppercase tracking-tight">No Limit Tutor</span>
-                <span className="text-base md:text-base text-amber-400 font-black">無限家教</span>
-              </div>
-            </div>
-            
-            <div className="text-left flex-1 max-w-2xl">
-              <div className="mb-6 md:mb-6">
-                <p className="text-2xl md:text-3xl font-black text-white mb-3 md:mb-5">No Limit Tutor</p>
-                <p className="text-white text-lg md:text-lg font-bold">
-                  突破規則，知識無限 -<br />
-                  優質、民主、自在的一對一教學
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-4 md:gap-5 mb-4 md:mb-5">
-                <a href="/privacy" className="text-amber-400 hover:text-amber-300 text-base md:text-base font-bold underline transition-colors">隱私條款</a>
-              </div>
-              <p className="text-gray-400 text-sm md:text-sm font-medium">
-                © 2025 No Limit Tutor. All rights reserved.<br />
-                No Limit Tutor 無限家教為睿思博遠有限公司註冊之商標
+              <p className="text-gray-300">
+                No Limit Tutor - 連接全球優質華語教師與學習者的專業平台
               </p>
             </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">服務</h4>
+              <ul className="space-y-2 text-gray-300">
+                <li>線上華語課程</li>
+                <li>教師媒合服務</li>
+                <li>學習進度追蹤</li>
+                <li>客服支援</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">支援</h4>
+              <ul className="space-y-2 text-gray-300">
+                <li>幫助中心</li>
+                <li>聯絡我們</li>
+                <li>退款政策</li>
+                <li>隱私權政策</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">聯絡資訊</h4>
+              <div className="space-y-2 text-gray-300">
+                <p>客服信箱：support@nlt.com</p>
+                <p>客服專線：0800-123-456</p>
+                <p>服務時間：24/7 全年無休</p>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+            <p>&copy; 2024 No Limit Tutor. All rights reserved.</p>
           </div>
         </div>
       </footer>
