@@ -538,15 +538,15 @@ const Index = () => {
                     <div className="space-y-3 md:space-y-4">
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-6 h-6 text-green-600" />
-                        <span className="text-xl font-bold text-black leading-none">設定 $500/堂，實拿 $500</span>
+                        <span className="text-xl font-bold text-black">設定 $500/堂，實拿 $500</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-6 h-6 text-green-600" />
-                        <span className="text-xl font-bold text-black leading-none">學生先付才上課</span>
+                        <span className="text-xl font-bold text-black">學生先付才上課</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-6 h-6 text-green-600" />
-                        <span className="text-xl font-bold text-black leading-none">無隱藏費用</span>
+                        <span className="text-xl font-bold text-black">無隱藏費用</span>
                       </div>
                     </div>
                   </div>
