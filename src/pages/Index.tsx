@@ -191,17 +191,15 @@ const Index = () => {
 
       {/* Hero Section */}
       <section id="home" className="relative overflow-hidden bg-gradient-to-br from-amber-400 via-orange-400 to-red-400 pb-10 md:pb-16">
-        <div className="relative container mx-auto px-4 py-12 md:py-20">
-          <div className="max-w-5xl mx-auto">
+        <div className="relative container mx-auto px-4 py-10 md:py-16">
+          <div className="max-w-5xl mx-auto text-center">
             <div className="space-y-8 md:space-y-12">
               {/* Title and Logo */}
               <div className="text-center">
-                <div className="mb-6 md:mb-8">
-                  <img 
-                    src="/lovable-uploads/6ed7f059-777c-4ced-8660-78aa11ba900f.png" 
-                    alt="No Limit Tutor Logo" 
-                    className="w-26 h-26 md:w-31 md:h-31 object-contain mx-auto mb-4 md:mb-5"
-                  />
+                      <div className="mb-6">
+                      <img src="/lovable-uploads/6ed7f059-777c-4ced-8660-78aa11ba900f.png"
+                        alt="No Limit Tutor Logo"
+                        className="w-12 h-12 md:w-14 md:h-14 object-contain mx-auto mb-3"/>
                 </div>
                 <h1 className="text-6xl sm:text-7xl md:text-7xl lg:text-8xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[3px_3px_0px_rgba(255,255,255,1)] md:drop-shadow-[4px_4px_0px_rgba(255,255,255,1)] mb-4 md:mb-5">
                   No Limit Tutor
