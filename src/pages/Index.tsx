@@ -200,14 +200,14 @@ const Index = () => {
                   <img 
                     src="/lovable-uploads/6ed7f059-777c-4ced-8660-78aa11ba900f.png" 
                     alt="No Limit Tutor Logo" 
-                    className="w-26 h-26 md:w-31 md:h-31 object-contain mx-auto mb-4 md:mb-5"
+                    className="w-20 h-20 md:w-24 md:h-24 object-contain mx-auto mb-4 md:mb-5"
                   />
                 </div>
-                <h1 className="text-6xl sm:text-7xl md:text-7xl lg:text-8xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[3px_3px_0px_rgba(255,255,255,1)] md:drop-shadow-[4px_4px_0px_rgba(255,255,255,1)] mb-4 md:mb-5">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[3px_3px_0px_rgba(255,255,255,1)] md:drop-shadow-[4px_4px_0px_rgba(255,255,255,1)] mb-4 md:mb-5">
                   No Limit Tutor
                 </h1>
                 <div className="mb-8 md:mb-10">
-                  <span className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[3px_3px_0px_rgba(255,255,255,1)] md:drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
+                  <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[3px_3px_0px_rgba(255,255,255,1)] md:drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
                     無限家教
                   </span>
                 </div>
@@ -215,7 +215,7 @@ const Index = () => {
               
               {/* Main Value Proposition */}
               <div className="text-center">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black leading-tight bg-white px-6 md:px-10 py-6 md:py-8 border-3 md:border-5 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 mb-8 md:mb-10">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-black leading-tight bg-white px-6 md:px-10 py-6 md:py-8 border-3 md:border-5 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 mb-8 md:mb-10">
                   台灣首個民主、群眾導向的一對一線上家教平台
                 </h2>
               </div>
@@ -223,21 +223,21 @@ const Index = () => {
               {/* Key Benefits */}
               <div className="max-w-4xl mx-auto">
                 <div className="bg-white border-3 md:border-5 border-black p-6 md:p-8 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] mb-8 md:mb-10">
-                  <p className="font-black text-2xl md:text-3xl text-center mb-6 md:mb-8">
+                  <p className="font-black text-xl md:text-2xl text-center mb-6 md:mb-8">
                     NLT 專為台灣師生打造，對老師零抽成、100% 退款保障、確保師生安全
                   </p>
                   <div className="grid grid-cols-1 gap-4 md:gap-6 bg-gradient-to-r from-orange-100 to-amber-100 border-2 md:border-4 border-black p-4 md:p-6 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
                     <div className="flex items-center space-x-3 md:space-x-4">
                       <div className="w-4 h-4 md:w-5 md:h-5 bg-red-500 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
-                      <span className="font-black text-xl md:text-2xl">不滿意試教？全額退費</span>
+                      <span className="font-black text-lg md:text-xl">不滿意試教？全額退費</span>
                     </div>
                     <div className="flex items-center space-x-3 md:space-x-4">
                       <div className="w-4 h-4 md:w-5 md:h-5 bg-blue-500 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
-                      <span className="font-black text-xl md:text-2xl">對老師零抽成、零綁約、零名目費用</span>
+                      <span className="font-black text-lg md:text-xl">對老師零抽成、零綁約、零名目費用</span>
                     </div>
                     <div className="flex items-center space-x-3 md:space-x-4">
                       <div className="w-4 h-4 md:w-5 md:h-5 bg-green-500 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" />
-                      <span className="font-black text-xl md:text-2xl">公平爭議處理機制</span>
+                      <span className="font-black text-lg md:text-xl">公平爭議處理機制</span>
                     </div>
                   </div>
                 </div>
@@ -248,10 +248,10 @@ const Index = () => {
                 {/* Teacher Count */}
                 <div className="text-center">
                   <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-3 md:border-5 border-black px-8 md:px-12 py-8 md:py-12 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[13px_13px_0px_0px_rgba(0,0,0,1)] transform rotate-1 inline-block max-w-3xl w-full">
-                    <h2 className="text-4xl md:text-5xl font-black text-black uppercase tracking-wide mb-3 md:mb-4">
+                    <h2 className="text-3xl md:text-4xl font-black text-black uppercase tracking-wide mb-3 md:mb-4">
                       已有 {emailCount} 位老師申請
                     </h2>
-                    <p className="text-3xl md:text-4xl font-black text-black">
+                    <p className="text-2xl md:text-3xl font-black text-black">
                       搶先成為元老級教師
                     </p>
                   </div>
@@ -261,10 +261,10 @@ const Index = () => {
                 <div className="max-w-3xl mx-auto space-y-6 md:space-y-8">
                   {/* Call to Action Message */}
                   <div className="bg-white border-3 md:border-5 border-black p-6 md:p-8 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[13px_13px_0px_0px_rgba(0,0,0,1)] text-center">
-                    <h2 className="text-3xl md:text-4xl font-black text-black mb-4 md:mb-6">
+                    <h2 className="text-2xl md:text-3xl font-black text-black mb-4 md:mb-6">
                       還在等什麼？
                     </h2>
-                    <p className="text-2xl md:text-3xl font-black text-black">
+                    <p className="text-xl md:text-2xl font-black text-black">
                       現在就加入 No Limit Tutor 教師行列
                     </p>
                   </div>
@@ -273,7 +273,7 @@ const Index = () => {
                   <div className="text-center">
                     <Button 
                       size="lg" 
-                      className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-3 md:border-5 border-white shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] md:shadow-[13px_13px_0px_0px_rgba(255,255,255,1)] hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] md:hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-xl md:text-2xl px-6 md:px-10 py-5 md:py-6 uppercase tracking-wide transform hover:translate-x-2 hover:translate-y-2 transition-all duration-200 flex items-center justify-center"
+                      className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-3 md:border-5 border-white shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] md:shadow-[13px_13px_0px_0px_rgba(255,255,255,1)] hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] md:hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-lg md:text-xl px-6 md:px-10 py-5 md:py-6 uppercase tracking-wide transform hover:translate-x-2 hover:translate-y-2 transition-all duration-200 flex items-center justify-center"
                       onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
                     >
                       立即加入教師招募
@@ -284,29 +284,29 @@ const Index = () => {
                   {/* Email Form */}
                   <div className="bg-gradient-to-r from-yellow-100 to-amber-100 border-3 md:border-5 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[13px_13px_0px_0px_rgba(0,0,0,1)] p-6 md:p-8">
                     <div className="flex items-center justify-center mb-4 md:mb-6">
-                      <Mail className="w-6 h-6 md:w-7 md:h-7 text-black mr-3 md:mr-4" />
-                      <h3 className="text-2xl md:text-3xl font-black text-black">輸入你的 Email 地址</h3>
+                      <Mail className="w-5 h-5 md:w-6 md:h-6 text-black mr-3 md:mr-4" />
+                      <h3 className="text-xl md:text-2xl font-black text-black">輸入你的 Email 地址</h3>
                     </div>
-                    <p className="text-xl md:text-2xl font-black text-black text-center mb-6 md:mb-8">搶先成為 NLT 首批教師！</p>
+                    <p className="text-lg md:text-xl font-black text-black text-center mb-6 md:mb-8">搶先成為 NLT 首批教師！</p>
                     <form onSubmit={handleEmailSubmit} className="space-y-4 md:space-y-6">
                       <input
                         type="email"
                         placeholder="請輸入你的 Email 地址"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="w-full h-14 md:h-16 px-5 md:px-7 text-xl md:text-2xl text-center border-3 md:border-4 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] font-bold focus:outline-none focus:ring-2 focus:ring-black"
+                        className="w-full h-14 md:h-16 px-5 md:px-7 text-lg md:text-xl text-center border-3 md:border-4 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] font-bold focus:outline-none focus:ring-2 focus:ring-black"
                         required
                       />
                       <button
                         type="submit"
                         disabled={isSubmittingEmail}
-                        className="w-full h-14 md:h-16 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-3 md:border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] font-black text-lg md:text-xl uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="w-full h-14 md:h-16 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-3 md:border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] font-black text-base md:text-lg uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         {isSubmittingEmail ? '訂閱中...' : '搶先登記'}
                         <ArrowRight className="ml-3 md:ml-4 w-5 h-5 md:w-6 md:h-6" />
                       </button>
                     </form>
-                    <p className="text-base md:text-lg font-bold text-black text-center mt-4 md:mt-6">
+                    <p className="text-sm md:text-base font-bold text-black text-center mt-4 md:mt-6">
                       * 我們承諾不會濫用你的 Email，也不會分享給第三方
                     </p>
                   </div>
@@ -346,13 +346,13 @@ const Index = () => {
       <section id="what-is-nlt" className="py-16 md:py-20 bg-gradient-to-br from-blue-50 to-indigo-100 mt-10 md:mt-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 md:mb-16">
-            <div className="inline-block bg-white border-3 md:border-4 border-black px-5 md:px-6 py-3 md:py-3 text-xl md:text-xl font-black mb-6 md:mb-8 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
+            <div className="inline-block bg-white border-3 md:border-4 border-black px-5 md:px-6 py-3 md:py-3 text-lg md:text-lg font-black mb-6 md:mb-8 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
               NLT 是什麼
             </div>
             <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-3 md:border-5 border-black px-8 md:px-10 py-6 md:py-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 mb-8 md:mb-10">
-              <h2 className="text-4xl md:text-5xl font-black text-black uppercase tracking-wide">不是 AmazingTalker 但運作方式有點像</h2>
+              <h2 className="text-3xl md:text-4xl font-black text-black uppercase tracking-wide">不是 AmazingTalker 但運作方式有點像</h2>
             </div>
-            <p className="text-2xl md:text-2xl text-black font-bold max-w-2xl mx-auto bg-white border-3 md:border-4 border-black p-5 md:p-6 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] mt-8 md:mt-10">個人媒合</p>
+            <p className="text-xl md:text-xl text-black font-bold max-w-2xl mx-auto bg-white border-3 md:border-4 border-black p-5 md:p-6 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] mt-8 md:mt-10">個人媒合</p>
           </div>
           
           <div className="max-w-5xl mx-auto">
@@ -364,7 +364,7 @@ const Index = () => {
                   <div className="w-12 h-12 md:w-13 md:h-13 bg-white border-3 border-black flex items-center justify-center mr-4 md:mr-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
                     <Heart className="w-6 h-6 md:w-7 md:h-7 text-green-600" />
                   </div>
-                  <h3 className="text-3xl md:text-3xl font-black text-black uppercase">NLT 如何運作</h3>
+                  <h3 className="text-2xl md:text-2xl font-black text-black uppercase">NLT 如何運作</h3>
                 </div>
                 
                 <div className="bg-white border-2 md:border-3 border-black p-5 md:p-5 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
@@ -373,29 +373,29 @@ const Index = () => {
                       <div className="w-7 h-7 md:w-7 md:h-7 bg-green-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
                         <span className="text-white font-black text-sm">1</span>
                       </div>
-                      <p className="text-xl md:text-xl font-bold text-black">免費註冊，免費使用</p>
+                      <p className="text-lg md:text-lg font-bold text-black">免費註冊，免費使用</p>
                     </div>
                     <div className="flex items-start space-x-4">
                       <div className="w-7 h-7 md:w-7 md:h-7 bg-blue-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
                         <span className="text-white font-black text-sm">2</span>
                       </div>
-                      <p className="text-xl md:text-xl font-bold text-black">老師自訂每堂課 (50 分鐘) 學費</p>
+                      <p className="text-lg md:text-lg font-bold text-black">老師自訂每堂課 (50 分鐘) 學費</p>
                     </div>
                     <div className="flex items-start space-x-4">
                       <div className="w-7 h-7 md:w-7 md:h-7 bg-purple-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
                         <span className="text-white font-black text-sm">3</span>
                       </div>
-                      <p className="text-xl md:text-xl font-bold text-black">NLT 在老師費用基礎加保障服務費</p>
+                      <p className="text-lg md:text-lg font-bold text-black">NLT 在老師費用基礎加保障服務費</p>
                     </div>
                     <div className="flex items-start space-x-4">
                       <div className="w-7 h-7 md:w-7 md:h-7 bg-orange-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
                         <span className="text-white font-black text-sm">4</span>
                       </div>
-                      <p className="text-xl md:text-xl font-bold text-black">學生支付老師與 NLT 保障服務費，享受平台保障的權利</p>
+                      <p className="text-lg md:text-lg font-bold text-black">學生支付老師與 NLT 保障服務費，享受平台保障的權利</p>
                     </div>
                   </div>
                   <div className="bg-green-100 border-2 border-black p-4 md:p-4 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mt-5 md:mt-5">
-                    <p className="text-lg md:text-xl font-bold text-black">
+                    <p className="text-base md:text-lg font-bold text-black">
                       <strong>注：</strong>保障服務費為合理投資，確保師生權益與平台品質。
                     </p>
                   </div>
@@ -408,7 +408,7 @@ const Index = () => {
                   <div className="w-12 h-12 md:w-13 md:h-13 bg-white border-3 border-black flex items-center justify-center mr-4 md:mr-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
                     <Target className="w-6 h-6 md:w-7 md:h-7 text-blue-600" />
                   </div>
-                  <h3 className="text-3xl md:text-3xl font-black text-black uppercase">如何使用 NLT</h3>
+                  <h3 className="text-2xl md:text-2xl font-black text-black uppercase">如何使用 NLT</h3>
                 </div>
                 
                 <div className="bg-white border-2 md:border-3 border-black p-5 md:p-5 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
@@ -417,22 +417,22 @@ const Index = () => {
                       <div className="w-7 h-7 md:w-7 md:h-7 bg-red-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
                         <span className="text-white font-black text-sm">1</span>
                       </div>
-                      <p className="text-xl md:text-xl font-bold text-black">老師建立自介頁，學生瀏覽選擇老師</p>
+                      <p className="text-lg md:text-lg font-bold text-black">老師建立自介頁，學生瀏覽選擇老師</p>
                     </div>
                     <div className="flex items-start space-x-4">
                       <div className="w-7 h-7 md:w-7 md:h-7 bg-green-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
                         <span className="text-white font-black text-sm">2</span>
                       </div>
-                      <p className="text-xl md:text-xl font-bold text-black">學生選擇時間，預約上課</p>
+                      <p className="text-lg md:text-lg font-bold text-black">學生選擇時間，預約上課</p>
                     </div>
                     <div className="flex items-start space-x-4">
                       <div className="w-7 h-7 md:w-7 md:h-7 bg-purple-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
                         <span className="text-white font-black text-sm">3</span>
                       </div>
-                      <p className="text-xl md:text-xl font-bold text-black">上 NLT 視訊，開始課程</p>
+                      <p className="text-lg md:text-lg font-bold text-black">上 NLT 視訊，開始課程</p>
                     </div>
                     <div className="bg-blue-100 border-2 border-black p-4 md:p-4 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mt-5 md:mt-5">
-                      <p className="text-lg md:text-xl font-bold text-black">
+                      <p className="text-base md:text-lg font-bold text-black">
                         學生享有聊天室功能、100% 試教退款保障，以及完善的評價系統，確保學習品質與安全。
                       </p>
                     </div>
@@ -496,21 +496,21 @@ const Index = () => {
               <div className="bg-white border-3 border-black p-6 md:p-6 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
                 <h4 className="text-2xl md:text-3xl font-black text-black text-center mb-5 md:mb-6 uppercase">彈性課程方案</h4>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
-                  <div className="bg-blue-200 border-2 border-black p-4 md:p-4 text-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                    <div className="text-4xl md:text-5xl font-black text-black">1堂/週</div>
-                    <div className="text-xl md:text-xl font-bold text-black">體驗方案</div>
+                  <div className="bg-blue-200 border-2 border-black p-3 md:p-4 text-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+                    <div className="text-2xl md:text-3xl lg:text-4xl font-black text-black leading-none mb-1">1堂/週</div>
+                    <div className="text-sm md:text-base lg:text-lg font-bold text-black">體驗方案</div>
                   </div>
-                  <div className="bg-green-200 border-2 border-black p-4 md:p-4 text-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                    <div className="text-4xl md:text-5xl font-black text-black">2堂/週</div>
-                    <div className="text-xl md:text-xl font-bold text-black">入門方案</div>
+                  <div className="bg-green-200 border-2 border-black p-3 md:p-4 text-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+                    <div className="text-2xl md:text-3xl lg:text-4xl font-black text-black leading-none mb-1">2堂/週</div>
+                    <div className="text-sm md:text-base lg:text-lg font-bold text-black">入門方案</div>
                   </div>
-                  <div className="bg-yellow-200 border-2 border-black p-4 md:p-4 text-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                    <div className="text-4xl md:text-5xl font-black text-black">3堂/週</div>
-                    <div className="text-xl md:text-xl font-bold text-black">進階方案</div>
+                  <div className="bg-yellow-200 border-2 border-black p-3 md:p-4 text-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+                    <div className="text-2xl md:text-3xl lg:text-4xl font-black text-black leading-none mb-1">3堂/週</div>
+                    <div className="text-sm md:text-base lg:text-lg font-bold text-black">進階方案</div>
                   </div>
-                  <div className="bg-purple-200 border-2 border-black p-4 md:p-4 text-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                    <div className="text-4xl md:text-5xl font-black text-black">4堂/週</div>
-                    <div className="text-xl md:text-xl font-bold text-black">密集方案</div>
+                  <div className="bg-purple-200 border-2 border-black p-3 md:p-4 text-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+                    <div className="text-2xl md:text-3xl lg:text-4xl font-black text-black leading-none mb-1">4堂/週</div>
+                    <div className="text-sm md:text-base lg:text-lg font-bold text-black">密集方案</div>
                   </div>
                 </div>
               </div>
@@ -595,12 +595,12 @@ const Index = () => {
               {/* 與其他平台比較 */}
               <div className="bg-yellow-300 border-3 border-black p-6 md:p-6 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
                 <h4 className="text-2xl md:text-3xl font-black text-black text-center mb-5 md:mb-6 uppercase">與其他平台比較</h4>
-                <div className="overflow-x-auto" style={{ maxWidth: '100%', overflowX: 'scroll' }}>
-                  <div style={{ minWidth: '800px' }}>
-                    <table className="w-full border-2 border-black bg-white text-sm">
+                <div className="overflow-x-auto" style={{ minWidth: '100%' }}>
+                  <div style={{ minWidth: '1000px' }}>
+                    <table className="w-full border-2 border-black bg-white text-sm relative">
                       <thead>
                         <tr className="bg-black text-white">
-                          <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">平台</th>
+                          <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-black z-10">平台</th>
                           <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">老師抽成</th>
                           <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">學生服務費</th>
                           <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">退款政策</th>
@@ -609,28 +609,28 @@ const Index = () => {
                       </thead>
                       <tbody>
                         <tr>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">No Limit Tutor</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10">No Limit Tutor</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">0%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">25%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">全額退款</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-green-600">20% (國內業界最低)</td>
                         </tr>
                         <tr>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">平台A</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10">平台A</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">8-38%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">10%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">退成平台幣，退款麻煩，以外幣計算</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">18-78%</td>
                         </tr>
                         <tr>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">平台B</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10">平台B</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">20-35%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">0%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">不能退款</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">20-35%</td>
                         </tr>
                         <tr>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">其他多數平台</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10">其他多數平台</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">不透明</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">不透明</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">不能退款，只能轉讓或吸收沒上到的損失</td>
@@ -885,7 +885,7 @@ const Index = () => {
                     onClick={() => toggleFaq(index)}
                     className="w-full p-6 md:p-8 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                   >
-                    <h3 className="text-xl md:text-2xl font-black text-black pr-5">{item.question}</h3>
+                    <h3 className="text-xl md:text-2xl font-black text-black pr-5 leading-snug">{item.question}</h3>
                     <div className="w-10 h-10 md:w-12 md:h-12 bg-black border-2 border-black flex items-center justify-center shadow-[2px_2px_0px_0px_rgba(0,0,0,0.3)]">
                       {expandedFaq === index ? (
                         <ChevronUp className="w-6 h-6 md:w-7 md:h-7 text-white" />
@@ -896,7 +896,7 @@ const Index = () => {
                   </button>
                   {expandedFaq === index && (
                     <div className="border-t-3 border-black bg-gray-50 p-6 md:p-8">
-                      <p className="text-lg md:text-xl font-bold text-black leading-normal whitespace-pre-line">{item.answer}</p>
+                      <p className="text-lg md:text-xl font-bold text-black leading-relaxed whitespace-pre-line">{item.answer}</p>
                     </div>
                   )}
                 </div>
