@@ -609,8 +609,8 @@ const Index = () => {
                                           md:w-auto md:min-w-[8rem] md:max-w-none">平台</th>
                           <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">老師抽成</th>
                           <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">學生服務費</th>
-                          <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-40 md:w-auto">退款政策</th>
-                          <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-40 md:w-auto">平台費用率</th>
+                          <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-36 md:w-auto">退款政策</th>
+                          <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-36 md:w-auto">平台費用率</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -620,8 +620,8 @@ const Index = () => {
                                           md:w-auto md:min-w-[8rem] md:max-w-none">No Limit Tutor</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">0%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">25%</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-40 md:w-auto">全額退款</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-green-600 w-40 md:w-auto">20% (國內業界最低)</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-36 md:w-auto">全額新台幣退款</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-green-600 w-36 md:w-auto">20% (國內業界最低)</td>
                         </tr>
                         <tr>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10 w-20 
@@ -629,8 +629,8 @@ const Index = () => {
                                           md:w-auto md:min-w-[8rem] md:max-w-none">平台A</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">8-38%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">10%</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-40 md:w-auto">退款麻煩有匯損，預設退成平台幣</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-40 md:w-auto">18-48%</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-36 md:w-auto">退款麻煩，有匯損，預設退平台幣</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-36 md:w-auto">18-48% (每個月要教超多課才能壓下抽成)</td>
                         </tr>
                         <tr>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10 w-20 
@@ -638,8 +638,8 @@ const Index = () => {
                                           md:w-auto md:min-w-[8rem] md:max-w-none">平台B</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">20-35%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">0%</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-40 md:w-auto">極難退款，通常退不成</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-40 md:w-auto">20-35%</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-36 md:w-auto">極難退款，通常退成平台點數</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-36 md:w-auto">20-35%</td>
                         </tr>
                         <tr>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10 w-20 
@@ -647,8 +647,8 @@ const Index = () => {
                                           md:w-auto md:min-w-[8rem] md:max-w-none">其他多數平台</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">不透明</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">不透明</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-40 md:w-auto">超過七天不能退款，只能轉讓或吸收損失</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-40 md:w-auto">不透明，可能在33-65%之間不等</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-36 md:w-auto">超過七天不能退款，只能轉讓或吸收損失</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-36 md:w-auto">不透明，可能在33-65%之間不等</td>
                         </tr>
                       </tbody>
                     </table>
