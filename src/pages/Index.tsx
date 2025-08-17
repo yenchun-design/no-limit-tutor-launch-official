@@ -596,66 +596,91 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* 與其他平台比較 */}
-              <div className="bg-yellow-300 border-3 border-black p-6 md:p-6 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
-                <h4 className="text-2xl md:text-3xl font-black text-black text-center mb-5 md:mb-6 uppercase">與其他平台比較</h4>
-                <div className="overflow-x-auto" style={{ minWidth: '100%' }}>
-                  <div style={{ minWidth: '1000px' }}>
-                    <table className="w-full border-2 border-black bg-white text-sm relative">
-                      <thead>
-                        <tr className="bg-black text-white">
-                          <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-black z-10 w-20 
-                                          min-w-[5rem] max-w-[5rem] break-words         <!-- 手機板窄 -->
-                                          md:w-auto md:min-w-[8rem] md:max-w-none       <!-- 桌面板放寬 -->">平台</th>
-                          <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">老師抽成</th>
-                          <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">學生服務費</th>
-                          <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">退款政策</th>
-                          <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">平台費用率</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10 w-20 
-                                          min-w-[5rem] max-w-[5rem] break-words         <!-- 手機板窄 -->
-                                          md:w-auto md:min-w-[8rem] md:max-w-none       <!-- 桌面板放寬 -->">No Limit Tutor</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">0%</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">25%</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">全額退款</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-green-600">20% (國內業界最低)</td>
-                        </tr>
-                        <tr>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10 w-20 
-                                          min-w-[5rem] max-w-[5rem] break-words         <!-- 手機板窄 -->
-                                          md:w-auto md:min-w-[8rem] md:max-w-none       <!-- 桌面板放寬 -->">平台A</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">8-38%</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">10%</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">退款麻煩有匯損，預設退成平台幣</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">18-48%</td>
-                        </tr>
-                        <tr>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10 w-20 
-                                          min-w-[5rem] max-w-[5rem] break-words         <!-- 手機板窄 -->
-                                          md:w-auto md:min-w-[8rem] md:max-w-none       <!-- 桌面板放寬 -->">平台B</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">20-35%</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">0%</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">極難退款，通常退不成</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">20-35%</td>
-                        </tr>
-                        <tr>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10 w-20 
-                                          min-w-[5rem] max-w-[5rem] break-words         <!-- 手機板窄 -->
-                                          md:w-auto md:min-w-[8rem] md:max-w-none       <!-- 桌面板放寬 -->">其他多數平台</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black ">不透明</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black ">不透明</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black ">超過七天不能退款，只能轉讓或吸收損失</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">不透明，可能在33-65%之間不等</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
+   {/* 與其他平台比較 */}
+<div className="bg-yellow-300 border-3 border-black p-6 md:p-6 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
+  <h4 className="text-2xl md:text-3xl font-black text-black text-center mb-5 md:mb-6 uppercase">與其他平台比較</h4>
+  <div className="overflow-x-auto" style={{ minWidth: '100%' }}>
+    <div style={{ minWidth: '1000px' }}>
+      <table className="w-full border-2 border-black bg-white text-sm relative">
+        <thead>
+          <tr className="bg-black text-white">
+            <th
+              className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-black z-10 
+                         w-[4rem] min-w-[4rem] max-w-[4rem] break-words   /* 手機板窄 */
+                         md:w-auto md:min-w-[6rem] md:max-w-none          /* 桌面板放寬 */">
+              平台
+            </th>
+            <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">老師抽成</th>
+            <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">學生服務費</th>
+            <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">退款政策</th>
+            <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">平台費用率</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td
+              className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10 
+                         w-[4rem] min-w-[4rem] max-w-[4rem] break-words 
+                         md:w-auto md:min-w-[6rem] md:max-w-none">
+              No Limit Tutor
+            </td>
+            <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">0%</td>
+            <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">25%</td>
+            <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">全額退款</td>
+            <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-green-600">
+              20% (國內業界最低)
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10 
+                         w-[4rem] min-w-[4rem] max-w-[4rem] break-words 
+                         md:w-auto md:min-w-[6rem] md:max-w-none">
+              平台A
+            </td>
+            <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">8-38%</td>
+            <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">10%</td>
+            <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">
+              退款麻煩有匯損，預設退成平台幣
+            </td>
+            <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">18-48%</td>
+          </tr>
+          <tr>
+            <td
+              className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10 
+                         w-[4rem] min-w-[4rem] max-w-[4rem] break-words 
+                         md:w-auto md:min-w-[6rem] md:max-w-none">
+              平台B
+            </td>
+            <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">20-35%</td>
+            <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">0%</td>
+            <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">
+              極難退款，通常退不成
+            </td>
+            <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">20-35%</td>
+          </tr>
+          <tr>
+            <td
+              className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10 
+                         w-[4rem] min-w-[4rem] max-w-[4rem] break-words 
+                         md:w-auto md:min-w-[6rem] md:max-w-none">
+              其他多數平台
+            </td>
+            <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">不透明</td>
+            <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">不透明</td>
+            <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">
+              超過七天不能退款，只能轉讓或吸收損失
+            </td>
+            <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">
+              不透明，可能在33-65%之間不等
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+              
 
             {/* NLT 獨有優勢 */}
             <div className="bg-gradient-to-r from-yellow-200 to-amber-200 border-3 md:border-5 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[13px_13px_0px_0px_rgba(0,0,0,1)] p-6 md:p-8">
