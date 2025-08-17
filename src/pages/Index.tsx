@@ -50,7 +50,7 @@ const Index = () => {
     const fetchEmailCount = async () => {
       try {
         const { count, error } = await supabase
-          .from('email_list')
+          .from('email_signups')
           .select('*', { count: 'exact', head: true });
         
         if (error) {
@@ -86,7 +86,7 @@ const Index = () => {
     
     try {
       const { error } = await supabase
-        .from('email_list')
+        .from('email_signups')
         .insert([{ email: email.trim() }]);
 
       if (error) {
