@@ -604,7 +604,9 @@ const Index = () => {
                     <table className="w-full border-2 border-black bg-white text-sm relative">
                       <thead>
                         <tr className="bg-black text-white">
-                          <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-black z-10 w-20 min-w-[5rem] max-w-[5rem] break-words md:w-auto md:min-w-[8rem] md:max-w-none">平台</th>
+                          <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-black z-10 w-20 
+                                          min-w-[5rem] max-w-[5rem] break-words         <!-- 手機板窄 -->
+                                          md:w-auto md:min-w-[8rem] md:max-w-none       <!-- 桌面板放寬 --> ">平台</th>
                           <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">老師抽成</th>
                           <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">學生服務費</th>
                           <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">退款政策</th>
