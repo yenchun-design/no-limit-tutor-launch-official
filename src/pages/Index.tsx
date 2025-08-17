@@ -600,13 +600,13 @@ const Index = () => {
               <div className="bg-yellow-300 border-3 border-black p-6 md:p-6 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
                 <h4 className="text-2xl md:text-3xl font-black text-black text-center mb-5 md:mb-6 uppercase">與其他平台比較</h4>
                 <div className="overflow-x-auto" style={{ minWidth: '100%' }}>
-                  <div style={{ minWidth: '1000px' }}>
+                  <div className="min-w-[640px] md:min-w-[1000px]">
                     <table className="w-full table-fixed border-2 border-black bg-white text-sm relative">
                       <thead>
                         <tr className="bg-black text-white">
                           <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-black z-10 w-20 
-                                          min-w-[5rem] max-w-[5rem] break-words         <!-- 手機板窄 -->
-                                          md:w-auto md:min-w-[8rem] md:max-w-none       <!-- 桌面板放寬 -->">平台</th>
+                                          min-w-[5rem] max-w-[5rem] break-words 
+                                          md:w-auto md:min-w-[8rem] md:max-w-none">平台</th>
                           <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-40 md:w-auto">老師抽成</th>
                           <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-40 md:w-auto">學生服務費</th>
                           <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-40 md:w-auto">退款政策</th>
@@ -616,8 +616,8 @@ const Index = () => {
                       <tbody>
                         <tr>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10 w-20 
-                                          min-w-[5rem] max-w-[5rem] break-words         <!-- 手機板窄 -->
-                                          md:w-auto md:min-w-[8rem] md:max-w-none       <!-- 桌面板放寬 -->">No Limit Tutor</td>
+                                          min-w-[5rem] max-w-[5rem] break-words 
+                                          md:w-auto md:min-w-[8rem] md:max-w-none">No Limit Tutor</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-40 md:w-auto">0%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-40 md:w-auto">25%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-40 md:w-auto">全額退款</td>
@@ -625,8 +625,8 @@ const Index = () => {
                         </tr>
                         <tr>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10 w-20 
-                                          min-w-[5rem] max-w-[5rem] break-words         <!-- 手機板窄 -->
-                                          md:w-auto md:min-w-[8rem] md:max-w-none       <!-- 桌面板放寬 -->">平台A</td>
+                                          min-w-[5rem] max-w-[5rem] break-words 
+                                          md:w-auto md:min-w-[8rem] md:max-w-none">平台A</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-40 md:w-auto">8-38%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-40 md:w-auto">10%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-40 md:w-auto">退款麻煩有匯損，預設退成平台幣</td>
@@ -634,8 +634,8 @@ const Index = () => {
                         </tr>
                         <tr>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10 w-20 
-                                          min-w-[5rem] max-w-[5rem] break-words         <!-- 手機板窄 -->
-                                          md:w-auto md:min-w-[8rem] md:max-w-none       <!-- 桌面板放寬 -->">平台B</td>
+                                          min-w-[5rem] max-w-[5rem] break-words   
+                                          md:w-auto md:min-w-[8rem] md:max-w-none">平台B</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-40 md:w-auto">20-35%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-40 md:w-auto">0%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-40 md:w-auto">極難退款，通常退不成</td>
@@ -643,8 +643,8 @@ const Index = () => {
                         </tr>
                         <tr>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10 w-20 
-                                          min-w-[5rem] max-w-[5rem] break-words         <!-- 手機板窄 -->
-                                          md:w-auto md:min-w-[8rem] md:max-w-none       <!-- 桌面板放寬 -->">其他多數平台</td>
+                                          min-w-[5rem] max-w-[5rem] break-words   
+                                          md:w-auto md:min-w-[8rem] md:max-w-none">其他多數平台</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-40 md:w-auto">不透明</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-40 md:w-auto">不透明</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-40 md:w-auto">超過七天不能退款，只能轉讓或吸收損失</td>
