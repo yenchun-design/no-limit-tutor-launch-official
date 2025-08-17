@@ -373,19 +373,19 @@ const Index = () => {
                       <div className="w-7 h-7 md:w-7 md:h-7 bg-green-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
                         <span className="text-white font-black text-sm">1</span>
                       </div>
-                      <p className="text-lg md:text-lg font-bold text-black">免費註冊，免費使用</p>
+                      <p className="text-lg md:text-lg font-bold text-black">免費註冊（永遠免費使用！）</p>
                     </div>
                     <div className="flex items-start space-x-4">
                       <div className="w-7 h-7 md:w-7 md:h-7 bg-blue-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
                         <span className="text-white font-black text-sm">2</span>
                       </div>
-                      <p className="text-lg md:text-lg font-bold text-black">老師自訂每堂課 (50 分鐘) 學費</p>
+                      <p className="text-lg md:text-lg font-bold text-black">老師自訂每堂課學費（50 分鐘）</p>
                     </div>
                     <div className="flex items-start space-x-4">
                       <div className="w-7 h-7 md:w-7 md:h-7 bg-purple-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
                         <span className="text-white font-black text-sm">3</span>
                       </div>
-                      <p className="text-lg md:text-lg font-bold text-black">NLT 在老師費用基礎加保障服務費</p>
+                      <p className="text-lg md:text-lg font-bold text-black">NLT 在老師費用基礎上加保障服務費</p>
                     </div>
                     <div className="flex items-start space-x-4">
                       <div className="w-7 h-7 md:w-7 md:h-7 bg-orange-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -396,7 +396,7 @@ const Index = () => {
                   </div>
                   <div className="bg-green-100 border-2 border-black p-4 md:p-4 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mt-5 md:mt-5">
                     <p className="text-base md:text-lg font-bold text-black">
-                      <strong>注：</strong>保障服務費為合理投資，確保師生權益與平台品質。
+                      <strong>注：</strong>保障服務費讓學生享有一般家教沒有的權益，比如試教全額退款、部分或全部學費退款，與 NLT 老師聊天、老師評價系統等。
                     </p>
                   </div>
                 </div>
