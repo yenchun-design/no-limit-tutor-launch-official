@@ -396,7 +396,7 @@ const Index = () => {
                   </div>
                   <div className="bg-green-100 border-2 border-black p-4 md:p-4 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mt-5 md:mt-5">
                     <p className="text-base md:text-lg font-bold text-black">
-                      <strong>注：</strong>保障服務費讓學生享有一般家教沒有的權益，比如試教全額退款、部分或全部學費退款，與 NLT 老師聊天、老師評價系統等。
+                      <strong>注：</strong>保障服務費讓學生享有一般家教沒有的權益，比如試教全額退款、學費退款，與 NLT 老師聊天、透明評價系統等，同時養活這個極稀有的民主家教平台。
                     </p>
                   </div>
                 </div>
