@@ -189,30 +189,30 @@ const Index = () => {
         </div>
       </header>
 
-    {/* Hero Section */}
-      <section id="home" className="relative overflow-hidden bg-gradient-to-br from-amber-400 via-orange-400 to-red-400">
-        <div className="relative container mx-auto px-4 py-10 md:py-13">
+      {/* Hero Section */}
+      <section id="home" className="relative overflow-hidden bg-gradient-to-br from-amber-400 via-orange-400 to-red-400 pb-10 md:pb-16">
+        <div className="relative container mx-auto px-4 py-12 md:py-20">
           <div className="max-w-5xl mx-auto">
-            <div className="space-y-6 md:space-y-8">
+            <div className="space-y-8 md:space-y-12">
               {/* Title and Logo */}
               <div className="text-center">
-                <div className="mb-5">
+                <div className="mb-6 md:mb-8">
                   <img 
                     src="/lovable-uploads/6ed7f059-777c-4ced-8660-78aa11ba900f.png" 
                     alt="No Limit Tutor Logo" 
-                    className="w-16 h-16 md:w-19 md:h-19 object-contain mx-auto mb-3"
+                    className="w-26 h-26 md:w-31 md:h-31 object-contain mx-auto mb-4 md:mb-5"
                   />
                 </div>
-                <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[3px_3px_0px_rgba(255,255,255,1)] md:drop-shadow-[4px_4px_0px_rgba(255,255,255,1)] mb-3">
+                <h1 className="text-6xl sm:text-7xl md:text-7xl lg:text-8xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[3px_3px_0px_rgba(255,255,255,1)] md:drop-shadow-[4px_4px_0px_rgba(255,255,255,1)] mb-4 md:mb-5">
                   No Limit Tutor
                 </h1>
-                <div className="mb-6">
-                  <span className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[3px_3px_0px_rgba(255,255,255,1)] md:drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
+                <div className="mb-8 md:mb-10">
+                  <span className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[3px_3px_0px_rgba(255,255,255,1)] md:drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
                     無限家教
                   </span>
                 </div>
               </div>
-
+              
               {/* Main Value Proposition */}
               <div className="text-center">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black leading-tight bg-white px-6 md:px-10 py-6 md:py-8 border-3 md:border-5 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 mb-8 md:mb-10">
