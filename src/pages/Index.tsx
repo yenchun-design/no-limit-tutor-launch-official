@@ -138,7 +138,7 @@ const Index = () => {
     },
     {
       question: "如何確保教師品質？",
-      answer: "你可以藉由老師自介與評價系統了解老師的教學經驗，並用「100% 可退款」的試教課嘗試新老師，並善用評價系統，幫助其他人了解老師的能力與教學品質。"
+      answer: "每個人對教學風格喜好不同，你可以藉由老師自介與評價系統了解老師，並用「100% 可退款」的試教課，無風險找到適合你的老師。"
     },
     {
       question: "支援哪些科目和語言？",
@@ -837,7 +837,7 @@ const Index = () => {
                         </li>
                         <li className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-green-500 border border-black" />
-                          <span>I人、E人都愛的排課系統 (自動通知老師，不用寫訊息)</span>
+                          <span>I人、E人都愛的排課系統 (訊息溝通)</span>
                         </li>
                         <li className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-yellow-500 border border-black" />
@@ -1039,7 +1039,7 @@ const Index = () => {
                   <ArrowRight className="ml-4 md:ml-6 w-6 h-6 md:w-8 md:h-8" />
                 </button>
               </form>
-              <p className="text-lg md:text-xl font-bold text-black text-center mt-6 md:mt-8">
+              <p className="text-base md:text-lg font-bold text-black text-center mt-6 md:mt-8">
                 * 我們承諾不會濫用你的 Email，也不會分享給第三方
               </p>
             </div>
@@ -1069,7 +1069,7 @@ const Index = () => {
                 <h2 className="text-2xl md:text-4xl font-black text-black">想學習新技能？</h2>
               </div>
               <p className="text-2xl md:text-3xl font-bold text-black mb-6 md:mb-8">
-                NLT 學生平台即將上線
+                NLT 線上家教平台即將於 2026 年上線
               </p>
               <p className="text-lg md:text-xl font-bold text-black mb-8 md:mb-12">
                 無論是語言學習、程式設計、藝術才藝，都能找到最適合的老師
@@ -1083,7 +1083,7 @@ const Index = () => {
                 <ExternalLink className="ml-3 md:ml-4 w-6 h-6 md:w-8 md:h-8" />
               </Button>
               <p className="text-base md:text-lg font-bold text-black text-center mt-4 md:mt-6">
-                平台上線時將優先通知你註冊使用
+                平台上線時將優先通知你
               </p>
             </div>
           </div>
@@ -1109,7 +1109,7 @@ const Index = () => {
                 <p className="text-2xl md:text-3xl font-black text-white mb-3 md:mb-5">No Limit Tutor</p>
                 <p className="text-white text-lg md:text-lg font-bold">
                   突破規則，知識無限 -<br />
-                  優質、民主、自在的一對一教學
+                  優質、專業、自在的一對一教學
                 </p>
               </div>
               <div className="flex flex-wrap gap-4 md:gap-5 mb-4 md:mb-5">
