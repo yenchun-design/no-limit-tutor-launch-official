@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -42,29 +42,7 @@ const Index = () => {
   const { toast } = useToast();
   const [email, setEmail] = useState('');
   const [isSubmittingEmail, setIsSubmittingEmail] = useState(false);
-  const [emailCount, setEmailCount] = useState(11);
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
-
-  // Fetch email count from Supabase
-  useEffect(() => {
-    const fetchEmailCount = async () => {
-      try {
-        const { count, error } = await supabase
-          .from('email_list')
-          .select('*', { count: 'exact', head: true });
-        
-        if (error) {
-          console.error('Error fetching email count:', error);
-        } else if (count !== null) {
-          setEmailCount(count);
-        }
-      } catch (error) {
-        console.error('Error fetching email count:', error);
-      }
-    };
-
-    fetchEmailCount();
-  }, []);
 
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
@@ -105,7 +83,6 @@ const Index = () => {
           description: "我們會在平台上線時第一時間通知你",
         });
         setEmail('');
-        setEmailCount(prevCount => prevCount + 1);
       }
     } catch (error) {
       toast({
@@ -245,18 +222,6 @@ const Index = () => {
 
               {/* CTA Section */}
               <div className="space-y-8 md:space-y-10">
-                {/* Teacher Count */}
-                <div className="text-center">
-                  <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-3 md:border-5 border-black px-8 md:px-12 py-8 md:py-12 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[13px_13px_0px_0px_rgba(0,0,0,1)] transform rotate-1 inline-block max-w-3xl w-full">
-                    <h2 className="text-3xl md:text-4xl font-black text-black uppercase tracking-wide mb-3 md:mb-4">
-                      已有 {emailCount} 位老師申請
-                    </h2>
-                    <p className="text-2xl md:text-3xl font-black text-black">
-                      搶先成為元老級教師
-                    </p>
-                  </div>
-                </div>
-
                 {/* Main Action */}
                 <div className="max-w-3xl mx-auto space-y-6 md:space-y-8">
                   {/* Call to Action Message */}
@@ -655,40 +620,40 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* NLT 獨有優勢 */}
-            <div className="bg-gradient-to-r from-yellow-200 to-amber-200 border-3 md:border-5 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[13px_13px_0px_0px_rgba(0,0,0,1)] p-6 md:p-8">
-              <div className="text-center mb-6 md:mb-8">
-                <div className="flex items-center justify-center mb-4 md:mb-4">
-                  <Star className="w-6 h-6 md:w-7 md:h-7 text-black mr-3 md:mr-3" />
-                  <h3 className="text-2xl md:text-3xl font-black text-black uppercase">NLT 獨有優勢</h3>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-5">
-                <div className="bg-white border-3 border-black p-5 md:p-5 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] text-center">
-                  <div className="w-10 h-10 md:w-11 md:h-11 bg-red-500 border-3 border-black flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                    <Heart className="w-5 h-5 md:w-6 md:h-6 text-white" />
+              {/* NLT 獨有優勢 */}
+              <div className="bg-gradient-to-r from-yellow-200 to-amber-200 border-3 md:border-5 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[13px_13px_0px_0px_rgba(0,0,0,1)] p-6 md:p-8">
+                <div className="text-center mb-6 md:mb-8">
+                  <div className="flex items-center justify-center mb-4 md:mb-4">
+                    <Star className="w-6 h-6 md:w-7 md:h-7 text-black mr-3 md:mr-3" />
+                    <h3 className="text-2xl md:text-3xl font-black text-black uppercase">NLT 獨有優勢</h3>
                   </div>
-                  <h4 className="text-xl md:text-xl font-black text-black mb-2 md:mb-3 uppercase">對老師 0 抽成</h4>
-                  <p className="text-lg md:text-lg font-bold text-black">珍惜台灣教育工作者與寶貴教育資源</p>
                 </div>
                 
-                <div className="bg-white border-3 border-black p-5 md:p-5 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] text-center">
-                  <div className="w-10 h-10 md:w-11 md:h-11 bg-blue-500 border-3 border-black flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                    <RefreshCw className="w-5 h-5 md:w-6 md:h-6 text-white" />
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-5">
+                  <div className="bg-white border-3 border-black p-5 md:p-5 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] text-center">
+                    <div className="w-10 h-10 md:w-11 md:h-11 bg-red-500 border-3 border-black flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+                      <Heart className="w-5 h-5 md:w-6 md:h-6 text-white" />
+                    </div>
+                    <h4 className="text-xl md:text-xl font-black text-black mb-2 md:mb-3 uppercase">對老師 0 抽成</h4>
+                    <p className="text-lg md:text-lg font-bold text-black">珍惜台灣教育工作者與寶貴教育資源</p>
                   </div>
-                  <h4 className="text-xl md:text-xl font-black text-black mb-2 md:mb-3 uppercase">100% 新台幣退款保障</h4>
-                  <p className="text-lg md:text-lg font-bold text-black">沒有點數制，不綁課程包，原卡退回新台幣</p>
-                </div>
-                
-                <div className="bg-white border-3 border-black p-5 md:p-5 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] text-center">
-                  <div className="w-10 h-10 md:w-11 md:h-11 bg-green-500 border-3 border-black flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-                    <Users className="w-5 h-5 md:w-6 md:h-6 text-white" />
+                  
+                  <div className="bg-white border-3 border-black p-5 md:p-5 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] text-center">
+                    <div className="w-10 h-10 md:w-11 md:h-11 bg-blue-500 border-3 border-black flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+                      <RefreshCw className="w-5 h-5 md:w-6 md:h-6 text-white" />
+                    </div>
+                    <h4 className="text-xl md:text-xl font-black text-black mb-2 md:mb-3 uppercase">100% 新台幣退款保障</h4>
+                    <p className="text-lg md:text-lg font-bold text-black">沒有點數制，不綁課程包，原卡退回新台幣</p>
                   </div>
-                  <h4 className="text-xl md:text-xl font-black text-black mb-2 md:mb-3 uppercase">平台商業模式公開透明</h4>
-                  <p className="text-lg md:text-lg font-bold text-black">所有收費只有一筆，毫無隱藏費用</p>
+                  
+                  <div className="bg-white border-3 border-black p-5 md:p-5 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] text-center">
+                    <div className="w-10 h-10 md:w-11 md:h-11 bg-green-500 border-3 border-black flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
+                      <Users className="w-5 h-5 md:w-6 md:h-6 text-white" />
+                    </div>
+                    <h4 className="text-xl md:text-xl font-black text-black mb-2 md:mb-3 uppercase">平台商業模式公開透明</h4>
+                    <p className="text-lg md:text-lg font-bold text-black">所有收費只有一筆，毫無隱藏費用</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -894,7 +859,7 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <div className="space-y-5 md:space-y-6">
               {faqItems.map((item, index) => (
-                <div key={index} className="bg-white border-3 md:border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                <div key={index} className="bg-white border-3 md:border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,0.1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,0.1)]">
                   <button
                     onClick={() => toggleFaq(index)}
                     className="w-full p-6 md:p-8 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
@@ -1004,26 +969,14 @@ const Index = () => {
       <section className="py-16 md:py-20 bg-gradient-to-br from-red-400 to-red-500 mt-10 md:mt-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            {/* Teacher Count Banner */}
+            {/* Call to Action Message */}
             <div className="text-center mb-12 md:mb-16">
-              <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-4 md:border-8 border-black px-8 md:px-12 py-8 md:py-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] md:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] transform rotate-1 inline-block mb-8 md:mb-12">
-                <h2 className="text-3xl md:text-5xl font-black text-black uppercase tracking-wide mb-3 md:mb-4">
-                  目前已有
-                </h2>
-                <div className="text-4xl md:text-6xl font-black text-black uppercase tracking-wide mb-3 md:mb-4">
-                  {emailCount} 位老師
-                </div>
-                <div className="text-3xl md:text-5xl font-black text-black uppercase tracking-wide">
-                  申請加入
-                </div>
-              </div>
-              
               <div className="bg-white border-4 md:border-8 border-black p-8 md:p-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] md:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)]">
                 <p className="text-2xl md:text-3xl font-black text-black mb-6 md:mb-8">
-                  越來越多優秀教師選擇 No Limit Tutor
+                  成為 No Limit Tutor 教師行列
                 </p>
                 <p className="text-xl md:text-2xl font-bold text-black">
-                  成為首批元老教師，搶占平台發展先機！
+                  搶占平台發展先機！
                 </p>
               </div>
             </div>
