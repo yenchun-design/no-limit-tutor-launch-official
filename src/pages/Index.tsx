@@ -350,7 +350,11 @@ const Index = () => {
               NLT 是什麼
             </div>
             <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-3 md:border-5 border-black px-8 md:px-10 py-6 md:py-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 mb-8 md:mb-10">
-              <h2 className="text-3xl md:text-4xl font-black text-black uppercase tracking-wide">不是 Amazing Talker！ 但使用方法很像</h2>
+                <h2 className="font-black text-black uppercase tracking-wide text-center leading-tight">
+    <div className="text-3xl md:text-4xl">不是</div>
+    <div className="text-3xl md:text-4xl">Amazing Talker</div>
+    <div className="text-2xl md:text-3xl">但使用方式很像</div>
+  </h2>
             </div>
             <p className="text-xl md:text-xl text-black font-bold max-w-2xl mx-auto bg-white border-3 md:border-4 border-black p-5 md:p-6 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] mt-8 md:mt-10">先講結論：NLT 是一個讓老師拿到 100% 課程費用，學生享有 100% 退款保障的線上家教平台</p>
           </div>
