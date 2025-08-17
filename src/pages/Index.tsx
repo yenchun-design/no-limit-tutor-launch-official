@@ -615,7 +615,7 @@ const Index = () => {
                       </thead>
                       <tbody>
                         <tr>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg text-black font-bold sticky left-0 bg-white z-10 w-20 
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10 w-20 
                                           min-w-[5rem] max-w-[5rem] break-words 
                                           md:w-auto md:min-w-[8rem] md:max-w-none">No Limit Tutor</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">0%</td>
