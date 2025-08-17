@@ -617,23 +617,23 @@ const Index = () => {
                         </tr>
                         <tr>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10">平台A</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">8-38%</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">8-38%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">10%</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">退成平台幣，退款麻煩，以外幣計算</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">退款麻煩有匯損，預設退成平台幣</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">18-48%</td>
                         </tr>
                         <tr>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10">平台B</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">20-35%</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">20-35%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">0%</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">不能退款</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">極難退款，通常退不成</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">20-35%</td>
                         </tr>
                         <tr>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10">其他多數平台</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">不透明</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">不透明</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">不能退款，只能轉讓或吸收沒上到的損失</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black ">不透明</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black ">不透明</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black ">超過七天不能退款，只能轉讓或吸收損失</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">不透明，可能在33-65%之間不等</td>
                         </tr>
                       </tbody>
