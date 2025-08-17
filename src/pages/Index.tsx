@@ -601,7 +601,7 @@ const Index = () => {
                 <h4 className="text-2xl md:text-3xl font-black text-black text-center mb-5 md:mb-6 uppercase">與其他平台比較</h4>
                 <div className="overflow-x-auto" style={{ minWidth: '100%' }}>
                   <div style={{ minWidth: '1000px' }}>
-                    <table className="w-full border-2 border-black bg-white text-sm relative">
+                    <table className="w-full table-fixed border-2 border-black bg-white text-sm relative">
                       <thead>
                         <tr className="bg-black text-white">
                           <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-black z-10 w-20 
