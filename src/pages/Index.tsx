@@ -81,31 +81,31 @@ const Index = () => {
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2.5 flex-shrink-0"></div>
                     <span className="text-gray-700">學生試教不滿意，100% 退款</span>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2.5 flex-shrink-0"></div>
                     <span className="text-gray-700">未消耗課程，剩餘金額 100% 退回（不會像其他平台一樣不給退）</span>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2.5 flex-shrink-0"></div>
                     <span className="text-gray-700">I人、E人都愛的排課系統（自動通知老師，不用寫訊息）</span>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2.5 flex-shrink-0"></div>
                     <span className="text-gray-700">老師評價系統</span>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2.5 flex-shrink-0"></div>
                     <span className="text-gray-700">平台內視訊、安全金流</span>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2.5 flex-shrink-0"></div>
                     <span className="text-gray-700">安全回報機制</span>
                   </div>
                   <div className="flex items-start space-x-3 md:col-span-2">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2.5 flex-shrink-0"></div>
                     <span className="text-gray-700">檢舉與仲裁機制</span>
                   </div>
                 </div>
@@ -236,15 +236,15 @@ const Index = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2.5 flex-shrink-0"></div>
                   <span className="text-gray-700">老師建立自介頁，學生瀏覽選擇老師</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2.5 flex-shrink-0"></div>
                   <span className="text-gray-700">學生選擇時間，預約上課</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2.5 flex-shrink-0"></div>
                   <span className="text-gray-700">上 NLT 視訊，開始課程</span>
                 </div>
               </CardContent>
@@ -259,19 +259,19 @@ const Index = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2.5 flex-shrink-0"></div>
                   <span className="text-gray-700">課程聊天室，即時溝通無障礙</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2.5 flex-shrink-0"></div>
                   <span className="text-gray-700">不滿意課程？100% 退款保障</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2.5 flex-shrink-0"></div>
                   <span className="text-gray-700">完善的評價與回饋機制</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-green-600 rounded-full mt-2.5 flex-shrink-0"></div>
                   <span className="text-gray-700">24/7 客服支援，學習無憂</span>
                 </div>
               </CardContent>
