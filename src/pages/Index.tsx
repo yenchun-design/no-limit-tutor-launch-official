@@ -1,3 +1,4 @@
+
 import {
   AlertDialog,
   AlertDialogAction,
@@ -31,7 +32,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { CheckCheck, Copy, Mail, RefreshCw } from "lucide-react";
 import { type SubmitHandler, useForm } from "react-hook-form";
 import { useQuery } from "@tanstack/react-query";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 type Inputs = {
   email: string;
@@ -49,7 +50,7 @@ const Index = () => {
     formState: { errors },
   } = useForm<Inputs>();
 
-  const { refetch } = useQuery({
+  const { data, error, refetch } = useQuery({
     queryKey: ["emailCount"],
     queryFn: async () => {
       const { data, error } = await supabase.rpc('get_email_count');
@@ -59,18 +60,21 @@ const Index = () => {
       }
       return data as number;
     },
-    onError: (error) => {
+  });
+
+  // Handle query success/error using useEffect
+  useEffect(() => {
+    if (error) {
       console.error("Query error:", error);
       toast({
         title: "Something went wrong!",
         description: "There was an issue fetching the email count.",
         variant: "destructive",
       });
-    },
-    onSuccess: (data) => {
+    } else if (data !== undefined) {
       setEmailCount(data);
-    },
-  });
+    }
+  }, [data, error]);
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     setIsSubmitting(true);
