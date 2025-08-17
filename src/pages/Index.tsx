@@ -620,7 +620,7 @@ const Index = () => {
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">8-38%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black">10%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">退成平台幣，退款麻煩，以外幣計算</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">18-78%</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600">18-48%</td>
                         </tr>
                         <tr>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10">平台B</td>
