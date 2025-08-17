@@ -302,7 +302,7 @@ const Index = () => {
                         disabled={isSubmittingEmail}
                         className="w-full h-14 md:h-16 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-3 md:border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] font-black text-base md:text-lg uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                       >
-                        {isSubmittingEmail ? '訂閱中...' : '搶先登記'}
+                        {isSubmittingEmail ? '訂閱中...' : '加入教師招募'}
                         <ArrowRight className="ml-3 md:ml-4 w-5 h-5 md:w-6 md:h-6" />
                       </button>
                     </form>
@@ -1035,7 +1035,7 @@ const Index = () => {
                   disabled={isSubmittingEmail}
                   className="w-full h-16 md:h-20 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-4 md:border-6 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] font-black text-xl md:text-2xl uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmittingEmail ? '訂閱中...' : '立即登記'}
+                  {isSubmittingEmail ? '訂閱中...' : '立即成為 NLT 老師'}
                   <ArrowRight className="ml-4 md:ml-6 w-6 h-6 md:w-8 md:h-8" />
                 </button>
               </form>
