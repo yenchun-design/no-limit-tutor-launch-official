@@ -224,7 +224,7 @@ const Index = () => {
               <div className="max-w-4xl mx-auto">
                 <div className="bg-white border-3 md:border-5 border-black p-6 md:p-8 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] mb-8 md:mb-10">
                   <p className="font-black text-xl md:text-2xl text-center mb-6 md:mb-8">
-                    NLT 專為台灣師生打造，對老師零抽成、100% 退款保障、確保師生安全
+                   NLT 專為台灣師生打造，國內研發、台灣金流，交易透明安全，學習更安心
                   </p>
                   <div className="grid grid-cols-1 gap-4 md:gap-6 bg-gradient-to-r from-orange-100 to-amber-100 border-2 md:border-4 border-black p-4 md:p-6 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
                     <div className="flex items-center space-x-3 md:space-x-4">
