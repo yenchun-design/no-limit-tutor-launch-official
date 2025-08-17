@@ -223,7 +223,7 @@ const Index = () => {
               {/* Key Benefits */}
               <div className="max-w-4xl mx-auto">
                 <div className="bg-white border-3 md:border-5 border-black p-6 md:p-8 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] mb-8 md:mb-10">
-                  <p className="font-black text-xl md:text-2xl text-center mb-6 md:mb-8">
+                  <p className="font-black text-2xl md:text-3xl text-center mb-6 md:mb-8">
                    NLT 專為台灣師生打造，國內研發、台灣金流，交易透明安全，學習更安心
                   </p>
                   <div className="grid grid-cols-1 gap-4 md:gap-6 bg-gradient-to-r from-orange-100 to-amber-100 border-2 md:border-4 border-black p-4 md:p-6 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
@@ -273,7 +273,7 @@ const Index = () => {
                   <div className="text-center">
                     <Button 
                       size="lg" 
-                      className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-3 md:border-5 border-white shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] md:shadow-[13px_13px_0px_0px_rgba(255,255,255,1)] hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] md:hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-lg md:text-xl px-6 md:px-10 py-5 md:py-6 uppercase tracking-wide transform hover:translate-x-2 hover:translate-y-2 transition-all duration-200 flex items-center justify-center"
+                      className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-3 md:border-5 border-white shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] md:shadow-[13px_13px_0px_0px_rgba(255,255,255,1)] hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] md:hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-lg md:text-xl px-6 md:px-10 py-6 md:py-8 uppercase tracking-wide transform hover:translate-x-2 hover:translate-y-2 transition-all duration-200 flex items-center justify-center"
                       onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
                     >
                       立即加入教師招募
