@@ -597,7 +597,7 @@ const Index = () => {
               </div>
 
               {/* 與其他平台比較 */}
-              <div className="bg-yellow-300 border-3 border-black p-6 md:p-6 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
+              <div className="bg-yellow-300 border-3 border-black p-4 md:p-4 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
                 <h4 className="text-2xl md:text-3xl font-black text-black text-center mb-5 md:mb-6 uppercase">與其他平台比較</h4>
                 <div className="overflow-x-auto" style={{ minWidth: '100%' }}>
                   <div className="min-w-[640px] md:min-w-[1000px]">
