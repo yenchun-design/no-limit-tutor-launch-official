@@ -216,7 +216,7 @@ const Index = () => {
               {/* Main Value Proposition */}
               <div className="text-center">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-black leading-tight bg-white px-6 md:px-10 py-6 md:py-8 border-3 md:border-5 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 mb-8 md:mb-10">
-                  台灣首個以民主、群眾導向為理念設計的一對一家教平台
+                  台灣第一個民主、群眾導向的一對一家教平台
                 </h2>
               </div>
               
