@@ -377,7 +377,7 @@ const Index = () => {
                       <div className="w-7 h-7 md:w-7 md:h-7 bg-green-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
                         <span className="text-white font-black text-sm">1</span>
                       </div>
-                      <p className="text-lg md:text-lg font-bold text-black">免費註冊（永遠免費使用！）</p>
+                      <p className="text-lg md:text-lg font-bold text-black">免費註冊——終身免費使用！</p>
                     </div>
                     <div className="flex items-start space-x-4">
                       <div className="w-7 h-7 md:w-7 md:h-7 bg-blue-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -395,12 +395,12 @@ const Index = () => {
                       <div className="w-7 h-7 md:w-7 md:h-7 bg-orange-500 border-2 border-black flex items-center justify-center flex-shrink-0 mt-0.5">
                         <span className="text-white font-black text-sm">4</span>
                       </div>
-                      <p className="text-lg md:text-lg font-bold text-black">學生支付老師與 NLT 保障服務費，享受平台保障的權利</p>
+                      <p className="text-lg md:text-lg font-bold text-black">學生支付老師 + 保障服務費，享受平台保障的權利</p>
                     </div>
                   </div>
                   <div className="bg-green-100 border-2 border-black p-4 md:p-4 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] mt-5 md:mt-5">
                     <p className="text-base md:text-lg font-bold text-black">
-                      <strong>注：</strong>保障服務費讓學生享有一般家教沒有的權益，比如試教全額退款、學費退款，與 NLT 老師聊天、互動評價系統等。
+                      <strong>注：</strong>保障服務費讓學生享有一般家教沒有的權益，比如試教全額退款、學費退款，直接與新的 NLT 老師聊天、老師評價系統等。
                     </p>
                   </div>
                 </div>
@@ -492,7 +492,7 @@ const Index = () => {
                     </div>
                     <h4 className="text-lg md:text-xl font-black text-black">第三方保障</h4>
                   </div>
-                  <p className="text-lg md:text-lg font-bold text-black">NLT 公平透明處理爭議，讓師生沒有擔憂，專心上課！</p>
+                  <p className="text-lg md:text-lg font-bold text-black">NLT 公平透明處理爭議，讓師生專心上課！</p>
                 </div>
               </div>
 
@@ -577,19 +577,19 @@ const Index = () => {
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-6 h-6 text-blue-600" />
-                        <span className="text-xl md:text-xl font-bold text-black">試教退款依賴保障服務費</span>
+                        <span className="text-xl md:text-xl font-bold text-black">主動聯繫多位老師的功能</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-6 h-6 text-blue-600" />
-                        <span className="text-xl md:text-xl font-bold text-black">第三方服務、爭議排解</span>
+                        <span className="text-xl md:text-xl font-bold text-black">試教課與沒安排的正是課都可以退款</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-6 h-6 text-blue-600" />
-                        <span className="text-xl md:text-xl font-bold text-black">隨時可退款成新台幣</span>
+                        <span className="text-xl md:text-xl font-bold text-black">退款成新台幣，點數制 bye!</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-6 h-6 text-blue-600" />
-                        <span className="text-xl md:text-xl font-bold text-black">與老師們聊天、評價系統</span>
+                        <span className="text-xl md:text-xl font-bold text-black">互動式訂課與老師評價系統</span>
                       </div>
                     </div>
                   </div>
@@ -599,6 +599,7 @@ const Index = () => {
               {/* 與其他平台比較 */}
               <div className="bg-yellow-300 border-3 border-black p-4 md:p-4 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
                 <h4 className="text-2xl md:text-3xl font-black text-black text-center mb-5 md:mb-6 uppercase">與其他平台比較</h4>
+                <h4 className="text-3xl md:text-4xl font-black text-black text-center mb-6 md:mb-7 uppercase">NLT 透明度、服務費皆完勝!!</h4>
                 <div className="overflow-x-auto" style={{ minWidth: '100%' }}>
                   <div className="min-w-[640px] md:min-w-[1000px]">
                     <table className="w-full table-fixed border-2 border-black bg-white text-sm relative">
@@ -680,7 +681,7 @@ const Index = () => {
                     <RefreshCw className="w-5 h-5 md:w-6 md:h-6 text-white" />
                   </div>
                   <h4 className="text-xl md:text-xl font-black text-black mb-2 md:mb-3 uppercase">100% 新台幣退款保障</h4>
-                  <p className="text-lg md:text-lg font-bold text-black">沒有點數制，不綁課程包，原卡退回新台幣</p>
+                  <p className="text-lg md:text-lg font-bold text-black">沒有點數制跟二十萬有病課程包，不玩遊戲，原卡退回新台幣</p>
                 </div>
                 
                 <div className="bg-white border-3 border-black p-5 md:p-5 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] text-center">
