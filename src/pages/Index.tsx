@@ -138,7 +138,7 @@ const Index = () => {
     },
     {
       question: "如何確保教師品質？",
-      answer: "💡 每個人對教學風格喜好不同，你可以藉由老師自介與評價系統了解老師，並用「100% 可退款」的試教課，無風險找到適合你的老師。"
+      answer: "💡 每個人對教學風格喜好不同，你可以藉由老師自介與評價系統了解老師，並用「100% 可退款」的試教課，找到適合你的老師。"
     },
     {
       question: "上課需要額外下載軟體或用外部視訊工具嗎？",
@@ -146,7 +146,7 @@ const Index = () => {
     },
     {
       question: "支援哪些科目和語言？",
-      answer: "💡 我們目前登記的老師能教國高中學科輔導、英文，程式基礎與商業技能。\n隨著未來更多優秀老師加入，會陸續加入才藝、日文、UI/UX 等多元課程。"
+      answer: "💡 我們已登記的老師能教國高中學科輔導、英文，程式基礎與商業技能。\n隨著未來更多優秀老師加入，會陸續有才藝、日文、UI/UX 等多元課程。"
     }
   ];
 
@@ -228,7 +228,8 @@ const Index = () => {
               <div className="max-w-4xl mx-auto">
                 <div className="bg-white border-3 md:border-5 border-black p-6 md:p-8 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] mb-8 md:mb-10">
                   <p className="font-black text-2xl md:text-3xl text-center mb-6 md:mb-8">
-                   NLT 專為台灣師生打造，國內研發、台灣金流，交易透明安全，學習更安心
+                   NLT 專為台灣師生打造，聚集台灣優質師資，國內研發
+                    <br />平台運作透明安全，學習更安心
                   </p>
                   <div className="grid grid-cols-1 gap-4 md:gap-6 bg-gradient-to-r from-orange-100 to-amber-100 border-2 md:border-4 border-black p-4 md:p-6 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
                     <div className="flex items-center space-x-3 md:space-x-4">
@@ -685,7 +686,7 @@ const Index = () => {
                     <RefreshCw className="w-5 h-5 md:w-6 md:h-6 text-white" />
                   </div>
                   <h4 className="text-xl md:text-xl font-black text-black mb-2 md:mb-3 uppercase">100% 新台幣退款保障</h4>
-                  <p className="text-lg md:text-lg font-bold text-black">沒有點數制跟二十萬有病課程包，不玩遊戲，原卡退回新台幣</p>
+                  <p className="text-lg md:text-lg font-bold text-black">沒有點數制跟二十萬有病課程包，不玩金錢遊戲，退款直接退成新台幣</p>
                 </div>
                 
                 <div className="bg-white border-3 border-black p-5 md:p-5 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] text-center">
@@ -693,7 +694,7 @@ const Index = () => {
                     <Users className="w-5 h-5 md:w-6 md:h-6 text-white" />
                   </div>
                   <h4 className="text-xl md:text-xl font-black text-black mb-2 md:mb-3 uppercase">平台商業模式公開透明</h4>
-                  <p className="text-lg md:text-lg font-bold text-black">所有收費只有一筆，毫無隱藏費用</p>
+                  <p className="text-lg md:text-lg font-bold text-black">所有收費透明，毫無隱藏費用</p>
                 </div>
               </div>
             </div>
@@ -743,21 +744,21 @@ const Index = () => {
                 title: "安全聊天",
                 subtitle: "加密通訊保護",
                 color: "bg-gradient-to-br from-purple-300 to-purple-400",
-                features: ["文字聊天", "圖片傳送", "基本加密", "25MB限制"]
+                features: ["文字聊天", "圖片傳送", "基本加密", "25 MB 限制"]
               },
               {
                 icon: <DollarSign className="w-12 h-12 md:w-13 md:h-13 text-black" />,
                 title: "透明收費",
                 subtitle: "公平定價機制",
                 color: "bg-gradient-to-br from-yellow-300 to-yellow-400",
-                features: ["試教50%優惠", "30天退款", "綠界金流", "信用卡支付"]
+                features: ["試教 50% 價格", "30 天退款", "綠界金流", "信用卡支付"]
               },
               {
                 icon: <Shield className="w-12 h-12 md:w-13 md:h-13 text-black" />,
                 title: "完善保障",
                 subtitle: "多重品質保護",
                 color: "bg-gradient-to-br from-red-300 to-red-400",
-                features: ["課程認證", "No-Show處理", "投訴檢舉", "客服爭議"]
+                features: ["課程認證", "No-Show 處理", "投訴檢舉", "客服回報"]
               }
             ].map((feature, index) => (
               <div key={index} className={`${feature.color} border-4 md:border-5 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 p-6 md:p-6 h-full flex flex-col`}>
@@ -805,23 +806,23 @@ const Index = () => {
               {
                 type: "體驗課程",
                 title: "試教課程",
-                duration: "25分鐘體驗",
-                price: "正式課程 50% 折扣",
+                duration: "25 分鐘體驗",
+                price: "正式課程 50% 價格",
                 features: ["25分鐘一對一教學", "了解教師教學風格", "不滿意可退費"]
               },
               {
                 type: "進入課程",
                 title: "正式課程",
-                duration: "50分鐘完整課程",
+                duration: "50 分鐘完整課程",
                 price: "教師定價 + 保障服務費",
                 features: ["4/8/12/16 堂課選擇", "自動月訂制", "隨時取消訂閱"]
               },
               {
                 type: "品質保證",
                 title: "退款保障",
-                duration: "30天保證期",
+                duration: "30 天保證期",
                 price: "100% 退款",
-                features: ["購買後30天內", "未完成課程退款", "無條件申請"]
+                features: ["購買後 30 天內", "未完成課程退款", "無條件申請"]
               }
             ].map((plan, index) => (
               <div key={index} className="border-4 md:border-5 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 transition-all duration-200 bg-white h-full flex flex-col">
@@ -852,11 +853,11 @@ const Index = () => {
                         </li>
                         <li className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-blue-500 border border-black" />
-                          <span>未消耗課程，剩餘金額 100% 退回 (不會像其他平台一樣不給退)</span>
+                          <span>未消耗課程，剩餘金額 100% 退回 (其他平台常不給退!!)</span>
                         </li>
                         <li className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-green-500 border border-black" />
-                          <span>I人、E人都愛的排課系統 (訊息溝通)</span>
+                          <span>I人、E人都愛的排課系統</span>
                         </li>
                         <li className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-yellow-500 border border-black" />
@@ -864,7 +865,7 @@ const Index = () => {
                         </li>
                         <li className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-purple-500 border border-black" />
-                          <span>平台內視訊、安全金流</span>
+                          <span>平台內視訊、安全退款</span>
                         </li>
                         <li className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-pink-500 border border-black" />
@@ -872,7 +873,7 @@ const Index = () => {
                         </li>
                         <li className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-indigo-500 border border-black" />
-                          <span>檢舉與仲裁機制</span>
+                          <span>檢舉機制</span>
                         </li>
                       </ul>
                     </div>
