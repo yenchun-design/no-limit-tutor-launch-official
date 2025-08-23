@@ -222,8 +222,8 @@ const Index = () => {
               </div>
 
 {/* CTA Headline - 招募老師 */}
-<div className="inline-block bg-[#fcd54c] border-[#fcd54c] shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] px-6 py-6 md:px-10 md:py-10 text-center w-full">
-  <h2 className="text-4xl md:text-6xl font-black text-black tracking-tight whitespace-normal">
+<div className="inline-block bg-[#dd2929] border-[#dd2929] shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] px-6 py-6 md:px-10 md:py-10 text-center w-full">
+  <h2 className="text-4xl md:text-6xl font-black text-white tracking-tight whitespace-normal">
     招募 2026 年線上家教老師中！
   </h2>
 </div>
@@ -277,10 +277,10 @@ const Index = () => {
                 <div className="max-w-3xl mx-auto space-y-6 md:space-y-8">
                   {/* Call to Action Message */}
                   <div className="bg-white border-3 md:border-5 border-black p-6 md:p-8 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[13px_13px_0px_0px_rgba(0,0,0,1)] text-center">
-                    <h2 className="text-2xl md:text-3xl font-black text-black mb-4 md:mb-6">
+                    <h2 className="text-3xl md:text-4xl font-black text-black mb-4 md:mb-6">
                       還在等什麼？
                     </h2>
-                    <p className="text-xl md:text-2xl font-black text-black">
+                    <p className="text-2xl md:text-3xl font-black text-black">
                       現在就加入 No Limit Tutor 教師行列
                     </p>
                   </div>
