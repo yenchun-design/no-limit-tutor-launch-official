@@ -38,6 +38,12 @@ import {
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 
+// --- lock table name: do NOT let anyone rename this ---
+type EmailTable = 'email_signups';
+const EMAIL_TABLE: EmailTable = 'email_signups';
+.supabase.from(EMAIL_TABLE).select('*', { count: 'exact', head: true })
+.supabase.from(EMAIL_TABLE).insert([{ email: email.trim() }])
+
 const Index = () => {
   const { toast } = useToast();
   const [email, setEmail] = useState('');
