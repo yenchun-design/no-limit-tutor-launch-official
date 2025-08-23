@@ -173,7 +173,7 @@ const Index = () => {
             <button onClick={() => scrollToSection('home')} className="text-sm md:text-base font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">首頁</button>
             <button onClick={() => scrollToSection('what-is-nlt')} className="text-sm md:text-base font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">NLT 是什麼</button>
             <button onClick={() => scrollToSection('features')} className="text-sm md:text-base font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">功能</button>
-            <button onClick={() => scrollToSection('pricing')} className="text-sm md:text-base font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">收費</button>
+            <button onClick={() => scrollToSection('pricing')} className="text-sm md:text-base font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">上課方式</button>
             <button onClick={() => scrollToSection('faq')} className="text-sm md:text-base font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">FAQ</button>
             <button onClick={() => scrollToSection('social')} className="text-sm md:text-base font-black text-black hover:text-amber-600 transition-colors uppercase tracking-wide">社群連結</button>
             <Button 
@@ -806,10 +806,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 md:mb-20">
             <div className="inline-block bg-white border-3 md:border-3 border-black px-5 md:px-6 py-3 md:py-3 text-xl md:text-xl font-black mb-8 md:mb-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
-              收費方式
+              上課方式
             </div>
             <h2 className="text-3xl md:text-4xl font-black text-black mb-8 md:mb-8 bg-amber-400 border-4 border-black p-5 md:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 uppercase">透明公平定價</h2>
-            <p className="text-xl md:text-xl text-black font-bold bg-white border-3 md:border-3 border-black p-5 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] max-w-2xl mx-auto">雙贏學習環境</p>
+            <p className="text-xl md:text-xl text-black font-bold bg-white border-3 md:border-3 border-black p-5 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] max-w-2xl mx-auto">課堂價格由老師決定</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-8 max-w-6xl mx-auto">
