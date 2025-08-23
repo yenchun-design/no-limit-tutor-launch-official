@@ -743,14 +743,19 @@ const Index = () => {
         {isSubmittingEmail ? '訂閱中...' : '登記成為 2026 NLT 老師'}
         <ArrowRight className="ml-3 md:ml-4 w-5 h-5 md:w-6 md:h-6" />
       </button>
-                    <Button
-                size="lg"
-                className="w-full max-w-md bg-indigo-500 hover:bg-indigo-600 text-white border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] font-black text-xl md:text-2xl px-8 md:px-12 py-6 md:py-8 transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
-                onClick={() => window.open('https://forms.gle/6cYoa9Lt2P7Wy8uu5', '_blank')}
-              >
-                學生搶先登記
-                <ExternalLink className="ml-3 md:ml-4 w-6 h-6 md:w-8 md:h-8" />
-              </Button>
+      
+<button className="w-full h-14 md:h-16 bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 
+             text-white border-3 md:border-4 border-black 
+             shadow-[5px_5px_0_0_rgba(0,0,0,1)] md:shadow-[8px_8px_0_0_rgba(0,0,0,1)]
+             hover:shadow-[3px_3px_0_0_rgba(0,0,0,1)] md:hover:shadow-[5px_5px_0_0_rgba(0,0,0,1)]
+             font-black text-lg md:text-xl uppercase tracking-wide
+             flex items-center justify-center
+             transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
+  onClick={() => window.open('https://forms.gle/6cYoa9Lt2P7Wy8uu5', '_blank')}
+>
+  學生搶先登記
+  <ExternalLink className="ml-3 md:ml-4 w-5 h-5 md:w-6 md:h-6" />
+</button>
     </form>
   </div>
 </div>
