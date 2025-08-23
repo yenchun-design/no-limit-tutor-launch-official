@@ -18,7 +18,7 @@ const Index = () => {
     queryKey: ['signup-count'],
     queryFn: async () => {
       const { count, error } = await supabase
-        .from('email_signups')
+        .from('email_list')
         .select('*', { count: 'exact', head: true });
       
       if (error) {
@@ -45,7 +45,7 @@ const Index = () => {
 
     try {
       const { error } = await supabase
-        .from('email_signups')
+        .from('email_list')
         .insert([{ email }]);
       
       if (error) {
