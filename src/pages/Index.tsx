@@ -204,7 +204,7 @@ const Index = () => {
             <div className="space-y-8 md:space-y-12">
               {/* Title and Logo */}
               <div className="text-center">
-                <div className="mb-6 md:mb-8">
+                <div className="mb-4 md:mb-6">
                   <img 
                     src="/lovable-uploads/6ed7f059-777c-4ced-8660-78aa11ba900f.png" 
                     alt="No Limit Tutor Logo" 
@@ -214,7 +214,7 @@ const Index = () => {
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[3px_3px_0px_rgba(255,255,255,1)] md:drop-shadow-[4px_4px_0px_rgba(255,255,255,1)] mb-4 md:mb-5">
                   No Limit Tutor
                 </h1>
-                <div className="mb-6 md:mb-8">
+                <div className="mb-4 md:mb-6">
                   <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[3px_3px_0px_rgba(255,255,255,1)] md:drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
                     無限家教
                   </span>
@@ -222,7 +222,7 @@ const Index = () => {
               </div>
 
 {/* CTA Headline - 招募老師 */}
-<div className="inline-block bg-[#dd2929] border-[#dd2929] shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] px-6 py-6 md:px-10 md:py-10 text-center w-full">
+<div className="inline-block bg-[#dd2929] border-[#dd2929] shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] px-6 py-6 md:px-10 md:py-10 text-center w-full mt-[-8px] md:mt-[-12px]">
   <h2 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight whitespace-normal">
     招募 2026 年線上家教老師中！
   </h2>
