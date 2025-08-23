@@ -717,27 +717,27 @@ const Index = () => {
       </section>
 
 {/* Email Form — Minimal, same RWD as the other card */}
-<div className="bg-gradient-to-r from-yellow-100 to-amber-100 border-3 md:border-5 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[13px_13px_0px_0px_rgba(0,0,0,1)] p-6 md:p-8">
-  <form onSubmit={handleEmailSubmit} className="space-y-4 md:space-y-6">
-    <input
-      type="email"
-      placeholder="請輸入你的 Email 地址"
-      value={email}
-      onChange={(e) => setEmail(e.target.value)}
-      className="w-full h-14 md:h-16 px-5 md:px-7 text-lg md:text-xl text-center border-3 md:border-4 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] font-bold focus:outline-none focus:ring-2 focus:ring-black"
-      required
-      aria-label="Email"
-    />
-    <button
-      type="submit"
-      disabled={isSubmittingEmail}
-      className="w-full h-14 md:h-16 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-3 md:border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] font-black text-base md:text-lg uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
-    >
-      {isSubmittingEmail ? '訂閱中...' : '立即成為 NLT 老師'}
-      <ArrowRight className="ml-3 md:ml-4 w-5 h-5 md:w-6 md:h-6" />
-    </button>
-  </form>
-</div>
+                  <div className="bg-gradient-to-r from-yellow-100 to-amber-100 border-3 md:border-5 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[13px_13px_0px_0px_rgba(0,0,0,1)] p-6 md:p-8">
+                    <form onSubmit={handleEmailSubmit} className="space-y-4 md:space-y-6">
+                      <input
+                        type="email"
+                        placeholder="請輸入你的 Email 地址"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="w-full h-14 md:h-16 px-5 md:px-7 text-lg md:text-xl text-center border-3 md:border-4 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] font-bold focus:outline-none focus:ring-2 focus:ring-black"
+                        required
+                      />
+                      <button
+                        type="submit"
+                        disabled={isSubmittingEmail}
+                        className="w-full h-14 md:h-16 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-3 md:border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] font-black text-base md:text-lg uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        {isSubmittingEmail ? '訂閱中...' : '加入教師招募'}
+                        <ArrowRight className="ml-3 md:ml-4 w-5 h-5 md:w-6 md:h-6" />
+                      </button>
+                    </form>
+                  </div>
+      
       
       {/* Features Section */}
       <section id="features" className="py-16 md:py-20 bg-gradient-to-br from-amber-200 to-orange-200 mt-10 md:mt-16">
