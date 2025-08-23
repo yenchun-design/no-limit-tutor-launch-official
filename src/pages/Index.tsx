@@ -716,8 +716,8 @@ const Index = () => {
         </div>
       </section>
 
-{/* Email Form Section — Minimal */}
-<div className="bg-yellow-300 border-4 border-black shadow-[12px_12px_0_0_#000] p-6 max-w-md mx-auto">
+{/* Email Form Section — Minumim */}
+<div className="bg-yellow-300 border-4 border-black shadow-[12px_12px_0_0_#000] p-6 w-full">
   <form onSubmit={handleEmailSubmit} className="space-y-4">
     <input
       type="email"
