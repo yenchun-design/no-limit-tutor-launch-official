@@ -295,7 +295,7 @@ const Index = () => {
                       hover:translate-y-2 transition-all duration-200 flex items-center justify-center"
                       onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
                     >
-                      立即加入教師招募
+                      立即登記成為 2026 NLT 老師
                       <ArrowRight className="ml-2 md:ml-3 w-5 h-5 md:w-6 md:h-6" />
                     </Button>
                   </div>
@@ -319,9 +319,11 @@ const Index = () => {
                       <button
                         type="submit"
                         disabled={isSubmittingEmail}
-                        className="w-full h-14 md:h-16 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-3 md:border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] font-black text-base md:text-lg uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="w-full h-14 md:h-16 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-3 md:border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] 
+                        md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] 
+                        font-black text-lg md:text-xl uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                       >
-                        {isSubmittingEmail ? '訂閱中...' : '加入教師招募'}
+                        {isSubmittingEmail ? '訂閱中...' : '登記成為 2026 NLT 老師'}
                         <ArrowRight className="ml-3 md:ml-4 w-5 h-5 md:w-6 md:h-6" />
                       </button>
                     </form>
@@ -733,9 +735,12 @@ const Index = () => {
       <button
         type="submit"
         disabled={isSubmittingEmail}
-        className="w-full h-14 md:h-16 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-3 md:border-4 border-black shadow-[5px_5px_0_0_rgba(0,0,0,1)] md:shadow-[8px_8px_0_0_rgba(0,0,0,1)] hover:shadow-[3px_3px_0_0_rgba(0,0,0,1)] md:hover:shadow-[5px_5px_0_0_rgba(0,0,0,1)] font-black text-base md:text-lg uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full h-14 md:h-16 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-3 md:border-4 border-black shadow-[5px_5px_0_0_rgba(0,0,0,1)] 
+        md:shadow-[8px_8px_0_0_rgba(0,0,0,1)] hover:shadow-[3px_3px_0_0_rgba(0,0,0,1)] md:hover:shadow-[5px_5px_0_0_rgba(0,0,0,1)] 
+        font-black text-lg md:text-xl uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex items-center 
+        justify-center disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {isSubmittingEmail ? '訂閱中...' : '加入教師招募'}
+        {isSubmittingEmail ? '訂閱中...' : '登記成為 2026 NLT 老師'}
         <ArrowRight className="ml-3 md:ml-4 w-5 h-5 md:w-6 md:h-6" />
       </button>
                     <Button
