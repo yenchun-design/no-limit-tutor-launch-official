@@ -214,7 +214,7 @@ const Index = () => {
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[3px_3px_0px_rgba(255,255,255,1)] md:drop-shadow-[4px_4px_0px_rgba(255,255,255,1)] mb-4 md:mb-5">
                   No Limit Tutor
                 </h1>
-                <div className="mb-8 md:mb-10">
+                <div className="mb-6 md:mb-8">
                   <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black leading-tight tracking-tight uppercase drop-shadow-[3px_3px_0px_rgba(255,255,255,1)] md:drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
                     無限家教
                   </span>
