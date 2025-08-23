@@ -716,29 +716,28 @@ const Index = () => {
         </div>
       </section>
 
-{/* Email Form Section — Minumim */}
-<div className="bg-yellow-300 border-4 border-black shadow-[12px_12px_0_0_#000] p-6 w-full">
-  <form onSubmit={handleEmailSubmit} className="space-y-4">
+{/* Email Form — Minimal, same RWD as the other card */}
+<div className="bg-gradient-to-r from-yellow-100 to-amber-100 border-3 md:border-5 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[13px_13px_0px_0px_rgba(0,0,0,1)] p-6 md:p-8">
+  <form onSubmit={handleEmailSubmit} className="space-y-4 md:space-y-6">
     <input
       type="email"
       placeholder="請輸入你的 Email 地址"
       value={email}
       onChange={(e) => setEmail(e.target.value)}
-      className="w-full h-14 px-4 text-lg text-center placeholder-gray-400 border-4 border-black shadow-[6px_6px_0_0_#000] font-bold focus:outline-none"
+      className="w-full h-14 md:h-16 px-5 md:px-7 text-lg md:text-xl text-center border-3 md:border-4 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] font-bold focus:outline-none focus:ring-2 focus:ring-black"
       required
       aria-label="Email"
     />
     <button
       type="submit"
       disabled={isSubmittingEmail}
-      className="w-full h-14 bg-green-400 hover:bg-green-500 text-black border-4 border-black shadow-[8px_8px_0_0_#000] font-black text-lg tracking-wide flex items-center justify-center disabled:opacity-60 disabled:cursor-not-allowed transition-transform active:translate-x-[2px] active:translate-y-[2px]"
+      className="w-full h-14 md:h-16 bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black border-3 md:border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] font-black text-base md:text-lg uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
     >
       {isSubmittingEmail ? '訂閱中...' : '立即成為 NLT 老師'}
-      <ArrowRight className="ml-3 w-6 h-6" />
+      <ArrowRight className="ml-3 md:ml-4 w-5 h-5 md:w-6 md:h-6" />
     </button>
   </form>
 </div>
-
       
       {/* Features Section */}
       <section id="features" className="py-16 md:py-20 bg-gradient-to-br from-amber-200 to-orange-200 mt-10 md:mt-16">
