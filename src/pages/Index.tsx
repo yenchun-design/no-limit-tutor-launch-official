@@ -224,7 +224,7 @@ const Index = () => {
 {/* CTA Headline - 招募老師 */}
 <div className="inline-block bg-[#dd2929] border-[#dd2929] shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] px-6 py-6 md:px-10 md:py-10 text-center w-full mt-[-16px] md:mt-[-20px]">
   <h2 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight whitespace-normal">
-    招募 2026 年線上家教老師中！
+    正在招募 2026 年線上家教老師！
   </h2>
 </div>
               
@@ -289,7 +289,10 @@ const Index = () => {
                   <div className="text-center">
                     <Button 
                       size="lg" 
-                      className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-3 md:border-5 border-white shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] md:shadow-[13px_13px_0px_0px_rgba(255,255,255,1)] hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] md:hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-lg md:text-xl px-6 md:px-10 py-6 md:py-8 uppercase tracking-wide transform hover:translate-x-2 hover:translate-y-2 transition-all duration-200 flex items-center justify-center"
+                      className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-3 md:border-5 
+                      border-white shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] md:shadow-[13px_13px_0px_0px_rgba(255,255,255,1)] hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] 
+                      md:hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] font-black text-xl md:text-2xl px-6 md:px-10 py-6 md:py-8 uppercase tracking-wide transform hover:translate-x-2 
+                      hover:translate-y-2 transition-all duration-200 flex items-center justify-center"
                       onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
                     >
                       立即加入教師招募
