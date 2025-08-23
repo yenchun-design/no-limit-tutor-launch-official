@@ -717,8 +717,10 @@ const Index = () => {
       </section>
 
 {/* Email Form — Minimal, same RWD as the other card */}
-                  <div className="bg-gradient-to-r from-yellow-100 to-amber-100 border-3 md:border-5 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[13px_13px_0px_0px_rgba(0,0,0,1)] p-6 md:p-8">
-                    <form onSubmit={handleEmailSubmit} className="space-y-4 md:space-y-6">
+
+      <div className="bg-gradient-to-r from-yellow-100 to-amber-100 border-3 md:border-5 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[13px_13px_0px_0px_rgba(0,0,0,1)] p-6 md:p-8">
+        <div className="bg-gradient-to-r from-yellow-100 to-amber-100 border-3 md:border-5 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] md:shadow-[13px_13px_0px_0px_rgba(0,0,0,1)] p-6 md:p-8">
+            <form onSubmit={handleEmailSubmit} className="space-y-4 md:space-y-6">
                       <input
                         type="email"
                         placeholder="請輸入你的 Email 地址"
@@ -737,6 +739,7 @@ const Index = () => {
                       </button>
                     </form>
                   </div>
+        </div>
       
       
       {/* Features Section */}
