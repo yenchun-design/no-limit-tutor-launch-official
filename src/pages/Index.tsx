@@ -856,7 +856,7 @@ const Index = () => {
             <div className="inline-block bg-white border-3 md:border-3 border-black px-5 md:px-6 py-3 md:py-3 text-xl md:text-xl font-black mb-8 md:mb-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
               上課方式
             </div>
-            <h2 className="text-3xl md:text-4xl font-black text-black mb-8 md:mb-8 bg-amber-400 border-4 border-black p-5 md:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 uppercase">透明公平定價</h2>
+            <h2 className="text-3xl md:text-4xl font-black text-black mb-8 md:mb-8 bg-amber-400 border-4 border-black p-5 md:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 uppercase">流暢直觀的上課流程</h2>
             <p className="text-xl md:text-xl text-black font-bold bg-white border-3 md:border-3 border-black p-5 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] max-w-2xl mx-auto">課堂價格由老師決定</p>
           </div>
           
