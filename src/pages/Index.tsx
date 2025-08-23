@@ -650,11 +650,11 @@ const Index = () => {
                         <tr>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10 w-20 
                                           min-w-[5rem] max-w-[5rem] break-words   
-                                          md:w-auto md:min-w-[8rem] md:max-w-none">其他多數平台</td>
+                                          md:w-auto md:min-w-[8rem] md:max-w-none">多數其他平台</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">不透明</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">不透明</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-36 md:w-auto">超過七天不能全額退款，只能轉讓或吸收損失</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-36 md:w-auto">不透明，可能在33-65%之間不等</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-36 md:w-auto">不透明，可能在33-65%之間，老師實拿更少</td>
                         </tr>
                       </tbody>
                     </table>
