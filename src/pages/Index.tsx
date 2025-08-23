@@ -223,7 +223,7 @@ const Index = () => {
 
 {/* CTA Headline - 招募老師 */}
 <div className="inline-block bg-[#fcd54c] border-[#fcd54c] shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] px-6 py-6 md:px-10 md:py-10 text-center w-full">
-  <h2 className="text-2xl md:text-7xl font-black text-black tracking-tight whitespace-normal">
+  <h2 className="text-4xl md:text-6xl font-black text-black tracking-tight whitespace-normal">
     招募 2026 年線上家教老師中！
   </h2>
 </div>
