@@ -181,7 +181,7 @@ const Index = () => {
               className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white border-2 md:border-3 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] font-black text-sm md:text-base px-4 py-2 uppercase tracking-wide transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
               onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
             >
-              立即加入教師招募
+              立即加入 2026 教師招募
             </Button>
           </nav>
           
@@ -230,7 +230,7 @@ const Index = () => {
               
               {/* Main Value Proposition */}
               <div className="text-center">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black leading-tight bg-white px-6 md:px-10 py-6 md:py-8 border-3 md:border-5 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 mb-8 md:mb-10">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-black text-black leading-tight bg-white px-6 md:px-10 py-6 md:py-8 border-3 md:border-5 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1 mb-8 md:mb-10">
                   台灣第一個民主、群眾導向的一對一家教平台
                 </h2>
               </div>
@@ -281,7 +281,7 @@ const Index = () => {
                       還在等什麼？
                     </h2>
                     <p className="text-2xl md:text-3xl font-black text-black">
-                      現在就加入 No Limit Tutor 教師行列
+                      現在就加入 No Limit Tutor 2026 教師行列
                     </p>
                   </div>
 
@@ -1040,7 +1040,7 @@ const Index = () => {
                   越來越多優秀教師選擇 No Limit Tutor
                 </p>
                 <p className="text-xl md:text-2xl font-bold text-black">
-                  成為首批元老教師，搶占平台發展先機！
+                  成為 2026 首批元老教師，搶占平台發展先機！
                 </p>
               </div>
             </div>
@@ -1082,7 +1082,7 @@ const Index = () => {
                 className="w-full max-w-2xl bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white border-4 md:border-8 border-white shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] md:shadow-[20px_20px_0px_0px_rgba(255,255,255,1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,1)] md:hover:shadow-[16px_16px_0px_0px_rgba(255,255,255,1)] font-black text-2xl md:text-3xl px-8 md:px-16 py-8 md:py-12 uppercase tracking-wide transform hover:translate-x-2 hover:translate-y-2 transition-all duration-200"
                 onClick={() => window.open('https://forms.gle/Ztut3UCMqghCEoDD8', '_blank')}
               >
-                立即加入教師招募
+                立即加入 2026 教師招募
                 <ArrowRight className="ml-4 md:ml-6 w-8 h-8 md:w-10 md:h-10" />
               </Button>
             </div>
