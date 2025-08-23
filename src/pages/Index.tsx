@@ -133,23 +133,23 @@ const Index = () => {
       answer: "💡 是的！老師設定多少課程費用，就實拿多少。我們只向學生收取 25% 的服務費用來維持平台運作。"
     },
     {
-      question: "學生怕遇到教學品質不好的老師，怎麼保障？",
+      question: "NLT 為什麼還收保障服務費？",
+      answer: "💡 NLT 透過保障服務費，才能提供學生「試教課保障」、協助老師曝光與找到更多學生、讓學生方便連絡多位老師，並支撐平台維護、客服與老師收入保障。沒有保障服務費，這些服務將難以持續。"
+    },
+    {
+      question: "老師的教學品質怎麼保障？",
       answer: "💡 NLT 提供 25 分鐘試教課程，不滿意就全額退費。學生可以透過老師的評價、介紹影片與履歷，自己挑選最適合的老師。"
     },
     {
       question: "平台什麼時候會正式上線？",
-      answer: "💡 預計 2026 年正式上線；平台目前開發中，正在招募首批優質教師，現在登記，有機會成為資深元老教師！"
-    },
-    {
-      question: "如何確保教師品質？",
-      answer: "💡 每個人對教學風格喜好不同，你可以藉由老師自介與評價系統了解老師，並用「100% 可退款」的試教課，找到適合你的老師。"
+      answer: "💡 預計 2026 年正式上線；平台目前開發中，正在招募首批優質教師與學生。現在登記，有機會成為資深元老教師或得到優惠！"
     },
     {
       question: "上課需要額外下載軟體或用外部視訊工具嗎？",
-      answer: "💡 不需要！NLT 內建視訊教室與聊天室，學生與老師在平台內完成預約、訂閱、付款、上課，方便又簡易。"
+      answer: "💡 不需要！NLT 內建視訊教室與聊天室，學生與老師可在平台內完成上課！"
     },
     {
-      question: "支援哪些科目和語言？",
+      question: "NLT 支援哪些科目和語言？",
       answer: "💡 我們已登記的老師能教國高中學科輔導、英文，程式基礎與商業技能。\n隨著未來更多優秀老師加入，會陸續有才藝、日文、UI/UX 等多元課程。"
     }
   ];
@@ -602,15 +602,15 @@ const Index = () => {
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-6 h-6 text-blue-600" />
-                        <span className="text-xl md:text-xl font-bold text-black">試教課與沒安排的正是課都可以退款</span>
+                        <span className="text-xl md:text-xl font-bold text-black">試教課與沒安排的正式課都可以退款</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-6 h-6 text-blue-600" />
-                        <span className="text-xl md:text-xl font-bold text-black">退款成新台幣，點數制 bye!</span>
+                        <span className="text-xl md:text-xl font-bold text-black">退款成新台幣，沒在扣留你的錢!</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-6 h-6 text-blue-600" />
-                        <span className="text-xl md:text-xl font-bold text-black">互動式訂課與老師評價系統</span>
+                        <span className="text-xl md:text-xl font-bold text-black">互動式訂課，能使用老師評價系統</span>
                       </div>
                     </div>
                   </div>
@@ -640,7 +640,7 @@ const Index = () => {
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10 w-20 
                                           min-w-[5rem] max-w-[5rem] break-words 
                                           md:w-auto md:min-w-[8rem] md:max-w-none">No Limit Tutor</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">0%</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-green w-28 md:w-auto">0%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">25%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-36 md:w-auto">全額新台幣退款</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-green-600 w-36 md:w-auto">20% (國內業界最低)</td>
@@ -651,7 +651,7 @@ const Index = () => {
                                           md:w-auto md:min-w-[8rem] md:max-w-none">平台A</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">8-38%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">10%</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-36 md:w-auto">退款麻煩，有匯損，預設退平台幣</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-36 md:w-auto">退款麻煩，有匯損、預設退平台幣</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-36 md:w-auto">18-48% (每個月要教超多課才能壓下抽成)</td>
                         </tr>
                         <tr>
@@ -669,8 +669,8 @@ const Index = () => {
                                           md:w-auto md:min-w-[8rem] md:max-w-none">多數其他平台</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">不透明</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">不透明</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-36 md:w-auto">超過七天不能全額退款，只能轉讓或吸收損失</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-36 md:w-auto">不透明，可能在33-65%之間，老師實拿更少</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-36 md:w-auto">超過七天不能全額退款、轉讓或吸收損失</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-36 md:w-auto">不透明，可能在33-65%之間，學生有可能付平台 50%</td>
                         </tr>
                       </tbody>
                     </table>
@@ -694,7 +694,7 @@ const Index = () => {
                     <Heart className="w-5 h-5 md:w-6 md:h-6 text-white" />
                   </div>
                   <h4 className="text-xl md:text-xl font-black text-black mb-2 md:mb-3 uppercase">對老師 0 抽成</h4>
-                  <p className="text-lg md:text-lg font-bold text-black">珍惜台灣教育工作者與寶貴教育資源</p>
+                  <p className="text-lg md:text-lg font-bold text-black">台灣教育工作文化翻轉，重視教育資源</p>
                 </div>
                 
                 <div className="bg-white border-3 border-black p-5 md:p-5 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] text-center">
@@ -726,7 +726,7 @@ const Index = () => {
     <form onSubmit={handleEmailSubmit} className="space-y-4 md:space-y-6">
       <input
         type="email"
-        placeholder="請輸入你的 Email 地址"
+        placeholder="請輸入你 (老師) 的 Email 地址"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         className="w-full h-14 md:h-16 px-5 md:px-7 text-lg md:text-xl text-center border-3 md:border-4 border-black shadow-[3px_3px_0_0_rgba(0,0,0,1)] md:shadow-[5px_5px_0_0_rgba(0,0,0,1)] font-bold focus:outline-none focus:ring-2 focus:ring-black"
@@ -753,7 +753,7 @@ const Index = () => {
              transform hover:translate-x-1 hover:translate-y-1 transition-all duration-200"
   onClick={() => window.open('https://forms.gle/6cYoa9Lt2P7Wy8uu5', '_blank')}
 >
-  學生搶先登記
+  學生看這邊——搶先登記！
   <ExternalLink className="ml-3 md:ml-4 w-5 h-5 md:w-6 md:h-6" />
 </button>
     </form>
@@ -765,13 +765,16 @@ const Index = () => {
       <section id="features" className="py-16 md:py-20 bg-gradient-to-br from-amber-200 to-orange-200 mt-10 md:mt-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 md:mb-16">
-            <div className="inline-block bg-white border-3 md:border-3 border-black px-5 md:px-6 py-3 md:py-3 text-lg md:text-lg font-black mb-6 md:mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
+            <div className="inline-block bg-white border-3 md:border-3 border-black px-5 md:px-6 py-3 md:py-3 text-lg md:text-lg font-black mb-6 md:mb-6 
+              shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
               功能特色
             </div>
-            <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-4 md:border-6 border-black px-8 md:px-10 py-6 md:py-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1">
+            <div className="bg-gradient-to-r from-yellow-300 to-amber-300 border-4 md:border-6 border-black px-8 md:px-10 py-6 md:py-8 
+              shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] inline-block transform -rotate-1">
               <h2 className="text-2xl md:text-3xl font-black text-black uppercase tracking-wide">教學生態系統詳解</h2>
             </div>
-            <p className="text-lg md:text-lg text-black font-bold max-w-3xl mx-auto bg-white border-3 md:border-3 border-black p-5 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] mt-8 md:mt-10">深入了解完整功能，全方位學習支援</p>
+            <p className="text-lg md:text-lg text-black font-bold max-w-3xl mx-auto bg-white border-3 md:border-3 border-black p-5 md:p-6 
+              shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] mt-8 md:mt-10">了解 NLT 的詳細功能，以及學生與老師在平台的互動方式</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 max-w-7xl mx-auto">
@@ -912,7 +915,7 @@ const Index = () => {
                         </li>
                         <li className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-blue-500 border border-black" />
-                          <span>未消耗課程，剩餘金額 100% 退回 (其他平台常不給退!!)</span>
+                          <span>未用課程可 100% 退費，我們吸收成本，老師收入不受影響（其他平台常不給退!!）</span>
                         </li>
                         <li className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-green-500 border border-black" />
@@ -924,11 +927,11 @@ const Index = () => {
                         </li>
                         <li className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-purple-500 border border-black" />
-                          <span>平台內視訊、安全退款</span>
+                          <span>平台內視訊、國內支付系統（綠界）</span>
                         </li>
                         <li className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-pink-500 border border-black" />
-                          <span>安全回報機制</span>
+                          <span>學生回報機制</span>
                         </li>
                         <li className="flex items-center space-x-3">
                           <div className="w-3 h-3 bg-indigo-500 border border-black" />
@@ -1099,7 +1102,7 @@ const Index = () => {
                 <Mail className="w-8 h-8 md:w-10 md:h-10 text-black mr-4 md:mr-6" />
                 <h3 className="text-2xl md:text-4xl font-black text-black">最後機會！立即登記</h3>
               </div>
-              <p className="text-xl md:text-2xl font-black text-black text-center mb-8 md:mb-10">成為 NLT 首批元老教師</p>
+              <p className="text-xl md:text-2xl font-black text-black text-center mb-8 md:mb-10">成為 NLT 2026 年首批元老教師</p>
               <form onSubmit={handleEmailSubmit} className="space-y-6 md:space-y-8">
                 <input
                   type="email"
