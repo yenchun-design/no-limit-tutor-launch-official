@@ -39,8 +39,8 @@ import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 
 // --- lock table name: do NOT let anyone rename this ---
-type EmailTable = 'email_signups';
-const EMAIL_TABLE: EmailTable = 'email_signups';
+type EmailTable = 'email_list';
+const EMAIL_TABLE: EmailTable = 'email_list';
 
 const Index = () => {
   const { toast } = useToast();
@@ -54,7 +54,7 @@ const Index = () => {
     const fetchEmailCount = async () => {
       try {
         const { count, error } = await supabase
-          .from('email_signups')
+          .from('email_list')
           .select('*', { count: 'exact', head: true });
         
         if (error) {
@@ -90,7 +90,7 @@ const Index = () => {
     
     try {
       const { error } = await supabase
-        .from('email_signups')
+        .from('email_list')
         .insert([{ email: email.trim() }]);
 
       if (error) {
@@ -130,11 +130,11 @@ const Index = () => {
   const faqItems = [
     {
       question: "NLT 真的對老師零抽成嗎？",
-      answer: "💡 是的！老師設定多少課程費用，就實拿多少。我們只向學生收取 25% 的服務費用來維持平台運作。"
+      answer: "💡 是的！老師設定多少課程費用，就實拿多少。我們透過公平合理的服務費維持平台運作，確保不剝削老師、還給學生最本質的家教服務。"
     },
     {
-      question: "NLT 為什麼還收保障服務費？",
-      answer: "💡 NLT 透過保障服務費，才能提供學生「試教課保障」、協助老師曝光與找到更多學生、讓學生方便連絡多位老師，並支撐平台維護、客服與老師收入保障。沒有保障服務費，這些服務將難以持續。"
+      question: "NLT 如何確保服務品質？",
+      answer: "💡 我們創造真正的價值：提供學生「試教課保障」、協助老師曝光與找到更多學生、讓學生方便連絡多位老師，並支撐平台維護、客服與老師收入保障。專注於還給市場最本質的家教服務。"
     },
     {
       question: "老師的教學品質怎麼保障？",
@@ -588,13 +588,13 @@ const Index = () => {
                   
                   <div className="bg-white border-2 border-black p-5 md:p-6 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] mb-6 md:mb-8">
                     <div className="text-center mb-4 md:mb-6">
-                      <div className="text-5xl md:text-6xl font-black text-blue-600">25%</div>
-                      <div className="text-2xl md:text-3xl font-black text-black">保障服務費</div>
+                      <div className="text-4xl md:text-5xl font-black text-blue-600">透明公平</div>
+                      <div className="text-2xl md:text-3xl font-black text-black">服務保障</div>
                     </div>
                     <div className="space-y-3 md:space-y-4">
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-6 h-6 text-blue-600" />
-                        <span className="text-xl md:text-xl font-bold text-black">老師設定 $500，學生付 $625</span>
+                        <span className="text-xl md:text-xl font-bold text-black">老師實拿100%課程費，不剝削老師</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-6 h-6 text-blue-600" />
@@ -624,13 +624,12 @@ const Index = () => {
                 <div className="overflow-x-auto" style={{ minWidth: '100%' }}>
                   <div className="min-w-[640px] md:min-w-[1000px]">
                     <table className="w-full table-fixed border-2 border-black bg-white text-sm relative">
-                      <thead>
+                       <thead>
                         <tr className="bg-black text-white">
                           <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-black z-10 w-20 
                                           min-w-[5rem] max-w-[5rem] break-words 
                                           md:w-auto md:min-w-[8rem] md:max-w-none">平台</th>
                           <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">老師抽成</th>
-                          <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">學生服務費</th>
                           <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-36 md:w-auto">退款政策</th>
                           <th className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-36 md:w-auto">平台費用率</th>
                         </tr>
@@ -641,16 +640,14 @@ const Index = () => {
                                           min-w-[5rem] max-w-[5rem] break-words 
                                           md:w-auto md:min-w-[8rem] md:max-w-none">No Limit Tutor</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-green w-28 md:w-auto">0%</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">25%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-36 md:w-auto">全額新台幣退款</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-green-600 w-36 md:w-auto">20% (國內業界最低)</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-green-600 w-36 md:w-auto">業界最低</td>
                         </tr>
                         <tr>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10 w-20 
                                           min-w-[5rem] max-w-[5rem] break-words 
                                           md:w-auto md:min-w-[8rem] md:max-w-none">平台A</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">8-38%</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">10%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-36 md:w-auto">退款麻煩，有匯損、預設退平台幣</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-36 md:w-auto">18-48% (每個月要教超多課才能壓下抽成)</td>
                         </tr>
@@ -659,7 +656,6 @@ const Index = () => {
                                           min-w-[5rem] max-w-[5rem] break-words   
                                           md:w-auto md:min-w-[8rem] md:max-w-none">平台B</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">20-35%</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">0%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-36 md:w-auto">極難退款，通常退成平台點數</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-36 md:w-auto">20-35%</td>
                         </tr>
@@ -667,7 +663,6 @@ const Index = () => {
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10 w-20 
                                           min-w-[5rem] max-w-[5rem] break-words   
                                           md:w-auto md:min-w-[8rem] md:max-w-none">多數其他平台</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">不透明</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">不透明</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-36 md:w-auto">超過七天不能全額退款、轉讓或吸收損失</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-36 md:w-auto">不透明，可能在33-65%之間，學生有可能付平台 50%</td>
