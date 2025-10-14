@@ -39,8 +39,8 @@ import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 
 // --- lock table name: do NOT let anyone rename this ---
-type EmailTable = 'email_signups';
-const EMAIL_TABLE: EmailTable = 'email_signups';
+type EmailTable = 'email_list';
+const EMAIL_TABLE: EmailTable = 'email_list';
 
 const Index = () => {
   const { toast } = useToast();
@@ -48,13 +48,14 @@ const Index = () => {
   const [isSubmittingEmail, setIsSubmittingEmail] = useState(false);
   const [emailCount, setEmailCount] = useState(11);
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
+  const [expandedStudentFaq, setExpandedStudentFaq] = useState<number | null>(null);
 
   // Fetch email count from Supabase
   useEffect(() => {
     const fetchEmailCount = async () => {
       try {
         const { count, error } = await supabase
-          .from('email_signups')
+          .from('email_list')
           .select('*', { count: 'exact', head: true });
         
         if (error) {
@@ -90,7 +91,7 @@ const Index = () => {
     
     try {
       const { error } = await supabase
-        .from('email_signups')
+        .from('email_list')
         .insert([{ email: email.trim() }]);
 
       if (error) {
@@ -127,6 +128,10 @@ const Index = () => {
     setExpandedFaq(expandedFaq === index ? null : index);
   };
 
+  const toggleStudentFaq = (index: number) => {
+    setExpandedStudentFaq(expandedStudentFaq === index ? null : index);
+  };
+
   const faqItems = [
     {
       question: "NLT 真的對老師零抽成嗎？",
@@ -151,6 +156,33 @@ const Index = () => {
     {
       question: "NLT 支援哪些科目和語言？",
       answer: "💡 我們已登記的老師能教國高中學科輔導、英文，程式基礎與商業技能。\n隨著未來更多優秀老師加入，會陸續有才藝、日文、UI/UX 等多元課程。"
+    }
+  ];
+
+  const studentFaqItems = [
+    {
+      question: "NLT 是什麼？它如何運作？",
+      answer: "💡 NLT (No Limit Tutor) 是一個創新的線上家教平台，致力於提供透明、公平且高品質的教育服務。我們透過先進的媒合系統，幫助學生快速找到最適合自己的專業家教老師。平台運作模式以學生需求為核心，確保每一次的學習體驗都能最大化價值。"
+    },
+    {
+      question: "為什麼 NLT 的家教費用相對有競爭力？",
+      answer: "💡 我們相信優質的教育應該是人人都能負擔的。NLT 透過優化平台運作效率，並堅持不剝削老師的原則，將更多價值回饋給學生和老師。我們的目標是提供一個公平的市場，讓學生能以合理的價格獲得頂尖的教學資源，同時讓老師獲得應有的報酬。"
+    },
+    {
+      question: "我如何確保找到最適合我的老師？",
+      answer: "💡 NLT 提供詳細的老師檔案、學生評價以及專業的篩選機制，幫助您做出明智的選擇。您可以根據老師的專長、教學風格、學歷背景等條件進行篩選，並透過平台訊息與老師初步溝通，確保找到最符合您學習需求的老師。更重要的是，我們提供 25 分鐘試教課程，不滿意就全額退費！"
+    },
+    {
+      question: "NLT 如何保障我的學習權益？",
+      answer: "💡 我們重視每一位學生的學習體驗。NLT 設有完善的評價與申訴機制，確保教學品質。若您對教學內容或老師有任何疑慮，我們的客服團隊會及時介入處理，保障您的學習權益不受損害。此外，購買後 30 天內未完成的課程可 100% 退款，讓您安心學習。"
+    },
+    {
+      question: "試教課程怎麼運作？",
+      answer: "💡 試教課程是 25 分鐘的一對一體驗課，讓您在正式購買課程前先了解老師的教學風格。試教課程的費用為正式課程的 50% 價格，如果您對試教不滿意，可以申請全額退費。這個機制確保您能找到真正適合的老師。"
+    },
+    {
+      question: "如果我對課程不滿意，可以退費嗎？",
+      answer: "💡 可以！NLT 提供 30 天退款保障。在購買課程後的 30 天內，如果您對課程不滿意，可以申請未完成課程的 100% 退款。我們吸收所有退款成本，確保老師的收入不受影響，同時保障您的消費權益。"
     }
   ];
 
@@ -977,6 +1009,44 @@ const Index = () => {
                     </div>
                   </button>
                   {expandedFaq === index && (
+                    <div className="border-t-3 border-black bg-gray-50 p-6 md:p-8">
+                      <p className="text-lg md:text-xl font-bold text-black leading-relaxed whitespace-pre-line">{item.answer}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+          </div>
+
+          {/* Student FAQ Section */}
+          <div className="text-center mb-12 md:mb-20 mt-16 md:mt-24">
+            <div className="inline-block bg-white border-3 md:border-5 border-black px-6 md:px-8 py-3 md:py-4 text-xl md:text-2xl font-black mb-6 md:mb-8 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wide">
+              學生專區
+            </div>
+            <div className="bg-gradient-to-r from-blue-300 to-cyan-300 border-3 md:border-6 border-black px-8 md:px-12 py-6 md:py-8 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[13px_13px_0px_0px_rgba(0,0,0,1)] inline-block transform rotate-1">
+              <h2 className="text-3xl md:text-4xl font-black text-black uppercase tracking-wide">學生常見問題</h2>
+            </div>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-5 md:space-y-6">
+              {studentFaqItems.map((item, index) => (
+                <div key={index} className="bg-white border-3 md:border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                  <button
+                    onClick={() => toggleStudentFaq(index)}
+                    className="w-full p-6 md:p-8 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                  >
+                    <h3 className="text-xl md:text-2xl font-black text-black pr-5 leading-snug">{item.question}</h3>
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-black border-2 border-black flex items-center justify-center shadow-[2px_2px_0px_0px_rgba(0,0,0,0.3)]">
+                      {expandedStudentFaq === index ? (
+                        <ChevronUp className="w-6 h-6 md:w-7 md:h-7 text-white" />
+                      ) : (
+                        <ChevronDown className="w-6 h-6 md:w-7 md:h-7 text-white" />
+                      )}
+                    </div>
+                  </button>
+                  {expandedStudentFaq === index && (
                     <div className="border-t-3 border-black bg-gray-50 p-6 md:p-8">
                       <p className="text-lg md:text-xl font-bold text-black leading-relaxed whitespace-pre-line">{item.answer}</p>
                     </div>
