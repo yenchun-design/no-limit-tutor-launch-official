@@ -134,12 +134,12 @@ const Index = () => {
 
   const faqItems = [
     {
-      question: "NLT 真的對老師零抽成嗎？",
-      answer: "💡 是的！老師設定多少課程費用，就實拿多少。我們只向學生收取 25% 的服務費用來維持平台運作。"
+      question: "NLT 真的零抽成嗎？",
+      answer: "💡 是的！老師設定多少課程費用，就實拿多少。但我們會有 10% 的費用來維持平台運作並協助學生處理課程與訂閱問題。"
     },
     {
-      question: "NLT 為什麼還收保障服務費？",
-      answer: "💡 NLT 透過保障服務費，才能提供學生「試教課保障」、協助老師曝光與找到更多學生、讓學生方便連絡多位老師，並支撐平台維護、客服與老師收入保障。沒有保障服務費，這些服務將難以持續。"
+      question: "NLT 為什麼收 10% 費用？",
+      answer: "💡 NLT 部署雲端、協助學生處理問題、保障試教課品質、服務用戶遇到的問題，皆需要固定成本；在 10% 費用以外，不對老師或學生索取其他費用"
     },
     {
       question: "老師的教學品質怎麼保障？",
@@ -147,11 +147,11 @@ const Index = () => {
     },
     {
       question: "平台什麼時候會正式上線？",
-      answer: "💡 預計 2026 年正式上線；平台目前開發中，正在招募首批優質教師與學生。現在登記，有機會成為資深元老教師或得到優惠！"
+      answer: "💡 預計 2026 年六月正式上線；No Limit Tutor 目前開發中，正在招募首批優質教師與學生。現在登記，有機會成為資深元老教師或得到優惠！"
     },
     {
       question: "上課需要額外下載軟體或用外部視訊工具嗎？",
-      answer: "💡 不需要！NLT 內建視訊教室與聊天室，學生與老師可在平台內完成上課！"
+      answer: "💡 不需要！No Limit Tutor 內建視訊教室與聊天室，學生與老師可在平台內完成上課！"
     },
     {
       question: "NLT 支援哪些科目和語言？",
@@ -656,7 +656,7 @@ const Index = () => {
                   
                   <div className="bg-white border-2 border-black p-5 md:p-6 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] mb-6 md:mb-8">
                     <div className="text-center mb-4 md:mb-6">
-                      <div className="text-5xl md:text-6xl font-black text-blue-600">25%</div>
+                      <div className="text-5xl md:text-6xl font-black text-blue-600">10%</div>
                       <div className="text-2xl md:text-3xl font-black text-black">保障服務費</div>
                     </div>
                     <div className="space-y-3 md:space-y-4">
@@ -709,7 +709,7 @@ const Index = () => {
                                           min-w-[5rem] max-w-[5rem] break-words 
                                           md:w-auto md:min-w-[8rem] md:max-w-none">No Limit Tutor</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-green w-28 md:w-auto">0%</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">25%</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">10%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-36 md:w-auto">全額新台幣退款</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-green-600 w-36 md:w-auto">20% (國內業界最低)</td>
                         </tr>
