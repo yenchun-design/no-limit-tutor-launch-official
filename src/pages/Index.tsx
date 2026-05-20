@@ -46,7 +46,7 @@ const Index = () => {
   const { toast } = useToast();
   const [email, setEmail] = useState('');
   const [isSubmittingEmail, setIsSubmittingEmail] = useState(false);
-  const [emailCount, setEmailCount] = useState(11);
+  const [emailCount, setEmailCount] = useState(48);
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
   const [expandedStudentFaq, setExpandedStudentFaq] = useState<number | null>(null);
 
