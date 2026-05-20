@@ -662,11 +662,11 @@ const Index = () => {
                     <div className="space-y-3 md:space-y-4">
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-6 h-6 text-blue-600" />
-                        <span className="text-xl md:text-xl font-bold text-black">老師設定 $500，學生付 $625</span>
+                        <span className="text-xl md:text-xl font-bold text-black">老師設定 $500，學生付 $550</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-6 h-6 text-blue-600" />
-                        <span className="text-xl md:text-xl font-bold text-black">主動聯繫多位老師的功能</span>
+                        <span className="text-xl md:text-xl font-bold text-black">主動聯繫多位老師</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-6 h-6 text-blue-600" />
@@ -674,11 +674,11 @@ const Index = () => {
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-6 h-6 text-blue-600" />
-                        <span className="text-xl md:text-xl font-bold text-black">退款成新台幣，沒在扣留你的錢!</span>
+                        <span className="text-xl md:text-xl font-bold text-black">退款成新台幣</span>
                       </div>
                       <div className="flex items-center space-x-3">
                         <CheckCircle className="w-6 h-6 text-blue-600" />
-                        <span className="text-xl md:text-xl font-bold text-black">互動式訂課，能使用老師評價系統</span>
+                        <span className="text-xl md:text-xl font-bold text-black">互動式訂課，能評價老師</span>
                       </div>
                     </div>
                   </div>
