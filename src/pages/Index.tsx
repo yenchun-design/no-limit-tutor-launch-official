@@ -581,7 +581,7 @@ const Index = () => {
                     </div>
                     <h4 className="text-lg md:text-xl font-black text-black">第三方保障</h4>
                   </div>
-                  <p className="text-lg md:text-lg font-bold text-black">NLT 公平透明處理爭議，讓師生專心上課！</p>
+                  <p className="text-lg md:text-lg font-bold text-black">NLT 公平透明處理爭議，師生專心上課！</p>
                 </div>
               </div>
 
@@ -719,8 +719,8 @@ const Index = () => {
                                           md:w-auto md:min-w-[8rem] md:max-w-none">平台A</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">8-38%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">10%</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-36 md:w-auto">退款麻煩，有匯損、預設退平台幣</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-36 md:w-auto">18-48% (每個月要教超多課才能壓下抽成)</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-36 md:w-auto">退款不易、有匯損、退點數而非退錢</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-36 md:w-auto">18-48% (要教超多課才能壓下抽成)</td>
                         </tr>
                         <tr>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10 w-20 
@@ -737,7 +737,7 @@ const Index = () => {
                                           md:w-auto md:min-w-[8rem] md:max-w-none">多數其他平台</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">不透明</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">不透明</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-36 md:w-auto">超過七天不能全額退款、轉讓或吸收損失</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-36 md:w-auto">超過七天不能全額退款，學生需轉讓或吸收損失</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-red-600 w-36 md:w-auto">不透明，可能在33-65%之間，學生有可能付平台 50%</td>
                         </tr>
                       </tbody>
@@ -752,7 +752,7 @@ const Index = () => {
               <div className="text-center mb-6 md:mb-8">
                 <div className="flex items-center justify-center mb-4 md:mb-4">
                   <Star className="w-6 h-6 md:w-7 md:h-7 text-black mr-3 md:mr-3" />
-                  <h3 className="text-2xl md:text-3xl font-black text-black uppercase">NLT 獨有優勢</h3>
+                  <h3 className="text-2xl md:text-3xl font-black text-black uppercase">No Limit Tutor 獨有優勢</h3>
                 </div>
               </div>
               
