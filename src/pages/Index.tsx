@@ -711,7 +711,7 @@ const Index = () => {
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-green w-28 md:w-auto">0%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-28 md:w-auto">10%</td>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black w-36 md:w-auto">全額新台幣退款</td>
-                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-green-600 w-36 md:w-auto">20% (國內業界最低)</td>
+                          <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black text-green-600 w-36 md:w-auto">9% (全球最低最透明)</td>
                         </tr>
                         <tr>
                           <td className="border-2 border-black p-3 md:p-4 text-base md:text-lg font-black sticky left-0 bg-white z-10 w-20 
